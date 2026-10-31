@@ -1,0 +1,64 @@
+--- /dev/null
++++ b/include/strata/core/engram_mxfp8.hpp
+@@ -0,0 +1,19 @@
++#pragma once
++#include <cstdint>
++#include <cstring>
++
++namespace strata::core {
++// MXFP8: eight [E8M0 scale, 32 E4M3 codes] blocks per 256-element row.
++// The shared LUT preserves the existing Engram BF16 reconstruction contract.
++inline bool decode_engram_mxfp8(const uint8_t* raw, float* dst, const uint32_t (&lut)[256][256]) {
++    for (int block = 0; block < 8; ++block) {
++        const uint8_t* p = raw + 33 * block;
++        for (int j = 0; j < 32; ++j) {
++            const uint32_t bits = lut[p[0]][p[1 + j]];
++            if (bits == 0xffffffffu) return false;
++            std::memcpy(dst + 32 * block + j, &bits, sizeof(bits));
++        }
++    }
++    return true;
++}
++}  // namespace strata::core
+--- a/src/core/dsv41_fast_path.cu
++++ b/src/core/dsv41_fast_path.cu
+@@ -1,3 +1,4 @@
++#include "strata/core/engram_mxfp8.hpp"
+ // src/core/dsv41_fast_path.cu - the deepseek41 (DeepSeek V4.1 Flash) pieces of the fast decode path (Glm5Model
+ // members).  A V4.1 layer is a deepseek4 layer (dsv4_fast_path.cu) with these differences (Abyss-tools/worklog/
+ // 2026-10-18_deepseek41-spec.md):
+@@ -115,6 +116,7 @@
+ 
+ // the Engram tables (pack/engram.txt, engram_token_map.u32 - tools/iq_pack.py write_engram) and the n-gram history
+ struct V41Engram {
++    bool mxfp8 = false;  // GGUF type 43: eight interleaved scale/value blocks
+     int gtype = -1;            // llama.cpp's layout: a ggml row type (Q8_0 / Q2_K ...) decoded by ggml; ds4: e4m3 + e8m0 rows (264)
+     int row_bytes = 264;
+ #ifdef _WIN32
+@@ -186,10 +188,11 @@
+                 E.gtype = E.row_bytes;
+                 is >> E.row_bytes;
+             }
++            E.mxfp8 = name == "mxfp8";
+             const ggml_type_traits* tt = E.gtype >= 0 && E.gtype < GGML_TYPE_COUNT ? ggml_get_type_traits((ggml_type) E.gtype) : nullptr;
+             if ((E.gtype >= 0 && (tt == nullptr || tt->to_float == nullptr || E.row_bytes <= 0 || E.row_bytes > kEngRowMax ||
+                                   ggml_row_size((ggml_type) E.gtype, kEngDim) != (size_t) E.row_bytes)) ||
+-                (E.gtype < 0 && (name != "row264" || E.row_bytes != 264))) {
++                (E.gtype < 0 && ((name != "row264" && !E.mxfp8) || E.row_bytes != 264))) {
+                 err = "deepseek41: engram.txt: unknown row format " + name;
+                 return false;
+             }
+@@ -591,6 +594,13 @@
+     }
+     if (E.gtype >= 0) {   // llama.cpp's get_rows: ggml's dequantizer, F32 (no BF16 rounding)
+         ggml_get_type_traits((ggml_type) E.gtype)->to_float(raw, dst, kEngDim);
++        return true;
++    }
++    if (E.mxfp8) {
++        if (!strata::core::decode_engram_mxfp8(raw, dst, E.lut)) {
++            err = "deepseek41: an invalid MXFP8 Engram row (NaN code or scale)";
++            return false;
++        }
+         return true;
+     }
+     uint32_t* du = (uint32_t*) dst;

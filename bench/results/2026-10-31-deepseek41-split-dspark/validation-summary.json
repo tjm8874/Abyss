@@ -1,0 +1,23 @@
+{
+  "base_commit": "93ac6000e036f6f98b46089ba7a40dec95b69839",
+  "base_release": "v1.3.88",
+  "validation": "2026-10-31",
+  "clean_base_primary_apply": true,
+  "optional_adapter_apply_after_primary": true,
+  "cuda_release_sm120a_build_primary": true,
+  "cuda_release_sm120a_build_with_adapter": true,
+  "hip_cuda_name_mapping_check": true,
+  "server_tests": {
+    "run": 205,
+    "skipped": 3,
+    "result": "OK"
+  },
+  "tools_tests": {
+    "run": 314,
+    "skipped": 33,
+    "result": "OK"
+  },
+  "replay_script": "Python syntax and --help checked; not used for a new performance run",
+  "measured_cpp_sources_reconstructed_exactly": true,
+  "scope": "Existing two-GPU performance records plus isolated clean-base packaging/build validation; no broad numerical parity or AMD/Windows runtime validation."
+}

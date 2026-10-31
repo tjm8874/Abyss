@@ -1,0 +1,39 @@
+{
+  "run": "W_SP8ddQ",
+  "content_passed": 6,
+  "format_passed": 5,
+  "total": 6,
+  "items": [
+    {
+      "name": "arithmetic",
+      "passed": true,
+      "format_passed": true
+    },
+    {
+      "name": "aggregation",
+      "passed": true,
+      "format_passed": true
+    },
+    {
+      "name": "japanese-extraction",
+      "passed": true,
+      "format_passed": false
+    },
+    {
+      "name": "latest-state",
+      "passed": true,
+      "format_passed": true
+    },
+    {
+      "name": "filter-sort",
+      "passed": true,
+      "format_passed": true
+    },
+    {
+      "name": "python-function",
+      "passed": true,
+      "format_passed": true
+    }
+  ],
+  "scope": "Six short functional checks; no claim of long-form or logit parity."
+}

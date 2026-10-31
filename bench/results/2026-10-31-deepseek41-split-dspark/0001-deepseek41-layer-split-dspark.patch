@@ -1,0 +1,594 @@
+--- a/include/strata/core/glm_model.hpp
++++ b/include/strata/core/glm_model.hpp
+@@ -667,6 +667,13 @@
+     /// the pending token -> 5 drafts and their confidences (host; waits for the device).  dspark_upload: the expert
+     /// cache's copies the last draft planned - after the window is queued, so they run under it.
+     bool dspark_ready() const { return dsp_ != nullptr || q35_mtp_on(); }
++    /// The part that carries the drafter: a split's last one (the capture layers and the embedding rows are there, so a
++    /// draft's features stay local); this model when it is whole.
++    Glm5Model& drafter() {
++        Glm5Model* m = this;
++        while (m->split_next_ != nullptr) m = m->split_next_.get();
++        return *m;
++    }
+     bool dspark_draft(int32_t y, int32_t* drafts, float* conf, std::string& err);
+     void dspark_upload();
+     void dspark_report() const;
+@@ -698,6 +705,8 @@
+     // a long deepseek41 prompt's skip (prefill_run): the chunks before the cut stop at this layer - its attention (its
+     // compressed KV and index keys, which the layers after it read) and no FFN, no layer after it (-1: every layer)
+     int pf_kv_cut_ = -1;
++    int pf_skip_yl_ = -1;            // deepseek41's prompt skip: the layer the rows before the cut stop at
++    int64_t pf_skip_cut_ = 0;        // ... and the row the cut starts at (0: no cut)
+     // deepseek41's prompt path: the row's own top-k selection and candidate mask (fast_dsv41_attn reads and writes
+     // these instead of the token path's ds_sel / v41_keep - the prompt runs a layer over every row before the next
+     // layer, and a layer that is no index source reads the selection the last index source made for the same row)
+--- a/src/core/dspark.cu
++++ b/src/core/dspark.cu
+@@ -158,6 +158,14 @@
+     return (uint16_t) ((u + 0x7fffu + ((u >> 16) & 1u)) >> 16);
+ }
+ 
++// (a split: the head reads the noise token's embedding row at load, the last part takes it - the head is the only
++// part that maps the token_embd shard)
++std::vector<float> g_noise_emb;
++// (a split: the head's copy of the whole embedding table - the last part maps no token_embd shard, and a draft's
++// tokens want arbitrary rows)
++std::vector<uint8_t> g_emb_rows;
++int g_emb_type = -1, g_emb_row = 0;
++
+ // the feature slot (0..2) of target layer il's output, -1 when it is none
+ int cap_slot(const DSparkState* D, int il) {
+     for (int k = 0; k < 3; ++k)
+@@ -184,8 +192,56 @@
+         dspark_destroy();
+         return true;   // the target runs on without the drafter
+     };
+-    if (!g.dsv4() || n_parts_ != 1 || l0_ != 0 || l1_ != g.n_layers || mtp_il_ >= 0)
+-        return refuse("DeepSeek V4 / V4.1 Flash on one device only (no split, no MTP)");
++    const bool dsp_dbg = getenv("STRATA_GLM_DBG_DSPARK") != nullptr;
++    const auto dbg = [&](const char* what) {
++        if (dsp_dbg) std::fprintf(stderr, "DBG dspark load: %s (l0 %d l1 %d dev %d n_parts %d)\n", what, l0_, l1_, dev_, n_parts_);
++    };
++    dbg("entered");
++    if (n_parts_ > 1 && l0_ == 0) {
++        // the head: no drafter here, but the last part needs the noise token's row (only this part maps token_embd)
++        try {
++            strata::GgufFile DG(path);
++            const strata::MetaValue* v = DG.get(DG.get("general.architecture") != nullptr &&
++                                                       DG.get("general.architecture")->s == "deepseek41-dflash-draft"
++                                                   ? "deepseek41-dflash-draft.dflash.mask_token_id"
++                                                   : "deepseek4.dspark.noise_token_id");
++            const int soft = v != nullptr && v->is_num() ? (int) v->num() : -1;
++            const ggml_type_traits* tth = ggml_get_type_traits((ggml_type) pack_emb_type_);
++            if (soft >= 0 && soft < g.n_vocab && tth != nullptr && tth->to_float != nullptr &&
++                pack_emb_src_ != nullptr) {
++                g_noise_emb.assign((size_t) g.n_embd, 0.0f);
++                tth->to_float(pack_emb_src_ + (size_t) soft * ggml_row_size((ggml_type) pack_emb_type_, g.n_embd),
++                              g_noise_emb.data(), g.n_embd);
++                std::fprintf(stderr, "dspark: CUDA%d passes the noise token %d's embedding (%.1f KB) to the last part\n",
++                             dev_, soft, (double) g_noise_emb.size() * 4 / 1024.0);
++            }
++            if (tth != nullptr && tth->to_float != nullptr && pack_emb_src_ != nullptr) {
++                // the whole table: a draft's tokens are the drafter's choice, so every row may be read
++                const size_t rb = ggml_row_size((ggml_type) pack_emb_type_, g.n_embd);
++                g_emb_rows.assign(pack_emb_src_, pack_emb_src_ + rb * (size_t) g.n_vocab);
++                g_emb_type = pack_emb_type_;
++                g_emb_row = (int) rb;
++                std::fprintf(stderr, "dspark: CUDA%d passes the embedding table (%.0f MB, %d rows of %d B) to the "
++                                     "last part\n", dev_, (double) g_emb_rows.size() / 1048576.0, g.n_vocab, g_emb_row);
++            }
++            else if (dsp_dbg) std::fprintf(stderr, "DBG dspark: the head's noise row not passed (noise %d, emb %p)\n", soft, (void*) pack_emb_src_);
++        } catch (const std::exception& ex) {
++            if (dsp_dbg) std::fprintf(stderr, "DBG dspark: the head's noise row read failed: %s\n", ex.what());
++        }
++        return true;
++    }
++    // one device, or a split's last part: the capture layers and the embedding rows are there, so a draft's features
++    // stay local.  The other parts pass silently.
++    if (n_parts_ > 1 ? !(l1_ == g.n_layers && split_next_ == nullptr && l0_ > 0) : (l0_ != 0 || l1_ != g.n_layers))
++        return true;
++    if (n_parts_ > 1) {
++        if (g_emb_rows.empty()) return refuse("the embedding table (the head did not pass it)");
++        pack_emb_src_ = g_emb_rows.data();   // (this part maps no token_embd shard; the head's copy serves the rows)
++        pack_emb_type_ = g_emb_type;
++    }
++    dbg("passes the device guard");
++    if (!g.dsv4() || mtp_il_ >= 0)
++        return refuse("DeepSeek V4 / V4.1 Flash only (and no MTP)");
+     if (g.v41 ? (g.n_embd > 5120 || g.n_embd % 256 != 0 || g.head_dim != 512)
+               : (g.n_layers <= kL0 + 2 || g.n_embd > 4096 || g.head_dim != 512 || g.n_expert > 512 || g.n_exp_used > 8))
+         return refuse("the target's geometry (n_layers " + std::to_string(g.n_layers) + ", n_embd " +
+@@ -270,6 +326,7 @@
+             return refuse("the drafter's geometry (experts " + std::to_string(D->ne) + " top-" + std::to_string(D->k) +
+                           ", ff " + std::to_string(D->ff) + ", q_lora " + std::to_string(D->ql) + ")");
+     }
++    dbg("the drafter's metadata read");
+     if (noise < 0 || noise >= g.n_vocab) return refuse("the noise token id");
+     const int E = g.n_embd, NE = D->ne, K = D->k, FF = D->ff, V = g.n_vocab;
+     const int HD = D->nh * g.head_dim, OL = D->og * D->olr, QL = D->ql, DH = g.head_dim;
+@@ -390,6 +447,7 @@
+         S.ring = (uint16_t*) dev((size_t) kRing * DH * sizeof(uint16_t));
+         S.tab = (unsigned long long*) dev((size_t) NE * sizeof(unsigned long long));
+     }
++    dbg("the stages' weights read");
+     if (!D->v41) {
+         raw("dspark.main_proj.weight", kQ8_0, 3 * E, E, D->main_proj);
+         raw("dspark.markov_w2.weight", kQ8_0, 256, V, D->markov_w2);
+@@ -418,18 +476,24 @@
+         }
+         D->conf_b = f32("dflash.dspark.confidence.bias", {1});
+     }
++    dbg("the dense weights uploaded");
+     if (!ok) return refuse(why.empty() ? "the weights did not upload (VRAM?)" : why);
+     if (!gf::moe_supported(D->etype) || (!D->v41 && !gf::mvn_supported(kQ8_0)))
+         return refuse("the experts' type " + std::to_string(D->etype) + " / the Q8_0 kernels");
+     // the noise token's embedding, once
+     const ggml_type_traits* tt = ggml_get_type_traits((ggml_type) pack_emb_type_);
+-    if (tt == nullptr || tt->to_float == nullptr || pack_emb_src_ == nullptr) return refuse("the target's embedding");
++    if (n_parts_ > 1 ? g_noise_emb.size() != (size_t) E
++                     : (tt == nullptr || tt->to_float == nullptr || pack_emb_src_ == nullptr))
++        return refuse(n_parts_ > 1 ? "the noise token's embedding (the head did not pass it)"
++                                   : "the target's embedding");
+     {
+         std::vector<float> e((size_t) E);
+-        tt->to_float(pack_emb_src_ + (size_t) noise * ggml_row_size((ggml_type) pack_emb_type_, E), e.data(), E);
++        if (n_parts_ > 1) e = g_noise_emb;
++        else tt->to_float(pack_emb_src_ + (size_t) noise * ggml_row_size((ggml_type) pack_emb_type_, E), e.data(), E);
+         D->emb_noise = (float*) dev((size_t) E * sizeof(float));
+         if (ok) ok = cudaMemcpy(D->emb_noise, e.data(), (size_t) E * sizeof(float), cudaMemcpyHostToDevice) == cudaSuccess;
+     }
++    dbg("the noise token's embedding uploaded");
+     // the buffers
+     const auto fb = [&](float*& p, size_t n) { p = (float*) dev(n * sizeof(float)); };
+     const auto bb = [&](void*& p, size_t n) { p = dev(n); };
+@@ -648,6 +712,7 @@
+ }
+ 
+ void Glm5Model::dspark_reset() {
++    for (Glm5Model* m = split_next_.get(); m != nullptr; m = m->split_next_.get()) m->dspark_reset();
+     auto* D = (DSparkState*) dsp_;
+     if (D == nullptr) return;
+     D->ctx_lo = D->ctx_end = pos_;
+@@ -707,6 +772,7 @@
+ void Glm5Model::dspark_settle() {
+     auto* D = (DSparkState*) dsp_;
+     if (D == nullptr || D->win_p0 < 0) return;
++    if (dev_ >= 0) cudaSetDevice(dev_);
+     const int64_t p0 = D->win_p0;
+     const int n = (int) std::max<int64_t>(0, std::min<int64_t>(D->win_T, pos_ - p0));
+     D->win_p0 = -1;
+@@ -714,8 +780,11 @@
+ }
+ 
+ void Glm5Model::dspark_window(int64_t p0, int T) {
++    // a split's drafter rides the last part: the window must reach it, so propagate before this part's own check
++    for (Glm5Model* m = split_next_.get(); m != nullptr; m = m->split_next_.get()) m->dspark_window(p0, T);
+     auto* D = (DSparkState*) dsp_;
+     if (D == nullptr) return;
++    if (dev_ >= 0) cudaSetDevice(dev_);
+     D->win_p0 = p0;
+     D->win_T = T;
+ }
+@@ -724,11 +793,18 @@
+     if (g_.qwen35()) verify_rewind_q35(pos);   // (the delta-net and conv states: not rings - replayed)
+     pos_ = pos;
+     dspark_settle();
++    // a split's drafter rides the last part: its position and its window follow the head's rewind
++    for (Glm5Model* m = split_next_.get(); m != nullptr; m = m->split_next_.get()) {
++        m->pos_ = pos;
++        m->dspark_settle();
++    }
++    if (dev_ >= 0) cudaSetDevice(dev_);
+ }
+ 
+ void Glm5Model::dspark_upload() {
+     auto* D = (DSparkState*) dsp_;
+     if (D == nullptr || D->ups.empty()) return;
++    if (dev_ >= 0) cudaSetDevice(dev_);
+     const int E = g_.n_embd, FF = D->ff;
+     const auto t0 = std::chrono::steady_clock::now();
+     cudaEventSynchronize(D->ev_up);   // (the staging buffers of the last uploads; long done)
+@@ -759,6 +835,7 @@
+     if (dsp_ == nullptr && q35_mtp_on()) return q35_mtp_draft(y, drafts, conf, err);   // (qwen35moe's NextN block)
+     auto* D = (DSparkState*) dsp_;
+     if (D == nullptr) { err = "dspark: not loaded"; return false; }
++    if (dev_ >= 0) cudaSetDevice(dev_);
+     FastState* F = fast_;
+     const Glm5Geometry& g = g_;
+     cudaStream_t s = F->cs;
+--- a/src/core/dsv41_fast_path.cu
++++ b/src/core/dsv41_fast_path.cu
+@@ -329,9 +329,25 @@
+         err = "deepseek41: unresolved weights: " + missing.substr(0, 800);
+         return false;
+     }
+-    if (n_parts_ > 1 || l0_ != 0 || l1_ != g.n_layers) {
+-        err = "deepseek41: layer splits are not implemented";
+-        return false;
++    if (n_parts_ > 1) {
++        // LEAD PATCH (v41 layer-split trial): a part must own every KV/index source its readers use - a boundary
++        // on a source layer keeps each part self-contained (V4.1: ratio-2 sources in 0-19, the ratio-1 source 20).
++        int last_kv = -1, last_idx = -1;
++        for (int il = 0; il < g.n_layers; ++il) {
++            if (g.kv_src[(size_t) il]) last_kv = il;
++            if (g.idx_src[(size_t) il]) last_idx = il;
++            if (il < l0_ || il >= l1_) continue;
++            if (g.ratio(il) != 0 && last_kv < l0_) {
++                err = "deepseek41: layer " + std::to_string(il) + " reads the KV cache of layer " +
++                      std::to_string(last_kv) + " on another part";
++                return false;
++            }
++            if (g.idx_src[(size_t) il] && last_idx < l0_) {
++                err = "deepseek41: layer " + std::to_string(il) + " reads the index cache of layer " +
++                      std::to_string(last_idx) + " on another part";
++                return false;
++            }
++        }
+     }
+     auto* E = new V41Engram();
+     if (!engram_open(pack_dir_, *E, err)) {
+--- a/src/core/dsv4_verify.cu
++++ b/src/core/dsv4_verify.cu
+@@ -170,17 +170,32 @@
+ bool Glm5Model::verify_ready() const {
+     // every part of a split (the window runs part after part): the fast path, no draft block, prefetch or lookahead,
+     // MoE layers; the head's weights on the last
++    const bool dbg = getenv("STRATA_GLM_DBG_VERIFY") != nullptr;   // (why a window is unavailable)
+     for (const Glm5Model* m = this; m != nullptr; m = m->split_next_.get()) {
+         const FastState* F = m->fast_;
+-        if (F == nullptr || !(m->g_.dsv4() || m->g_.qwen35()) || (m->mtp_il_ >= 0 && !m->g_.qwen35()) || F->max_pf > 0 ||
+-            F->n_ahead > 0) return false;
+-        if ((m->g_.v41 || m->g_.qwen35()) && (F->defer || m->split_next_ != nullptr || m != this)) return false;   // (one part, no deferral)
++        const auto no = [&](const char* why) {
++            if (dbg) std::fprintf(stderr, "DBG verify_ready: part [%d,%d) dev %d - %s\n", m->l0_, m->l1_, m->dev_, why);
++            return false;
++        };
++        if (F == nullptr) return no("no fast path");
++        if (!(m->g_.dsv4() || m->g_.qwen35())) return no("not deepseek4/qwen35");
++        if (m->mtp_il_ >= 0 && !m->g_.qwen35()) return no("an MTP block");
++        if (F->max_pf > 0) return no("a prompt path");
++        if (F->n_ahead > 0) return no("lookahead");
++        // (deepseek41: a split is a window too - verify_part_v41 hops the residual pair and the parting layer's pre;
++        //  qwen35moe: one part only, no deferral)
++        if (F->defer) return no("defer");
++        if (m->g_.qwen35() && (m->split_next_ != nullptr || m != this)) return no("qwen35 on a split");
+         for (int il = m->l0_; il < m->l1_; ++il)
+-            if (!F->L[(size_t) il].moe) return false;
++            if (!F->L[(size_t) il].moe) return no("a dense layer");
+     }
+     const Glm5Model* tail = verify_tail();
+     const auto it = tail->ws_map_.find("output.weight");
+-    return it != tail->ws_map_.end() && it->second.type != 0;
++    if (it == tail->ws_map_.end() || it->second.type == 0) {
++        if (dbg) std::fprintf(stderr, "DBG verify_ready: no output.weight on the output part\n");
++        return false;
++    }
++    return true;
+ }
+ 
+ const Glm5Model* Glm5Model::verify_tail() const {
+@@ -216,8 +231,9 @@
+     ok = ok && cudaHostGetDevicePointer((void**) &V->tok_in_d, V->tok_in_h, 0) == cudaSuccess;
+     ok = ok && cudaHostAlloc((void**) &V->emb_h, (size_t) TM * E * sizeof(float), cudaHostAllocDefault) == cudaSuccess;
+     ok = ok && cudaEventCreateWithFlags(&V->done, cudaEventDisableTiming) == cudaSuccess;
+-    if (split_next_)
+-        ok = ok && cudaHostAlloc((void**) &V->hop_h, (size_t) TM * g.hc * E * sizeof(float), cudaHostAllocDefault) ==
++    if (split_next_)   // (deepseek41: the residual pair's hand-over, then the parting layer's 4-float pre)
++        ok = ok && cudaHostAlloc((void**) &V->hop_h, (size_t) TM * (g.hc * E + (g.v41 ? 4 : 0)) * sizeof(float),
++                                 cudaHostAllocDefault) ==
+                        cudaSuccess &&
+              cudaEventCreateWithFlags(&V->ev_hop, cudaEventDisableTiming) == cudaSuccess;
+     V->hpart_n = (size_t) (4 * E / 512) * 36 + 64;
+@@ -924,7 +940,15 @@
+         for (int t = 0; t < T; ++t)
+             cudaMemcpyAsync(V->v41_pre + (size_t) t * 8 + 4, onehot, sizeof(onehot), cudaMemcpyHostToDevice, s);
+         wt_lap(wt_pre);
+-        if (!dsv41_engram_window(toks.data(), p0, T, err)) return false;
++        // (a split: every part that holds an Engram layer reads its columns' rows into its own staged block)
++        for (Glm5Model* m = this; m != nullptr; m = m->split_next_.get()) {
++            bool eng = false;
++            for (int il = m->l0_; il < m->l1_; ++il) eng = eng || m->fast_->L[(size_t) il].eng >= 0;
++            if (!eng) continue;
++            cudaSetDevice(m->dev_);
++            if (!m->dsv41_engram_window(toks.data(), p0, T, err)) return false;
++        }
++        cudaSetDevice(dev_);
+         wt_lap(wt_eng);
+     }
+     if (gp) {
+@@ -1290,6 +1314,32 @@
+             V->bg_after[t] = false;
+             F->bg_drain(s, F->bg_pace);
+         }
++    }
++    // the last layer's write half; a part before the last: the columns' residual pair and the parting layer's
++    // FFN-side pre to the next part (its first read collapses with that pre, as the token path's split hop)
++    if (split_next_ != nullptr) {
++        Glm5Model* B = split_next_.get();
++        auto* VB = (VerifyBuf*) B->vb_;
++        if (V->hop_h == nullptr || VB->v41_pre == nullptr) { err = "deepseek41 verify: the split's hop buffers"; return false; }
++        const size_t HS = HCE + 4;   // a column: its residual pair, then the parting layer's 4-float pre
++        for (int t = 0; t < T; ++t) {
++            gf::hc_post(V->ffn + (size_t) t * E, Rc[(size_t) t], V->post + (size_t) t * 8, V->comb + (size_t) t * 16,
++                        g.n_embd, Ro[(size_t) t], s);
++            cudaMemcpyAsync(V->hop_h + (size_t) t * HS, Ro[(size_t) t], HCE * sizeof(float), cudaMemcpyDeviceToHost, s);
++            cudaMemcpyAsync(V->hop_h + (size_t) t * HS + HCE, V->v41_pre + (size_t) t * 8 + 4, 4 * sizeof(float),
++                            cudaMemcpyDeviceToHost, s);
++        }
++        cudaEventRecord(V->ev_hop, s);
++        cudaSetDevice(B->dev_);
++        cudaStream_t sb = B->fast_->cs;
++        cudaStreamWaitEvent(sb, V->ev_hop, 0);
++        for (int t = 0; t < T; ++t) {
++            cudaMemcpyAsync(VB->R + (size_t) t * 2 * HCE, V->hop_h + (size_t) t * HS, HCE * sizeof(float),
++                            cudaMemcpyHostToDevice, sb);
++            cudaMemcpyAsync(VB->v41_pre + (size_t) t * 8 + 4, V->hop_h + (size_t) t * HS + HCE, 4 * sizeof(float),
++                            cudaMemcpyHostToDevice, sb);
++        }
++        return true;
+     }
+     const auto nw = w_.find("output_norm.weight");
+     if (nw == w_.end()) { err = "deepseek41 verify: output_norm.weight"; return false; }
+--- a/src/core/glm_prefill.cu
++++ b/src/core/glm_prefill.cu
+@@ -494,6 +494,7 @@
+     float* emb_h = nullptr;          // T x n_embd
+     int* toks_d = nullptr;           // deepseek4: the chunk's token ids on the device (hash routing)
+     float* hop_h = nullptr;          // 2 x T x hc x n_embd: the split's hand-over (first half), double-buffered
++    float* hop_h2 = nullptr;         // 2 x T x hc: deepseek41's mHC pre of the parting layer (the hop's other half)
+     int* h_counts = nullptr;
+     int* h_base = nullptr;
+     int* h_bounds = nullptr;
+@@ -609,8 +610,12 @@
+     S->emb_h = nullptr;
+     if (hop) cudaFreeHost(S->hop_h);
+     S->hop_h = nullptr;
++    if (S->hop_h2) cudaFreeHost(S->hop_h2);
++    S->hop_h2 = nullptr;
+     if (cudaHostAlloc((void**) &S->emb_h, (size_t) T * E * sizeof(float), cudaHostAllocDefault) != cudaSuccess ||
+         (hop && cudaHostAlloc((void**) &S->hop_h, (size_t) 2 * T * 4 * E * sizeof(float), cudaHostAllocDefault) !=
++                    cudaSuccess) ||
++        (hop && cudaHostAlloc((void**) &S->hop_h2, (size_t) 2 * T * 4 * sizeof(float), cudaHostAllocDefault) !=
+                     cudaSuccess)) {
+         cudaGetLastError();
+         std::fprintf(stderr, "glm prefill: CUDA%d pinned staging did not allocate - token by token\n", dev_);
+@@ -998,6 +1003,8 @@
+         cudaHostAlloc((void**) &S->h_base, 4096 * sizeof(int), cudaHostAllocDefault) != cudaSuccess ||
+         cudaHostAlloc((void**) &S->h_bounds, 8192 * sizeof(int), cudaHostAllocDefault) != cudaSuccess ||
+         (l1_ < g.n_layers && cudaHostAlloc((void**) &S->hop_h, (size_t) 2 * T * 4 * E * sizeof(float),
++                                           cudaHostAllocDefault) != cudaSuccess) ||
++        (l1_ < g.n_layers && cudaHostAlloc((void**) &S->hop_h2, (size_t) 2 * T * 4 * sizeof(float),
+                                            cudaHostAllocDefault) != cudaSuccess)) {
+         cudaGetLastError();
+         std::fprintf(stderr, "glm prefill: CUDA%d pinned staging did not allocate - token by token\n", dev_);
+@@ -1167,7 +1174,7 @@
+     const size_t T = (size_t) S->T, E = (size_t) g_.n_embd;
+     PinnedPrompt p;
+     p.staging = T * E * sizeof(float) + (S->gpin != nullptr ? (size_t) S->nland * S->gstride : 0);
+-    p.hop = (size_t) 2 * T * 4 * E * sizeof(float);
++    p.hop = (size_t) 2 * T * 4 * E * sizeof(float) + (S->hop_h2 != nullptr ? (size_t) 2 * T * 4 * sizeof(float) : 0);
+     return p;
+ }
+ 
+@@ -1563,6 +1570,7 @@
+     if (S->emb_h) cudaFreeHost(S->emb_h);
+     if (S->toks_d) cudaFree(S->toks_d);
+     if (S->hop_h) cudaFreeHost(S->hop_h);
++    if (S->hop_h2) cudaFreeHost(S->hop_h2);
+     if (S->h_counts) cudaFreeHost(S->h_counts);
+     if (S->h_base) cudaFreeHost(S->h_base);
+     if (S->h_bounds) cudaFreeHost(S->h_bounds);
+@@ -2582,11 +2590,19 @@
+ 
+     S->mark("start", s);
+     if (g.v41) {   // the chunk's Engram row numbers (the n-gram history advances) and layer 0's one-hot pre
+-        if (S->toks_h.size() != (size_t) T) { err = "glm prefill: deepseek41 has no host token ids"; return false; }
+-        if (!dsv41_engram_hash(S->toks_h.data(), p0, T, err)) return false;
+-        std::vector<float> oh((size_t) T * 4, 0.0f);
+-        for (int t = 0; t < T; ++t) oh[(size_t) t * 4] = 1.0f;
+-        cudaMemcpyAsync(S->onehot, oh.data(), oh.size() * sizeof(float), cudaMemcpyHostToDevice, s);
++        // (a later part of a split owns neither: its rows' Engram layers ran on part 0, and its first layer's pre
++        // came over the hop)
++        bool has_eng = false;
++        for (int il = l0_; il < l1_ && !has_eng; ++il) has_eng = F->L[(size_t) il].eng >= 0;
++        if (l0_ == 0 || has_eng) {
++            if (S->toks_h.size() != (size_t) T) { err = "glm prefill: deepseek41 has no host token ids"; return false; }
++            if (!dsv41_engram_hash(S->toks_h.data(), p0, T, err)) return false;
++        }
++        if (l0_ == 0) {
++            std::vector<float> oh((size_t) T * 4, 0.0f);
++            for (int t = 0; t < T; ++t) oh[(size_t) t * 4] = 1.0f;
++            cudaMemcpyAsync(S->onehot, oh.data(), oh.size() * sizeof(float), cudaMemcpyHostToDevice, s);
++        }
+     }
+     prestage(next_moe(l0_));   // (the dense layers before the first MoE one run meanwhile)
+     for (auto& t : S->tr) t.on = false;
+@@ -2609,7 +2625,21 @@
+                 S->mark("engram", s);
+             }
+             hc_read(blk, Ly.hc_attn_fn, Ly.hc_attn_scale, Ly.hc_attn_base, Ly.attn_norm,
+-                    il == l0_ ? S->onehot : S->pre2, S->pre);
++                    il == l0_ && l0_ == 0 ? S->onehot : S->pre2, S->pre);
++            if (il == l0_ && l0_ != 0 && getenv("STRATA_GLM_DBG_HOP")) {
++                cudaStreamSynchronize(s);
++                long bad = 0; int shown = 0;
++                std::vector<float> row(E);
++                for (int r = 0; r < T; ++r) {
++                    cudaMemcpy(row.data(), S->x + (size_t) r * E, 4 * sizeof(float), cudaMemcpyDeviceToHost);
++                    bool okr = true;
++                    for (int k = 0; k < 4; ++k) if (!std::isfinite(row[k])) okr = false;
++                    if (!okr) { ++bad; if (shown < 4) { std::fprintf(stderr, "DBG part[%d) layer %d row %d x= %g %g %g %g\n", l0_, il, r, row[0], row[1], row[2], row[3]); ++shown; } }
++                }
++                std::fprintf(stderr, "DBG part[%d) layer %d: %ld of %d rows bad x\n", l0_, il, bad, T);
++                cudaMemcpy(row.data(), S->pre2, 4 * sizeof(float), cudaMemcpyDeviceToHost);
++                std::fprintf(stderr, "DBG part[%d) layer %d pre2 row0 = %g %g %g %g\n", l0_, il, row[0], row[1], row[2], row[3]);
++            }
+             if (dsp_ != nullptr && il > l0_) dspark_capture_rows(il - 1, S->R, T, s);   // DSpark's features
+         } else if (g.q4x) {
+             // qwen4exp: the last FFN combined (with its inject) and the attention's mix; layer 1 first adds the PLE
+@@ -4212,13 +4242,15 @@
+     int yl = -1;
+     int64_t cut = 0;
+     static const bool skip_on = [] { const char* v = getenv("STRATA_GLM_PROMPT_SKIP"); return v == nullptr || std::atoi(v) != 0; }();
+-    if (skip_on && g.v41 && split_next_ == nullptr && l0_ == 0 && l1_ == g.n_layers && mtp_il_ < 0) {
++    if (skip_on && g.v41 && l0_ == 0 && (split_next_ != nullptr || l1_ == g.n_layers) && mtp_il_ < 0) {
+         for (int il = 0; il < g.n_layers && yl < 0; ++il)
+             if (g.ratio(il) == 1) yl = il;
+         bool ok = yl > 0 && g.kv_src[(size_t) yl];
+         for (int il = yl + 1; ok && il < g.n_layers; ++il) ok = g.ratio(il) == 1 && !g.kv_src[(size_t) il];
+         const int64_t keep = (int64_t) (g.n_layers - yl) * (g.n_swa - 1) + g.n_swa;
+         if (ok && n - keep >= 1024) cut = n - keep;
++        pf_skip_yl_ = yl;
++        pf_skip_cut_ = cut;
+     }
+     // the chunks' starts (every Tc rows; with a cut, the chunks before it end at it)
+     std::vector<int64_t> cs;
+@@ -4300,16 +4332,36 @@
+                 PrefillState* SP = prev->pf_;
+                 const size_t hop = (size_t) T * 4 * E * sizeof(float);
+                 cudaSetDevice(prev->dev_);
++                const size_t hop2 = (size_t) T * 4 * sizeof(float);
++                const bool hop2_ok = SP->hop_h2 != nullptr;   // (the sender's slots: the last part has no hop_h2 of its own)
+                 cudaMemcpyAsync(SP->hop_h, SP->R, hop, cudaMemcpyDeviceToHost, prev->fast_->cs);
++                if (hop2_ok) cudaMemcpyAsync(SP->hop_h2, SP->pre2, hop2, cudaMemcpyDeviceToHost, prev->fast_->cs);
+                 cudaEventRecord(SP->ev_hop, prev->fast_->cs);
++                if (getenv("STRATA_GLM_DBG_HOP")) {
++                    cudaStreamSynchronize(prev->fast_->cs);
++                    long nr = 0, np = 0; int firstrow = -1;
++                    for (size_t k = 0; k < hop / sizeof(float); ++k)
++                        if (!std::isfinite(SP->hop_h[k])) { ++nr; if (firstrow < 0) firstrow = (int) (k / E); }
++                    for (size_t k = 0; k < hop2 / sizeof(float); ++k)
++                        if (!std::isfinite(SP->hop_h2[k])) ++np;
++                    std::fprintf(stderr, "DBG hop out part[%d,%d) T=%d: R bad=%ld firstrow=%d pre2 bad=%ld\n",
++                                 prev->l0_, prev->l1_, T, nr, firstrow, np);
++                }
+                 cudaSetDevice(m->dev_);
+                 cudaStreamWaitEvent(m->fast_->cs, SP->ev_hop, 0);
+                 cudaMemcpyAsync(m->pf_->R, SP->hop_h, hop, cudaMemcpyHostToDevice, m->fast_->cs);
++                if (hop2_ok) cudaMemcpyAsync(m->pf_->pre2, SP->hop_h2, hop2, cudaMemcpyHostToDevice, m->fast_->cs);
+                 m->pos_ = p0;
+                 toks_to(m, c);
++                if (g.v41)
++                    m->pf_->toks_h.assign(tokens.begin() + cs[(size_t) c], tokens.begin() + cs[(size_t) c] + T);
++                m->pf_kv_cut_ = (pf_skip_cut_ > 0 && pf_skip_yl_ >= m->l0_ && pf_skip_yl_ < m->l1_ &&
++                                 cs[(size_t) c + 1] <= pf_skip_cut_) ? pf_skip_yl_ : -1;
+                 std::vector<int32_t> nx;
+                 if (m->mtp_il_ >= 0) next_of(c, nx);
+-                if (!m->prefill_half(p0, T, err, nx.empty() ? nullptr : nx.data())) return false;
++                const bool m_ok = m->prefill_half(p0, T, err, nx.empty() ? nullptr : nx.data());
++                m->pf_kv_cut_ = -1;
++                if (!m_ok) return false;
+                 prev = m;
+             }
+             pos_ = p0 + T;
+@@ -4331,6 +4383,7 @@
+         bool stop = false;
+         std::string stage_err;
+         const size_t slot = (size_t) Tc * 4 * E;
++        const size_t slot2 = (size_t) Tc * 4;
+         const auto fail = [&](std::string e) {
+             std::lock_guard<std::mutex> lk(mu);
+             if (stage_err.empty()) stage_err = std::move(e);
+@@ -4347,6 +4400,9 @@
+             }
+             cudaMemcpyAsync(m->pf_->hop_h + (size_t) (c & 1) * slot, m->pf_->R, (size_t) T * 4 * E * sizeof(float),
+                             cudaMemcpyDeviceToHost, m->fast_->cs);
++            if (m->pf_->hop_h2 != nullptr)
++                cudaMemcpyAsync(m->pf_->hop_h2 + (size_t) (c & 1) * slot2, m->pf_->pre2, (size_t) T * 4 * sizeof(float),
++                                cudaMemcpyDeviceToHost, m->fast_->cs);
+             std::string e;
+             if (!glmfast::cuda_ok(cudaStreamSynchronize(m->fast_->cs), "glm prompt hop out", e)) {
+                 fail(e);
+@@ -4375,6 +4431,9 @@
+                     const int64_t p0 = pos_start + cs[(size_t) c];
+                     cudaMemcpyAsync(m->pf_->R, up->pf_->hop_h + (size_t) (c & 1) * slot,
+                                     (size_t) T * 4 * E * sizeof(float), cudaMemcpyHostToDevice, m->fast_->cs);
++                    if (up->pf_->hop_h2 != nullptr)   // (the earlier part's slots)
++                        cudaMemcpyAsync(m->pf_->pre2, up->pf_->hop_h2 + (size_t) (c & 1) * slot2,
++                                        (size_t) T * 4 * sizeof(float), cudaMemcpyHostToDevice, m->fast_->cs);
+                     std::string e2;
+                     if (!glmfast::cuda_ok(cudaStreamSynchronize(m->fast_->cs), "glm prompt hop in", e2)) {
+                         fail(e2);
+@@ -4387,9 +4446,15 @@
+                     cv.notify_all();
+                     m->pos_ = p0;
+                     toks_to(m, c);
++                    if (g.v41)
++                        m->pf_->toks_h.assign(tokens.begin() + cs[(size_t) c], tokens.begin() + cs[(size_t) c] + T);
++                    m->pf_kv_cut_ = (pf_skip_cut_ > 0 && pf_skip_yl_ >= m->l0_ && pf_skip_yl_ < m->l1_ &&
++                                     cs[(size_t) c + 1] <= pf_skip_cut_) ? pf_skip_yl_ : -1;
+                     std::vector<int32_t> nx;
+                     if (m->mtp_il_ >= 0) next_of(c, nx);
+-                    if (!m->prefill_half(p0, T, e2, nx.empty() ? nullptr : nx.data())) {
++                    const bool half_ok = m->prefill_half(p0, T, e2, nx.empty() ? nullptr : nx.data());
++                    m->pf_kv_cut_ = -1;
++                    if (!half_ok) {
+                         fail(e2.empty() ? "glm prefill: part " + std::to_string(k) + " failed" : e2);
+                         return;
+                     }
+--- a/src/program/generate.cpp
++++ b/src/program/generate.cpp
+@@ -2012,6 +2012,10 @@
+             }
+             return produced < max_new;
+         };
++        if (getenv("STRATA_GLM_DBG_SPEC") != nullptr)   // (which decode a request takes)
++            std::fprintf(stderr, "DBG spec gate: finish %s req_spec %d spec_k %d dspark %d adapt %d fast %d vready %d sready %d\n",
++                         finish, (int) req_spec, spec_k, (int) model.drafter().dspark_ready(), (int) spec_adapt,
++                         (int) model.fast(), (int) model.verify_ready(), (int) model.spec_ready());
+         if (std::strcmp(finish, "cancel") != 0 && req_spec && model.fast() && model.spec_ready()) {
+             // the pipelined speculative decode: the two halves of the split work on consecutive tokens, the head
+             // running the NextN block's draft (same tokens as the loop below)
+@@ -2020,7 +2024,8 @@
+                 std::printf("ERR %s\n", err.c_str());
+                 return 1;
+             }
+-        } else if (req_spec && spec_k > 0 && (model.dspark_ready() || spec_adapt) && model.fast() && model.verify_ready()) {
++        } else if (req_spec && spec_k > 0 && (model.drafter().dspark_ready() || spec_adapt) && model.fast() && model.verify_ready()) {
++            auto& dmodel = model.drafter();   // (a split's drafter rides the last part: its calls, its device)
+             // DSpark's speculative decode (STRATA_DS4_DSPARK=<the drafter GGUF>): after each token the drafter
+             // proposes the next 5 with a confidence each; the leading ones at or above STRATA_DS4_DSPARK_THR (default
+             // 0.6; ds4's 0.7: swe-bench 61.3 against 61.9 tok/s, 0.8 59.8) go through a verify window behind the token, compared and kept as the n-gram decode's below
+@@ -2192,8 +2197,8 @@
+                 };
+                 came.clear();
+                 const auto td = std::chrono::steady_clock::now();
+-                if (!rep && room > 0 && model.dspark_ready()) {
+-                    if (!model.dspark_draft(tok, d, c, err)) {
++                if (!rep && room > 0 && dmodel.dspark_ready()) {
++                    if (!dmodel.dspark_draft(tok, d, c, err)) {
+                         std::printf("ERR %s\n", err.c_str());
+                         return 1;
+                     }
+@@ -2226,7 +2231,7 @@
+                 const auto tw = std::chrono::steady_clock::now();
+                 if (k == 0) {
+                     ++n_one;
+-                    model.dspark_upload();
++                    dmodel.dspark_upload();
+                     if (!model.forward({(int32_t) tok}, lg, err)) {
+                         std::printf("ERR %s\n", err.c_str());
+                         return 1;
+@@ -2252,7 +2257,7 @@
+                     std::printf("ERR %s\n", err.c_str());
+                     return 1;
+                 }
+-                model.dspark_upload();   // (the expert cache's copies under the window)
++                dmodel.dspark_upload();   // (the expert cache's copies under the window)
+                 model.spec_steps_ += (uint64_t) k;
+                 ++spec_rounds;
+                 ++n_win;
+--- a/tools/env_undocumented.txt
++++ b/tools/env_undocumented.txt
+@@ -54,6 +54,10 @@
+ STRATA_GLM_CPU_SHARED  # src/core/glm_fast_path.cu
+ STRATA_GLM_CPU_SPLIT  # src/core/glm_fast_path.cu
+ STRATA_GLM_CPU_WAIT_BLOCKS  # src/kernels/cuda/glm_fast.cu
++STRATA_GLM_DBG_DSPARK  # src/core/dspark.cu
++STRATA_GLM_DBG_HOP  # src/core/glm_prefill.cu
++STRATA_GLM_DBG_SPEC  # src/program/generate.cpp
++STRATA_GLM_DBG_VERIFY  # src/core/dsv4_verify.cu
+ STRATA_GLM_DEMOTE_TIES  # src/core/glm_fast_path.cu
+ STRATA_GLM_DEV1  # src/core/glm_model.cu
+ STRATA_GLM_DEVS  # src/core/glm_model.cu
