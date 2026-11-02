@@ -1,0 +1,200 @@
+{
+  "version": "1.3.95",
+  "upstream_commit": "e8d4847063018769cea1ea2ff9ba59f4966f42a4",
+  "engine_sha256": "e47c943e7f57db9c6acf1576c02e9bc1cc580ecc3e50815e515c110741f15842",
+  "adapter_sha256": "c2c26136fe086b4a1641e4c70878baa0eb8508fa2bbebc835cad54b3e76390ff",
+  "aggregate": {
+    "off": {
+      "prefill_tps": {
+        "median": 2974.0545445597027,
+        "min": 2940.2052975378656,
+        "max": 3029.081698681802,
+        "values": [
+          3029.081698681802,
+          2992.948741368602,
+          2955.160347750803,
+          2940.2052975378656
+        ]
+      },
+      "decode_tps": {
+        "median": 92.30745614386979,
+        "min": 90.01564725118234,
+        "max": 93.25835021971267,
+        "values": [
+          90.01564725118234,
+          91.69506019726974,
+          93.25835021971267,
+          92.91985209046982
+        ]
+      },
+      "ttft_s": {
+        "median": 5.510970784496749,
+        "min": 5.410522007005056,
+        "max": 5.574054141994566,
+        "values": [
+          5.410522007005056,
+          5.475878516997909,
+          5.5460630519955885,
+          5.574054141994566
+        ]
+      },
+      "wall_s": {
+        "median": 27.71228768049332,
+        "min": 27.506173422007123,
+        "max": 28.16176684500533,
+        "values": [
+          28.16176684500533,
+          27.8103691849974,
+          27.506173422007123,
+          27.61420617598924
+        ]
+      }
+    },
+    "on": {
+      "prefill_tps": {
+        "median": 2706.021533040024,
+        "min": 2702.3817378109125,
+        "max": 2720.7811617788702,
+        "values": [
+          2702.3817378109125,
+          2708.457316669973,
+          2720.7811617788702,
+          2703.5857494100756
+        ]
+      },
+      "decode_tps": {
+        "median": 102.38321099386525,
+        "min": 97.87663147632179,
+        "max": 103.67677954003554,
+        "values": [
+          101.70787789095208,
+          103.0585440967784,
+          97.87663147632179,
+          103.67677954003554
+        ]
+      },
+      "ttft_s": {
+        "median": 6.109174638506374,
+        "min": 6.073612712993054,
+        "max": 6.176052852999419,
+        "values": [
+          6.176052852999419,
+          6.073612712993054,
+          6.121194056991953,
+          6.097155220020795
+        ]
+      },
+      "wall_s": {
+        "median": 26.061501502495958,
+        "min": 25.815169928013347,
+        "max": 26.94751969500794,
+        "values": [
+          26.200355612993008,
+          25.922647391998908,
+          26.94751969500794,
+          25.815169928013347
+        ]
+      }
+    }
+  },
+  "changes_percent": {
+    "prefill_tps": -9.012377127042893,
+    "decode_tps": 10.915429013980681,
+    "ttft_s": 10.854781805275927,
+    "wall_s": -5.956874427077164
+  },
+  "cpu_checks": [
+    {
+      "file": "cpu-check-summary.json",
+      "checked_columns_last_report": 20484,
+      "worst_helper_vs_cpu": 0.0563,
+      "rms_helper_vs_cpu": 0.000834,
+      "float_reference_columns": 81,
+      "helper_rms_to_float": 0.0125,
+      "helper_max_to_float": 0.0268,
+      "cpu_rms_to_float": 0.0208,
+      "cpu_max_to_float": 0.0315,
+      "last_check_lines": [
+        "expert helper check: 20484 window columns, max |diff| / max |ref| 0.0563, rms helper vs cpu 0.000834",
+        "expert helper check: exact float reference, 81 columns: helper rms 0.0125 max 0.0268 | cpu lane rms 0.0208 max 0.0315"
+      ],
+      "request_end": [
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 20300 experts 44112 upload_bytes 29920296960 prepare_ms 1040.550 launch_ms 193.557 wait_ms 167.660 fallbacks 0 window_calls 4483 columns 19669"
+      ]
+    },
+    {
+      "file": "cpu-check-repeat-summary.json",
+      "checked_columns_last_report": 20485,
+      "worst_helper_vs_cpu": 0.0467,
+      "rms_helper_vs_cpu": 0.000898,
+      "float_reference_columns": 81,
+      "helper_rms_to_float": 0.0128,
+      "helper_max_to_float": 0.0287,
+      "cpu_rms_to_float": 0.021,
+      "cpu_max_to_float": 0.033,
+      "last_check_lines": [
+        "expert helper check: 20485 window columns, max |diff| / max |ref| 0.0467, rms helper vs cpu 0.000898",
+        "expert helper check: exact float reference, 81 columns: helper rms 0.0128 max 0.0287 | cpu lane rms 0.021 max 0.033"
+      ],
+      "request_end": [
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 20197 experts 44299 upload_bytes 29920296960 prepare_ms 1040.284 launch_ms 220.234 wait_ms 158.641 fallbacks 0 window_calls 4492 columns 19714"
+      ]
+    }
+  ],
+  "temperature_maxima_c": {
+    "off-A": {
+      "0": 29.0,
+      "1": 73.0
+    },
+    "on-A": {
+      "0": 45.0,
+      "1": 80.0
+    },
+    "on-B": {
+      "0": 48.0,
+      "1": 80.0
+    },
+    "off-B": {
+      "0": 44.0,
+      "1": 82.0
+    }
+  },
+  "output_comparisons": [
+    {
+      "request": "trial-01",
+      "a": "off-A",
+      "b": "off-B",
+      "same_output_ids": false
+    },
+    {
+      "request": "trial-01",
+      "a": "on-A",
+      "b": "on-B",
+      "same_output_ids": false
+    },
+    {
+      "request": "trial-01",
+      "a": "off-A",
+      "b": "on-A",
+      "same_output_ids": false
+    },
+    {
+      "request": "trial-02",
+      "a": "off-A",
+      "b": "off-B",
+      "same_output_ids": false
+    },
+    {
+      "request": "trial-02",
+      "a": "on-A",
+      "b": "on-B",
+      "same_output_ids": false
+    },
+    {
+      "request": "trial-02",
+      "a": "off-A",
+      "b": "on-A",
+      "same_output_ids": false
+    }
+  ]
+}
