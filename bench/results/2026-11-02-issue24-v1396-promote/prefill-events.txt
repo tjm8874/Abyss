@@ -1,0 +1,611 @@
+[original-off-A / warmup-01]
+PP 4096 16384 1211.7 3380.5 0 0.0
+PP 8192 16384 2237.1 3661.8 0 0.0
+PP 12288 16384 3290.5 3734.4 0 0.0
+PP 13715 16384 3891.6 3524.3 0 0.0
+PP 16383 16384 5973.8 2742.5 0 0.0
+PP 16384 16384 6013.6 2724.5 0 0.0
+STAT tok_s=86.23 ms_tok=11.60 vram_hit=0.9192 ram_fetch=3.994 disk=0.000 promo=3.505 vram_used=6686 vram_slots=6800 ram_used=8667 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.045 miss_ms=0.000 lane=17.197 lane_ms=3.513 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=9.68 w_disk_ms=0.000 w_lane_ms=2.186 spec_acc=1608 spec_offered=1804 spec_rounds=416
+DONE 2048 16384 6013.6 23749.4 length 1608 1804 0 495067 538560 416
+ds4 dspark: thr 0.60: 416 windows (1804 drafted, 1608 accepted = 89%) and 24 single tokens; the repeats' windows 22 (49 drafted, 25 accepted); the drafter's steps 418, drafts kept 0..5: 24 14 27 26 26 301; 53.1 ms a window, 19.7 a single token, 2.85 a draft; 4.65 tokens a step
+glm stat: decode 11.60 ms/tok (86.23 tok/s) | vram hit 91.92% | ram fetches 3.99/tok | disk 0.00 reads/tok in 0.04 waits/tok, 0.00 ms/tok | promotions 3.50/tok | cpu lane 17.20/tok in 3.51 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6686/6800 ram 8667/9272
+
+[original-off-A / trial-01]
+PP 4096 16384 1052.9 3890.4 0 0.0
+PP 8192 16384 2043.5 4008.9 0 0.0
+PP 12288 16384 3065.7 4008.2 0 0.0
+PP 13715 16384 3623.8 3784.7 0 0.0
+PP 16383 16384 5471.7 2994.1 0 0.0
+PP 16384 16384 5501.8 2977.9 0 0.0
+STAT tok_s=90.67 ms_tok=11.03 vram_hit=0.9366 ram_fetch=2.738 disk=0.000 promo=2.515 vram_used=6688 vram_slots=6800 ram_used=8653 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.048 miss_ms=0.000 lane=13.977 lane_ms=2.772 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=10.87 w_disk_ms=0.000 w_lane_ms=2.831 spec_acc=1606 spec_offered=1814 spec_rounds=423
+DONE 2048 16384 5501.9 22586.8 length 1606 1814 0 506870 541200 423
+ds4 dspark: thr 0.60: 423 windows (1814 drafted, 1606 accepted = 89%) and 18 single tokens; the repeats' windows 7 (16 drafted, 0 accepted); the drafter's steps 434, drafts kept 0..5: 18 19 38 29 34 296; 49.7 ms a window, 17.7 a single token, 2.84 a draft; 4.64 tokens a step
+glm stat: decode 11.03 ms/tok (90.67 tok/s) | vram hit 93.66% | ram fetches 2.74/tok | disk 0.00 reads/tok in 0.05 waits/tok, 0.00 ms/tok | promotions 2.52/tok | cpu lane 13.98/tok in 2.77 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6688/6800 ram 8653/9272
+
+[original-off-A / trial-02]
+PP 4096 16384 1033.9 3961.9 0 0.0
+PP 8192 16384 2020.5 4054.5 0 0.0
+PP 12288 16384 3037.6 4045.3 0 0.0
+PP 13715 16384 3571.9 3839.7 0 0.0
+PP 16383 16384 5394.9 3036.7 0 0.0
+PP 16384 16384 5424.5 3020.4 0 0.0
+STAT tok_s=93.56 ms_tok=10.69 vram_hit=0.9393 ram_fetch=2.501 disk=0.000 promo=2.298 vram_used=6689 vram_slots=6800 ram_used=8668 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.048 miss_ms=0.000 lane=13.262 lane_ms=2.660 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=8.54 w_disk_ms=0.000 w_lane_ms=1.880 spec_acc=1624 spec_offered=1799 spec_rounds=405
+DONE 2048 16384 5424.5 21889.8 length 1624 1799 0 501138 533520 405
+ds4 dspark: thr 0.60: 405 windows (1799 drafted, 1624 accepted = 90%) and 19 single tokens; the repeats' windows 7 (19 drafted, 6 accepted); the drafter's steps 417, drafts kept 0..5: 19 14 24 27 28 305; 50.3 ms a window, 17.2 a single token, 2.84 a draft; 4.83 tokens a step
+glm stat: decode 10.69 ms/tok (93.56 tok/s) | vram hit 93.93% | ram fetches 2.50/tok | disk 0.00 reads/tok in 0.05 waits/tok, 0.00 ms/tok | promotions 2.30/tok | cpu lane 13.26/tok in 2.66 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6689/6800 ram 8668/9272
+
+[original-p0-A / warmup-01]
+PP 4096 16384 1215.1 3371.0 0 0.0
+PP 8192 16384 2251.8 3638.0 0 0.0
+PP 12288 16384 3316.0 3705.7 0 0.0
+PP 13715 16384 3919.1 3499.5 0 0.0
+PP 16383 16384 6014.3 2724.0 0 0.0
+PP 16384 16384 6049.4 2708.4 0 0.0
+STAT tok_s=84.70 ms_tok=11.81 vram_hit=0.6479 ram_fetch=1.103 disk=0.000 promo=1.086 vram_used=6687 vram_slots=6800 ram_used=8673 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.004 miss_ms=0.000 lane=93.642 lane_ms=3.416 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=11.79 w_disk_ms=0.000 w_lane_ms=2.787 spec_acc=1588 spec_offered=1836 spec_rounds=438
+DONE 2048 16384 6049.4 24181.0 length 1588 1836 0 356994 551040 438
+ds4 dspark: thr 0.60: 438 windows (1836 drafted, 1588 accepted = 86%) and 22 single tokens; the repeats' windows 46 (115 drafted, 60 accepted); the drafter's steps 414, drafts kept 0..5: 22 17 37 17 26 295; 47.0 ms a window, 18.0 a single token, 2.81 a draft; 4.45 tokens a step
+glm stat: decode 11.81 ms/tok (84.69 tok/s) | vram hit 64.79% | ram fetches 1.10/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 1.09/tok | cpu lane 93.64/tok in 3.42 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6680/6800 ram 8673/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 78587 experts 161462 upload_bytes 29920296960 prepare_ms 1040.272 launch_ms 573.278 wait_ms 1252.389 fallbacks 0 window_calls 17321 columns 77727
+
+[original-p0-A / trial-01]
+PP 4096 16384 1139.0 3596.1 0 0.0
+PP 8192 16384 2221.4 3687.8 0 0.0
+PP 12288 16384 3329.2 3690.9 0 0.0
+PP 13715 16384 3966.6 3457.6 0 0.0
+PP 16383 16384 6012.1 2725.0 0 0.0
+PP 16384 16384 6041.2 2712.0 0 0.0
+STAT tok_s=101.64 ms_tok=9.84 vram_hit=0.6768 ram_fetch=0.374 disk=0.000 promo=0.377 vram_used=6670 vram_slots=6800 ram_used=8690 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.005 miss_ms=0.000 lane=85.298 lane_ms=2.565 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=8.67 w_disk_ms=0.000 w_lane_ms=2.106 spec_acc=1604 spec_offered=1818 spec_rounds=424
+DONE 2048 16384 6041.3 20150.1 length 1604 1818 0 367414 542880 424
+ds4 dspark: thr 0.60: 424 windows (1818 drafted, 1604 accepted = 88%) and 20 single tokens; the repeats' windows 33 (76 drafted, 44 accepted); the drafter's steps 411, drafts kept 0..5: 20 17 22 26 27 299; 43.8 ms a window, 15.5 a single token, 2.83 a draft; 4.61 tokens a step
+glm stat: decode 9.84 ms/tok (101.64 tok/s) | vram hit 67.68% | ram fetches 0.37/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 0.38/tok | cpu lane 85.30/tok in 2.56 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6670/6800 ram 8690/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 155854 experts 320619 upload_bytes 33015582720 prepare_ms 1148.044 launch_ms 1131.461 wait_ms 3227.070 fallbacks 0 window_calls 34115 columns 154204
+
+[original-p0-A / trial-02]
+PP 4096 16384 1137.3 3601.6 0 0.0
+PP 8192 16384 2214.0 3700.1 0 0.0
+PP 12288 16384 3329.9 3690.2 0 0.0
+PP 13715 16384 3973.7 3451.5 0 0.0
+PP 16383 16384 6024.9 2719.2 0 0.0
+PP 16384 16384 6052.0 2707.2 0 0.0
+STAT tok_s=103.32 ms_tok=9.68 vram_hit=0.6911 ram_fetch=0.307 disk=0.000 promo=0.307 vram_used=6643 vram_slots=6800 ram_used=8717 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.002 miss_ms=0.000 lane=80.266 lane_ms=2.423 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=8.65 w_disk_ms=0.000 w_lane_ms=2.200 spec_acc=1619 spec_offered=1798 spec_rounds=411
+DONE 2048 16384 6052.0 19822.4 length 1619 1798 0 369222 534240 411
+ds4 dspark: thr 0.60: 411 windows (1798 drafted, 1619 accepted = 90%) and 17 single tokens; the repeats' windows 5 (11 drafted, 2 accepted); the drafter's steps 423, drafts kept 0..5: 17 24 26 18 33 305; 44.6 ms a window, 15.2 a single token, 2.85 a draft; 4.78 tokens a step
+glm stat: decode 9.68 ms/tok (103.32 tok/s) | vram hit 69.11% | ram fetches 0.31/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.31/tok | cpu lane 80.27/tok in 2.42 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6643/6800 ram 8717/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 231008 experts 472071 upload_bytes 33720975360 prepare_ms 1172.634 launch_ms 1683.089 wait_ms 5316.812 fallbacks 0 window_calls 50356 columns 228677
+
+[original-p2-A / warmup-01]
+PP 4096 16384 1213.6 3375.0 0 0.0
+PP 8192 16384 2249.5 3641.7 0 0.0
+PP 12288 16384 3320.7 3700.4 0 0.0
+PP 13715 16384 3927.2 3492.3 0 0.0
+PP 16383 16384 6039.0 2712.9 0 0.0
+PP 16384 16384 6074.2 2697.3 0 0.0
+STAT tok_s=80.20 ms_tok=12.47 vram_hit=0.9168 ram_fetch=3.677 disk=0.000 promo=3.426 vram_used=6684 vram_slots=6800 ram_used=8674 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.043 miss_ms=0.000 lane=18.195 lane_ms=2.584 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=9.55 w_disk_ms=0.000 w_lane_ms=1.738 spec_acc=1605 spec_offered=1806 spec_rounds=424
+DONE 2048 16384 6074.2 25535.7 length 1605 1806 0 494638 539520 424
+ds4 dspark: thr 0.60: 424 windows (1806 drafted, 1605 accepted = 89%) and 18 single tokens; the repeats' windows 9 (19 drafted, 10 accepted); the drafter's steps 433, drafts kept 0..5: 18 22 39 25 33 296; 51.7 ms a window, 20.3 a single token, 2.84 a draft; 4.63 tokens a step
+glm stat: decode 12.47 ms/tok (80.20 tok/s) | vram hit 91.68% | ram fetches 3.68/tok | disk 0.00 reads/tok in 0.04 waits/tok, 0.00 ms/tok | promotions 3.43/tok | cpu lane 18.20/tok in 2.58 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6680/6800 ram 8677/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 12399 experts 13299 upload_bytes 29920296960 prepare_ms 1040.263 launch_ms 123.947 wait_ms 174.454 fallbacks 0 window_calls 7722 columns 11937
+
+[original-p2-A / trial-01]
+PP 4096 16384 1081.9 3786.0 0 0.0
+PP 8192 16384 2104.7 3892.2 0 0.0
+PP 12288 16384 3158.3 3890.7 0 0.0
+PP 13715 16384 3728.8 3678.1 0 0.0
+PP 16383 16384 5611.0 2919.8 0 0.0
+PP 16384 16384 5643.8 2903.0 0 0.0
+STAT tok_s=91.91 ms_tok=10.88 vram_hit=0.9388 ram_fetch=2.242 disk=0.000 promo=2.134 vram_used=6686 vram_slots=6800 ram_used=8663 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.048 miss_ms=0.000 lane=13.776 lane_ms=1.745 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=9.72 w_disk_ms=0.000 w_lane_ms=1.432 spec_acc=1611 spec_offered=1803 spec_rounds=413
+DONE 2048 16384 5643.8 22282.0 length 1611 1803 0 504457 537360 413
+ds4 dspark: thr 0.60: 413 windows (1803 drafted, 1611 accepted = 89%) and 23 single tokens; the repeats' windows 2 (5 drafted, 0 accepted); the drafter's steps 434, drafts kept 0..5: 23 21 26 33 29 302; 48.7 ms a window, 16.4 a single token, 2.84 a draft; 4.69 tokens a step
+glm stat: decode 10.88 ms/tok (91.91 tok/s) | vram hit 93.88% | ram fetches 2.24/tok | disk 0.00 reads/tok in 0.05 waits/tok, 0.00 ms/tok | promotions 2.13/tok | cpu lane 13.78/tok in 1.74 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6680/6800 ram 8675/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 24435 experts 26036 upload_bytes 45944801280 prepare_ms 1597.931 launch_ms 238.524 wait_ms 435.775 fallbacks 0 window_calls 15096 columns 23268
+
+[original-p2-A / trial-02]
+PP 4096 16384 1054.8 3883.2 0 0.0
+PP 8192 16384 2065.8 3965.6 0 0.0
+PP 12288 16384 3109.2 3952.1 0 0.0
+PP 13715 16384 3645.0 3762.7 0 0.0
+PP 16383 16384 5503.9 2976.6 0 0.0
+PP 16384 16384 5534.2 2960.5 0 0.0
+STAT tok_s=94.05 ms_tok=10.63 vram_hit=0.9389 ram_fetch=2.178 disk=0.000 promo=2.079 vram_used=6688 vram_slots=6800 ram_used=8661 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.047 miss_ms=0.000 lane=13.869 lane_ms=1.803 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=9.30 w_disk_ms=0.000 w_lane_ms=1.401 spec_acc=1610 spec_offered=1809 spec_rounds=422
+DONE 2048 16384 5534.2 21774.7 length 1610 1809 0 506318 539280 422
+ds4 dspark: thr 0.60: 422 windows (1809 drafted, 1610 accepted = 89%) and 16 single tokens; the repeats' windows 37 (85 drafted, 50 accepted); the drafter's steps 401, drafts kept 0..5: 16 11 26 21 37 290; 47.7 ms a window, 16.4 a single token, 2.85 a draft; 4.68 tokens a step
+glm stat: decode 10.63 ms/tok (94.05 tok/s) | vram hit 93.89% | ram fetches 2.18/tok | disk 0.00 reads/tok in 0.05 waits/tok, 0.00 ms/tok | promotions 2.08/tok | cpu lane 13.87/tok in 1.80 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6680/6800 ram 8672/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 36258 experts 38452 upload_bytes 52964628480 prepare_ms 1842.265 launch_ms 359.810 wait_ms 689.861 fallbacks 0 window_calls 22504 columns 34414
+
+[original-p4-A / warmup-01]
+PP 4096 16384 1219.8 3358.0 0 0.0
+PP 8192 16384 2259.6 3625.4 0 0.0
+PP 12288 16384 3327.9 3692.4 0 0.0
+PP 13715 16384 3932.1 3487.9 0 0.0
+PP 16383 16384 6026.9 2718.3 0 0.0
+PP 16384 16384 6063.1 2702.2 0 0.0
+STAT tok_s=81.80 ms_tok=12.22 vram_hit=0.9054 ram_fetch=3.255 disk=0.000 promo=3.061 vram_used=6689 vram_slots=6800 ram_used=8648 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.031 miss_ms=0.000 lane=21.750 lane_ms=2.516 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=10.53 w_disk_ms=0.000 w_lane_ms=1.944 spec_acc=1596 spec_offered=1808 spec_rounds=427
+DONE 2048 16384 6063.1 25036.0 length 1596 1808 0 490884 542160 427
+ds4 dspark: thr 0.60: 427 windows (1808 drafted, 1596 accepted = 88%) and 24 single tokens; the repeats' windows 31 (61 drafted, 28 accepted); the drafter's steps 420, drafts kept 0..5: 24 17 32 19 31 297; 50.1 ms a window, 18.5 a single token, 2.84 a draft; 4.54 tokens a step
+glm stat: decode 12.22 ms/tok (81.80 tok/s) | vram hit 90.54% | ram fetches 3.26/tok | disk 0.00 reads/tok in 0.03 waits/tok, 0.00 ms/tok | promotions 3.06/tok | cpu lane 21.75/tok in 2.52 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6680/6800 ram 8671/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 19067 experts 21869 upload_bytes 29920296960 prepare_ms 1040.291 launch_ms 178.866 wait_ms 284.570 fallbacks 0 window_calls 10222 columns 18390
+
+[original-p4-A / trial-01]
+PP 4096 16384 1072.6 3818.7 0 0.0
+PP 8192 16384 2089.7 3920.2 0 0.0
+PP 12288 16384 3133.9 3921.0 0 0.0
+PP 13715 16384 3689.6 3717.2 0 0.0
+PP 16383 16384 5564.6 2944.1 0 0.0
+PP 16384 16384 5592.9 2929.4 0 0.0
+STAT tok_s=93.97 ms_tok=10.64 vram_hit=0.9358 ram_fetch=1.617 disk=0.000 promo=1.578 vram_used=6690 vram_slots=6800 ram_used=8661 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.026 miss_ms=0.000 lane=15.250 lane_ms=1.567 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=10.41 w_disk_ms=0.000 w_lane_ms=1.560 spec_acc=1613 spec_offered=1812 spec_rounds=414
+DONE 2048 16384 5592.9 21794.8 length 1613 1812 0 504682 539280 414
+ds4 dspark: thr 0.60: 414 windows (1812 drafted, 1613 accepted = 89%) and 21 single tokens; the repeats' windows 2 (5 drafted, 0 accepted); the drafter's steps 433, drafts kept 0..5: 21 20 27 29 34 302; 47.7 ms a window, 15.6 a single token, 2.84 a draft; 4.71 tokens a step
+glm stat: decode 10.64 ms/tok (93.97 tok/s) | vram hit 93.58% | ram fetches 1.62/tok | disk 0.00 reads/tok in 0.03 waits/tok, 0.00 ms/tok | promotions 1.58/tok | cpu lane 15.25/tok in 1.57 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6680/6800 ram 8670/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 35062 experts 39595 upload_bytes 44450058240 prepare_ms 1545.623 launch_ms 328.590 wait_ms 644.856 fallbacks 0 window_calls 19255 columns 33559
+
+[original-p4-A / trial-02]
+PP 4096 16384 1078.4 3798.2 0 0.0
+PP 8192 16384 2117.5 3868.7 0 0.0
+PP 12288 16384 3176.1 3868.9 0 0.0
+PP 13715 16384 3752.7 3654.7 0 0.0
+PP 16383 16384 5648.4 2900.4 0 0.0
+PP 16384 16384 5676.0 2886.5 0 0.0
+STAT tok_s=99.17 ms_tok=10.08 vram_hit=0.9387 ram_fetch=1.407 disk=0.000 promo=1.367 vram_used=6689 vram_slots=6800 ram_used=8667 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.024 miss_ms=0.000 lane=14.407 lane_ms=1.463 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=8.98 w_disk_ms=0.000 w_lane_ms=1.246 spec_acc=1626 spec_offered=1784 spec_rounds=401
+DONE 2048 16384 5676.0 20652.5 length 1626 1784 0 497002 529440 401
+ds4 dspark: thr 0.60: 401 windows (1784 drafted, 1626 accepted = 91%) and 21 single tokens; the repeats' windows 4 (9 drafted, 1 accepted); the drafter's steps 418, drafts kept 0..5: 21 16 22 27 26 306; 47.3 ms a window, 15.7 a single token, 2.86 a draft; 4.85 tokens a step
+glm stat: decode 10.08 ms/tok (99.16 tok/s) | vram hit 93.87% | ram fetches 1.41/tok | disk 0.00 reads/tok in 0.02 waits/tok, 0.00 ms/tok | promotions 1.37/tok | cpu lane 14.41/tok in 1.46 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6680/6800 ram 8671/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 50494 experts 56673 upload_bytes 48956958720 prepare_ms 1702.532 launch_ms 473.033 wait_ms 997.664 fallbacks 0 window_calls 27976 columns 48194
+
+[identical-p4-A / warmup-01]
+PP 4096 16384 1211.8 3380.2 0 0.0
+PP 8192 16384 2250.9 3639.4 0 0.0
+PP 12288 16384 3321.3 3699.7 0 0.0
+PP 13715 16384 3925.3 3494.0 0 0.0
+PP 16383 16384 6035.4 2714.5 0 0.0
+PP 16384 16384 6069.7 2699.3 0 0.0
+STAT tok_s=82.90 ms_tok=12.06 vram_hit=0.9069 ram_fetch=3.150 disk=0.000 promo=2.971 vram_used=6691 vram_slots=6800 ram_used=8659 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.001 disk_waits=0.035 miss_ms=0.001 lane=21.329 lane_ms=2.457 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=9.53 w_disk_ms=0.000 w_lane_ms=1.692 spec_acc=1616 spec_offered=1815 spec_rounds=413
+DONE 2048 16384 6069.8 24705.6 length 1616 1815 0 488835 539040 413
+ds4 dspark: thr 0.60: 413 windows (1815 drafted, 1616 accepted = 89%) and 18 single tokens; the repeats' windows 10 (27 drafted, 13 accepted); the drafter's steps 421, drafts kept 0..5: 18 16 25 30 28 304; 51.1 ms a window, 20.1 a single token, 2.86 a draft; 4.75 tokens a step
+glm stat: decode 12.06 ms/tok (82.90 tok/s) | vram hit 90.69% | ram fetches 3.15/tok | disk 0.00 reads/tok in 0.03 waits/tok, 0.00 ms/tok | promotions 2.97/tok | cpu lane 21.33/tok in 2.46 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6680/6800 ram 8669/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 18580 experts 21275 upload_bytes 29920296960 prepare_ms 1040.313 launch_ms 173.022 wait_ms 268.404 fallbacks 0 window_calls 9988 columns 17972
+
+[identical-p4-A / trial-01]
+PP 4096 16384 1084.5 3776.7 0 0.0
+PP 8192 16384 2116.0 3871.5 0 0.0
+PP 12288 16384 3178.6 3865.9 0 0.0
+PP 13715 16384 3769.0 3638.9 0 0.0
+PP 16383 16384 5680.9 2883.9 0 0.0
+PP 16384 16384 5711.2 2868.7 0 0.0
+STAT tok_s=96.02 ms_tok=10.41 vram_hit=0.9346 ram_fetch=1.563 disk=0.000 promo=1.528 vram_used=6685 vram_slots=6800 ram_used=8672 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.019 miss_ms=0.000 lane=15.431 lane_ms=1.539 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=10.18 w_disk_ms=0.000 w_lane_ms=1.300 spec_acc=1622 spec_offered=1795 spec_rounds=410
+DONE 2048 16384 5711.2 21328.6 length 1622 1795 0 498196 533040 410
+ds4 dspark: thr 0.60: 410 windows (1795 drafted, 1622 accepted = 90%) and 16 single tokens; the repeats' windows 5 (8 drafted, 2 accepted); the drafter's steps 421, drafts kept 0..5: 16 24 25 20 27 309; 47.3 ms a window, 15.9 a single token, 2.86 a draft; 4.81 tokens a step
+glm stat: decode 10.41 ms/tok (96.02 tok/s) | vram hit 93.46% | ram fetches 1.56/tok | disk 0.00 reads/tok in 0.02 waits/tok, 0.00 ms/tok | promotions 1.53/tok | cpu lane 15.43/tok in 1.54 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6680/6800 ram 8675/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 34990 experts 39857 upload_bytes 43557120000 prepare_ms 1514.618 launch_ms 329.559 wait_ms 643.550 fallbacks 0 window_calls 19072 columns 33596
+
+[identical-p4-A / trial-02]
+PP 4096 16384 1067.8 3835.8 0 0.0
+PP 8192 16384 2094.7 3910.9 0 0.0
+PP 12288 16384 3153.3 3896.9 0 0.0
+PP 13715 16384 3708.2 3698.5 0 0.0
+PP 16383 16384 5590.8 2930.4 0 0.0
+PP 16384 16384 5618.7 2916.0 0 0.0
+STAT tok_s=96.42 ms_tok=10.37 vram_hit=0.9400 ram_fetch=1.438 disk=0.000 promo=1.399 vram_used=6682 vram_slots=6800 ram_used=8677 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.022 miss_ms=0.000 lane=14.558 lane_ms=1.491 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=9.48 w_disk_ms=0.000 w_lane_ms=1.244 spec_acc=1605 spec_offered=1836 spec_rounds=429
+DONE 2048 16384 5618.7 21239.7 length 1605 1836 0 513914 546720 429
+ds4 dspark: thr 0.60: 429 windows (1836 drafted, 1605 accepted = 87%) and 13 single tokens; the repeats' windows 33 (87 drafted, 42 accepted); the drafter's steps 409, drafts kept 0..5: 13 18 30 21 27 300; 45.9 ms a window, 15.5 a single token, 2.86 a draft; 4.63 tokens a step
+glm stat: decode 10.37 ms/tok (96.42 tok/s) | vram hit 94.00% | ram fetches 1.44/tok | disk 0.00 reads/tok in 0.02 waits/tok, 0.00 ms/tok | promotions 1.40/tok | cpu lane 14.56/tok in 1.49 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6677/6800 ram 8678/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 50380 experts 56771 upload_bytes 48334325760 prepare_ms 1681.138 launch_ms 468.804 wait_ms 1006.658 fallbacks 0 window_calls 27870 columns 48229
+
+[identical-p2-A / warmup-01]
+PP 4096 16384 1207.4 3392.4 0 0.0
+PP 8192 16384 2248.2 3643.8 0 0.0
+PP 12288 16384 3319.5 3701.8 0 0.0
+PP 13715 16384 3927.4 3492.1 0 0.0
+PP 16383 16384 6029.6 2717.1 0 0.0
+PP 16384 16384 6065.2 2701.3 0 0.0
+STAT tok_s=80.54 ms_tok=12.42 vram_hit=0.9168 ram_fetch=3.691 disk=0.000 promo=3.425 vram_used=6692 vram_slots=6800 ram_used=8658 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.046 miss_ms=0.000 lane=18.258 lane_ms=2.579 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=10.11 w_disk_ms=0.000 w_lane_ms=2.013 spec_acc=1604 spec_offered=1812 spec_rounds=421
+DONE 2048 16384 6065.2 25427.6 length 1604 1812 0 496393 541440 421
+ds4 dspark: thr 0.60: 421 windows (1812 drafted, 1604 accepted = 89%) and 23 single tokens; the repeats' windows 3 (7 drafted, 0 accepted); the drafter's steps 441, drafts kept 0..5: 23 20 36 29 39 294; 51.6 ms a window, 18.3 a single token, 2.83 a draft; 4.61 tokens a step
+glm stat: decode 12.42 ms/tok (80.54 tok/s) | vram hit 91.68% | ram fetches 3.69/tok | disk 0.00 reads/tok in 0.05 waits/tok, 0.00 ms/tok | promotions 3.42/tok | cpu lane 18.26/tok in 2.58 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6680/6800 ram 8668/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 12447 experts 13396 upload_bytes 29920296960 prepare_ms 1040.536 launch_ms 118.568 wait_ms 169.317 fallbacks 0 window_calls 7728 columns 12029
+
+[identical-p2-A / trial-01]
+PP 4096 16384 1070.9 3824.8 0 0.0
+PP 8192 16384 2084.7 3929.6 0 0.0
+PP 12288 16384 3134.7 3920.0 0 0.0
+PP 13715 16384 3693.7 3713.1 0 0.0
+PP 16383 16384 5586.6 2932.6 0 0.0
+PP 16384 16384 5617.8 2916.4 0 0.0
+STAT tok_s=92.52 ms_tok=10.81 vram_hit=0.9401 ram_fetch=2.162 disk=0.000 promo=2.062 vram_used=6686 vram_slots=6800 ram_used=8665 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.042 miss_ms=0.000 lane=13.625 lane_ms=1.795 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=11.17 w_disk_ms=0.000 w_lane_ms=2.093 spec_acc=1593 spec_offered=1798 spec_rounds=436
+DONE 2048 16384 5617.8 22135.4 length 1593 1798 0 508304 540720 436
+ds4 dspark: thr 0.60: 436 windows (1798 drafted, 1593 accepted = 89%) and 19 single tokens; the repeats' windows 54 (115 drafted, 67 accepted); the drafter's steps 401, drafts kept 0..5: 19 19 24 26 27 286; 46.2 ms a window, 16.0 a single token, 2.85 a draft; 4.50 tokens a step
+glm stat: decode 10.81 ms/tok (92.52 tok/s) | vram hit 94.01% | ram fetches 2.16/tok | disk 0.00 reads/tok in 0.04 waits/tok, 0.00 ms/tok | promotions 2.06/tok | cpu lane 13.62/tok in 1.80 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6680/6800 ram 8674/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 23799 experts 25302 upload_bytes 45767301120 prepare_ms 1592.084 launch_ms 249.461 wait_ms 418.430 fallbacks 0 window_calls 14911 columns 22665
+
+[identical-p2-A / trial-02]
+PP 4096 16384 1074.8 3811.0 0 0.0
+PP 8192 16384 2104.5 3892.6 0 0.0
+PP 12288 16384 3158.0 3891.1 0 0.0
+PP 13715 16384 3727.3 3679.6 0 0.0
+PP 16383 16384 5603.4 2923.8 0 0.0
+PP 16384 16384 5631.8 2909.2 0 0.0
+STAT tok_s=91.98 ms_tok=10.87 vram_hit=0.9383 ram_fetch=2.285 disk=0.000 promo=2.201 vram_used=6690 vram_slots=6800 ram_used=8659 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.054 miss_ms=0.000 lane=13.874 lane_ms=1.795 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=11.69 w_disk_ms=0.000 w_lane_ms=1.925 spec_acc=1599 spec_offered=1795 spec_rounds=427
+DONE 2048 16384 5631.8 22265.0 length 1599 1795 0 505357 538560 427
+ds4 dspark: thr 0.60: 427 windows (1795 drafted, 1599 accepted = 89%) and 22 single tokens; the repeats' windows 7 (14 drafted, 3 accepted); the drafter's steps 442, drafts kept 0..5: 22 34 32 31 25 298; 47.8 ms a window, 16.2 a single token, 2.86 a draft; 4.56 tokens a step
+glm stat: decode 10.87 ms/tok (91.98 tok/s) | vram hit 93.83% | ram fetches 2.29/tok | disk 0.00 reads/tok in 0.05 waits/tok, 0.00 ms/tok | promotions 2.20/tok | cpu lane 13.87/tok in 1.79 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6680/6800 ram 8670/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 35440 experts 37544 upload_bytes 52071137280 prepare_ms 1811.469 launch_ms 364.738 wait_ms 670.848 fallbacks 0 window_calls 22264 columns 33626
+
+[identical-p0-A / warmup-01]
+PP 4096 16384 1207.1 3393.2 0 0.0
+PP 8192 16384 2243.5 3651.4 0 0.0
+PP 12288 16384 3310.5 3711.8 0 0.0
+PP 13715 16384 3918.3 3500.2 0 0.0
+PP 16383 16384 6027.5 2718.0 0 0.0
+PP 16384 16384 6061.8 2702.8 0 0.0
+STAT tok_s=86.17 ms_tok=11.60 vram_hit=0.6428 ram_fetch=1.108 disk=0.000 promo=1.088 vram_used=6684 vram_slots=6800 ram_used=8671 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.004 miss_ms=0.000 lane=92.273 lane_ms=3.411 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=9.72 w_disk_ms=0.000 w_lane_ms=2.513 spec_acc=1606 spec_offered=1789 spec_rounds=418
+DONE 2048 16384 6061.8 23767.1 length 1606 1789 0 344186 535440 418
+ds4 dspark: thr 0.60: 418 windows (1789 drafted, 1606 accepted = 90%) and 24 single tokens; the repeats' windows 13 (16 drafted, 7 accepted); the drafter's steps 429, drafts kept 0..5: 24 21 32 24 24 304; 48.1 ms a window, 17.6 a single token, 2.86 a draft; 4.63 tokens a step
+glm stat: decode 11.61 ms/tok (86.17 tok/s) | vram hit 64.28% | ram fetches 1.11/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 1.09/tok | cpu lane 92.27/tok in 3.41 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6680/6800 ram 8676/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 76402 experts 158045 upload_bytes 29920296960 prepare_ms 1040.272 launch_ms 558.294 wait_ms 1151.021 fallbacks 0 window_calls 16578 columns 75488
+
+[identical-p0-A / trial-01]
+PP 4096 16384 1139.1 3595.7 0 0.0
+PP 8192 16384 2217.6 3694.1 0 0.0
+PP 12288 16384 3321.4 3699.7 0 0.0
+PP 13715 16384 3957.3 3465.7 0 0.0
+PP 16383 16384 6014.9 2723.7 0 0.0
+PP 16384 16384 6043.9 2710.8 0 0.0
+STAT tok_s=105.80 ms_tok=9.45 vram_hit=0.6718 ram_fetch=0.316 disk=0.000 promo=0.319 vram_used=6650 vram_slots=6800 ram_used=8707 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.005 miss_ms=0.000 lane=83.445 lane_ms=2.492 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=8.46 w_disk_ms=0.000 w_lane_ms=2.194 spec_acc=1630 spec_offered=1761 spec_rounds=395
+DONE 2048 16384 6043.9 19358.3 length 1630 1761 0 351168 522720 395
+ds4 dspark: thr 0.60: 395 windows (1761 drafted, 1630 accepted = 93%) and 22 single tokens; the repeats' windows 2 (5 drafted, 0 accepted); the drafter's steps 415, drafts kept 0..5: 22 12 29 24 26 302; 44.9 ms a window, 15.4 a single token, 2.84 a draft; 4.91 tokens a step
+glm stat: decode 9.45 ms/tok (105.79 tok/s) | vram hit 67.18% | ram fetches 0.32/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.32/tok | cpu lane 83.44/tok in 2.49 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6650/6800 ram 8710/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 151271 experts 313411 upload_bytes 32997335040 prepare_ms 1147.380 launch_ms 1095.061 wait_ms 3009.959 fallbacks 0 window_calls 32248 columns 149519
+
+[identical-p0-A / trial-02]
+PP 4096 16384 1129.3 3627.0 0 0.0
+PP 8192 16384 2209.2 3708.1 0 0.0
+PP 12288 16384 3322.2 3698.8 0 0.0
+PP 13715 16384 3967.1 3457.2 0 0.0
+PP 16383 16384 6008.5 2726.6 0 0.0
+PP 16384 16384 6033.4 2715.6 0 0.0
+STAT tok_s=101.59 ms_tok=9.84 vram_hit=0.6838 ram_fetch=0.321 disk=0.000 promo=0.322 vram_used=6658 vram_slots=6800 ram_used=8701 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.004 miss_ms=0.000 lane=83.823 lane_ms=2.511 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=10.09 w_disk_ms=0.000 w_lane_ms=2.531 spec_acc=1610 spec_offered=1833 spec_rounds=418
+DONE 2048 16384 6033.4 20159.4 length 1610 1833 0 372705 545040 418
+ds4 dspark: thr 0.60: 418 windows (1833 drafted, 1610 accepted = 88%) and 20 single tokens; the repeats' windows 2 (5 drafted, 0 accepted); the drafter's steps 436, drafts kept 0..5: 20 21 27 24 39 305; 44.4 ms a window, 15.5 a single token, 2.86 a draft; 4.68 tokens a step
+glm stat: decode 9.84 ms/tok (101.59 tok/s) | vram hit 68.38% | ram fetches 0.32/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.32/tok | cpu lane 83.82/tok in 2.51 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6658/6800 ram 8702/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 228396 experts 470671 upload_bytes 33598679040 prepare_ms 1168.345 launch_ms 1650.973 wait_ms 5056.158 fallbacks 0 window_calls 48801 columns 225872
+
+[identical-off-A / warmup-01]
+PP 4096 16384 1213.9 3374.2 0 0.0
+PP 8192 16384 2249.6 3641.5 0 0.0
+PP 12288 16384 3324.1 3696.6 0 0.0
+PP 13715 16384 3931.8 3488.2 0 0.0
+PP 16383 16384 6030.5 2716.7 0 0.0
+PP 16384 16384 6065.1 2701.3 0 0.0
+STAT tok_s=82.96 ms_tok=12.05 vram_hit=0.9168 ram_fetch=4.307 disk=0.000 promo=3.806 vram_used=6694 vram_slots=6800 ram_used=8660 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.058 miss_ms=0.000 lane=18.042 lane_ms=3.694 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=10.35 w_disk_ms=0.000 w_lane_ms=2.190 spec_acc=1583 spec_offered=1834 spec_rounds=452
+DONE 2048 16384 6065.1 24688.3 length 1583 1834 0 505869 551760 452
+ds4 dspark: thr 0.60: 452 windows (1834 drafted, 1583 accepted = 86%) and 13 single tokens; the repeats' windows 36 (70 drafted, 40 accepted); the drafter's steps 429, drafts kept 0..5: 13 26 40 32 28 290; 51.3 ms a window, 20.9 a single token, 2.86 a draft; 4.40 tokens a step
+glm stat: decode 12.05 ms/tok (82.95 tok/s) | vram hit 91.68% | ram fetches 4.31/tok | disk 0.00 reads/tok in 0.06 waits/tok, 0.00 ms/tok | promotions 3.81/tok | cpu lane 18.04/tok in 3.69 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6694/6800 ram 8660/9272
+
+[identical-off-A / trial-01]
+PP 4096 16384 1065.4 3844.5 0 0.0
+PP 8192 16384 2084.5 3930.0 0 0.0
+PP 12288 16384 3134.4 3920.3 0 0.0
+PP 13715 16384 3682.1 3724.8 0 0.0
+PP 16383 16384 5544.8 2954.7 0 0.0
+PP 16384 16384 5573.2 2939.8 0 0.0
+STAT tok_s=92.19 ms_tok=10.85 vram_hit=0.9371 ram_fetch=2.649 disk=0.000 promo=2.443 vram_used=6690 vram_slots=6800 ram_used=8661 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.001 disk_waits=0.053 miss_ms=0.001 lane=13.739 lane_ms=2.747 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=9.64 w_disk_ms=0.000 w_lane_ms=2.106 spec_acc=1623 spec_offered=1807 spec_rounds=410
+DONE 2048 16384 5573.2 22215.6 length 1623 1807 0 501768 535440 410
+ds4 dspark: thr 0.60: 410 windows (1807 drafted, 1623 accepted = 90%) and 14 single tokens; the repeats' windows 2 (5 drafted, 0 accepted); the drafter's steps 422, drafts kept 0..5: 14 21 27 22 29 309; 50.6 ms a window, 17.6 a single token, 2.87 a draft; 4.83 tokens a step
+glm stat: decode 10.85 ms/tok (92.19 tok/s) | vram hit 93.71% | ram fetches 2.65/tok | disk 0.00 reads/tok in 0.05 waits/tok, 0.00 ms/tok | promotions 2.44/tok | cpu lane 13.74/tok in 2.75 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6690/6800 ram 8661/9272
+
+[identical-off-A / trial-02]
+PP 4096 16384 1054.2 3885.3 0 0.0
+PP 8192 16384 2066.6 3964.1 0 0.0
+PP 12288 16384 3111.2 3949.6 0 0.0
+PP 13715 16384 3648.0 3759.6 0 0.0
+PP 16383 16384 5502.2 2977.5 0 0.0
+PP 16384 16384 5533.3 2961.0 0 0.0
+STAT tok_s=90.56 ms_tok=11.04 vram_hit=0.9367 ram_fetch=2.724 disk=0.000 promo=2.515 vram_used=6690 vram_slots=6800 ram_used=8657 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.054 miss_ms=0.000 lane=13.946 lane_ms=2.772 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=11.27 w_disk_ms=0.001 w_lane_ms=2.716 spec_acc=1605 spec_offered=1812 spec_rounds=423
+DONE 2048 16384 5533.3 22616.3 length 1605 1812 0 506950 541200 423
+ds4 dspark: thr 0.60: 423 windows (1812 drafted, 1605 accepted = 89%) and 20 single tokens; the repeats' windows 12 (23 drafted, 8 accepted); the drafter's steps 431, drafts kept 0..5: 20 25 27 22 41 296; 49.7 ms a window, 17.6 a single token, 2.85 a draft; 4.62 tokens a step
+glm stat: decode 11.04 ms/tok (90.55 tok/s) | vram hit 93.67% | ram fetches 2.72/tok | disk 0.00 reads/tok in 0.05 waits/tok, 0.00 ms/tok | promotions 2.52/tok | cpu lane 13.95/tok in 2.77 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6690/6800 ram 8657/9272
+
+[original-p4-B / warmup-01]
+PP 4096 16384 1211.4 3381.2 0 0.0
+PP 8192 16384 2250.4 3640.3 0 0.0
+PP 12288 16384 3323.0 3697.9 0 0.0
+PP 13715 16384 3925.4 3493.9 0 0.0
+PP 16383 16384 6041.0 2712.0 0 0.0
+PP 16384 16384 6075.3 2696.8 0 0.0
+STAT tok_s=82.96 ms_tok=12.05 vram_hit=0.9067 ram_fetch=3.136 disk=0.000 promo=2.951 vram_used=6687 vram_slots=6800 ram_used=8672 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.040 miss_ms=0.000 lane=21.262 lane_ms=2.454 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=10.45 w_disk_ms=0.003 w_lane_ms=1.567 spec_acc=1614 spec_offered=1802 spec_rounds=410
+DONE 2048 16384 6075.4 24685.9 length 1614 1802 0 486351 536400 410
+ds4 dspark: thr 0.60: 410 windows (1802 drafted, 1614 accepted = 90%) and 23 single tokens; the repeats' windows 18 (52 drafted, 34 accepted); the drafter's steps 415, drafts kept 0..5: 23 18 22 22 28 302; 51.4 ms a window, 17.6 a single token, 2.85 a draft; 4.73 tokens a step
+glm stat: decode 12.05 ms/tok (82.96 tok/s) | vram hit 90.67% | ram fetches 3.14/tok | disk 0.00 reads/tok in 0.04 waits/tok, 0.00 ms/tok | promotions 2.95/tok | cpu lane 21.26/tok in 2.45 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6680/6800 ram 8673/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 18620 experts 21337 upload_bytes 29920296960 prepare_ms 1040.509 launch_ms 178.050 wait_ms 273.307 fallbacks 0 window_calls 9971 columns 18057
+
+[original-p4-B / trial-01]
+PP 4096 16384 1081.2 3788.4 0 0.0
+PP 8192 16384 2106.5 3888.9 0 0.0
+PP 12288 16384 3165.0 3882.4 0 0.0
+PP 13715 16384 3734.0 3673.0 0 0.0
+PP 16383 16384 5632.3 2908.8 0 0.0
+PP 16384 16384 5662.8 2893.3 0 0.0
+STAT tok_s=95.98 ms_tok=10.42 vram_hit=0.9370 ram_fetch=1.525 disk=0.000 promo=1.473 vram_used=6683 vram_slots=6800 ram_used=8672 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.028 miss_ms=0.000 lane=14.854 lane_ms=1.532 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=9.79 w_disk_ms=0.000 w_lane_ms=1.280 spec_acc=1614 spec_offered=1788 spec_rounds=411
+DONE 2048 16384 5662.9 21337.3 length 1614 1788 0 499676 533280 411
+ds4 dspark: thr 0.60: 411 windows (1788 drafted, 1614 accepted = 90%) and 23 single tokens; the repeats' windows 13 (20 drafted, 6 accepted); the drafter's steps 421, drafts kept 0..5: 23 16 26 29 22 305; 47.0 ms a window, 15.3 a single token, 2.86 a draft; 4.72 tokens a step
+glm stat: decode 10.42 ms/tok (95.98 tok/s) | vram hit 93.70% | ram fetches 1.53/tok | disk 0.00 reads/tok in 0.03 waits/tok, 0.00 ms/tok | promotions 1.47/tok | cpu lane 14.85/tok in 1.53 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6677/6800 ram 8677/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 34108 experts 38605 upload_bytes 43709368320 prepare_ms 1520.068 launch_ms 316.468 wait_ms 631.629 fallbacks 0 window_calls 18829 columns 32687
+
+[original-p4-B / trial-02]
+PP 4096 16384 1088.0 3764.5 0 0.0
+PP 8192 16384 2121.6 3861.2 0 0.0
+PP 12288 16384 3185.5 3857.5 0 0.0
+PP 13715 16384 3758.3 3649.2 0 0.0
+PP 16383 16384 5673.6 2887.6 0 0.0
+PP 16384 16384 5700.9 2874.0 0 0.0
+STAT tok_s=97.44 ms_tok=10.26 vram_hit=0.9389 ram_fetch=1.471 disk=0.000 promo=1.438 vram_used=6682 vram_slots=6800 ram_used=8672 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.025 miss_ms=0.000 lane=14.584 lane_ms=1.539 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=9.77 w_disk_ms=0.000 w_lane_ms=1.317 spec_acc=1614 spec_offered=1812 spec_rounds=417
+DONE 2048 16384 5700.9 21017.9 length 1614 1812 0 506109 539040 417
+ds4 dspark: thr 0.60: 417 windows (1812 drafted, 1614 accepted = 89%) and 17 single tokens; the repeats' windows 27 (74 drafted, 41 accepted); the drafter's steps 407, drafts kept 0..5: 17 11 30 25 28 296; 46.7 ms a window, 15.7 a single token, 2.87 a draft; 4.72 tokens a step
+glm stat: decode 10.26 ms/tok (97.44 tok/s) | vram hit 93.89% | ram fetches 1.47/tok | disk 0.00 reads/tok in 0.02 waits/tok, 0.00 ms/tok | promotions 1.44/tok | cpu lane 14.58/tok in 1.54 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6680/6800 ram 8678/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 49398 experts 55550 upload_bytes 47163432960 prepare_ms 1640.290 launch_ms 486.830 wait_ms 990.069 fallbacks 0 window_calls 27627 columns 47148
+
+[original-p2-B / warmup-01]
+PP 4096 16384 1217.8 3363.4 0 0.0
+PP 8192 16384 2261.5 3622.4 0 0.0
+PP 12288 16384 3328.0 3692.3 0 0.0
+PP 13715 16384 3934.5 3485.9 0 0.0
+PP 16383 16384 6038.5 2713.1 0 0.0
+PP 16384 16384 6075.0 2697.0 0 0.0
+STAT tok_s=79.07 ms_tok=12.65 vram_hit=0.9163 ram_fetch=3.781 disk=0.000 promo=3.506 vram_used=6682 vram_slots=6800 ram_used=8666 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.043 miss_ms=0.000 lane=18.724 lane_ms=2.691 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=10.40 w_disk_ms=0.000 w_lane_ms=1.912 spec_acc=1593 spec_offered=1844 spec_rounds=433
+DONE 2048 16384 6075.0 25902.7 length 1593 1844 0 505343 551520 433
+ds4 dspark: thr 0.60: 433 windows (1844 drafted, 1593 accepted = 86%) and 21 single tokens; the repeats' windows 23 (65 drafted, 34 accepted); the drafter's steps 431, drafts kept 0..5: 21 24 34 23 27 302; 51.4 ms a window, 18.3 a single token, 2.85 a draft; 4.51 tokens a step
+glm stat: decode 12.65 ms/tok (79.07 tok/s) | vram hit 91.63% | ram fetches 3.78/tok | disk 0.00 reads/tok in 0.04 waits/tok, 0.00 ms/tok | promotions 3.51/tok | cpu lane 18.72/tok in 2.69 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6680/6800 ram 8678/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 12692 experts 13645 upload_bytes 29920296960 prepare_ms 1040.269 launch_ms 137.234 wait_ms 176.064 fallbacks 0 window_calls 7802 columns 12210
+
+[original-p2-B / trial-01]
+PP 4096 16384 1081.6 3787.0 0 0.0
+PP 8192 16384 2098.0 3904.7 0 0.0
+PP 12288 16384 3152.0 3898.4 0 0.0
+PP 13715 16384 3713.7 3693.1 0 0.0
+PP 16383 16384 5604.2 2923.3 0 0.0
+PP 16384 16384 5633.8 2908.2 0 0.0
+STAT tok_s=87.06 ms_tok=11.49 vram_hit=0.9364 ram_fetch=2.484 disk=0.000 promo=2.337 vram_used=6690 vram_slots=6800 ram_used=8647 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.036 miss_ms=0.000 lane=14.891 lane_ms=1.918 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=10.45 w_disk_ms=0.000 w_lane_ms=1.822 spec_acc=1584 spec_offered=1873 spec_rounds=444
+DONE 2048 16384 5633.8 23523.0 length 1584 1873 0 524982 560640 444
+ds4 dspark: thr 0.60: 444 windows (1873 drafted, 1584 accepted = 85%) and 19 single tokens; the repeats' windows 22 (33 drafted, 13 accepted); the drafter's steps 441, drafts kept 0..5: 19 20 34 32 24 312; 48.1 ms a window, 17.3 a single token, 2.85 a draft; 4.42 tokens a step
+glm stat: decode 11.49 ms/tok (87.06 tok/s) | vram hit 93.64% | ram fetches 2.48/tok | disk 0.00 reads/tok in 0.04 waits/tok, 0.00 ms/tok | promotions 2.34/tok | cpu lane 14.89/tok in 1.92 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6680/6800 ram 8670/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 25193 experts 26803 upload_bytes 45883607040 prepare_ms 1595.603 launch_ms 262.984 wait_ms 438.720 fallbacks 0 window_calls 15552 columns 24092
+
+[original-p2-B / trial-02]
+PP 4096 16384 1069.2 3830.8 0 0.0
+PP 8192 16384 2105.0 3891.7 0 0.0
+PP 12288 16384 3164.0 3883.7 0 0.0
+PP 13715 16384 3716.8 3690.0 0 0.0
+PP 16383 16384 5595.6 2927.9 0 0.0
+PP 16384 16384 5625.5 2912.4 0 0.0
+STAT tok_s=91.79 ms_tok=10.89 vram_hit=0.9381 ram_fetch=2.319 disk=0.000 promo=2.222 vram_used=6684 vram_slots=6800 ram_used=8668 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.045 miss_ms=0.000 lane=13.946 lane_ms=1.838 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=10.91 w_disk_ms=0.000 w_lane_ms=1.794 spec_acc=1603 spec_offered=1802 spec_rounds=422
+DONE 2048 16384 5625.5 22312.4 length 1603 1802 0 505874 539280 422
+ds4 dspark: thr 0.60: 422 windows (1802 drafted, 1603 accepted = 89%) and 23 single tokens; the repeats' windows 6 (13 drafted, 4 accepted); the drafter's steps 439, drafts kept 0..5: 23 26 31 28 38 293; 48.4 ms a window, 17.1 a single token, 2.87 a draft; 4.60 tokens a step
+glm stat: decode 10.89 ms/tok (91.79 tok/s) | vram hit 93.81% | ram fetches 2.32/tok | disk 0.00 reads/tok in 0.04 waits/tok, 0.00 ms/tok | promotions 2.22/tok | cpu lane 13.95/tok in 1.84 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6680/6800 ram 8676/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 36756 experts 38937 upload_bytes 52316006400 prepare_ms 1819.503 launch_ms 391.454 wait_ms 680.332 fallbacks 0 window_calls 22745 columns 34928
+
+[original-p0-B / warmup-01]
+PP 4096 16384 1217.9 3363.0 0 0.0
+PP 8192 16384 2263.4 3619.3 0 0.0
+PP 12288 16384 3338.6 3680.6 0 0.0
+PP 13715 16384 3944.0 3477.4 0 0.0
+PP 16383 16384 6048.2 2708.7 0 0.0
+PP 16384 16384 6083.0 2693.4 0 0.0
+STAT tok_s=84.68 ms_tok=11.81 vram_hit=0.6405 ram_fetch=1.005 disk=0.000 promo=0.992 vram_used=6685 vram_slots=6800 ram_used=8670 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.006 miss_ms=0.000 lane=94.824 lane_ms=3.485 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=9.40 w_disk_ms=0.000 w_lane_ms=2.491 spec_acc=1607 spec_offered=1834 spec_rounds=430
+DONE 2048 16384 6083.0 24186.0 length 1607 1834 0 349731 546000 430
+ds4 dspark: thr 0.60: 430 windows (1834 drafted, 1607 accepted = 88%) and 11 single tokens; the repeats' windows 45 (79 drafted, 45 accepted); the drafter's steps 396, drafts kept 0..5: 11 10 20 21 28 306; 48.4 ms a window, 19.4 a single token, 2.84 a draft; 4.64 tokens a step
+glm stat: decode 11.81 ms/tok (84.68 tok/s) | vram hit 64.05% | ram fetches 1.00/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 0.99/tok | cpu lane 94.82/tok in 3.49 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6680/6800 ram 8676/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 78536 experts 162725 upload_bytes 29920296960 prepare_ms 1040.279 launch_ms 542.137 wait_ms 1147.073 fallbacks 0 window_calls 17022 columns 78052
+
+[original-p0-B / trial-01]
+PP 4096 16384 1127.2 3633.6 0 0.0
+PP 8192 16384 2200.8 3722.3 0 0.0
+PP 12288 16384 3303.3 3719.9 0 0.0
+PP 13715 16384 3935.0 3485.4 0 0.0
+PP 16383 16384 5975.9 2741.5 0 0.0
+PP 16384 16384 6004.9 2728.4 0 0.0
+STAT tok_s=100.48 ms_tok=9.95 vram_hit=0.6718 ram_fetch=0.391 disk=0.000 promo=0.393 vram_used=6679 vram_slots=6800 ram_used=8680 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.004 miss_ms=0.000 lane=86.805 lane_ms=2.682 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=9.14 w_disk_ms=0.000 w_lane_ms=2.343 spec_acc=1615 spec_offered=1834 spec_rounds=415
+DONE 2048 16384 6004.9 20381.9 length 1615 1834 0 365495 544080 415
+ds4 dspark: thr 0.60: 415 windows (1834 drafted, 1615 accepted = 88%) and 18 single tokens; the repeats' windows 4 (8 drafted, 0 accepted); the drafter's steps 429, drafts kept 0..5: 18 13 27 34 28 309; 45.3 ms a window, 15.6 a single token, 2.85 a draft; 4.73 tokens a step
+glm stat: decode 9.95 ms/tok (100.48 tok/s) | vram hit 67.18% | ram fetches 0.39/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.39/tok | cpu lane 86.81/tok in 2.68 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6676/6800 ram 8681/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 156168 experts 324062 upload_bytes 32708874240 prepare_ms 1137.354 launch_ms 1192.319 wait_ms 3034.139 fallbacks 0 window_calls 33475 columns 154986
+
+[original-p0-B / trial-02]
+PP 4096 16384 1147.4 3569.7 0 0.0
+PP 8192 16384 2229.7 3674.1 0 0.0
+PP 12288 16384 3338.9 3680.2 0 0.0
+PP 13715 16384 3977.1 3448.5 0 0.0
+PP 16383 16384 6011.9 2725.1 0 0.0
+PP 16384 16384 6038.0 2713.5 0 0.0
+STAT tok_s=104.72 ms_tok=9.55 vram_hit=0.6747 ram_fetch=0.277 disk=0.000 promo=0.277 vram_used=6654 vram_slots=6800 ram_used=8706 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.001 miss_ms=0.000 lane=84.381 lane_ms=2.482 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=9.37 w_disk_ms=0.000 w_lane_ms=2.294 spec_acc=1610 spec_offered=1783 spec_rounds=418
+DONE 2048 16384 6038.0 19557.2 length 1610 1783 0 359657 533040 418
+ds4 dspark: thr 0.60: 418 windows (1783 drafted, 1610 accepted = 90%) and 20 single tokens; the repeats' windows 32 (84 drafted, 46 accepted); the drafter's steps 406, drafts kept 0..5: 20 15 29 29 26 287; 43.2 ms a window, 15.7 a single token, 2.84 a draft; 4.68 tokens a step
+glm stat: decode 9.55 ms/tok (104.72 tok/s) | vram hit 67.47% | ram fetches 0.28/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.28/tok | cpu lane 84.38/tok in 2.48 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6654/6800 ram 8706/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 232343 experts 483072 upload_bytes 33620889600 prepare_ms 1169.138 launch_ms 1733.579 wait_ms 5164.205 fallbacks 0 window_calls 50016 columns 230386
+
+[original-off-B / warmup-01]
+PP 4096 16384 1213.3 3376.0 0 0.0
+PP 8192 16384 2253.8 3634.8 0 0.0
+PP 12288 16384 3323.6 3697.2 0 0.0
+PP 13715 16384 3931.5 3488.5 0 0.0
+PP 16383 16384 6030.6 2716.7 0 0.0
+PP 16384 16384 6066.5 2700.7 0 0.0
+STAT tok_s=81.77 ms_tok=12.23 vram_hit=0.9162 ram_fetch=4.373 disk=0.000 promo=3.854 vram_used=6696 vram_slots=6800 ram_used=8639 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.055 miss_ms=0.000 lane=18.305 lane_ms=3.737 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=12.39 w_disk_ms=0.000 w_lane_ms=3.381 spec_acc=1579 spec_offered=1846 spec_rounds=449
+DONE 2048 16384 6066.5 25047.1 length 1579 1846 0 509042 555600 449
+ds4 dspark: thr 0.60: 449 windows (1846 drafted, 1579 accepted = 86%) and 20 single tokens; the repeats' windows 25 (51 drafted, 23 accepted); the drafter's steps 444, drafts kept 0..5: 20 30 37 33 28 296; 52.1 ms a window, 19.7 a single token, 2.84 a draft; 4.37 tokens a step
+glm stat: decode 12.23 ms/tok (81.77 tok/s) | vram hit 91.62% | ram fetches 4.37/tok | disk 0.00 reads/tok in 0.06 waits/tok, 0.00 ms/tok | promotions 3.85/tok | cpu lane 18.31/tok in 3.74 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6696/6800 ram 8639/9272
+
+[original-off-B / trial-01]
+PP 4096 16384 1067.5 3837.1 0 0.0
+PP 8192 16384 2076.0 3946.1 0 0.0
+PP 12288 16384 3115.0 3944.7 0 0.0
+PP 13715 16384 3668.4 3738.7 0 0.0
+PP 16383 16384 5519.9 2968.0 0 0.0
+PP 16384 16384 5551.9 2951.1 0 0.0
+STAT tok_s=91.71 ms_tok=10.90 vram_hit=0.9367 ram_fetch=2.700 disk=0.000 promo=2.471 vram_used=6696 vram_slots=6800 ram_used=8642 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.052 miss_ms=0.000 lane=13.771 lane_ms=2.774 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=11.70 w_disk_ms=0.000 w_lane_ms=3.379 spec_acc=1617 spec_offered=1798 spec_rounds=409
+DONE 2048 16384 5551.9 22331.1 length 1617 1798 0 501122 534960 409
+ds4 dspark: thr 0.60: 409 windows (1798 drafted, 1617 accepted = 90%) and 22 single tokens; the repeats' windows 2 (5 drafted, 0 accepted); the drafter's steps 429, drafts kept 0..5: 22 18 26 29 34 300; 50.7 ms a window, 16.9 a single token, 2.85 a draft; 4.75 tokens a step
+glm stat: decode 10.90 ms/tok (91.71 tok/s) | vram hit 93.67% | ram fetches 2.70/tok | disk 0.00 reads/tok in 0.05 waits/tok, 0.00 ms/tok | promotions 2.47/tok | cpu lane 13.77/tok in 2.77 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6696/6800 ram 8642/9272
+
+[original-off-B / trial-02]
+PP 4096 16384 1052.7 3891.0 0 0.0
+PP 8192 16384 2066.8 3963.6 0 0.0
+PP 12288 16384 3111.6 3949.1 0 0.0
+PP 13715 16384 3657.2 3750.1 0 0.0
+PP 16383 16384 5509.1 2973.8 0 0.0
+PP 16384 16384 5539.4 2957.7 0 0.0
+STAT tok_s=93.34 ms_tok=10.71 vram_hit=0.9388 ram_fetch=2.503 disk=0.000 promo=2.306 vram_used=6694 vram_slots=6800 ram_used=8657 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.045 miss_ms=0.000 lane=13.328 lane_ms=2.653 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=11.36 w_disk_ms=0.005 w_lane_ms=2.665 spec_acc=1621 spec_offered=1787 spec_rounds=406
+DONE 2048 16384 5539.4 21942.5 length 1621 1787 0 498846 531360 406
+ds4 dspark: thr 0.60: 406 windows (1787 drafted, 1621 accepted = 91%) and 21 single tokens; the repeats' windows 3 (8 drafted, 0 accepted); the drafter's steps 424, drafts kept 0..5: 21 19 25 28 29 302; 50.1 ms a window, 17.7 a single token, 2.85 a draft; 4.80 tokens a step
+glm stat: decode 10.71 ms/tok (93.33 tok/s) | vram hit 93.88% | ram fetches 2.50/tok | disk 0.00 reads/tok in 0.04 waits/tok, 0.00 ms/tok | promotions 2.31/tok | cpu lane 13.33/tok in 2.65 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6694/6800 ram 8657/9272
+
+[identical-off-B / warmup-01]
+PP 4096 16384 1209.9 3385.5 0 0.0
+PP 8192 16384 2251.8 3638.0 0 0.0
+PP 12288 16384 3327.3 3693.1 0 0.0
+PP 13715 16384 3932.6 3487.5 0 0.0
+PP 16383 16384 6040.1 2712.4 0 0.0
+PP 16384 16384 6076.2 2696.4 0 0.0
+STAT tok_s=87.14 ms_tok=11.48 vram_hit=0.9189 ram_fetch=3.976 disk=0.000 promo=3.473 vram_used=6684 vram_slots=6800 ram_used=8666 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.001 disk_waits=0.051 miss_ms=0.001 lane=17.075 lane_ms=3.550 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=9.59 w_disk_ms=0.000 w_lane_ms=2.238 spec_acc=1622 spec_offered=1795 spec_rounds=405
+DONE 2048 16384 6076.3 23501.6 length 1622 1795 0 489585 532800 405
+ds4 dspark: thr 0.60: 405 windows (1795 drafted, 1622 accepted = 90%) and 20 single tokens; the repeats' windows 6 (15 drafted, 3 accepted); the drafter's steps 419, drafts kept 0..5: 20 14 26 25 31 303; 54.1 ms a window, 20.3 a single token, 2.87 a draft; 4.82 tokens a step
+glm stat: decode 11.48 ms/tok (87.14 tok/s) | vram hit 91.89% | ram fetches 3.98/tok | disk 0.00 reads/tok in 0.05 waits/tok, 0.00 ms/tok | promotions 3.47/tok | cpu lane 17.07/tok in 3.55 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6684/6800 ram 8666/9272
+
+[identical-off-B / trial-01]
+PP 4096 16384 1070.2 3827.4 0 0.0
+PP 8192 16384 2084.3 3930.4 0 0.0
+PP 12288 16384 3125.6 3931.4 0 0.0
+PP 13715 16384 3690.0 3716.8 0 0.0
+PP 16383 16384 5550.6 2951.6 0 0.0
+PP 16384 16384 5580.3 2936.0 0 0.0
+STAT tok_s=91.87 ms_tok=10.89 vram_hit=0.9386 ram_fetch=2.628 disk=0.000 promo=2.402 vram_used=6690 vram_slots=6800 ram_used=8651 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.046 miss_ms=0.000 lane=13.395 lane_ms=2.644 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=11.74 w_disk_ms=0.000 w_lane_ms=3.269 spec_acc=1605 spec_offered=1791 spec_rounds=427
+DONE 2048 16384 5580.4 22293.0 length 1605 1791 0 503251 536160 427
+ds4 dspark: thr 0.60: 427 windows (1791 drafted, 1605 accepted = 90%) and 16 single tokens; the repeats' windows 25 (51 drafted, 23 accepted); the drafter's steps 418, drafts kept 0..5: 16 22 34 24 32 290; 48.7 ms a window, 17.8 a single token, 2.85 a draft; 4.62 tokens a step
+glm stat: decode 10.89 ms/tok (91.87 tok/s) | vram hit 93.86% | ram fetches 2.63/tok | disk 0.00 reads/tok in 0.05 waits/tok, 0.00 ms/tok | promotions 2.40/tok | cpu lane 13.39/tok in 2.64 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6690/6800 ram 8651/9272
+
+[identical-off-B / trial-02]
+PP 4096 16384 1055.4 3881.0 0 0.0
+PP 8192 16384 2064.7 3967.6 0 0.0
+PP 12288 16384 3111.3 3949.4 0 0.0
+PP 13715 16384 3650.8 3756.7 0 0.0
+PP 16383 16384 5508.3 2974.2 0 0.0
+PP 16384 16384 5539.9 2957.4 0 0.0
+STAT tok_s=89.48 ms_tok=11.18 vram_hit=0.9358 ram_fetch=2.822 disk=0.000 promo=2.602 vram_used=6687 vram_slots=6800 ram_used=8666 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.053 miss_ms=0.000 lane=14.298 lane_ms=2.847 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=11.67 w_disk_ms=0.000 w_lane_ms=3.008 spec_acc=1604 spec_offered=1837 spec_rounds=426
+DONE 2048 16384 5539.9 22887.7 length 1604 1837 0 512270 547440 426
+ds4 dspark: thr 0.60: 426 windows (1837 drafted, 1604 accepted = 87%) and 18 single tokens; the repeats' windows 11 (30 drafted, 14 accepted); the drafter's steps 433, drafts kept 0..5: 18 23 29 27 35 301; 50.0 ms a window, 18.6 a single token, 2.86 a draft; 4.61 tokens a step
+glm stat: decode 11.18 ms/tok (89.48 tok/s) | vram hit 93.58% | ram fetches 2.82/tok | disk 0.00 reads/tok in 0.05 waits/tok, 0.00 ms/tok | promotions 2.60/tok | cpu lane 14.30/tok in 2.85 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6687/6800 ram 8666/9272
+
+[identical-p0-B / warmup-01]
+PP 4096 16384 1211.4 3381.3 0 0.0
+PP 8192 16384 2253.1 3635.8 0 0.0
+PP 12288 16384 3322.6 3698.3 0 0.0
+PP 13715 16384 3930.7 3489.2 0 0.0
+PP 16383 16384 6040.1 2712.4 0 0.0
+PP 16384 16384 6075.6 2696.7 0 0.0
+STAT tok_s=85.62 ms_tok=11.68 vram_hit=0.6485 ram_fetch=1.089 disk=0.000 promo=1.081 vram_used=6681 vram_slots=6800 ram_used=8676 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.008 miss_ms=0.000 lane=91.629 lane_ms=3.418 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=9.33 w_disk_ms=0.000 w_lane_ms=2.522 spec_acc=1605 spec_offered=1808 spec_rounds=423
+DONE 2048 16384 6075.6 23920.4 length 1605 1808 0 350336 540240 423
+ds4 dspark: thr 0.60: 423 windows (1808 drafted, 1605 accepted = 89%) and 20 single tokens; the repeats' windows 3 (7 drafted, 0 accepted); the drafter's steps 440, drafts kept 0..5: 20 24 35 34 30 297; 48.0 ms a window, 17.7 a single token, 2.85 a draft; 4.62 tokens a step
+glm stat: decode 11.68 ms/tok (85.62 tok/s) | vram hit 64.85% | ram fetches 1.09/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 1.08/tok | cpu lane 91.63/tok in 3.42 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6680/6800 ram 8679/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 76784 experts 156594 upload_bytes 29920296960 prepare_ms 1040.241 launch_ms 538.990 wait_ms 1142.389 fallbacks 0 window_calls 16758 columns 76004
+
+[identical-p0-B / trial-01]
+PP 4096 16384 1124.4 3642.9 0 0.0
+PP 8192 16384 2198.0 3727.1 0 0.0
+PP 12288 16384 3304.8 3718.2 0 0.0
+PP 13715 16384 3936.7 3483.9 0 0.0
+PP 16383 16384 5986.2 2736.8 0 0.0
+PP 16384 16384 6015.2 2723.8 0 0.0
+STAT tok_s=99.73 ms_tok=10.03 vram_hit=0.6750 ram_fetch=0.337 disk=0.000 promo=0.339 vram_used=6665 vram_slots=6800 ram_used=8695 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.003 miss_ms=0.000 lane=87.176 lane_ms=2.630 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=9.55 w_disk_ms=0.000 w_lane_ms=2.505 spec_acc=1588 spec_offered=1838 spec_rounds=443
+DONE 2048 16384 6015.2 20535.9 length 1588 1838 0 372287 551520 443
+ds4 dspark: thr 0.60: 443 windows (1838 drafted, 1588 accepted = 86%) and 17 single tokens; the repeats' windows 40 (71 drafted, 44 accepted); the drafter's steps 420, drafts kept 0..5: 17 17 33 23 35 295; 42.8 ms a window, 15.0 a single token, 2.84 a draft; 4.45 tokens a step
+glm stat: decode 10.03 ms/tok (99.73 tok/s) | vram hit 67.50% | ram fetches 0.34/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.34/tok | cpu lane 87.18/tok in 2.63 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6664/6800 ram 8695/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 155512 experts 318630 upload_bytes 32827115520 prepare_ms 1141.445 launch_ms 1090.362 wait_ms 3127.917 fallbacks 0 window_calls 34216 columns 153978
+
+[identical-p0-B / trial-02]
+PP 4096 16384 1133.3 3614.2 0 0.0
+PP 8192 16384 2208.4 3709.4 0 0.0
+PP 12288 16384 3313.4 3708.6 0 0.0
+PP 13715 16384 3952.6 3469.9 0 0.0
+PP 16383 16384 6003.9 2728.7 0 0.0
+PP 16384 16384 6029.5 2717.3 0 0.0
+STAT tok_s=103.19 ms_tok=9.69 vram_hit=0.6808 ram_fetch=0.311 disk=0.000 promo=0.311 vram_used=6653 vram_slots=6800 ram_used=8707 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.003 miss_ms=0.000 lane=83.206 lane_ms=2.496 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=10.27 w_disk_ms=0.000 w_lane_ms=2.669 spec_acc=1614 spec_offered=1799 spec_rounds=412
+DONE 2048 16384 6029.6 19847.4 length 1614 1799 0 364871 535920 412
+ds4 dspark: thr 0.60: 412 windows (1799 drafted, 1614 accepted = 90%) and 22 single tokens; the repeats' windows 4 (9 drafted, 1 accepted); the drafter's steps 430, drafts kept 0..5: 22 23 25 27 29 304; 44.3 ms a window, 15.4 a single token, 2.86 a draft; 4.72 tokens a step
+glm stat: decode 9.69 ms/tok (103.19 tok/s) | vram hit 68.08% | ram fetches 0.31/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.31/tok | cpu lane 83.21/tok in 2.50 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6653/6800 ram 8707/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 231708 experts 475080 upload_bytes 33515366400 prepare_ms 1165.484 launch_ms 1628.165 wait_ms 5202.412 fallbacks 0 window_calls 50536 columns 229334
+
+[identical-p2-B / warmup-01]
+PP 4096 16384 1221.6 3353.0 0 0.0
+PP 8192 16384 2263.1 3619.8 0 0.0
+PP 12288 16384 3333.3 3686.5 0 0.0
+PP 13715 16384 3936.1 3484.4 0 0.0
+PP 16383 16384 6035.1 2714.6 0 0.0
+PP 16384 16384 6071.4 2698.5 0 0.0
+STAT tok_s=80.84 ms_tok=12.37 vram_hit=0.9162 ram_fetch=3.722 disk=0.000 promo=3.450 vram_used=6686 vram_slots=6800 ram_used=8668 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.040 miss_ms=0.000 lane=18.272 lane_ms=2.599 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=12.82 w_disk_ms=0.000 w_lane_ms=2.367 spec_acc=1605 spec_offered=1803 spec_rounds=420
+DONE 2048 16384 6071.5 25335.7 length 1605 1803 0 493675 538800 420
+ds4 dspark: thr 0.60: 420 windows (1803 drafted, 1605 accepted = 89%) and 22 single tokens; the repeats' windows 3 (7 drafted, 2 accepted); the drafter's steps 439, drafts kept 0..5: 22 29 29 26 34 299; 51.5 ms a window, 19.4 a single token, 2.85 a draft; 4.63 tokens a step
+glm stat: decode 12.37 ms/tok (80.83 tok/s) | vram hit 91.62% | ram fetches 3.72/tok | disk 0.00 reads/tok in 0.04 waits/tok, 0.00 ms/tok | promotions 3.45/tok | cpu lane 18.27/tok in 2.60 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6680/6800 ram 8674/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 12237 experts 13215 upload_bytes 29920296960 prepare_ms 1040.235 launch_ms 122.963 wait_ms 172.338 fallbacks 0 window_calls 7424 columns 11745
+
+[identical-p2-B / trial-01]
+PP 4096 16384 1085.2 3774.5 0 0.0
+PP 8192 16384 2105.8 3890.2 0 0.0
+PP 12288 16384 3158.2 3890.8 0 0.0
+PP 13715 16384 3725.8 3681.1 0 0.0
+PP 16383 16384 5595.3 2928.0 0 0.0
+PP 16384 16384 5625.2 2912.6 0 0.0
+STAT tok_s=92.35 ms_tok=10.83 vram_hit=0.9396 ram_fetch=2.206 disk=0.000 promo=2.104 vram_used=6695 vram_slots=6800 ram_used=8660 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.054 miss_ms=0.000 lane=13.607 lane_ms=1.745 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=9.38 w_disk_ms=0.000 w_lane_ms=1.451 spec_acc=1617 spec_offered=1812 spec_rounds=412
+DONE 2048 16384 5625.2 22176.7 length 1617 1812 0 505824 538320 412
+ds4 dspark: thr 0.60: 412 windows (1812 drafted, 1617 accepted = 89%) and 19 single tokens; the repeats' windows 10 (20 drafted, 7 accepted); the drafter's steps 421, drafts kept 0..5: 19 16 23 27 31 305; 48.8 ms a window, 16.0 a single token, 2.86 a draft; 4.75 tokens a step
+glm stat: decode 10.83 ms/tok (92.35 tok/s) | vram hit 93.96% | ram fetches 2.21/tok | disk 0.00 reads/tok in 0.05 waits/tok, 0.00 ms/tok | promotions 2.10/tok | cpu lane 13.61/tok in 1.74 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6680/6800 ram 8665/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 24001 experts 25617 upload_bytes 45864622080 prepare_ms 1594.738 launch_ms 257.410 wait_ms 423.618 fallbacks 0 window_calls 14732 columns 22874
+
+[identical-p2-B / trial-02]
+PP 4096 16384 1076.4 3805.4 0 0.0
+PP 8192 16384 2107.4 3887.3 0 0.0
+PP 12288 16384 3166.6 3880.5 0 0.0
+PP 13715 16384 3732.0 3675.0 0 0.0
+PP 16383 16384 5613.1 2918.7 0 0.0
+PP 16384 16384 5643.3 2903.3 0 0.0
+STAT tok_s=93.71 ms_tok=10.67 vram_hit=0.9405 ram_fetch=2.144 disk=0.000 promo=2.066 vram_used=6688 vram_slots=6800 ram_used=8668 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.051 miss_ms=0.000 lane=13.465 lane_ms=1.728 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=9.20 w_disk_ms=0.000 w_lane_ms=1.332 spec_acc=1612 spec_offered=1812 spec_rounds=413
+DONE 2048 16384 5643.3 21854.4 length 1612 1812 0 507210 539280 413
+ds4 dspark: thr 0.60: 413 windows (1812 drafted, 1612 accepted = 89%) and 22 single tokens; the repeats' windows 2 (5 drafted, 0 accepted); the drafter's steps 433, drafts kept 0..5: 22 16 29 32 33 301; 48.5 ms a window, 17.1 a single token, 2.86 a draft; 4.71 tokens a step
+glm stat: decode 10.67 ms/tok (93.71 tok/s) | vram hit 94.05% | ram fetches 2.14/tok | disk 0.00 reads/tok in 0.05 waits/tok, 0.00 ms/tok | promotions 2.07/tok | cpu lane 13.46/tok in 1.73 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6680/6800 ram 8672/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 35487 experts 37691 upload_bytes 51992340480 prepare_ms 1807.938 launch_ms 371.308 wait_ms 673.677 fallbacks 0 window_calls 21825 columns 33651
+
+[identical-p4-B / warmup-01]
+PP 4096 16384 1213.2 3376.1 0 0.0
+PP 8192 16384 2254.0 3634.4 0 0.0
+PP 12288 16384 3315.8 3705.9 0 0.0
+PP 13715 16384 3920.7 3498.1 0 0.0
+PP 16383 16384 6023.2 2720.0 0 0.0
+PP 16384 16384 6057.9 2704.6 0 0.0
+STAT tok_s=81.94 ms_tok=12.20 vram_hit=0.9060 ram_fetch=3.251 disk=0.000 promo=3.091 vram_used=6682 vram_slots=6800 ram_used=8667 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.001 disk_waits=0.046 miss_ms=0.001 lane=21.494 lane_ms=2.476 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=13.38 w_disk_ms=0.000 w_lane_ms=2.297 spec_acc=1605 spec_offered=1808 spec_rounds=420
+DONE 2048 16384 6057.9 24994.5 length 1605 1808 0 489467 540240 420
+ds4 dspark: thr 0.60: 420 windows (1808 drafted, 1605 accepted = 89%) and 23 single tokens; the repeats' windows 15 (21 drafted, 10 accepted); the drafter's steps 428, drafts kept 0..5: 23 19 27 23 35 301; 50.7 ms a window, 19.6 a single token, 2.86 a draft; 4.62 tokens a step
+glm stat: decode 12.20 ms/tok (81.94 tok/s) | vram hit 90.60% | ram fetches 3.25/tok | disk 0.00 reads/tok in 0.05 waits/tok, 0.00 ms/tok | promotions 3.09/tok | cpu lane 21.49/tok in 2.48 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6680/6800 ram 8678/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 18665 experts 21392 upload_bytes 29920296960 prepare_ms 1040.264 launch_ms 164.407 wait_ms 262.538 fallbacks 0 window_calls 9902 columns 17960
+
+[identical-p4-B / trial-01]
+PP 4096 16384 1077.7 3800.7 0 0.0
+PP 8192 16384 2105.8 3890.2 0 0.0
+PP 12288 16384 3164.9 3882.5 0 0.0
+PP 13715 16384 3738.8 3668.3 0 0.0
+PP 16383 16384 5622.0 2914.1 0 0.0
+PP 16384 16384 5651.8 2898.9 0 0.0
+STAT tok_s=94.97 ms_tok=10.53 vram_hit=0.9359 ram_fetch=1.627 disk=0.000 promo=1.580 vram_used=6691 vram_slots=6800 ram_used=8660 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.025 miss_ms=0.000 lane=15.207 lane_ms=1.561 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=11.29 w_disk_ms=0.000 w_lane_ms=1.899 spec_acc=1604 spec_offered=1801 spec_rounds=426
+DONE 2048 16384 5651.8 21566.0 length 1604 1801 0 504270 538800 426
+ds4 dspark: thr 0.60: 426 windows (1801 drafted, 1604 accepted = 89%) and 18 single tokens; the repeats' windows 23 (46 drafted, 25 accepted); the drafter's steps 421, drafts kept 0..5: 18 23 28 25 34 293; 46.0 ms a window, 15.6 a single token, 2.85 a draft; 4.61 tokens a step
+glm stat: decode 10.53 ms/tok (94.96 tok/s) | vram hit 93.59% | ram fetches 1.63/tok | disk 0.00 reads/tok in 0.03 waits/tok, 0.00 ms/tok | promotions 1.58/tok | cpu lane 15.21/tok in 1.56 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6680/6800 ram 8669/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 34239 experts 39030 upload_bytes 43973130240 prepare_ms 1529.004 launch_ms 298.580 wait_ms 623.785 fallbacks 0 window_calls 18756 columns 32755
+
+[identical-p4-B / trial-02]
+PP 4096 16384 1062.6 3854.6 0 0.0
+PP 8192 16384 2086.8 3925.6 0 0.0
+PP 12288 16384 3146.1 3905.8 0 0.0
+PP 13715 16384 3703.0 3703.8 0 0.0
+PP 16383 16384 5596.5 2927.4 0 0.0
+PP 16384 16384 5625.4 2912.5 0 0.0
+STAT tok_s=96.63 ms_tok=10.35 vram_hit=0.9371 ram_fetch=1.531 disk=0.000 promo=1.476 vram_used=6686 vram_slots=6800 ram_used=8665 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.026 miss_ms=0.000 lane=15.086 lane_ms=1.573 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=9.99 w_disk_ms=0.000 w_lane_ms=1.237 spec_acc=1609 spec_offered=1818 spec_rounds=421
+DONE 2048 16384 5625.4 21193.8 length 1609 1818 0 507594 541680 421
+ds4 dspark: thr 0.60: 421 windows (1818 drafted, 1609 accepted = 89%) and 18 single tokens; the repeats' windows 30 (74 drafted, 40 accepted); the drafter's steps 409, drafts kept 0..5: 18 13 26 29 23 300; 46.5 ms a window, 15.5 a single token, 2.86 a draft; 4.67 tokens a step
+glm stat: decode 10.35 ms/tok (96.63 tok/s) | vram hit 93.71% | ram fetches 1.53/tok | disk 0.00 reads/tok in 0.03 waits/tok, 0.00 ms/tok | promotions 1.48/tok | cpu lane 15.09/tok in 1.57 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6680/6800 ram 8674/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 50049 experts 56527 upload_bytes 48366858240 prepare_ms 1681.886 launch_ms 460.792 wait_ms 981.909 fallbacks 0 window_calls 27703 columns 47738
