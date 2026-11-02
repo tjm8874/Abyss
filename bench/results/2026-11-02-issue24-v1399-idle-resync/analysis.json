@@ -1,0 +1,4833 @@
+{
+  "version": "1.3.99",
+  "upstream_commit": "37833d59eb7c130ecd5b5c3abde509bd4744f34a",
+  "engine_sha256": "960c475ba84179867a1596a7ececc4b7ffd440ab9ada5da5b90ee2cc532d6e99",
+  "aggregate": {
+    "original": {
+      "r0": {
+        "first_4096_tps": {
+          "median": 3607.55,
+          "min": 3550.7,
+          "max": 3647.6,
+          "values": [
+            3618.7,
+            3647.6,
+            3550.7,
+            3618.3,
+            3596.8,
+            3595.1
+          ]
+        },
+        "prefill_tps": {
+          "median": 2721.9338500175236,
+          "min": 2695.4461700447487,
+          "max": 2740.899357601713,
+          "values": [
+            2727.9841489202286,
+            2740.899357601713,
+            2695.4461700447487,
+            2721.5494759223266,
+            2722.318224112721,
+            2704.790834351372
+          ]
+        },
+        "decode_tps": {
+          "median": 101.97723796812029,
+          "min": 97.4398256740619,
+          "max": 104.39498822497936,
+          "values": [
+            102.69061443886197,
+            104.39498822497936,
+            101.71090859427379,
+            102.2435673419668,
+            98.36978971536163,
+            97.4398256740619
+          ]
+        },
+        "promotions_per_token": {
+          "median": 0.3865,
+          "min": 0.31,
+          "max": 0.414,
+          "values": [
+            0.395,
+            0.31,
+            0.379,
+            0.31,
+            0.394,
+            0.414
+          ]
+        },
+        "vram_hit_percent": {
+          "median": 68.245,
+          "min": 67.9,
+          "max": 68.94,
+          "values": [
+            68.94,
+            68.33,
+            67.9,
+            67.93,
+            68.16,
+            68.67999999999999
+          ]
+        },
+        "ram_fetches_per_token": {
+          "median": 0.385,
+          "min": 0.307,
+          "max": 0.412,
+          "values": [
+            0.392,
+            0.309,
+            0.378,
+            0.307,
+            0.392,
+            0.412
+          ]
+        },
+        "ttft_s": {
+          "median": 6.099569905476528,
+          "min": 6.004585143004078,
+          "max": 6.193473941995762,
+          "values": [
+            6.113046311977087,
+            6.004585143004078,
+            6.193473941995762,
+            6.042054895980982,
+            6.123904954001773,
+            6.08609349897597
+          ]
+        },
+        "wall_s": {
+          "median": 26.133027937001316,
+          "min": 25.596081035997486,
+          "max": 27.076173724984983,
+          "values": [
+            25.950154050980927,
+            25.596081035997486,
+            26.21457207200001,
+            26.051483802002622,
+            26.83860463599558,
+            27.076173724984983
+          ]
+        },
+        "wall_minus_native_ms": {
+          "median": 0.7324190000563249,
+          "min": 0.6720720000084839,
+          "max": 0.8540509809245123,
+          "values": [
+            0.8540509809245123,
+            0.6810359974879248,
+            0.6720720000084839,
+            0.783802002624725,
+            0.8046359955769731,
+            0.6737249849829823
+          ]
+        },
+        "dispatch_write_ms": {
+          "median": 0.08792598964646459,
+          "min": 0.05539398989640176,
+          "max": 0.10451598791405559,
+          "values": [
+            0.10451598791405559,
+            0.0852899975143373,
+            0.05539398989640176,
+            0.08817599155008793,
+            0.10080001084133983,
+            0.08767598774284124
+          ]
+        },
+        "preceding_resync_ms": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "following_resync_promotions": {
+          "median": 0.0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "following_resync_ms": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "sampling": {
+          "measured_requests": 6,
+          "fresh_processes": 3,
+          "flagged_startup_slow_processes": []
+        }
+      },
+      "r8192": {
+        "first_4096_tps": {
+          "median": 3730.8,
+          "min": 3063.4,
+          "max": 3763.1,
+          "values": [
+            3064.5,
+            3063.4,
+            3763.1,
+            3722.3,
+            3739.3,
+            3749.9
+          ]
+        },
+        "prefill_tps": {
+          "median": 2850.8728101849374,
+          "min": 2186.632500533846,
+          "max": 2875.445339511048,
+          "values": [
+            2193.4240119952874,
+            2186.632500533846,
+            2875.445339511048,
+            2839.7115917914584,
+            2862.034028578416,
+            2866.590849444493
+          ]
+        },
+        "decode_tps": {
+          "median": 99.95768332678007,
+          "min": 97.94965731968033,
+          "max": 101.85659506532647,
+          "values": [
+            98.26453696195607,
+            97.94965731968033,
+            101.63469077843837,
+            101.27884320571275,
+            98.6365234478474,
+            101.85659506532647
+          ]
+        },
+        "promotions_per_token": {
+          "median": 0.6675,
+          "min": 0.617,
+          "max": 0.726,
+          "values": [
+            0.695,
+            0.726,
+            0.634,
+            0.617,
+            0.715,
+            0.64
+          ]
+        },
+        "vram_hit_percent": {
+          "median": 89.185,
+          "min": 87.72,
+          "max": 89.87,
+          "values": [
+            89.87,
+            89.68,
+            87.72,
+            89.25999999999999,
+            88.37,
+            89.11
+          ]
+        },
+        "ram_fetches_per_token": {
+          "median": 0.6675,
+          "min": 0.618,
+          "max": 0.72,
+          "values": [
+            0.696,
+            0.72,
+            0.631,
+            0.618,
+            0.712,
+            0.639
+          ]
+        },
+        "ttft_s": {
+          "median": 6.013590497488622,
+          "min": 5.837869164010044,
+          "max": 7.801953295012936,
+          "values": [
+            7.801953295012936,
+            7.55539430299541,
+            5.998718277987791,
+            5.867048368992982,
+            6.028462716989452,
+            5.837869164010044
+          ]
+        },
+        "wall_s": {
+          "median": 26.24006766549428,
+          "min": 25.822814406012185,
+          "max": 28.402191410015803,
+          "values": [
+            28.312152930011507,
+            28.402191410015803,
+            25.849130634975154,
+            25.991676567995455,
+            26.488458762993105,
+            25.822814406012185
+          ]
+        },
+        "wall_minus_native_ms": {
+          "median": 0.6839890056289732,
+          "min": 0.6144060121841903,
+          "max": 0.8529300115078513,
+          "values": [
+            0.8529300115078513,
+            0.6914100158028305,
+            0.6306349751539528,
+            0.676567995455116,
+            0.7587629931076663,
+            0.6144060121841903
+          ]
+        },
+        "dispatch_write_ms": {
+          "median": 0.08033101039472967,
+          "min": 0.06856900290586054,
+          "max": 0.09227398550137877,
+          "values": [
+            0.08027101284824312,
+            0.08039100794121623,
+            0.08018998778425157,
+            0.08762499783188105,
+            0.09227398550137877,
+            0.06856900290586054
+          ]
+        },
+        "preceding_resync_ms": {
+          "median": 404.40000000000003,
+          "min": 50.1,
+          "max": 684.4,
+          "values": [
+            684.4,
+            50.1,
+            599.7,
+            137.7,
+            610.8,
+            209.1
+          ]
+        },
+        "following_resync_promotions": {
+          "median": 186.5,
+          "min": 72,
+          "max": 310,
+          "values": [
+            72,
+            284,
+            204,
+            140,
+            310,
+            169
+          ]
+        },
+        "following_resync_ms": {
+          "median": 125.39999999999999,
+          "min": 50.1,
+          "max": 209.1,
+          "values": [
+            50.1,
+            192.2,
+            137.7,
+            90.3,
+            209.1,
+            113.1
+          ]
+        },
+        "sampling": {
+          "measured_requests": 6,
+          "fresh_processes": 3,
+          "flagged_startup_slow_processes": [
+            "original-r8192-A"
+          ]
+        }
+      }
+    },
+    "identical": {
+      "r0": {
+        "first_4096_tps": {
+          "median": 3599.85,
+          "min": 3580.1,
+          "max": 3633.9,
+          "values": [
+            3589.0,
+            3610.7,
+            3580.1,
+            3633.9
+          ]
+        },
+        "prefill_tps": {
+          "median": 2723.6098268305013,
+          "min": 2713.4363458703897,
+          "max": 2727.575414530199,
+          "values": [
+            2713.4363458703897,
+            2727.575414530199,
+            2721.368657088282,
+            2725.850996572721
+          ]
+        },
+        "decode_tps": {
+          "median": 100.54446909003002,
+          "min": 99.14938733618322,
+          "max": 103.63166230651291,
+          "values": [
+            103.63166230651291,
+            99.89366787306481,
+            101.19527030699523,
+            99.14938733618322
+          ]
+        },
+        "promotions_per_token": {
+          "median": 0.358,
+          "min": 0.335,
+          "max": 0.391,
+          "values": [
+            0.335,
+            0.364,
+            0.352,
+            0.391
+          ]
+        },
+        "vram_hit_percent": {
+          "median": 68.08500000000001,
+          "min": 67.04,
+          "max": 69.58,
+          "values": [
+            67.04,
+            68.57,
+            67.60000000000001,
+            69.58
+          ]
+        },
+        "ram_fetches_per_token": {
+          "median": 0.3565,
+          "min": 0.335,
+          "max": 0.388,
+          "values": [
+            0.335,
+            0.36,
+            0.353,
+            0.388
+          ]
+        },
+        "ttft_s": {
+          "median": 6.0847213645029115,
+          "min": 6.03285820101155,
+          "max": 6.145343001990113,
+          "values": [
+            6.145343001990113,
+            6.03285820101155,
+            6.133562424016418,
+            6.035880304989405
+          ]
+        },
+        "wall_s": {
+          "median": 26.38437628900283,
+          "min": 25.801189894991694,
+          "max": 26.66703413700452,
+          "values": [
+            25.801189894991694,
+            26.509335629991256,
+            26.259416948014405,
+            26.66703413700452
+          ]
+        },
+        "wall_minus_native_ms": {
+          "median": 0.7627624914766784,
+          "min": 0.7341370045214717,
+          "max": 0.8169480144060799,
+          "values": [
+            0.789894991696201,
+            0.7356299912571558,
+            0.8169480144060799,
+            0.7341370045214717
+          ]
+        },
+        "dispatch_write_ms": {
+          "median": 0.10550851584412158,
+          "min": 0.08863699622452259,
+          "max": 0.17851500888355076,
+          "values": [
+            0.11515701771713793,
+            0.09586001397110522,
+            0.17851500888355076,
+            0.08863699622452259
+          ]
+        },
+        "preceding_resync_ms": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "following_resync_promotions": {
+          "median": 0.0,
+          "min": 0,
+          "max": 0,
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "following_resync_ms": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "sampling": {
+          "measured_requests": 4,
+          "fresh_processes": 2,
+          "flagged_startup_slow_processes": []
+        }
+      },
+      "r8192": {
+        "first_4096_tps": {
+          "median": 3728.6499999999996,
+          "min": 3702.8,
+          "max": 3756.2,
+          "values": [
+            3756.2,
+            3728.7,
+            3728.6,
+            3702.8
+          ]
+        },
+        "prefill_tps": {
+          "median": 2836.3206612225995,
+          "min": 2816.911094682186,
+          "max": 2858.837899145001,
+          "values": [
+            2858.837899145001,
+            2848.2520035464076,
+            2816.911094682186,
+            2824.3893188987918
+          ]
+        },
+        "decode_tps": {
+          "median": 100.19902328893534,
+          "min": 99.54408033518358,
+          "max": 102.76790911463037,
+          "values": [
+            100.07965323963897,
+            100.31839333823169,
+            99.54408033518358,
+            102.76790911463037
+          ]
+        },
+        "promotions_per_token": {
+          "median": 0.6365000000000001,
+          "min": 0.59,
+          "max": 0.658,
+          "values": [
+            0.658,
+            0.64,
+            0.633,
+            0.59
+          ]
+        },
+        "vram_hit_percent": {
+          "median": 88.475,
+          "min": 86.88,
+          "max": 89.62,
+          "values": [
+            88.1,
+            89.62,
+            86.88,
+            88.85
+          ]
+        },
+        "ram_fetches_per_token": {
+          "median": 0.6375,
+          "min": 0.585,
+          "max": 0.656,
+          "values": [
+            0.656,
+            0.645,
+            0.63,
+            0.585
+          ]
+        },
+        "ttft_s": {
+          "median": 5.98907872250129,
+          "min": 5.873710658022901,
+          "max": 6.053729648992885,
+          "values": [
+            6.042240759008564,
+            5.873710658022901,
+            6.053729648992885,
+            5.935916685994016
+          ]
+        },
+        "wall_s": {
+          "median": 26.18166687351186,
+          "min": 25.730096608021995,
+          "max": 26.390851648990065,
+          "values": [
+            26.195440020004753,
+            26.167893727018964,
+            26.390851648990065,
+            25.730096608021995
+          ]
+        },
+        "wall_minus_native_ms": {
+          "median": 0.7458344974093052,
+          "min": 0.5937270189642732,
+          "max": 0.7966080219921423,
+          "values": [
+            0.7400200047522958,
+            0.5937270189642732,
+            0.7516489900663146,
+            0.7966080219921423
+          ]
+        },
+        "dispatch_write_ms": {
+          "median": 0.08288549724966288,
+          "min": 0.0510960235260427,
+          "max": 0.16222501290030777,
+          "values": [
+            0.09203300578519702,
+            0.0510960235260427,
+            0.07373798871412873,
+            0.16222501290030777
+          ]
+        },
+        "preceding_resync_ms": {
+          "median": 339.3,
+          "min": 180.9,
+          "max": 618.1,
+          "values": [
+            618.1,
+            180.9,
+            441.2,
+            237.4
+          ]
+        },
+        "following_resync_promotions": {
+          "median": 196.0,
+          "min": 27,
+          "max": 351,
+          "values": [
+            269,
+            27,
+            351,
+            123
+          ]
+        },
+        "following_resync_ms": {
+          "median": 130.4,
+          "min": 18.5,
+          "max": 237.4,
+          "values": [
+            180.9,
+            18.5,
+            237.4,
+            79.9
+          ]
+        },
+        "sampling": {
+          "measured_requests": 4,
+          "fresh_processes": 2,
+          "flagged_startup_slow_processes": []
+        }
+      }
+    }
+  },
+  "changes_vs_r0_percent": {
+    "original": {
+      "r8192": {
+        "prefill_tps": 4.737035037298343,
+        "decode_tps": -1.9803974706312122,
+        "wall_s": 0.409595584373168
+      }
+    },
+    "identical": {
+      "r8192": {
+        "prefill_tps": 4.138288578700755,
+        "decode_tps": -0.3435751406527965,
+        "wall_s": -0.7682933766202438
+      }
+    }
+  },
+  "temperature_maxima_c": {
+    "0": 52.0,
+    "1": 82.0
+  },
+  "thermal_flags": [],
+  "diagnostics": {
+    "r8192": {
+      "last_check": "expert helper check: 30720 window columns, max |diff| / max |ref| 0.072, rms helper vs cpu 0.00267",
+      "last_exact_reference": "expert helper check: exact float reference, 120 columns: helper rms 0.0123 max 0.0295 | cpu lane rms 0.0197 max 0.0295",
+      "helper_request_end": [
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 20421 experts 44859 upload_bytes 29920296960 prepare_ms 1040.460 launch_ms 176.865 wait_ms 172.388 fallbacks 0 window_calls 4485 columns 19756",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 30039 experts 57741 upload_bytes 37312450560 prepare_ms 1297.629 launch_ms 259.339 wait_ms 375.780 fallbacks 0 window_calls 8235 columns 28921"
+      ],
+      "resync_lines": [
+        "expert helper resync: 800 promotions in 542.8 ms",
+        "expert helper resync: 480 promotions in 324.6 ms"
+      ]
+    }
+  },
+  "request_rows": [
+    {
+      "case": "original-r0-A",
+      "name": "warmup-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "318c59035fe741f1fff4935cc4c44cb2c7332d16311feb4d367125845ea051d2",
+      "output_ids_sha256": "63b2afde57d39c76a92acbe2e66392f0c4cdf1b625649b1a0897594975f4d71e",
+      "prefill_tps": 2715.595113785159,
+      "decode_tps": 84.0287864240992,
+      "prefill_ms": 6033.3,
+      "decode_ms": 24372.6,
+      "ttft_s": 8.075422472989885,
+      "wall_s": 30.40662721201079,
+      "draft_accepted": 1588,
+      "draft_offered": 1831,
+      "reused": 0,
+      "done": "DONE 2048 16384 6033.3 24372.6 length 1588 1831 0 353294 549600 426",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.2119969800114632,
+          "line": "PP 4096 16384 1211.2 3381.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.2463121460168622,
+          "line": "PP 8192 16384 2245.5 3648.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.305639450001763,
+          "line": "PP 12288 16384 3304.8 3718.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.9099017909902614,
+          "line": "PP 13715 16384 3909.1 3508.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.997805741993943,
+          "line": "PP 16383 16384 5997.0 2731.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.034030420996714,
+          "line": "PP 16384 16384 6033.2 2715.6 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 29.702613305009436,
+      "done_elapsed_s": 60.109240517020226,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.09186301031149924,
+      "client_gap_since_previous_done_ms": null,
+      "wall_minus_native_ms": 0.7272120107918454,
+      "family": "original",
+      "mode": "r0",
+      "first_4096_tps": 3381.8,
+      "promotions_per_token": 1.122,
+      "vram_hit_percent": 64.28,
+      "ram_fetches_per_token": 1.15,
+      "native_stat": {
+        "tok_s": "84.03",
+        "ms_tok": "11.90",
+        "vram_hit": "0.6428",
+        "ram_fetch": "1.150",
+        "disk": "0.000",
+        "promo": "1.122",
+        "vram_used": "6681",
+        "vram_slots": "6800",
+        "ram_used": "8679",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.003",
+        "miss_ms": "0.000",
+        "lane": "94.699",
+        "lane_ms": "3.499",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "10.72",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.623",
+        "spec_acc": "1588",
+        "spec_offered": "1831",
+        "spec_rounds": "426"
+      },
+      "glm_stat": "glm stat: decode 11.90 ms/tok (84.03 tok/s) | vram hit 64.28% | ram fetches 1.15/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 1.12/tok | cpu lane 94.70/tok in 3.50 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6680/6800 ram 8679/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 0,
+      "warmup": true,
+      "startup_warmup_prefill_tps": 2715.595113785159,
+      "startup_slow_before_resync": false,
+      "following_resync_promotions": 0,
+      "following_resync_ms": 0.0,
+      "preceding_resync_ms": 0.0,
+      "helper_request_increment": {
+        "calls": 78254.0,
+        "experts": 162003.0,
+        "upload_bytes": 29920296960.0,
+        "prepare_ms": 1040.588,
+        "launch_ms": 565.389,
+        "wait_ms": 1146.619,
+        "fallbacks": 0.0,
+        "window_calls": 16914.0,
+        "columns": 77066.0
+      }
+    },
+    {
+      "case": "original-r0-A",
+      "name": "trial-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "113530afeb28a7e465438c194fb73045a69eb835bb38de53f46f6a0b47009ac8",
+      "prefill_tps": 2727.9841489202286,
+      "decode_tps": 102.69061443886197,
+      "prefill_ms": 6005.9,
+      "decode_ms": 19943.4,
+      "ttft_s": 6.113046311977087,
+      "wall_s": 25.950154050980927,
+      "draft_accepted": 1624,
+      "draft_offered": 1797,
+      "reused": 0,
+      "done": "DONE 2048 16384 6005.9 19943.4 length 1624 1797 0 367458 533040 415",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.1327051349799149,
+          "line": "PP 4096 16384 1131.9 3618.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.2027921169938054,
+          "line": "PP 8192 16384 2202.0 3720.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.2986541010031942,
+          "line": "PP 12288 16384 3297.8 3726.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.930424085992854,
+          "line": "PP 13715 16384 3929.6 3490.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.9741491389868315,
+          "line": "PP 16383 16384 5973.3 2742.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.006680653983494,
+          "line": "PP 16384 16384 6005.9 2728.0 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 65.10934574602288,
+      "done_elapsed_s": 91.05949979700381,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.10451598791405559,
+      "client_gap_since_previous_done_ms": 5000.105229002656,
+      "wall_minus_native_ms": 0.8540509809245123,
+      "family": "original",
+      "mode": "r0",
+      "first_4096_tps": 3618.7,
+      "promotions_per_token": 0.395,
+      "vram_hit_percent": 68.94,
+      "ram_fetches_per_token": 0.392,
+      "native_stat": {
+        "tok_s": "102.69",
+        "ms_tok": "9.74",
+        "vram_hit": "0.6894",
+        "ram_fetch": "0.392",
+        "disk": "0.000",
+        "promo": "0.395",
+        "vram_used": "6682",
+        "vram_slots": "6800",
+        "ram_used": "8671",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.004",
+        "miss_ms": "0.000",
+        "lane": "80.455",
+        "lane_ms": "2.491",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "11.13",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.775",
+        "spec_acc": "1624",
+        "spec_offered": "1797",
+        "spec_rounds": "415"
+      },
+      "glm_stat": "glm stat: decode 9.74 ms/tok (102.69 tok/s) | vram hit 68.94% | ram fetches 0.39/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.40/tok | cpu lane 80.45/tok in 2.49 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6677/6800 ram 8678/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 0,
+      "warmup": false,
+      "startup_warmup_prefill_tps": 2715.595113785159,
+      "startup_slow_before_resync": false,
+      "following_resync_promotions": 0,
+      "following_resync_ms": 0.0,
+      "preceding_resync_ms": 0.0,
+      "helper_request_increment": {
+        "calls": 73817.0,
+        "experts": 149229.0,
+        "upload_bytes": 3035381760.0,
+        "prepare_ms": 105.69900000000007,
+        "launch_ms": 504.1550000000001,
+        "wait_ms": 1838.47,
+        "fallbacks": 0.0,
+        "window_calls": 16374.0,
+        "columns": 73407.0
+      }
+    },
+    {
+      "case": "original-r0-A",
+      "name": "trial-02",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "f427160f41114de57386c03def91dd6a87537f0dace58a2e17a20378e0068305",
+      "output_ids_sha256": "6e136d5c47f1abecce9efe199d425639cfc65933e8991bac8726f099ed336334",
+      "prefill_tps": 2740.899357601713,
+      "decode_tps": 104.39498822497936,
+      "prefill_ms": 5977.6,
+      "decode_ms": 19617.8,
+      "ttft_s": 6.004585143004078,
+      "wall_s": 25.596081035997486,
+      "draft_accepted": 1619,
+      "draft_offered": 1805,
+      "reused": 0,
+      "done": "DONE 2048 16384 5977.6 19617.8 length 1619 1805 0 366336 536160 414",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.123620522004785,
+          "line": "PP 4096 16384 1122.9 3647.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.1946912799903657,
+          "line": "PP 8192 16384 2194.0 3733.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.286903419008013,
+          "line": "PP 12288 16384 3286.2 3739.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.9222381399886217,
+          "line": "PP 13715 16384 3921.6 3497.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.951714244991308,
+          "line": "PP 16383 16384 5951.0 2753.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.978226734005148,
+          "line": "PP 16384 16384 5977.6 2740.9 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 96.05960380201577,
+      "done_elapsed_s": 121.65568483801326,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.0852899975143373,
+      "client_gap_since_previous_done_ms": 5000.104005011963,
+      "wall_minus_native_ms": 0.6810359974879248,
+      "family": "original",
+      "mode": "r0",
+      "first_4096_tps": 3647.6,
+      "promotions_per_token": 0.31,
+      "vram_hit_percent": 68.33,
+      "ram_fetches_per_token": 0.309,
+      "native_stat": {
+        "tok_s": "104.40",
+        "ms_tok": "9.58",
+        "vram_hit": "0.6833",
+        "ram_fetch": "0.309",
+        "disk": "0.000",
+        "promo": "0.310",
+        "vram_used": "6646",
+        "vram_slots": "6800",
+        "ram_used": "8714",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.005",
+        "miss_ms": "0.000",
+        "lane": "82.608",
+        "lane_ms": "2.441",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "10.04",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.588",
+        "spec_acc": "1619",
+        "spec_offered": "1805",
+        "spec_rounds": "414"
+      },
+      "glm_stat": "glm stat: decode 9.58 ms/tok (104.39 tok/s) | vram hit 68.33% | ram fetches 0.31/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 0.31/tok | cpu lane 82.61/tok in 2.44 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6642/6800 ram 8715/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 0,
+      "warmup": false,
+      "startup_warmup_prefill_tps": 2715.595113785159,
+      "startup_slow_before_resync": false,
+      "following_resync_promotions": 0,
+      "following_resync_ms": 0.0,
+      "preceding_resync_ms": 0.0,
+      "helper_request_increment": {
+        "calls": 75761.0,
+        "experts": 155674.0,
+        "upload_bytes": 737556480.0,
+        "prepare_ms": 25.713999999999942,
+        "launch_ms": 545.1479999999999,
+        "wait_ms": 2076.3140000000003,
+        "fallbacks": 0.0,
+        "window_calls": 16373.0,
+        "columns": 75162.0
+      }
+    },
+    {
+      "case": "original-r8192-A",
+      "name": "warmup-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "318c59035fe741f1fff4935cc4c44cb2c7332d16311feb4d367125845ea051d2",
+      "output_ids_sha256": "c87fec016d77e3a8f1f695c2211785d07d6bd1df2c1a3a9239640a0b65b7b3e1",
+      "prefill_tps": 2045.3155233755695,
+      "decode_tps": 83.44912170614337,
+      "prefill_ms": 8010.5,
+      "decode_ms": 24541.9,
+      "ttft_s": 10.026887905027252,
+      "wall_s": 32.55311777602765,
+      "draft_accepted": 1559,
+      "draft_offered": 1829,
+      "reused": 0,
+      "done": "DONE 2048 16384 8010.5 24541.9 length 1559 1829 0 359598 556320 473",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.4834304490068462,
+          "line": "PP 4096 16384 1482.8 2762.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.7752156170026865,
+          "line": "PP 8192 16384 2774.6 2952.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.1032969990046695,
+          "line": "PP 12288 16384 4102.7 2995.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.971611386019504,
+          "line": "PP 13715 16384 4971.0 2759.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.976260167022701,
+          "line": "PP 16383 16384 7975.7 2054.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 8.01113702301518,
+          "line": "PP 16384 16384 8010.5 2045.3 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 29.556432460987708,
+      "done_elapsed_s": 62.109550237015355,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.03766000736504793,
+      "client_gap_since_previous_done_ms": null,
+      "wall_minus_native_ms": 0.7177760276463232,
+      "family": "original",
+      "mode": "r8192",
+      "first_4096_tps": 2762.3,
+      "promotions_per_token": 1.1,
+      "vram_hit_percent": 64.64,
+      "ram_fetches_per_token": 1.115,
+      "native_stat": {
+        "tok_s": "83.45",
+        "ms_tok": "11.98",
+        "vram_hit": "0.6464",
+        "ram_fetch": "1.115",
+        "disk": "0.000",
+        "promo": "1.100",
+        "vram_used": "6685",
+        "vram_slots": "6800",
+        "ram_used": "8675",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.001",
+        "miss_ms": "0.000",
+        "lane": "94.939",
+        "lane_ms": "3.538",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "8.96",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.434",
+        "spec_acc": "1559",
+        "spec_offered": "1829",
+        "spec_rounds": "473"
+      },
+      "glm_stat": "glm stat: decode 11.98 ms/tok (83.45 tok/s) | vram hit 64.64% | ram fetches 1.11/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 1.10/tok | cpu lane 94.94/tok in 3.54 ms/tok | tail skip 0.00/tok | prompt 0.5 ms/tok | vram 6680/6800 ram 8675/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 8192,
+      "warmup": true,
+      "startup_warmup_prefill_tps": 2045.3155233755695,
+      "startup_slow_before_resync": true,
+      "following_resync_promotions": 1012,
+      "following_resync_ms": 684.4,
+      "preceding_resync_ms": 0.0,
+      "following_resync_stopped_on_next_request": false,
+      "following_resync_completion_elapsed_s": 62.79398571798811,
+      "following_resync_completion_after_done_ms": 684.435480972752,
+      "helper_request_increment": {
+        "calls": 79254.0,
+        "experts": 162583.0,
+        "upload_bytes": 29920296960.0,
+        "prepare_ms": 1040.23,
+        "launch_ms": 539.007,
+        "wait_ms": 1302.696,
+        "fallbacks": 0.0,
+        "window_calls": 18669.0,
+        "columns": 78564.0
+      }
+    },
+    {
+      "case": "original-r8192-A",
+      "name": "trial-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "0f168f9b585f29a67c88e7bd3c4094ed47c33d2bf4b02bc8372dcf90e46704ad",
+      "prefill_tps": 2193.4240119952874,
+      "decode_tps": 98.26453696195607,
+      "prefill_ms": 7469.6,
+      "decode_ms": 20841.7,
+      "ttft_s": 7.801953295012936,
+      "wall_s": 28.312152930011507,
+      "draft_accepted": 1606,
+      "draft_offered": 1847,
+      "reused": 0,
+      "done": "DONE 2048 16384 7469.6 20841.7 length 1606 1847 0 493715 549360 427",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.33743673999561,
+          "line": "PP 4096 16384 1336.6 3064.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.5685102459974587,
+          "line": "PP 8192 16384 2567.7 3190.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.8307310350064654,
+          "line": "PP 12288 16384 3829.9 3208.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.646082235994982,
+          "line": "PP 13715 16384 4645.3 2952.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.441504535992863,
+          "line": "PP 16383 16384 7440.7 2201.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.4704392589919735,
+          "line": "PP 16384 16384 7469.6 2193.4 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 67.1096643130004,
+      "done_elapsed_s": 95.4218172430119,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.08027101284824312,
+      "client_gap_since_previous_done_ms": 5000.114075985039,
+      "wall_minus_native_ms": 0.8529300115078513,
+      "family": "original",
+      "mode": "r8192",
+      "first_4096_tps": 3064.5,
+      "promotions_per_token": 0.695,
+      "vram_hit_percent": 89.87,
+      "ram_fetches_per_token": 0.696,
+      "native_stat": {
+        "tok_s": "98.27",
+        "ms_tok": "10.18",
+        "vram_hit": "0.8987",
+        "ram_fetch": "0.696",
+        "disk": "0.000",
+        "promo": "0.695",
+        "vram_used": "6680",
+        "vram_slots": "6800",
+        "ram_used": "8676",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.013",
+        "miss_ms": "0.000",
+        "lane": "26.461",
+        "lane_ms": "1.553",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "10.07",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "1.082",
+        "spec_acc": "1606",
+        "spec_offered": "1847",
+        "spec_rounds": "427"
+      },
+      "glm_stat": "glm stat: decode 10.18 ms/tok (98.26 tok/s) | vram hit 89.87% | ram fetches 0.70/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 0.69/tok | cpu lane 26.46/tok in 1.55 ms/tok | tail skip 0.00/tok | prompt 0.5 ms/tok | vram 6678/6800 ram 8680/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 8192,
+      "warmup": false,
+      "startup_warmup_prefill_tps": 2045.3155233755695,
+      "startup_slow_before_resync": true,
+      "following_resync_promotions": 72,
+      "following_resync_ms": 50.1,
+      "preceding_resync_ms": 684.4,
+      "following_resync_stopped_on_next_request": false,
+      "following_resync_completion_elapsed_s": 95.47192587799509,
+      "following_resync_completion_after_done_ms": 50.108634983189404,
+      "preceding_resync_completed_before_send": true,
+      "helper_request_increment": {
+        "calls": 33576.0,
+        "experts": 43322.0,
+        "upload_bytes": 9513308160.0,
+        "prepare_ms": 330.922,
+        "launch_ms": 296.398,
+        "wait_ms": 832.5500000000002,
+        "fallbacks": 0.0,
+        "window_calls": 13487.0,
+        "columns": 32678.0
+      }
+    },
+    {
+      "case": "original-r8192-A",
+      "name": "trial-02",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "f427160f41114de57386c03def91dd6a87537f0dace58a2e17a20378e0068305",
+      "output_ids_sha256": "9b919c586b02bd93e921115c32c53314f6944d6f81b2ea77da326e8a452bb04c",
+      "prefill_tps": 2186.632500533846,
+      "decode_tps": 97.94965731968033,
+      "prefill_ms": 7492.8,
+      "decode_ms": 20908.7,
+      "ttft_s": 7.55539430299541,
+      "wall_s": 28.402191410015803,
+      "draft_accepted": 1589,
+      "draft_offered": 1828,
+      "reused": 0,
+      "done": "DONE 2048 16384 7492.8 20908.7 length 1589 1828 0 492229 548880 438",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.3377632620104123,
+          "line": "PP 4096 16384 1337.1 3063.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.5655614150164183,
+          "line": "PP 8192 16384 2564.9 3193.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.8416997890162747,
+          "line": "PP 12288 16384 3841.0 3199.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.665520999988075,
+          "line": "PP 13715 16384 4664.8 2940.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.468039967992809,
+          "line": "PP 16383 16384 7467.4 2193.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.493456046009669,
+          "line": "PP 16384 16384 7492.8 2186.6 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 100.42192035799962,
+      "done_elapsed_s": 128.82411176801543,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.08039100794121623,
+      "client_gap_since_previous_done_ms": 5000.1031149877235,
+      "wall_minus_native_ms": 0.6914100158028305,
+      "family": "original",
+      "mode": "r8192",
+      "first_4096_tps": 3063.4,
+      "promotions_per_token": 0.726,
+      "vram_hit_percent": 89.68,
+      "ram_fetches_per_token": 0.72,
+      "native_stat": {
+        "tok_s": "97.95",
+        "ms_tok": "10.21",
+        "vram_hit": "0.8968",
+        "ram_fetch": "0.720",
+        "disk": "0.000",
+        "promo": "0.726",
+        "vram_used": "6682",
+        "vram_slots": "6800",
+        "ram_used": "8673",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.012",
+        "miss_ms": "0.000",
+        "lane": "26.930",
+        "lane_ms": "1.573",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "11.16",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "1.644",
+        "spec_acc": "1589",
+        "spec_offered": "1828",
+        "spec_rounds": "438"
+      },
+      "glm_stat": "glm stat: decode 10.21 ms/tok (97.95 tok/s) | vram hit 89.68% | ram fetches 0.72/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 0.73/tok | cpu lane 26.93/tok in 1.57 ms/tok | tail skip 0.00/tok | prompt 0.5 ms/tok | vram 6679/6800 ram 8678/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 8192,
+      "warmup": false,
+      "startup_warmup_prefill_tps": 2045.3155233755695,
+      "startup_slow_before_resync": true,
+      "following_resync_promotions": 284,
+      "following_resync_ms": 192.2,
+      "preceding_resync_ms": 50.1,
+      "following_resync_stopped_on_next_request": false,
+      "following_resync_completion_elapsed_s": 129.01635390499723,
+      "following_resync_completion_after_done_ms": 192.24213698180392,
+      "preceding_resync_completed_before_send": true,
+      "helper_request_increment": {
+        "calls": 34245.0,
+        "experts": 44226.0,
+        "upload_bytes": 1755279360.0,
+        "prepare_ms": 61.281999999999925,
+        "launch_ms": 273.2940000000001,
+        "wait_ms": 879.2959999999998,
+        "fallbacks": 0.0,
+        "window_calls": 13768.0,
+        "columns": 33124.0
+      }
+    },
+    {
+      "case": "identical-r8192-A",
+      "name": "warmup-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "fb020d1e371ee8838cc22b8fe28a9acc4fe17d34f13ed1d503f9efe0f541888e",
+      "prefill_tps": 2701.8469656992083,
+      "decode_tps": 84.4588325051034,
+      "prefill_ms": 6064.0,
+      "decode_ms": 24248.5,
+      "ttft_s": 8.093733896996127,
+      "wall_s": 30.313141691993224,
+      "draft_accepted": 1600,
+      "draft_offered": 1835,
+      "reused": 0,
+      "done": "DONE 2048 16384 6064.0 24248.5 length 1600 1835 0 354695 547920 427",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.2116217489819974,
+          "line": "PP 4096 16384 1210.9 3382.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.2496289239788894,
+          "line": "PP 8192 16384 2248.9 3642.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.319208732980769,
+          "line": "PP 12288 16384 3318.5 3702.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.9239267069788184,
+          "line": "PP 13715 16384 3923.2 3495.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.02991161000682,
+          "line": "PP 16383 16384 6029.2 2717.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.064660706004361,
+          "line": "PP 16384 16384 6064.0 2701.9 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 29.272608034021687,
+      "done_elapsed_s": 59.58574972601491,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.027521979063749313,
+      "client_gap_since_previous_done_ms": null,
+      "wall_minus_native_ms": 0.6416919932235032,
+      "family": "identical",
+      "mode": "r8192",
+      "first_4096_tps": 3382.6,
+      "promotions_per_token": 1.091,
+      "vram_hit_percent": 64.73,
+      "ram_fetches_per_token": 1.104,
+      "native_stat": {
+        "tok_s": "84.46",
+        "ms_tok": "11.84",
+        "vram_hit": "0.6473",
+        "ram_fetch": "1.104",
+        "disk": "0.000",
+        "promo": "1.091",
+        "vram_used": "6680",
+        "vram_slots": "6800",
+        "ram_used": "8678",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.008",
+        "miss_ms": "0.000",
+        "lane": "93.236",
+        "lane_ms": "3.446",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "9.34",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.398",
+        "spec_acc": "1600",
+        "spec_offered": "1835",
+        "spec_rounds": "427"
+      },
+      "glm_stat": "glm stat: decode 11.84 ms/tok (84.46 tok/s) | vram hit 64.73% | ram fetches 1.10/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 1.09/tok | cpu lane 93.24/tok in 3.45 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6680/6800 ram 8680/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 8192,
+      "warmup": true,
+      "startup_warmup_prefill_tps": 2701.8469656992083,
+      "startup_slow_before_resync": false,
+      "following_resync_promotions": 913,
+      "following_resync_ms": 618.1,
+      "preceding_resync_ms": 0.0,
+      "following_resync_stopped_on_next_request": false,
+      "following_resync_completion_elapsed_s": 60.20387420000043,
+      "following_resync_completion_after_done_ms": 618.1244739855174,
+      "helper_request_increment": {
+        "calls": 77829.0,
+        "experts": 159592.0,
+        "upload_bytes": 29920296960.0,
+        "prepare_ms": 1040.236,
+        "launch_ms": 561.527,
+        "wait_ms": 1196.1,
+        "fallbacks": 0.0,
+        "window_calls": 16911.0,
+        "columns": 77005.0
+      }
+    },
+    {
+      "case": "identical-r8192-A",
+      "name": "trial-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "44ec3bc3c6cbecca084a8ac7f18fdcd1c7f46ed76f50c5ca9284f13f99d2086b",
+      "prefill_tps": 2858.837899145001,
+      "decode_tps": 100.07965323963897,
+      "prefill_ms": 5731.0,
+      "decode_ms": 20463.7,
+      "ttft_s": 6.042240759008564,
+      "wall_s": 26.195440020004753,
+      "draft_accepted": 1595,
+      "draft_offered": 1802,
+      "reused": 0,
+      "done": "DONE 2048 16384 5731.0 20463.7 length 1595 1802 0 476607 540960 431",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.0911846950184554,
+          "line": "PP 4096 16384 1090.5 3756.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.12646081999992,
+          "line": "PP 8192 16384 2125.7 3853.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.1873295650002547,
+          "line": "PP 12288 16384 3186.6 3856.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.7867794269986916,
+          "line": "PP 13715 16384 3786.1 3622.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.704102021001745,
+          "line": "PP 16383 16384 5703.4 2872.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.731659815995954,
+          "line": "PP 16384 16384 5731.0 2858.9 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 64.58585240700631,
+      "done_elapsed_s": 90.78129242701107,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.09203300578519702,
+      "client_gap_since_previous_done_ms": 5000.102680991404,
+      "wall_minus_native_ms": 0.7400200047522958,
+      "family": "identical",
+      "mode": "r8192",
+      "first_4096_tps": 3756.2,
+      "promotions_per_token": 0.658,
+      "vram_hit_percent": 88.1,
+      "ram_fetches_per_token": 0.656,
+      "native_stat": {
+        "tok_s": "100.08",
+        "ms_tok": "9.99",
+        "vram_hit": "0.8810",
+        "ram_fetch": "0.656",
+        "disk": "0.000",
+        "promo": "0.658",
+        "vram_used": "6676",
+        "vram_slots": "6800",
+        "ram_used": "8683",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.009",
+        "miss_ms": "0.000",
+        "lane": "30.758",
+        "lane_ms": "1.630",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "10.67",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "1.588",
+        "spec_acc": "1595",
+        "spec_offered": "1802",
+        "spec_rounds": "431"
+      },
+      "glm_stat": "glm stat: decode 9.99 ms/tok (100.08 tok/s) | vram hit 88.10% | ram fetches 0.66/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 0.66/tok | cpu lane 30.76/tok in 1.63 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6673/6800 ram 8684/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 8192,
+      "warmup": false,
+      "startup_warmup_prefill_tps": 2701.8469656992083,
+      "startup_slow_before_resync": false,
+      "following_resync_promotions": 269,
+      "following_resync_ms": 180.9,
+      "preceding_resync_ms": 618.1,
+      "following_resync_stopped_on_next_request": false,
+      "following_resync_completion_elapsed_s": 90.96222976100398,
+      "following_resync_completion_after_done_ms": 180.93733399291523,
+      "preceding_resync_completed_before_send": true,
+      "helper_request_increment": {
+        "calls": 38652.0,
+        "experts": 51957.0,
+        "upload_bytes": 8909936640.0,
+        "prepare_ms": 309.9279999999999,
+        "launch_ms": 313.832,
+        "wait_ms": 971.3630000000003,
+        "fallbacks": 0.0,
+        "window_calls": 14199.0,
+        "columns": 37535.0
+      }
+    },
+    {
+      "case": "identical-r8192-A",
+      "name": "trial-02",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "3f9a26f61ddfadaf4440ad96d677bf5996d57bfc2217bc3f586c83e2fb373d80",
+      "prefill_tps": 2848.2520035464076,
+      "decode_tps": 100.31839333823169,
+      "prefill_ms": 5752.3,
+      "decode_ms": 20415.0,
+      "ttft_s": 5.873710658022901,
+      "wall_s": 26.167893727018964,
+      "draft_accepted": 1587,
+      "draft_offered": 1797,
+      "reused": 0,
+      "done": "DONE 2048 16384 5752.3 20415.0 length 1587 1797 0 485457 541680 437",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.0991179160191678,
+          "line": "PP 4096 16384 1098.5 3728.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.135325166018447,
+          "line": "PP 8192 16384 2134.7 3837.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.2134295419964474,
+          "line": "PP 12288 16384 3212.8 3824.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.807926003006287,
+          "line": "PP 13715 16384 3807.3 3602.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.727197248023003,
+          "line": "PP 16383 16384 5726.6 2860.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.752826758020092,
+          "line": "PP 16384 16384 5752.2 2848.3 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 95.78136013800395,
+      "done_elapsed_s": 121.94925386502291,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.0510960235260427,
+      "client_gap_since_previous_done_ms": 5000.06771099288,
+      "wall_minus_native_ms": 0.5937270189642732,
+      "family": "identical",
+      "mode": "r8192",
+      "first_4096_tps": 3728.7,
+      "promotions_per_token": 0.64,
+      "vram_hit_percent": 89.62,
+      "ram_fetches_per_token": 0.645,
+      "native_stat": {
+        "tok_s": "100.32",
+        "ms_tok": "9.97",
+        "vram_hit": "0.8962",
+        "ram_fetch": "0.645",
+        "disk": "0.000",
+        "promo": "0.640",
+        "vram_used": "6667",
+        "vram_slots": "6800",
+        "ram_used": "8689",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.015",
+        "miss_ms": "0.000",
+        "lane": "26.793",
+        "lane_ms": "1.514",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "10.79",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "1.500",
+        "spec_acc": "1587",
+        "spec_offered": "1797",
+        "spec_rounds": "437"
+      },
+      "glm_stat": "glm stat: decode 9.97 ms/tok (100.32 tok/s) | vram hit 89.62% | ram fetches 0.65/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 0.64/tok | cpu lane 26.79/tok in 1.51 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6665/6800 ram 8693/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 8192,
+      "warmup": false,
+      "startup_warmup_prefill_tps": 2701.8469656992083,
+      "startup_slow_before_resync": false,
+      "following_resync_promotions": 27,
+      "following_resync_ms": 18.5,
+      "preceding_resync_ms": 180.9,
+      "following_resync_stopped_on_next_request": false,
+      "following_resync_completion_elapsed_s": 121.96771542701754,
+      "following_resync_completion_after_done_ms": 18.461561994627118,
+      "preceding_resync_completed_before_send": true,
+      "helper_request_increment": {
+        "calls": 33667.0,
+        "experts": 44578.0,
+        "upload_bytes": 3456460800.0,
+        "prepare_ms": 120.27500000000009,
+        "launch_ms": 277.4329999999999,
+        "wait_ms": 891.6979999999999,
+        "fallbacks": 0.0,
+        "window_calls": 13301.0,
+        "columns": 32319.0
+      }
+    },
+    {
+      "case": "identical-r0-A",
+      "name": "warmup-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "c82ab1dcfb92109fb5f388300e64768f7bcbd9d3037aa36aa4126cfabd3e3746",
+      "prefill_tps": 2705.773550006606,
+      "decode_tps": 87.57788145341651,
+      "prefill_ms": 6055.2,
+      "decode_ms": 23384.9,
+      "ttft_s": 8.080212416010909,
+      "wall_s": 29.44081491601537,
+      "draft_accepted": 1630,
+      "draft_offered": 1803,
+      "reused": 0,
+      "done": "DONE 2048 16384 6055.2 23384.9 length 1630 1803 0 340658 533040 402",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.2126088940131012,
+          "line": "PP 4096 16384 1211.9 3379.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.251160959014669,
+          "line": "PP 8192 16384 2250.5 3640.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.315894531988306,
+          "line": "PP 12288 16384 3315.2 3706.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.9247129959985614,
+          "line": "PP 13715 16384 3924.0 3495.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.021193538996158,
+          "line": "PP 16383 16384 6020.5 2721.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.0558371279912535,
+          "line": "PP 16384 16384 6055.1 2705.8 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 29.30193532499834,
+      "done_elapsed_s": 58.74275024101371,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.03840200952254236,
+      "client_gap_since_previous_done_ms": null,
+      "wall_minus_native_ms": 0.7149160153676348,
+      "family": "identical",
+      "mode": "r0",
+      "first_4096_tps": 3379.8,
+      "promotions_per_token": 1.052,
+      "vram_hit_percent": 63.91,
+      "ram_fetches_per_token": 1.072,
+      "native_stat": {
+        "tok_s": "87.58",
+        "ms_tok": "11.42",
+        "vram_hit": "0.6391",
+        "ram_fetch": "1.072",
+        "disk": "0.000",
+        "promo": "1.052",
+        "vram_used": "6681",
+        "vram_slots": "6800",
+        "ram_used": "8677",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.007",
+        "miss_ms": "0.000",
+        "lane": "92.858",
+        "lane_ms": "3.359",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "9.63",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.642",
+        "spec_acc": "1630",
+        "spec_offered": "1803",
+        "spec_rounds": "402"
+      },
+      "glm_stat": "glm stat: decode 11.42 ms/tok (87.58 tok/s) | vram hit 63.91% | ram fetches 1.07/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 1.05/tok | cpu lane 92.86/tok in 3.36 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6680/6800 ram 8679/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 0,
+      "warmup": true,
+      "startup_warmup_prefill_tps": 2705.773550006606,
+      "startup_slow_before_resync": false,
+      "following_resync_promotions": 0,
+      "following_resync_ms": 0.0,
+      "preceding_resync_ms": 0.0,
+      "helper_request_increment": {
+        "calls": 76821.0,
+        "experts": 159581.0,
+        "upload_bytes": 29920296960.0,
+        "prepare_ms": 1040.291,
+        "launch_ms": 515.103,
+        "wait_ms": 1152.549,
+        "fallbacks": 0.0,
+        "window_calls": 15967.0,
+        "columns": 76178.0
+      }
+    },
+    {
+      "case": "identical-r0-A",
+      "name": "trial-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "5dcdcbc08d5b1e8640ee9d3aed6f14792aab6580e5c35627ab13974ab3afeb75",
+      "prefill_tps": 2713.4363458703897,
+      "decode_tps": 103.63166230651291,
+      "prefill_ms": 6038.1,
+      "decode_ms": 19762.3,
+      "ttft_s": 6.145343001990113,
+      "wall_s": 25.801189894991694,
+      "draft_accepted": 1606,
+      "draft_offered": 1787,
+      "reused": 0,
+      "done": "DONE 2048 16384 6038.1 19762.3 length 1606 1787 0 358616 534960 420",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.1431426749913953,
+          "line": "PP 4096 16384 1141.3 3589.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.2166124579962343,
+          "line": "PP 8192 16384 2215.9 3697.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.3263893270050175,
+          "line": "PP 12288 16384 3325.6 3694.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.969144923001295,
+          "line": "PP 13715 16384 3968.4 3456.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.010908312018728,
+          "line": "PP 16383 16384 6010.2 2725.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.038845852017403,
+          "line": "PP 16384 16384 6038.1 2713.4 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 63.74285268099629,
+      "done_elapsed_s": 89.54404257598799,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.11515701771713793,
+      "client_gap_since_previous_done_ms": 5000.102439982584,
+      "wall_minus_native_ms": 0.789894991696201,
+      "family": "identical",
+      "mode": "r0",
+      "first_4096_tps": 3589.0,
+      "promotions_per_token": 0.335,
+      "vram_hit_percent": 67.04,
+      "ram_fetches_per_token": 0.335,
+      "native_stat": {
+        "tok_s": "103.63",
+        "ms_tok": "9.65",
+        "vram_hit": "0.6704",
+        "ram_fetch": "0.335",
+        "disk": "0.000",
+        "promo": "0.335",
+        "vram_used": "6667",
+        "vram_slots": "6800",
+        "ram_used": "8693",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.002",
+        "miss_ms": "0.000",
+        "lane": "85.769",
+        "lane_ms": "2.548",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "9.14",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.354",
+        "spec_acc": "1606",
+        "spec_offered": "1787",
+        "spec_rounds": "420"
+      },
+      "glm_stat": "glm stat: decode 9.65 ms/tok (103.63 tok/s) | vram hit 67.04% | ram fetches 0.33/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.33/tok | cpu lane 85.77/tok in 2.55 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6666/6800 ram 8693/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 0,
+      "warmup": false,
+      "startup_warmup_prefill_tps": 2705.773550006606,
+      "startup_slow_before_resync": false,
+      "following_resync_promotions": 0,
+      "following_resync_ms": 0.0,
+      "preceding_resync_ms": 0.0,
+      "helper_request_increment": {
+        "calls": 76915.0,
+        "experts": 160135.0,
+        "upload_bytes": 3041925120.0,
+        "prepare_ms": 105.90700000000015,
+        "launch_ms": 497.529,
+        "wait_ms": 2007.388,
+        "fallbacks": 0.0,
+        "window_calls": 16622.0,
+        "columns": 76047.0
+      }
+    },
+    {
+      "case": "identical-r0-A",
+      "name": "trial-02",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "c109acf89e53cb62b9b219934b4a307d3917a0e4a274e1b5f5e808f96b41b4c0",
+      "prefill_tps": 2727.575414530199,
+      "decode_tps": 99.89366787306481,
+      "prefill_ms": 6006.8,
+      "decode_ms": 20501.8,
+      "ttft_s": 6.03285820101155,
+      "wall_s": 26.509335629991256,
+      "draft_accepted": 1604,
+      "draft_offered": 1852,
+      "reused": 0,
+      "done": "DONE 2048 16384 6006.8 20501.8 length 1604 1852 0 377866 551040 426",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.1350784650130663,
+          "line": "PP 4096 16384 1134.4 3610.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.209298502013553,
+          "line": "PP 8192 16384 2208.6 3709.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.3131450040091295,
+          "line": "PP 12288 16384 3312.5 3709.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.9533537630049977,
+          "line": "PP 13715 16384 3952.7 3469.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.980708507006057,
+          "line": "PP 16383 16384 5980.0 2739.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.0074785010074265,
+          "line": "PP 16384 16384 6006.8 2727.6 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 94.54413574299542,
+      "done_elapsed_s": 121.05347137298668,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.09586001397110522,
+      "client_gap_since_previous_done_ms": 5000.093167007435,
+      "wall_minus_native_ms": 0.7356299912571558,
+      "family": "identical",
+      "mode": "r0",
+      "first_4096_tps": 3610.7,
+      "promotions_per_token": 0.364,
+      "vram_hit_percent": 68.57,
+      "ram_fetches_per_token": 0.36,
+      "native_stat": {
+        "tok_s": "99.89",
+        "ms_tok": "10.01",
+        "vram_hit": "0.6857",
+        "ram_fetch": "0.360",
+        "disk": "0.000",
+        "promo": "0.364",
+        "vram_used": "6673",
+        "vram_slots": "6800",
+        "ram_used": "8686",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.005",
+        "miss_ms": "0.000",
+        "lane": "84.192",
+        "lane_ms": "2.560",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "10.68",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.427",
+        "spec_acc": "1604",
+        "spec_offered": "1852",
+        "spec_rounds": "426"
+      },
+      "glm_stat": "glm stat: decode 10.01 ms/tok (99.89 tok/s) | vram hit 68.57% | ram fetches 0.36/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.36/tok | cpu lane 84.19/tok in 2.56 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6673/6800 ram 8687/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 0,
+      "warmup": false,
+      "startup_warmup_prefill_tps": 2705.773550006606,
+      "startup_slow_before_resync": false,
+      "following_resync_promotions": 0,
+      "following_resync_ms": 0.0,
+      "preceding_resync_ms": 0.0,
+      "helper_request_increment": {
+        "calls": 77692.0,
+        "experts": 156899.0,
+        "upload_bytes": 707604480.0,
+        "prepare_ms": 24.673999999999978,
+        "launch_ms": 522.526,
+        "wait_ms": 2029.8680000000004,
+        "fallbacks": 0.0,
+        "window_calls": 16846.0,
+        "columns": 76971.0
+      }
+    },
+    {
+      "case": "original-r8192-B",
+      "name": "warmup-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "318c59035fe741f1fff4935cc4c44cb2c7332d16311feb4d367125845ea051d2",
+      "output_ids_sha256": "f258c71602c9aa1483331902a44a2152180b7a85b0bc12e087abf39785a1c29b",
+      "prefill_tps": 2707.0700394891196,
+      "decode_tps": 86.06633159071426,
+      "prefill_ms": 6052.3,
+      "decode_ms": 23795.6,
+      "ttft_s": 8.06992410600651,
+      "wall_s": 29.84836232700036,
+      "draft_accepted": 1584,
+      "draft_offered": 1790,
+      "reused": 0,
+      "done": "DONE 2048 16384 6052.3 23795.6 length 1584 1790 0 346817 540960 443",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.2153158569999505,
+          "line": "PP 4096 16384 1214.9 3371.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.2551419099909253,
+          "line": "PP 8192 16384 2254.7 3633.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.3223299910023343,
+          "line": "PP 12288 16384 3321.9 3699.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.9278228289913386,
+          "line": "PP 13715 16384 3927.4 3492.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.018523028003983,
+          "line": "PP 16383 16384 6018.1 2722.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.052684730995679,
+          "line": "PP 16384 16384 6052.3 2707.1 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 29.194178805017145,
+      "done_elapsed_s": 59.042541132017504,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.04385199281387031,
+      "client_gap_since_previous_done_ms": null,
+      "wall_minus_native_ms": 0.46232700036125607,
+      "family": "original",
+      "mode": "r8192",
+      "first_4096_tps": 3371.5,
+      "promotions_per_token": 1.061,
+      "vram_hit_percent": 64.11,
+      "ram_fetches_per_token": 1.073,
+      "native_stat": {
+        "tok_s": "86.07",
+        "ms_tok": "11.62",
+        "vram_hit": "0.6411",
+        "ram_fetch": "1.073",
+        "disk": "0.000",
+        "promo": "1.061",
+        "vram_used": "6682",
+        "vram_slots": "6800",
+        "ram_used": "8678",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.003",
+        "miss_ms": "0.000",
+        "lane": "93.720",
+        "lane_ms": "3.461",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "12.28",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "3.719",
+        "spec_acc": "1584",
+        "spec_offered": "1790",
+        "spec_rounds": "443"
+      },
+      "glm_stat": "glm stat: decode 11.62 ms/tok (86.07 tok/s) | vram hit 64.11% | ram fetches 1.07/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 1.06/tok | cpu lane 93.72/tok in 3.46 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6680/6800 ram 8678/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 8192,
+      "warmup": true,
+      "startup_warmup_prefill_tps": 2707.0700394891196,
+      "startup_slow_before_resync": false,
+      "following_resync_promotions": 885,
+      "following_resync_ms": 599.7,
+      "preceding_resync_ms": 0.0,
+      "following_resync_stopped_on_next_request": false,
+      "following_resync_completion_elapsed_s": 59.642301362007856,
+      "following_resync_completion_after_done_ms": 599.760229990352,
+      "helper_request_increment": {
+        "calls": 77457.0,
+        "experts": 161199.0,
+        "upload_bytes": 29920296960.0,
+        "prepare_ms": 1040.587,
+        "launch_ms": 600.563,
+        "wait_ms": 1211.303,
+        "fallbacks": 0.0,
+        "window_calls": 17540.0,
+        "columns": 76668.0
+      }
+    },
+    {
+      "case": "original-r8192-B",
+      "name": "trial-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "6a6eade8c061051b8b5f8fd6c532f526a518fab04c026fae47c44dca663ca577",
+      "prefill_tps": 2875.445339511048,
+      "decode_tps": 101.63469077843837,
+      "prefill_ms": 5697.9,
+      "decode_ms": 20150.6,
+      "ttft_s": 5.998718277987791,
+      "wall_s": 25.849130634975154,
+      "draft_accepted": 1607,
+      "draft_offered": 1769,
+      "reused": 0,
+      "done": "DONE 2048 16384 5697.9 20150.6 length 1607 1769 0 465284 530400 413",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.0891519009892363,
+          "line": "PP 4096 16384 1088.5 3763.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.1120893319894094,
+          "line": "PP 8192 16384 2111.4 3879.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.1704872979898937,
+          "line": "PP 12288 16384 3169.8 3876.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.7554443049884867,
+          "line": "PP 13715 16384 3754.7 3652.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.670242499996675,
+          "line": "PP 16383 16384 5669.5 2889.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.69852020899998,
+          "line": "PP 16384 16384 5697.8 2875.5 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 64.04263459102367,
+      "done_elapsed_s": 89.89176522599882,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.08018998778425157,
+      "client_gap_since_previous_done_ms": 5000.093459006166,
+      "wall_minus_native_ms": 0.6306349751539528,
+      "family": "original",
+      "mode": "r8192",
+      "first_4096_tps": 3763.1,
+      "promotions_per_token": 0.634,
+      "vram_hit_percent": 87.72,
+      "ram_fetches_per_token": 0.631,
+      "native_stat": {
+        "tok_s": "101.64",
+        "ms_tok": "9.84",
+        "vram_hit": "0.8772",
+        "ram_fetch": "0.631",
+        "disk": "0.000",
+        "promo": "0.634",
+        "vram_used": "6679",
+        "vram_slots": "6800",
+        "ram_used": "8678",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.011",
+        "miss_ms": "0.000",
+        "lane": "31.153",
+        "lane_ms": "1.627",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "8.11",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "1.200",
+        "spec_acc": "1607",
+        "spec_offered": "1769",
+        "spec_rounds": "413"
+      },
+      "glm_stat": "glm stat: decode 9.84 ms/tok (101.63 tok/s) | vram hit 87.72% | ram fetches 0.63/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 0.63/tok | cpu lane 31.15/tok in 1.63 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6677/6800 ram 8681/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 8192,
+      "warmup": false,
+      "startup_warmup_prefill_tps": 2707.0700394891196,
+      "startup_slow_before_resync": false,
+      "following_resync_promotions": 204,
+      "following_resync_ms": 137.7,
+      "preceding_resync_ms": 599.7,
+      "following_resync_stopped_on_next_request": false,
+      "following_resync_completion_elapsed_s": 90.02947915301775,
+      "following_resync_completion_after_done_ms": 137.71392701892182,
+      "preceding_resync_completed_before_send": true,
+      "helper_request_increment": {
+        "calls": 39458.0,
+        "experts": 53119.0,
+        "upload_bytes": 8611983360.0,
+        "prepare_ms": 299.58799999999997,
+        "launch_ms": 332.89,
+        "wait_ms": 985.6400000000001,
+        "fallbacks": 0.0,
+        "window_calls": 14040.0,
+        "columns": 38345.0
+      }
+    },
+    {
+      "case": "original-r8192-B",
+      "name": "trial-02",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "f427160f41114de57386c03def91dd6a87537f0dace58a2e17a20378e0068305",
+      "output_ids_sha256": "4c700ee35efc1b8738fe0c8a36de6625228bd2f94a288f91d3128e9fa2179c8b",
+      "prefill_tps": 2839.7115917914584,
+      "decode_tps": 101.27884320571275,
+      "prefill_ms": 5769.6,
+      "decode_ms": 20221.4,
+      "ttft_s": 5.867048368992982,
+      "wall_s": 25.991676567995455,
+      "draft_accepted": 1589,
+      "draft_offered": 1789,
+      "reused": 0,
+      "done": "DONE 2048 16384 5769.6 20221.4 length 1589 1789 0 481553 539520 442",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.1010665869980585,
+          "line": "PP 4096 16384 1100.4 3722.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.141137775994139,
+          "line": "PP 8192 16384 2140.5 3827.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.2158888920093887,
+          "line": "PP 12288 16384 3215.2 3821.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.807463793986244,
+          "line": "PP 13715 16384 3806.8 3602.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.743362929002615,
+          "line": "PP 16383 16384 5742.7 2852.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.770176144986181,
+          "line": "PP 16384 16384 5769.5 2839.7 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 94.8918689500133,
+      "done_elapsed_s": 120.88354551800876,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.08762499783188105,
+      "client_gap_since_previous_done_ms": 5000.10372401448,
+      "wall_minus_native_ms": 0.676567995455116,
+      "family": "original",
+      "mode": "r8192",
+      "first_4096_tps": 3722.3,
+      "promotions_per_token": 0.617,
+      "vram_hit_percent": 89.25999999999999,
+      "ram_fetches_per_token": 0.618,
+      "native_stat": {
+        "tok_s": "101.28",
+        "ms_tok": "9.87",
+        "vram_hit": "0.8926",
+        "ram_fetch": "0.618",
+        "disk": "0.000",
+        "promo": "0.617",
+        "vram_used": "6667",
+        "vram_slots": "6800",
+        "ram_used": "8688",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.010",
+        "miss_ms": "0.000",
+        "lane": "27.676",
+        "lane_ms": "1.530",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "9.20",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "1.238",
+        "spec_acc": "1589",
+        "spec_offered": "1789",
+        "spec_rounds": "442"
+      },
+      "glm_stat": "glm stat: decode 9.87 ms/tok (101.28 tok/s) | vram hit 89.26% | ram fetches 0.62/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 0.62/tok | cpu lane 27.68/tok in 1.53 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6665/6800 ram 8693/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 8192,
+      "warmup": false,
+      "startup_warmup_prefill_tps": 2707.0700394891196,
+      "startup_slow_before_resync": false,
+      "following_resync_promotions": 140,
+      "following_resync_ms": 90.3,
+      "preceding_resync_ms": 137.7,
+      "following_resync_stopped_on_next_request": false,
+      "following_resync_completion_elapsed_s": 120.97391127899755,
+      "following_resync_completion_after_done_ms": 90.36576098878868,
+      "preceding_resync_completed_before_send": true,
+      "helper_request_increment": {
+        "calls": 35519.0,
+        "experts": 46365.0,
+        "upload_bytes": 2765168640.0,
+        "prepare_ms": 96.24400000000014,
+        "launch_ms": 273.3620000000001,
+        "wait_ms": 935.8929999999996,
+        "fallbacks": 0.0,
+        "window_calls": 13846.0,
+        "columns": 34388.0
+      }
+    },
+    {
+      "case": "original-r0-B",
+      "name": "warmup-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "318c59035fe741f1fff4935cc4c44cb2c7332d16311feb4d367125845ea051d2",
+      "output_ids_sha256": "5637caa82b256795e505ad489014730e688b696b0f72e1b2709286f1a769a9dd",
+      "prefill_tps": 2706.4439929299438,
+      "decode_tps": 83.62665272889122,
+      "prefill_ms": 6053.7,
+      "decode_ms": 24489.8,
+      "ttft_s": 8.07126444100868,
+      "wall_s": 30.54422570200404,
+      "draft_accepted": 1589,
+      "draft_offered": 1838,
+      "reused": 0,
+      "done": "DONE 2048 16384 6053.7 24489.8 length 1589 1838 0 360888 551280 434",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.2093772920197807,
+          "line": "PP 4096 16384 1208.6 3388.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.2454909250081982,
+          "line": "PP 8192 16384 2244.8 3649.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.312250971008325,
+          "line": "PP 12288 16384 3311.5 3710.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.913747750018956,
+          "line": "PP 13715 16384 3913.0 3505.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.018546599021647,
+          "line": "PP 16383 16384 6017.8 2722.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.054423266003141,
+          "line": "PP 16384 16384 6053.7 2706.4 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 29.355070802994305,
+      "done_elapsed_s": 59.89929650499835,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.05698701716028154,
+      "client_gap_since_previous_done_ms": null,
+      "wall_minus_native_ms": 0.7257020040415227,
+      "family": "original",
+      "mode": "r0",
+      "first_4096_tps": 3388.9,
+      "promotions_per_token": 1.106,
+      "vram_hit_percent": 65.46,
+      "ram_fetches_per_token": 1.129,
+      "native_stat": {
+        "tok_s": "83.63",
+        "ms_tok": "11.96",
+        "vram_hit": "0.6546",
+        "ram_fetch": "1.129",
+        "disk": "0.000",
+        "promo": "1.106",
+        "vram_used": "6680",
+        "vram_slots": "6800",
+        "ram_used": "8680",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.002",
+        "miss_ms": "0.000",
+        "lane": "91.833",
+        "lane_ms": "3.452",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "10.13",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.455",
+        "spec_acc": "1589",
+        "spec_offered": "1838",
+        "spec_rounds": "434"
+      },
+      "glm_stat": "glm stat: decode 11.96 ms/tok (83.63 tok/s) | vram hit 65.46% | ram fetches 1.13/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 1.11/tok | cpu lane 91.83/tok in 3.45 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6680/6800 ram 8680/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 0,
+      "warmup": true,
+      "startup_warmup_prefill_tps": 2706.4439929299438,
+      "startup_slow_before_resync": false,
+      "following_resync_promotions": 0,
+      "following_resync_ms": 0.0,
+      "preceding_resync_ms": 0.0,
+      "helper_request_increment": {
+        "calls": 77710.0,
+        "experts": 157494.0,
+        "upload_bytes": 29920296960.0,
+        "prepare_ms": 1040.3,
+        "launch_ms": 593.148,
+        "wait_ms": 1201.52,
+        "fallbacks": 0.0,
+        "window_calls": 17167.0,
+        "columns": 76761.0
+      }
+    },
+    {
+      "case": "original-r0-B",
+      "name": "trial-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "55c4c704efbcb3cb56153c30926af2da9734e026cf2c3d4a0b2d57d0778b48be",
+      "prefill_tps": 2695.4461700447487,
+      "decode_tps": 101.71090859427379,
+      "prefill_ms": 6078.4,
+      "decode_ms": 20135.5,
+      "ttft_s": 6.193473941995762,
+      "wall_s": 26.21457207200001,
+      "draft_accepted": 1614,
+      "draft_offered": 1813,
+      "reused": 0,
+      "done": "DONE 2048 16384 6078.4 20135.5 length 1614 1813 0 366149 539280 415",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.1542577859945595,
+          "line": "PP 4096 16384 1153.6 3550.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.2346263919898774,
+          "line": "PP 8192 16384 2234.0 3667.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.339420012984192,
+          "line": "PP 12288 16384 3338.8 3680.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.985535418993095,
+          "line": "PP 13715 16384 3984.9 3441.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.05034347900073,
+          "line": "PP 16383 16384 6049.7 2708.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.0790423399885185,
+          "line": "PP 16384 16384 6078.4 2695.5 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 64.8993542480166,
+      "done_elapsed_s": 91.11392632001662,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.05539398989640176,
+      "client_gap_since_previous_done_ms": 5000.05774301826,
+      "wall_minus_native_ms": 0.6720720000084839,
+      "family": "original",
+      "mode": "r0",
+      "first_4096_tps": 3550.7,
+      "promotions_per_token": 0.379,
+      "vram_hit_percent": 67.9,
+      "ram_fetches_per_token": 0.378,
+      "native_stat": {
+        "tok_s": "101.71",
+        "ms_tok": "9.83",
+        "vram_hit": "0.6790",
+        "ram_fetch": "0.378",
+        "disk": "0.000",
+        "promo": "0.379",
+        "vram_used": "6666",
+        "vram_slots": "6800",
+        "ram_used": "8690",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.004",
+        "miss_ms": "0.000",
+        "lane": "84.154",
+        "lane_ms": "2.548",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "10.49",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.655",
+        "spec_acc": "1614",
+        "spec_offered": "1813",
+        "spec_rounds": "415"
+      },
+      "glm_stat": "glm stat: decode 9.83 ms/tok (101.71 tok/s) | vram hit 67.90% | ram fetches 0.38/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.38/tok | cpu lane 84.15/tok in 2.55 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6665/6800 ram 8694/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 0,
+      "warmup": false,
+      "startup_warmup_prefill_tps": 2706.4439929299438,
+      "startup_slow_before_resync": false,
+      "following_resync_promotions": 0,
+      "following_resync_ms": 0.0,
+      "preceding_resync_ms": 0.0,
+      "helper_request_increment": {
+        "calls": 76103.0,
+        "experts": 156250.0,
+        "upload_bytes": 3267901440.0,
+        "prepare_ms": 113.74400000000014,
+        "launch_ms": 494.78100000000006,
+        "wait_ms": 1957.129,
+        "fallbacks": 0.0,
+        "window_calls": 16423.0,
+        "columns": 75350.0
+      }
+    },
+    {
+      "case": "original-r0-B",
+      "name": "trial-02",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "f427160f41114de57386c03def91dd6a87537f0dace58a2e17a20378e0068305",
+      "output_ids_sha256": "5bc412df19e87413dfa05761b696e3cc14966dbed4069df949cb21e56201d5c0",
+      "prefill_tps": 2721.5494759223266,
+      "decode_tps": 102.2435673419668,
+      "prefill_ms": 6020.1,
+      "decode_ms": 20030.6,
+      "ttft_s": 6.042054895980982,
+      "wall_s": 26.051483802002622,
+      "draft_accepted": 1598,
+      "draft_offered": 1815,
+      "reused": 0,
+      "done": "DONE 2048 16384 6020.1 20030.6 length 1598 1815 0 369093 543360 432",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.1327300109842326,
+          "line": "PP 4096 16384 1132.0 3618.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.2120365820010193,
+          "line": "PP 8192 16384 2211.3 3704.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.3150509200058877,
+          "line": "PP 12288 16384 3314.4 3707.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.9581097599875648,
+          "line": "PP 13715 16384 3957.4 3465.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.994769346987596,
+          "line": "PP 16383 16384 5994.1 2733.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.020806212996831,
+          "line": "PP 16384 16384 6020.1 2721.5 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 96.11404119301005,
+      "done_elapsed_s": 122.16552499501267,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.08817599155008793,
+      "client_gap_since_previous_done_ms": 5000.114872993436,
+      "wall_minus_native_ms": 0.783802002624725,
+      "family": "original",
+      "mode": "r0",
+      "first_4096_tps": 3618.3,
+      "promotions_per_token": 0.31,
+      "vram_hit_percent": 67.93,
+      "ram_fetches_per_token": 0.307,
+      "native_stat": {
+        "tok_s": "102.24",
+        "ms_tok": "9.78",
+        "vram_hit": "0.6793",
+        "ram_fetch": "0.307",
+        "disk": "0.000",
+        "promo": "0.310",
+        "vram_used": "6645",
+        "vram_slots": "6800",
+        "ram_used": "8713",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.003",
+        "miss_ms": "0.000",
+        "lane": "84.782",
+        "lane_ms": "2.532",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "10.22",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.408",
+        "spec_acc": "1598",
+        "spec_offered": "1815",
+        "spec_rounds": "432"
+      },
+      "glm_stat": "glm stat: decode 9.78 ms/tok (102.24 tok/s) | vram hit 67.93% | ram fetches 0.31/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.31/tok | cpu lane 84.78/tok in 2.53 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6644/6800 ram 8715/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 0,
+      "warmup": false,
+      "startup_warmup_prefill_tps": 2706.4439929299438,
+      "startup_slow_before_resync": false,
+      "following_resync_promotions": 0,
+      "following_resync_ms": 0.0,
+      "preceding_resync_ms": 0.0,
+      "helper_request_increment": {
+        "calls": 77428.0,
+        "experts": 159555.0,
+        "upload_bytes": 590008320.0,
+        "prepare_ms": 20.567999999999984,
+        "launch_ms": 546.4939999999999,
+        "wait_ms": 2156.5930000000003,
+        "fallbacks": 0.0,
+        "window_calls": 17114.0,
+        "columns": 76757.0
+      }
+    },
+    {
+      "case": "identical-r0-B",
+      "name": "warmup-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "61048819d92b99591aac918bb91ce88581a13b2dd6f2135831e122d773f51a10",
+      "prefill_tps": 2701.4905685265794,
+      "decode_tps": 85.91180616148735,
+      "prefill_ms": 6064.8,
+      "decode_ms": 23838.4,
+      "ttft_s": 8.074033167009475,
+      "wall_s": 29.903867857006844,
+      "draft_accepted": 1613,
+      "draft_offered": 1823,
+      "reused": 0,
+      "done": "DONE 2048 16384 6064.8 23838.4 length 1613 1823 0 348868 541920 416",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.2127277110121213,
+          "line": "PP 4096 16384 1212.0 3379.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.2522719819971826,
+          "line": "PP 8192 16384 2251.6 3638.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.3209599500114564,
+          "line": "PP 12288 16384 3320.3 3700.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.9296523240045644,
+          "line": "PP 13715 16384 3929.0 3490.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.030660671007354,
+          "line": "PP 16383 16384 6030.0 2716.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.065425528009655,
+          "line": "PP 16384 16384 6064.7 2701.5 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 29.407314148003934,
+      "done_elapsed_s": 59.31118200501078,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.03573700087144971,
+      "client_gap_since_previous_done_ms": null,
+      "wall_minus_native_ms": 0.6678570068434055,
+      "family": "identical",
+      "mode": "r0",
+      "first_4096_tps": 3379.5,
+      "promotions_per_token": 1.083,
+      "vram_hit_percent": 64.38000000000001,
+      "ram_fetches_per_token": 1.102,
+      "native_stat": {
+        "tok_s": "85.91",
+        "ms_tok": "11.64",
+        "vram_hit": "0.6438",
+        "ram_fetch": "1.102",
+        "disk": "0.000",
+        "promo": "1.083",
+        "vram_used": "6683",
+        "vram_slots": "6800",
+        "ram_used": "8674",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.009",
+        "miss_ms": "0.000",
+        "lane": "93.153",
+        "lane_ms": "3.407",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "10.38",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.766",
+        "spec_acc": "1613",
+        "spec_offered": "1823",
+        "spec_rounds": "416"
+      },
+      "glm_stat": "glm stat: decode 11.64 ms/tok (85.91 tok/s) | vram hit 64.38% | ram fetches 1.10/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 1.08/tok | cpu lane 93.15/tok in 3.41 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6680/6800 ram 8677/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 0,
+      "warmup": true,
+      "startup_warmup_prefill_tps": 2701.4905685265794,
+      "startup_slow_before_resync": false,
+      "following_resync_promotions": 0,
+      "following_resync_ms": 0.0,
+      "preceding_resync_ms": 0.0,
+      "helper_request_increment": {
+        "calls": 77559.0,
+        "experts": 159456.0,
+        "upload_bytes": 29920296960.0,
+        "prepare_ms": 1040.262,
+        "launch_ms": 503.16,
+        "wait_ms": 1193.703,
+        "fallbacks": 0.0,
+        "window_calls": 16520.0,
+        "columns": 76847.0
+      }
+    },
+    {
+      "case": "identical-r0-B",
+      "name": "trial-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "7594b79b0654899ba7245694fa1bb5569732b2bc2b3d4f6da7c57a08794ef063",
+      "prefill_tps": 2721.368657088282,
+      "decode_tps": 101.19527030699523,
+      "prefill_ms": 6020.5,
+      "decode_ms": 20238.1,
+      "ttft_s": 6.133562424016418,
+      "wall_s": 26.259416948014405,
+      "draft_accepted": 1613,
+      "draft_offered": 1819,
+      "reused": 0,
+      "done": "DONE 2048 16384 6020.5 20238.1 length 1613 1819 0 365548 540720 413",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.1448794199968688,
+          "line": "PP 4096 16384 1144.1 3580.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.2206705060089007,
+          "line": "PP 8192 16384 2219.9 3690.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.324180041003274,
+          "line": "PP 12288 16384 3323.4 3697.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.960371741995914,
+          "line": "PP 13715 16384 3959.6 3463.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.992003866005689,
+          "line": "PP 16383 16384 5991.2 2734.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.02123054000549,
+          "line": "PP 16384 16384 6020.5 2721.4 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 64.3112840380054,
+      "done_elapsed_s": 90.5707009860198,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.17851500888355076,
+      "client_gap_since_previous_done_ms": 5000.102032994619,
+      "wall_minus_native_ms": 0.8169480144060799,
+      "family": "identical",
+      "mode": "r0",
+      "first_4096_tps": 3580.1,
+      "promotions_per_token": 0.352,
+      "vram_hit_percent": 67.60000000000001,
+      "ram_fetches_per_token": 0.353,
+      "native_stat": {
+        "tok_s": "101.20",
+        "ms_tok": "9.88",
+        "vram_hit": "0.6760",
+        "ram_fetch": "0.353",
+        "disk": "0.000",
+        "promo": "0.352",
+        "vram_used": "6668",
+        "vram_slots": "6800",
+        "ram_used": "8690",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.002",
+        "miss_ms": "0.000",
+        "lane": "85.178",
+        "lane_ms": "2.571",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "10.69",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.762",
+        "spec_acc": "1613",
+        "spec_offered": "1819",
+        "spec_rounds": "413"
+      },
+      "glm_stat": "glm stat: decode 9.88 ms/tok (101.20 tok/s) | vram hit 67.60% | ram fetches 0.35/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.35/tok | cpu lane 85.18/tok in 2.57 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6668/6800 ram 8692/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 0,
+      "warmup": false,
+      "startup_warmup_prefill_tps": 2701.4905685265794,
+      "startup_slow_before_resync": false,
+      "following_resync_promotions": 0,
+      "following_resync_ms": 0.0,
+      "preceding_resync_ms": 0.0,
+      "helper_request_increment": {
+        "calls": 77212.0,
+        "experts": 158795.0,
+        "upload_bytes": 3208458240.0,
+        "prepare_ms": 111.70800000000008,
+        "launch_ms": 569.3539999999998,
+        "wait_ms": 1944.3000000000002,
+        "fallbacks": 0.0,
+        "window_calls": 16344.0,
+        "columns": 76389.0
+      }
+    },
+    {
+      "case": "identical-r0-B",
+      "name": "trial-02",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "5c2ad590cc4eda3ca041ff91675d3a99227925b92351b1aa7134d6ff9ae9deba",
+      "prefill_tps": 2725.850996572721,
+      "decode_tps": 99.14938733618322,
+      "prefill_ms": 6010.6,
+      "decode_ms": 20655.7,
+      "ttft_s": 6.035880304989405,
+      "wall_s": 26.66703413700452,
+      "draft_accepted": 1588,
+      "draft_offered": 1822,
+      "reused": 0,
+      "done": "DONE 2048 16384 6010.6 20655.7 length 1588 1822 0 380911 547440 436",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.1278836059791502,
+          "line": "PP 4096 16384 1127.2 3633.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.2029941839864478,
+          "line": "PP 8192 16384 2202.3 3719.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.3043586459825747,
+          "line": "PP 12288 16384 3303.6 3719.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.9490915990027133,
+          "line": "PP 13715 16384 3948.4 3473.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.9851796939910855,
+          "line": "PP 16383 16384 5984.5 2737.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.011275550990831,
+          "line": "PP 16384 16384 6010.6 2725.9 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 95.57081773201935,
+      "done_elapsed_s": 122.23785186902387,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.08863699622452259,
+      "client_gap_since_previous_done_ms": 5000.116745999549,
+      "wall_minus_native_ms": 0.7341370045214717,
+      "family": "identical",
+      "mode": "r0",
+      "first_4096_tps": 3633.9,
+      "promotions_per_token": 0.391,
+      "vram_hit_percent": 69.58,
+      "ram_fetches_per_token": 0.388,
+      "native_stat": {
+        "tok_s": "99.15",
+        "ms_tok": "10.09",
+        "vram_hit": "0.6958",
+        "ram_fetch": "0.388",
+        "disk": "0.000",
+        "promo": "0.391",
+        "vram_used": "6669",
+        "vram_slots": "6800",
+        "ram_used": "8690",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.006",
+        "miss_ms": "0.000",
+        "lane": "80.919",
+        "lane_ms": "2.504",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "9.70",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.235",
+        "spec_acc": "1588",
+        "spec_offered": "1822",
+        "spec_rounds": "436"
+      },
+      "glm_stat": "glm stat: decode 10.09 ms/tok (99.15 tok/s) | vram hit 69.58% | ram fetches 0.39/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 0.39/tok | cpu lane 80.92/tok in 2.50 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6669/6800 ram 8691/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 0,
+      "warmup": false,
+      "startup_warmup_prefill_tps": 2701.4905685265794,
+      "startup_slow_before_resync": false,
+      "following_resync_promotions": 0,
+      "following_resync_ms": 0.0,
+      "preceding_resync_ms": 0.0,
+      "helper_request_increment": {
+        "calls": 76085.0,
+        "experts": 151108.0,
+        "upload_bytes": 688250880.0,
+        "prepare_ms": 23.995999999999867,
+        "launch_ms": 542.5780000000002,
+        "wait_ms": 1992.3979999999997,
+        "fallbacks": 0.0,
+        "window_calls": 17154.0,
+        "columns": 75175.0
+      }
+    },
+    {
+      "case": "identical-r8192-B",
+      "name": "warmup-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "76d5f4362a9eaf1908a5a05ea366befe207f5574de0437f44e451c243d9174be",
+      "prefill_tps": 2700.644501953286,
+      "decode_tps": 87.57675794947231,
+      "prefill_ms": 6066.7,
+      "decode_ms": 23385.2,
+      "ttft_s": 8.075779046019306,
+      "wall_s": 29.452591853012564,
+      "draft_accepted": 1625,
+      "draft_offered": 1797,
+      "reused": 0,
+      "done": "DONE 2048 16384 6066.7 23385.2 length 1625 1797 0 339338 532800 407",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.2148679020174313,
+          "line": "PP 4096 16384 1214.2 3373.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.2549064280174207,
+          "line": "PP 8192 16384 2254.2 3634.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.325522017024923,
+          "line": "PP 12288 16384 3324.8 3695.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.930053060001228,
+          "line": "PP 13715 16384 3929.4 3490.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.0314912870235275,
+          "line": "PP 16383 16384 6030.8 2716.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.067354480008362,
+          "line": "PP 16384 16384 6066.7 2700.7 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 29.323316815978615,
+      "done_elapsed_s": 58.77590866899118,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.039614009438082576,
+      "client_gap_since_previous_done_ms": null,
+      "wall_minus_native_ms": 0.6918530125622055,
+      "family": "identical",
+      "mode": "r8192",
+      "first_4096_tps": 3373.5,
+      "promotions_per_token": 1.052,
+      "vram_hit_percent": 63.690000000000005,
+      "ram_fetches_per_token": 1.067,
+      "native_stat": {
+        "tok_s": "87.58",
+        "ms_tok": "11.42",
+        "vram_hit": "0.6369",
+        "ram_fetch": "1.067",
+        "disk": "0.000",
+        "promo": "1.052",
+        "vram_used": "6681",
+        "vram_slots": "6800",
+        "ram_used": "8677",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.008",
+        "miss_ms": "0.000",
+        "lane": "93.389",
+        "lane_ms": "3.373",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "9.06",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.391",
+        "spec_acc": "1625",
+        "spec_offered": "1797",
+        "spec_rounds": "407"
+      },
+      "glm_stat": "glm stat: decode 11.42 ms/tok (87.58 tok/s) | vram hit 63.69% | ram fetches 1.07/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 1.05/tok | cpu lane 93.39/tok in 3.37 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6680/6800 ram 8679/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 8192,
+      "warmup": true,
+      "startup_warmup_prefill_tps": 2700.644501953286,
+      "startup_slow_before_resync": false,
+      "following_resync_promotions": 650,
+      "following_resync_ms": 441.2,
+      "preceding_resync_ms": 0.0,
+      "following_resync_stopped_on_next_request": false,
+      "following_resync_completion_elapsed_s": 59.21714774900465,
+      "following_resync_completion_after_done_ms": 441.23908001347445,
+      "helper_request_increment": {
+        "calls": 77044.0,
+        "experts": 160933.0,
+        "upload_bytes": 29920296960.0,
+        "prepare_ms": 1040.543,
+        "launch_ms": 550.994,
+        "wait_ms": 1190.657,
+        "fallbacks": 0.0,
+        "window_calls": 16177.0,
+        "columns": 76416.0
+      }
+    },
+    {
+      "case": "identical-r8192-B",
+      "name": "trial-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "12e0377db4da6d5ae4d8c335d49af2b692a8cb3f4de1340ea1a0858c997f756d",
+      "prefill_tps": 2816.911094682186,
+      "decode_tps": 99.54408033518358,
+      "prefill_ms": 5816.3,
+      "decode_ms": 20573.8,
+      "ttft_s": 6.053729648992885,
+      "wall_s": 26.390851648990065,
+      "draft_accepted": 1614,
+      "draft_offered": 1833,
+      "reused": 0,
+      "done": "DONE 2048 16384 5816.3 20573.8 length 1614 1833 0 472721 544080 417",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.0992631549888756,
+          "line": "PP 4096 16384 1098.5 3728.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.140250547003234,
+          "line": "PP 8192 16384 2139.5 3828.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.221828759997152,
+          "line": "PP 12288 16384 3221.1 3814.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.821570147993043,
+          "line": "PP 13715 16384 3820.8 3589.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.789780552993761,
+          "line": "PP 16383 16384 5789.1 2830.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.817007546982495,
+          "line": "PP 16384 16384 5816.3 2816.9 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 63.77601207399857,
+      "done_elapsed_s": 90.16686372298864,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.07373798871412873,
+      "client_gap_since_previous_done_ms": 5000.103405007394,
+      "wall_minus_native_ms": 0.7516489900663146,
+      "family": "identical",
+      "mode": "r8192",
+      "first_4096_tps": 3728.6,
+      "promotions_per_token": 0.633,
+      "vram_hit_percent": 86.88,
+      "ram_fetches_per_token": 0.63,
+      "native_stat": {
+        "tok_s": "99.55",
+        "ms_tok": "10.05",
+        "vram_hit": "0.8688",
+        "ram_fetch": "0.630",
+        "disk": "0.000",
+        "promo": "0.633",
+        "vram_used": "6680",
+        "vram_slots": "6800",
+        "ram_used": "8677",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.008",
+        "miss_ms": "0.000",
+        "lane": "34.206",
+        "lane_ms": "1.735",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "10.92",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.034",
+        "spec_acc": "1614",
+        "spec_offered": "1833",
+        "spec_rounds": "417"
+      },
+      "glm_stat": "glm stat: decode 10.05 ms/tok (99.54 tok/s) | vram hit 86.88% | ram fetches 0.63/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 0.63/tok | cpu lane 34.21/tok in 1.73 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6676/6800 ram 8680/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 8192,
+      "warmup": false,
+      "startup_warmup_prefill_tps": 2700.644501953286,
+      "startup_slow_before_resync": false,
+      "following_resync_promotions": 351,
+      "following_resync_ms": 237.4,
+      "preceding_resync_ms": 441.2,
+      "following_resync_stopped_on_next_request": false,
+      "following_resync_completion_elapsed_s": 90.40427975999773,
+      "following_resync_completion_after_done_ms": 237.41603700909764,
+      "preceding_resync_completed_before_send": true,
+      "helper_request_increment": {
+        "calls": 42671.0,
+        "experts": 58512.0,
+        "upload_bytes": 6783989760.0,
+        "prepare_ms": 236.04300000000012,
+        "launch_ms": 361.904,
+        "wait_ms": 1038.2970000000003,
+        "fallbacks": 0.0,
+        "window_calls": 14619.0,
+        "columns": 41808.0
+      }
+    },
+    {
+      "case": "identical-r8192-B",
+      "name": "trial-02",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "0b3d31c8e51e517d7e6ca5cfe1c395836a1e6e46a4d9b79a5b89907882944b1a",
+      "prefill_tps": 2824.3893188987918,
+      "decode_tps": 102.76790911463037,
+      "prefill_ms": 5800.9,
+      "decode_ms": 19928.4,
+      "ttft_s": 5.935916685994016,
+      "wall_s": 25.730096608021995,
+      "draft_accepted": 1617,
+      "draft_offered": 1789,
+      "reused": 0,
+      "done": "DONE 2048 16384 5800.9 19928.4 length 1617 1789 0 473185 532560 411",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.1069508219952695,
+          "line": "PP 4096 16384 1106.2 3702.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.1469774279976264,
+          "line": "PP 8192 16384 2146.2 3817.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.226178462995449,
+          "line": "PP 12288 16384 3225.4 3809.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.8180809520126786,
+          "line": "PP 13715 16384 3817.3 3592.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.774437571002636,
+          "line": "PP 16383 16384 5773.7 2837.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.801613689021906,
+          "line": "PP 16384 16384 5800.9 2824.4 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 95.16695858398452,
+      "done_elapsed_s": 120.89705519200652,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.16222501290030777,
+      "client_gap_since_previous_done_ms": 5000.094860995887,
+      "wall_minus_native_ms": 0.7966080219921423,
+      "family": "identical",
+      "mode": "r8192",
+      "first_4096_tps": 3702.8,
+      "promotions_per_token": 0.59,
+      "vram_hit_percent": 88.85,
+      "ram_fetches_per_token": 0.585,
+      "native_stat": {
+        "tok_s": "102.77",
+        "ms_tok": "9.73",
+        "vram_hit": "0.8885",
+        "ram_fetch": "0.585",
+        "disk": "0.000",
+        "promo": "0.590",
+        "vram_used": "6666",
+        "vram_slots": "6800",
+        "ram_used": "8694",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.008",
+        "miss_ms": "0.000",
+        "lane": "28.398",
+        "lane_ms": "1.524",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "8.91",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "1.166",
+        "spec_acc": "1617",
+        "spec_offered": "1789",
+        "spec_rounds": "411"
+      },
+      "glm_stat": "glm stat: decode 9.73 ms/tok (102.77 tok/s) | vram hit 88.85% | ram fetches 0.59/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 0.59/tok | cpu lane 28.40/tok in 1.52 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6663/6800 ram 8694/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 8192,
+      "warmup": false,
+      "startup_warmup_prefill_tps": 2700.644501953286,
+      "startup_slow_before_resync": false,
+      "following_resync_promotions": 123,
+      "following_resync_ms": 79.9,
+      "preceding_resync_ms": 237.4,
+      "following_resync_stopped_on_next_request": false,
+      "following_resync_completion_elapsed_s": 120.9769330539857,
+      "following_resync_completion_after_done_ms": 79.87786197918467,
+      "preceding_resync_completed_before_send": true,
+      "helper_request_increment": {
+        "calls": 35820.0,
+        "experts": 48036.0,
+        "upload_bytes": 3838095360.0,
+        "prepare_ms": 133.635,
+        "launch_ms": 288.6349999999999,
+        "wait_ms": 935.1099999999997,
+        "fallbacks": 0.0,
+        "window_calls": 13482.0,
+        "columns": 34748.0
+      }
+    },
+    {
+      "case": "original-r0-C",
+      "name": "warmup-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "318c59035fe741f1fff4935cc4c44cb2c7332d16311feb4d367125845ea051d2",
+      "output_ids_sha256": "87d2b8ebaa7d206213c35208f98f4909645ee4216afc0797781b6dfded3aa38f",
+      "prefill_tps": 2710.8324095368885,
+      "decode_tps": 87.26702516596927,
+      "prefill_ms": 6043.9,
+      "decode_ms": 23468.2,
+      "ttft_s": 8.068257553008152,
+      "wall_s": 29.51279447300476,
+      "draft_accepted": 1618,
+      "draft_offered": 1806,
+      "reused": 0,
+      "done": "DONE 2048 16384 6043.9 23468.2 length 1618 1806 0 346724 536640 411",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.2105625309923198,
+          "line": "PP 4096 16384 1209.8 3385.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.2409789329976775,
+          "line": "PP 8192 16384 2240.3 3656.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.3028118300135247,
+          "line": "PP 12288 16384 3302.1 3721.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.907127118000062,
+          "line": "PP 13715 16384 3906.4 3510.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.010841340001207,
+          "line": "PP 16383 16384 6010.1 2725.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.044577216001926,
+          "line": "PP 16384 16384 6043.9 2710.8 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 29.490730149002047,
+      "done_elapsed_s": 59.00352462200681,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.03914401168003678,
+      "client_gap_since_previous_done_ms": null,
+      "wall_minus_native_ms": 0.6944730047580379,
+      "family": "original",
+      "mode": "r0",
+      "first_4096_tps": 3385.6,
+      "promotions_per_token": 1.043,
+      "vram_hit_percent": 64.61,
+      "ram_fetches_per_token": 1.059,
+      "native_stat": {
+        "tok_s": "87.27",
+        "ms_tok": "11.46",
+        "vram_hit": "0.6461",
+        "ram_fetch": "1.059",
+        "disk": "0.000",
+        "promo": "1.043",
+        "vram_used": "6682",
+        "vram_slots": "6800",
+        "ram_used": "8677",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.003",
+        "miss_ms": "0.000",
+        "lane": "91.670",
+        "lane_ms": "3.374",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "8.26",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.276",
+        "spec_acc": "1618",
+        "spec_offered": "1806",
+        "spec_rounds": "411"
+      },
+      "glm_stat": "glm stat: decode 11.46 ms/tok (87.27 tok/s) | vram hit 64.61% | ram fetches 1.06/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 1.04/tok | cpu lane 91.67/tok in 3.37 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6680/6800 ram 8678/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 0,
+      "warmup": true,
+      "startup_warmup_prefill_tps": 2710.8324095368885,
+      "startup_slow_before_resync": false,
+      "following_resync_promotions": 0,
+      "following_resync_ms": 0.0,
+      "preceding_resync_ms": 0.0,
+      "helper_request_increment": {
+        "calls": 76772.0,
+        "experts": 157262.0,
+        "upload_bytes": 29920296960.0,
+        "prepare_ms": 1040.301,
+        "launch_ms": 535.004,
+        "wait_ms": 1140.032,
+        "fallbacks": 0.0,
+        "window_calls": 16325.0,
+        "columns": 76045.0
+      }
+    },
+    {
+      "case": "original-r0-C",
+      "name": "trial-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "b067c581959f112b016fe3048169ba4360eec318338c01b289d4c503c9a7111c",
+      "prefill_tps": 2722.318224112721,
+      "decode_tps": 98.36978971536163,
+      "prefill_ms": 6018.4,
+      "decode_ms": 20819.4,
+      "ttft_s": 6.123904954001773,
+      "wall_s": 26.83860463599558,
+      "draft_accepted": 1591,
+      "draft_offered": 1847,
+      "reused": 0,
+      "done": "DONE 2048 16384 6018.4 20819.4 length 1591 1847 0 376894 552960 441",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.1395161150139757,
+          "line": "PP 4096 16384 1138.8 3596.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.2157229380100034,
+          "line": "PP 8192 16384 2215.0 3698.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.3196102259971667,
+          "line": "PP 12288 16384 3318.9 3702.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.9576888430165127,
+          "line": "PP 13715 16384 3957.0 3466.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.989219826995395,
+          "line": "PP 16383 16384 5988.5 2735.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.019132768997224,
+          "line": "PP 16384 16384 6018.4 2722.3 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 64.00363071699394,
+      "done_elapsed_s": 90.84223535298952,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.10080001084133983,
+      "client_gap_since_previous_done_ms": 5000.106094987132,
+      "wall_minus_native_ms": 0.8046359955769731,
+      "family": "original",
+      "mode": "r0",
+      "first_4096_tps": 3596.8,
+      "promotions_per_token": 0.394,
+      "vram_hit_percent": 68.16,
+      "ram_fetches_per_token": 0.392,
+      "native_stat": {
+        "tok_s": "98.37",
+        "ms_tok": "10.17",
+        "vram_hit": "0.6816",
+        "ram_fetch": "0.392",
+        "disk": "0.000",
+        "promo": "0.394",
+        "vram_used": "6673",
+        "vram_slots": "6800",
+        "ram_used": "8684",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.004",
+        "miss_ms": "0.000",
+        "lane": "85.574",
+        "lane_ms": "2.633",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "10.26",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.290",
+        "spec_acc": "1591",
+        "spec_offered": "1847",
+        "spec_rounds": "441"
+      },
+      "glm_stat": "glm stat: decode 10.17 ms/tok (98.37 tok/s) | vram hit 68.16% | ram fetches 0.39/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.39/tok | cpu lane 85.57/tok in 2.63 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6672/6800 ram 8687/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 0,
+      "warmup": false,
+      "startup_warmup_prefill_tps": 2710.8324095368885,
+      "startup_slow_before_resync": false,
+      "following_resync_promotions": 0,
+      "following_resync_ms": 0.0,
+      "preceding_resync_ms": 0.0,
+      "helper_request_increment": {
+        "calls": 78103.0,
+        "experts": 158709.0,
+        "upload_bytes": 2991144960.0,
+        "prepare_ms": 104.14499999999998,
+        "launch_ms": 577.764,
+        "wait_ms": 1912.4370000000001,
+        "fallbacks": 0.0,
+        "window_calls": 17437.0,
+        "columns": 77457.0
+      }
+    },
+    {
+      "case": "original-r0-C",
+      "name": "trial-02",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "f427160f41114de57386c03def91dd6a87537f0dace58a2e17a20378e0068305",
+      "output_ids_sha256": "922ecfeb4810b7056f250fd8c5c3db651d320895bd2e897a00e6ee374448e028",
+      "prefill_tps": 2704.790834351372,
+      "decode_tps": 97.4398256740619,
+      "prefill_ms": 6057.4,
+      "decode_ms": 21018.1,
+      "ttft_s": 6.08609349897597,
+      "wall_s": 27.076173724984983,
+      "draft_accepted": 1582,
+      "draft_offered": 1840,
+      "reused": 0,
+      "done": "DONE 2048 16384 6057.4 21018.1 length 1582 1840 0 380086 553440 441",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.1406781239784323,
+          "line": "PP 4096 16384 1139.3 3595.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.2186207639751956,
+          "line": "PP 8192 16384 2217.9 3693.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.331242148997262,
+          "line": "PP 12288 16384 3330.5 3689.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.9738136879750527,
+          "line": "PP 13715 16384 3973.1 3452.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.031147606990999,
+          "line": "PP 16383 16384 6030.4 2716.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.058067928999662,
+          "line": "PP 16384 16384 6057.4 2704.8 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 95.84232814601273,
+      "done_elapsed_s": 122.91850187099772,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.08767598774284124,
+      "client_gap_since_previous_done_ms": 5000.092793023214,
+      "wall_minus_native_ms": 0.6737249849829823,
+      "family": "original",
+      "mode": "r0",
+      "first_4096_tps": 3595.1,
+      "promotions_per_token": 0.414,
+      "vram_hit_percent": 68.67999999999999,
+      "ram_fetches_per_token": 0.412,
+      "native_stat": {
+        "tok_s": "97.44",
+        "ms_tok": "10.26",
+        "vram_hit": "0.6868",
+        "ram_fetch": "0.412",
+        "disk": "0.000",
+        "promo": "0.414",
+        "vram_used": "6672",
+        "vram_slots": "6800",
+        "ram_used": "8684",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.006",
+        "miss_ms": "0.000",
+        "lane": "84.227",
+        "lane_ms": "2.626",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "9.46",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.318",
+        "spec_acc": "1582",
+        "spec_offered": "1840",
+        "spec_rounds": "441"
+      },
+      "glm_stat": "glm stat: decode 10.26 ms/tok (97.44 tok/s) | vram hit 68.68% | ram fetches 0.41/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 0.41/tok | cpu lane 84.23/tok in 2.63 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6672/6800 ram 8688/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 0,
+      "warmup": false,
+      "startup_warmup_prefill_tps": 2710.8324095368885,
+      "startup_slow_before_resync": false,
+      "following_resync_promotions": 0,
+      "following_resync_ms": 0.0,
+      "preceding_resync_ms": 0.0,
+      "helper_request_increment": {
+        "calls": 77739.0,
+        "experts": 156641.0,
+        "upload_bytes": 783544320.0,
+        "prepare_ms": 27.332000000000107,
+        "launch_ms": 556.924,
+        "wait_ms": 2038.585,
+        "fallbacks": 0.0,
+        "window_calls": 17398.0,
+        "columns": 76776.0
+      }
+    },
+    {
+      "case": "original-r8192-C",
+      "name": "warmup-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "318c59035fe741f1fff4935cc4c44cb2c7332d16311feb4d367125845ea051d2",
+      "output_ids_sha256": "e3bcd7d8f5c5c4091840920102bea74a52a012b61e17121cf6e16f9c001bf9c7",
+      "prefill_tps": 2709.711563905795,
+      "decode_tps": 86.18440432605311,
+      "prefill_ms": 6046.4,
+      "decode_ms": 23763.0,
+      "ttft_s": 8.065589079022175,
+      "wall_s": 29.810113167011878,
+      "draft_accepted": 1582,
+      "draft_offered": 1795,
+      "reused": 0,
+      "done": "DONE 2048 16384 6046.4 23763.0 length 1582 1795 0 348975 542400 446",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.2152859570051078,
+          "line": "PP 4096 16384 1214.6 3372.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.251573526998982,
+          "line": "PP 8192 16384 2250.9 3639.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.3180880260188133,
+          "line": "PP 12288 16384 3317.4 3704.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.9171740300080273,
+          "line": "PP 13715 16384 3916.5 3501.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.011294605006697,
+          "line": "PP 16383 16384 6010.7 2725.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.047060790006071,
+          "line": "PP 16384 16384 6046.4 2709.7 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 29.368676496000262,
+      "done_elapsed_s": 59.17878966301214,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.03139901673421264,
+      "client_gap_since_previous_done_ms": null,
+      "wall_minus_native_ms": 0.7131670118760667,
+      "family": "original",
+      "mode": "r8192",
+      "first_4096_tps": 3372.2,
+      "promotions_per_token": 1.072,
+      "vram_hit_percent": 64.34,
+      "ram_fetches_per_token": 1.092,
+      "native_stat": {
+        "tok_s": "86.18",
+        "ms_tok": "11.60",
+        "vram_hit": "0.6434",
+        "ram_fetch": "1.092",
+        "disk": "0.000",
+        "promo": "1.072",
+        "vram_used": "6682",
+        "vram_slots": "6800",
+        "ram_used": "8676",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.004",
+        "miss_ms": "0.000",
+        "lane": "93.350",
+        "lane_ms": "3.434",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "11.61",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "3.518",
+        "spec_acc": "1582",
+        "spec_offered": "1795",
+        "spec_rounds": "446"
+      },
+      "glm_stat": "glm stat: decode 11.60 ms/tok (86.18 tok/s) | vram hit 64.34% | ram fetches 1.09/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 1.07/tok | cpu lane 93.35/tok in 3.43 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6680/6800 ram 8678/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 8192,
+      "warmup": true,
+      "startup_warmup_prefill_tps": 2709.711563905795,
+      "startup_slow_before_resync": false,
+      "following_resync_promotions": 901,
+      "following_resync_ms": 610.8,
+      "preceding_resync_ms": 0.0,
+      "following_resync_stopped_on_next_request": false,
+      "following_resync_completion_elapsed_s": 59.78962398401927,
+      "following_resync_completion_after_done_ms": 610.8343210071325,
+      "helper_request_increment": {
+        "calls": 77506.0,
+        "experts": 160752.0,
+        "upload_bytes": 29920296960.0,
+        "prepare_ms": 1040.312,
+        "launch_ms": 585.327,
+        "wait_ms": 1239.746,
+        "fallbacks": 0.0,
+        "window_calls": 17640.0,
+        "columns": 76766.0
+      }
+    },
+    {
+      "case": "original-r8192-C",
+      "name": "trial-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "b137d55ad7dbd041d514127d49a3cd37d16188e08c609d9b2f4e10962166914c",
+      "prefill_tps": 2862.034028578416,
+      "decode_tps": 98.6365234478474,
+      "prefill_ms": 5724.6,
+      "decode_ms": 20763.1,
+      "ttft_s": 6.028462716989452,
+      "wall_s": 26.488458762993105,
+      "draft_accepted": 1597,
+      "draft_offered": 1817,
+      "reused": 0,
+      "done": "DONE 2048 16384 5724.6 20763.1 length 1597 1817 0 481005 544320 429",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.0961460989783518,
+          "line": "PP 4096 16384 1095.4 3739.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.122451146977255,
+          "line": "PP 8192 16384 2121.7 3861.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.1801354569906835,
+          "line": "PP 12288 16384 3179.4 3864.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.77032404099009,
+          "line": "PP 13715 16384 3769.6 3638.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.698787026980426,
+          "line": "PP 16383 16384 5698.0 2875.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.725309952977113,
+          "line": "PP 16384 16384 5724.6 2862.0 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 64.17888005802524,
+      "done_elapsed_s": 90.66733882101835,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.09227398550137877,
+      "client_gap_since_previous_done_ms": 5000.090395013103,
+      "wall_minus_native_ms": 0.7587629931076663,
+      "family": "original",
+      "mode": "r8192",
+      "first_4096_tps": 3739.3,
+      "promotions_per_token": 0.715,
+      "vram_hit_percent": 88.37,
+      "ram_fetches_per_token": 0.712,
+      "native_stat": {
+        "tok_s": "98.64",
+        "ms_tok": "10.14",
+        "vram_hit": "0.8837",
+        "ram_fetch": "0.712",
+        "disk": "0.000",
+        "promo": "0.715",
+        "vram_used": "6678",
+        "vram_slots": "6800",
+        "ram_used": "8679",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.011",
+        "miss_ms": "0.000",
+        "lane": "30.193",
+        "lane_ms": "1.654",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "9.47",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "1.556",
+        "spec_acc": "1597",
+        "spec_offered": "1817",
+        "spec_rounds": "429"
+      },
+      "glm_stat": "glm stat: decode 10.14 ms/tok (98.64 tok/s) | vram hit 88.37% | ram fetches 0.71/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 0.71/tok | cpu lane 30.19/tok in 1.65 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6677/6800 ram 8682/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 8192,
+      "warmup": false,
+      "startup_warmup_prefill_tps": 2709.711563905795,
+      "startup_slow_before_resync": false,
+      "following_resync_promotions": 310,
+      "following_resync_ms": 209.1,
+      "preceding_resync_ms": 610.8,
+      "following_resync_stopped_on_next_request": false,
+      "following_resync_completion_elapsed_s": 90.87640021101106,
+      "following_resync_completion_after_done_ms": 209.06138999271207,
+      "preceding_resync_completed_before_send": true,
+      "helper_request_increment": {
+        "calls": 37975.0,
+        "experts": 50599.0,
+        "upload_bytes": 8696770560.0,
+        "prepare_ms": 302.54100000000017,
+        "launch_ms": 311.337,
+        "wait_ms": 954.7840000000001,
+        "fallbacks": 0.0,
+        "window_calls": 14118.0,
+        "columns": 36905.0
+      }
+    },
+    {
+      "case": "original-r8192-C",
+      "name": "trial-02",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "f427160f41114de57386c03def91dd6a87537f0dace58a2e17a20378e0068305",
+      "output_ids_sha256": "3cc35898677c18c425f106de442b20993c7c7abb2492d3320f0ed996cbf63705",
+      "prefill_tps": 2866.590849444493,
+      "decode_tps": 101.85659506532647,
+      "prefill_ms": 5715.5,
+      "decode_ms": 20106.7,
+      "ttft_s": 5.837869164010044,
+      "wall_s": 25.822814406012185,
+      "draft_accepted": 1622,
+      "draft_offered": 1791,
+      "reused": 0,
+      "done": "DONE 2048 16384 5715.5 20106.7 length 1622 1791 0 474151 532080 408",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.0929318639973644,
+          "line": "PP 4096 16384 1092.3 3749.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.121851408010116,
+          "line": "PP 8192 16384 2121.2 3861.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.1860460080206394,
+          "line": "PP 12288 16384 3185.4 3857.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.761186224000994,
+          "line": "PP 13715 16384 3760.5 3647.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.687374984001508,
+          "line": "PP 16383 16384 5686.7 2880.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.716071824019309,
+          "line": "PP 16384 16384 5715.4 2866.6 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 95.66741602600086,
+      "done_elapsed_s": 121.49023043201305,
+      "requested_pause_s": 5.0,
+      "purpose": "performance",
+      "dispatch_write_ms": 0.06856900290586054,
+      "client_gap_since_previous_done_ms": 5000.077204982517,
+      "wall_minus_native_ms": 0.6144060121841903,
+      "family": "original",
+      "mode": "r8192",
+      "first_4096_tps": 3749.9,
+      "promotions_per_token": 0.64,
+      "vram_hit_percent": 89.11,
+      "ram_fetches_per_token": 0.639,
+      "native_stat": {
+        "tok_s": "101.86",
+        "ms_tok": "9.82",
+        "vram_hit": "0.8911",
+        "ram_fetch": "0.639",
+        "disk": "0.000",
+        "promo": "0.640",
+        "vram_used": "6674",
+        "vram_slots": "6800",
+        "ram_used": "8682",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.004",
+        "miss_ms": "0.000",
+        "lane": "27.643",
+        "lane_ms": "1.527",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "8.91",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "1.110",
+        "spec_acc": "1622",
+        "spec_offered": "1791",
+        "spec_rounds": "408"
+      },
+      "glm_stat": "glm stat: decode 9.82 ms/tok (101.86 tok/s) | vram hit 89.11% | ram fetches 0.64/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.64/tok | cpu lane 27.64/tok in 1.53 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 6671/6800 ram 8686/9272",
+      "helper": true,
+      "promote": 0,
+      "resync": 8192,
+      "warmup": false,
+      "startup_warmup_prefill_tps": 2709.711563905795,
+      "startup_slow_before_resync": false,
+      "following_resync_promotions": 169,
+      "following_resync_ms": 113.1,
+      "preceding_resync_ms": 209.1,
+      "following_resync_stopped_on_next_request": false,
+      "following_resync_completion_elapsed_s": 121.60339056001976,
+      "following_resync_completion_after_done_ms": 113.1601280067116,
+      "preceding_resync_completed_before_send": true,
+      "helper_request_increment": {
+        "calls": 34849.0,
+        "experts": 45927.0,
+        "upload_bytes": 3479961600.0,
+        "prepare_ms": 121.12599999999998,
+        "launch_ms": 274.5240000000001,
+        "wait_ms": 862.5209999999997,
+        "fallbacks": 0.0,
+        "window_calls": 13242.0,
+        "columns": 33924.0
+      }
+    }
+  ],
+  "process_summaries": [
+    {
+      "case": "original-r0-A",
+      "family": "original",
+      "mode": "r0",
+      "helper": true,
+      "resync": 0,
+      "warmups": 1,
+      "measured_requests": 2,
+      "measured_pair_span_s": 61.54644432099303,
+      "requested_pause_s": 5.0,
+      "measured_response_wall_sum_s": 51.54623508697841,
+      "excluded_idle_s": 10.00020923401462,
+      "metrics": {
+        "prefill_tps": {
+          "median": 2734.4417532609705,
+          "values": [
+            2727.9841489202286,
+            2740.899357601713
+          ]
+        },
+        "decode_tps": {
+          "median": 103.54280133192066,
+          "values": [
+            102.69061443886197,
+            104.39498822497936
+          ]
+        },
+        "ttft_s": {
+          "median": 6.0588157274905825,
+          "values": [
+            6.113046311977087,
+            6.004585143004078
+          ]
+        },
+        "wall_s": {
+          "median": 25.773117543489207,
+          "values": [
+            25.950154050980927,
+            25.596081035997486
+          ]
+        }
+      },
+      "helper_request_end": [
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 78254 experts 162003 upload_bytes 29920296960 prepare_ms 1040.588 launch_ms 565.389 wait_ms 1146.619 fallbacks 0 window_calls 16914 columns 77066",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 152071 experts 311232 upload_bytes 32955678720 prepare_ms 1146.287 launch_ms 1069.544 wait_ms 2985.089 fallbacks 0 window_calls 33288 columns 150473",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 227832 experts 466906 upload_bytes 33693235200 prepare_ms 1172.001 launch_ms 1614.692 wait_ms 5061.403 fallbacks 0 window_calls 49661 columns 225635"
+      ],
+      "resync_lines": []
+    },
+    {
+      "case": "original-r8192-A",
+      "family": "original",
+      "mode": "r8192",
+      "helper": true,
+      "resync": 8192,
+      "warmups": 1,
+      "measured_requests": 2,
+      "measured_pair_span_s": 66.71456153100007,
+      "requested_pause_s": 5.0,
+      "measured_response_wall_sum_s": 56.71434434002731,
+      "excluded_idle_s": 10.000217190972762,
+      "metrics": {
+        "prefill_tps": {
+          "median": 2190.0282562645666,
+          "values": [
+            2193.4240119952874,
+            2186.632500533846
+          ]
+        },
+        "decode_tps": {
+          "median": 98.1070971408182,
+          "values": [
+            98.26453696195607,
+            97.94965731968033
+          ]
+        },
+        "ttft_s": {
+          "median": 7.678673799004173,
+          "values": [
+            7.801953295012936,
+            7.55539430299541
+          ]
+        },
+        "wall_s": {
+          "median": 28.357172170013655,
+          "values": [
+            28.312152930011507,
+            28.402191410015803
+          ]
+        }
+      },
+      "helper_request_end": [
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 79254 experts 162583 upload_bytes 29920296960 prepare_ms 1040.230 launch_ms 539.007 wait_ms 1302.696 fallbacks 0 window_calls 18669 columns 78564",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 112830 experts 205905 upload_bytes 39433605120 prepare_ms 1371.152 launch_ms 835.405 wait_ms 2135.246 fallbacks 0 window_calls 32156 columns 111242",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 147075 experts 250131 upload_bytes 41188884480 prepare_ms 1432.434 launch_ms 1108.699 wait_ms 3014.542 fallbacks 0 window_calls 45924 columns 144366"
+      ],
+      "resync_lines": [
+        "expert helper resync: 1012 promotions in 684.4 ms",
+        "expert helper resync: 72 promotions in 50.1 ms",
+        "expert helper resync: 284 promotions in 192.2 ms"
+      ]
+    },
+    {
+      "case": "identical-r8192-A",
+      "family": "identical",
+      "mode": "r8192",
+      "helper": true,
+      "resync": 8192,
+      "warmups": 1,
+      "measured_requests": 2,
+      "measured_pair_span_s": 62.363504139008,
+      "requested_pause_s": 5.0,
+      "measured_response_wall_sum_s": 52.36333374702372,
+      "excluded_idle_s": 10.000170391984284,
+      "metrics": {
+        "prefill_tps": {
+          "median": 2853.5449513457042,
+          "values": [
+            2858.837899145001,
+            2848.2520035464076
+          ]
+        },
+        "decode_tps": {
+          "median": 100.19902328893534,
+          "values": [
+            100.07965323963897,
+            100.31839333823169
+          ]
+        },
+        "ttft_s": {
+          "median": 5.9579757085157325,
+          "values": [
+            6.042240759008564,
+            5.873710658022901
+          ]
+        },
+        "wall_s": {
+          "median": 26.18166687351186,
+          "values": [
+            26.195440020004753,
+            26.167893727018964
+          ]
+        }
+      },
+      "helper_request_end": [
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 77829 experts 159592 upload_bytes 29920296960 prepare_ms 1040.236 launch_ms 561.527 wait_ms 1196.100 fallbacks 0 window_calls 16911 columns 77005",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 116481 experts 211549 upload_bytes 38830233600 prepare_ms 1350.164 launch_ms 875.359 wait_ms 2167.463 fallbacks 0 window_calls 31110 columns 114540",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 150148 experts 256127 upload_bytes 42286694400 prepare_ms 1470.439 launch_ms 1152.792 wait_ms 3059.161 fallbacks 0 window_calls 44411 columns 146859"
+      ],
+      "resync_lines": [
+        "expert helper resync: 913 promotions in 618.1 ms",
+        "expert helper resync: 269 promotions in 180.9 ms",
+        "expert helper resync: 27 promotions in 18.5 ms"
+      ]
+    },
+    {
+      "case": "identical-r0-A",
+      "family": "identical",
+      "mode": "r0",
+      "helper": true,
+      "resync": 0,
+      "warmups": 1,
+      "measured_requests": 2,
+      "measured_pair_span_s": 62.31072113197297,
+      "requested_pause_s": 5.0,
+      "measured_response_wall_sum_s": 52.31052552498295,
+      "excluded_idle_s": 10.000195606990019,
+      "metrics": {
+        "prefill_tps": {
+          "median": 2720.505880200294,
+          "values": [
+            2713.4363458703897,
+            2727.575414530199
+          ]
+        },
+        "decode_tps": {
+          "median": 101.76266508978887,
+          "values": [
+            103.63166230651291,
+            99.89366787306481
+          ]
+        },
+        "ttft_s": {
+          "median": 6.0891006015008315,
+          "values": [
+            6.145343001990113,
+            6.03285820101155
+          ]
+        },
+        "wall_s": {
+          "median": 26.155262762491475,
+          "values": [
+            25.801189894991694,
+            26.509335629991256
+          ]
+        }
+      },
+      "helper_request_end": [
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 76821 experts 159581 upload_bytes 29920296960 prepare_ms 1040.291 launch_ms 515.103 wait_ms 1152.549 fallbacks 0 window_calls 15967 columns 76178",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 153736 experts 319716 upload_bytes 32962222080 prepare_ms 1146.198 launch_ms 1012.632 wait_ms 3159.937 fallbacks 0 window_calls 32589 columns 152225",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 231428 experts 476615 upload_bytes 33669826560 prepare_ms 1170.872 launch_ms 1535.158 wait_ms 5189.805 fallbacks 0 window_calls 49435 columns 229196"
+      ],
+      "resync_lines": []
+    },
+    {
+      "case": "original-r8192-B",
+      "family": "original",
+      "mode": "r8192",
+      "helper": true,
+      "resync": 8192,
+      "warmups": 1,
+      "measured_requests": 2,
+      "measured_pair_span_s": 61.841004385991255,
+      "requested_pause_s": 5.0,
+      "measured_response_wall_sum_s": 51.84080720297061,
+      "excluded_idle_s": 10.000197183020646,
+      "metrics": {
+        "prefill_tps": {
+          "median": 2857.5784656512533,
+          "values": [
+            2875.445339511048,
+            2839.7115917914584
+          ]
+        },
+        "decode_tps": {
+          "median": 101.45676699207556,
+          "values": [
+            101.63469077843837,
+            101.27884320571275
+          ]
+        },
+        "ttft_s": {
+          "median": 5.932883323490387,
+          "values": [
+            5.998718277987791,
+            5.867048368992982
+          ]
+        },
+        "wall_s": {
+          "median": 25.920403601485305,
+          "values": [
+            25.849130634975154,
+            25.991676567995455
+          ]
+        }
+      },
+      "helper_request_end": [
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 77457 experts 161199 upload_bytes 29920296960 prepare_ms 1040.587 launch_ms 600.563 wait_ms 1211.303 fallbacks 0 window_calls 17540 columns 76668",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 116915 experts 214318 upload_bytes 38532280320 prepare_ms 1340.175 launch_ms 933.453 wait_ms 2196.943 fallbacks 0 window_calls 31580 columns 115013",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 152434 experts 260683 upload_bytes 41297448960 prepare_ms 1436.419 launch_ms 1206.815 wait_ms 3132.836 fallbacks 0 window_calls 45426 columns 149401"
+      ],
+      "resync_lines": [
+        "expert helper resync: 885 promotions in 599.7 ms",
+        "expert helper resync: 204 promotions in 137.7 ms",
+        "expert helper resync: 140 promotions in 90.3 ms"
+      ]
+    },
+    {
+      "case": "original-r0-B",
+      "family": "original",
+      "mode": "r0",
+      "helper": true,
+      "resync": 0,
+      "warmups": 1,
+      "measured_requests": 2,
+      "measured_pair_span_s": 62.26622849001433,
+      "requested_pause_s": 5.0,
+      "measured_response_wall_sum_s": 52.26605587400263,
+      "excluded_idle_s": 10.000172616011696,
+      "metrics": {
+        "prefill_tps": {
+          "median": 2708.497822983538,
+          "values": [
+            2695.4461700447487,
+            2721.5494759223266
+          ]
+        },
+        "decode_tps": {
+          "median": 101.97723796812029,
+          "values": [
+            101.71090859427379,
+            102.2435673419668
+          ]
+        },
+        "ttft_s": {
+          "median": 6.117764418988372,
+          "values": [
+            6.193473941995762,
+            6.042054895980982
+          ]
+        },
+        "wall_s": {
+          "median": 26.133027937001316,
+          "values": [
+            26.21457207200001,
+            26.051483802002622
+          ]
+        }
+      },
+      "helper_request_end": [
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 77710 experts 157494 upload_bytes 29920296960 prepare_ms 1040.300 launch_ms 593.148 wait_ms 1201.520 fallbacks 0 window_calls 17167 columns 76761",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 153813 experts 313744 upload_bytes 33188198400 prepare_ms 1154.044 launch_ms 1087.929 wait_ms 3158.649 fallbacks 0 window_calls 33590 columns 152111",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 231241 experts 473299 upload_bytes 33778206720 prepare_ms 1174.612 launch_ms 1634.423 wait_ms 5315.242 fallbacks 0 window_calls 50704 columns 228868"
+      ],
+      "resync_lines": []
+    },
+    {
+      "case": "identical-r0-B",
+      "family": "identical",
+      "mode": "r0",
+      "helper": true,
+      "resync": 0,
+      "warmups": 1,
+      "measured_requests": 2,
+      "measured_pair_span_s": 62.92666986401309,
+      "requested_pause_s": 5.0,
+      "measured_response_wall_sum_s": 52.926451085018925,
+      "excluded_idle_s": 10.000218778994167,
+      "metrics": {
+        "prefill_tps": {
+          "median": 2723.6098268305013,
+          "values": [
+            2721.368657088282,
+            2725.850996572721
+          ]
+        },
+        "decode_tps": {
+          "median": 100.17232882158922,
+          "values": [
+            101.19527030699523,
+            99.14938733618322
+          ]
+        },
+        "ttft_s": {
+          "median": 6.0847213645029115,
+          "values": [
+            6.133562424016418,
+            6.035880304989405
+          ]
+        },
+        "wall_s": {
+          "median": 26.463225542509463,
+          "values": [
+            26.259416948014405,
+            26.66703413700452
+          ]
+        }
+      },
+      "helper_request_end": [
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 77559 experts 159456 upload_bytes 29920296960 prepare_ms 1040.262 launch_ms 503.160 wait_ms 1193.703 fallbacks 0 window_calls 16520 columns 76847",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 154771 experts 318251 upload_bytes 33128755200 prepare_ms 1151.970 launch_ms 1072.514 wait_ms 3138.003 fallbacks 0 window_calls 32864 columns 153236",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 230856 experts 469359 upload_bytes 33817006080 prepare_ms 1175.966 launch_ms 1615.092 wait_ms 5130.401 fallbacks 0 window_calls 50018 columns 228411"
+      ],
+      "resync_lines": []
+    },
+    {
+      "case": "identical-r8192-B",
+      "family": "identical",
+      "mode": "r8192",
+      "helper": true,
+      "resync": 8192,
+      "warmups": 1,
+      "measured_requests": 2,
+      "measured_pair_span_s": 62.12114652301534,
+      "requested_pause_s": 5.0,
+      "measured_response_wall_sum_s": 52.12094825701206,
+      "excluded_idle_s": 10.00019826600328,
+      "metrics": {
+        "prefill_tps": {
+          "median": 2820.650206790489,
+          "values": [
+            2816.911094682186,
+            2824.3893188987918
+          ]
+        },
+        "decode_tps": {
+          "median": 101.15599472490698,
+          "values": [
+            99.54408033518358,
+            102.76790911463037
+          ]
+        },
+        "ttft_s": {
+          "median": 5.9948231674934505,
+          "values": [
+            6.053729648992885,
+            5.935916685994016
+          ]
+        },
+        "wall_s": {
+          "median": 26.06047412850603,
+          "values": [
+            26.390851648990065,
+            25.730096608021995
+          ]
+        }
+      },
+      "helper_request_end": [
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 77044 experts 160933 upload_bytes 29920296960 prepare_ms 1040.543 launch_ms 550.994 wait_ms 1190.657 fallbacks 0 window_calls 16177 columns 76416",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 119715 experts 219445 upload_bytes 36704286720 prepare_ms 1276.586 launch_ms 912.898 wait_ms 2228.954 fallbacks 0 window_calls 30796 columns 118224",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 155535 experts 267481 upload_bytes 40542382080 prepare_ms 1410.221 launch_ms 1201.533 wait_ms 3164.064 fallbacks 0 window_calls 44278 columns 152972"
+      ],
+      "resync_lines": [
+        "expert helper resync: 650 promotions in 441.2 ms",
+        "expert helper resync: 351 promotions in 237.4 ms",
+        "expert helper resync: 123 promotions in 79.9 ms"
+      ]
+    },
+    {
+      "case": "original-r0-C",
+      "family": "original",
+      "mode": "r0",
+      "helper": true,
+      "resync": 0,
+      "warmups": 1,
+      "measured_requests": 2,
+      "bounded_extension": true,
+      "measured_pair_span_s": 63.91497724899091,
+      "requested_pause_s": 5.0,
+      "measured_response_wall_sum_s": 53.91477836098056,
+      "excluded_idle_s": 10.000198888010345,
+      "metrics": {
+        "prefill_tps": {
+          "median": 2713.5545292320467,
+          "values": [
+            2722.318224112721,
+            2704.790834351372
+          ]
+        },
+        "decode_tps": {
+          "median": 97.90480769471176,
+          "values": [
+            98.36978971536163,
+            97.4398256740619
+          ]
+        },
+        "ttft_s": {
+          "median": 6.1049992264888715,
+          "values": [
+            6.123904954001773,
+            6.08609349897597
+          ]
+        },
+        "wall_s": {
+          "median": 26.95738918049028,
+          "values": [
+            26.83860463599558,
+            27.076173724984983
+          ]
+        }
+      },
+      "helper_request_end": [
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 76772 experts 157262 upload_bytes 29920296960 prepare_ms 1040.301 launch_ms 535.004 wait_ms 1140.032 fallbacks 0 window_calls 16325 columns 76045",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 154875 experts 315971 upload_bytes 32911441920 prepare_ms 1144.446 launch_ms 1112.768 wait_ms 3052.469 fallbacks 0 window_calls 33762 columns 153502",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 232614 experts 472612 upload_bytes 33694986240 prepare_ms 1171.778 launch_ms 1669.692 wait_ms 5091.054 fallbacks 0 window_calls 51160 columns 230278"
+      ],
+      "resync_lines": []
+    },
+    {
+      "case": "original-r8192-C",
+      "family": "original",
+      "mode": "r8192",
+      "helper": true,
+      "resync": 8192,
+      "warmups": 1,
+      "measured_requests": 2,
+      "bounded_extension": true,
+      "measured_pair_span_s": 62.31144076900091,
+      "requested_pause_s": 5.0,
+      "measured_response_wall_sum_s": 52.31127316900529,
+      "excluded_idle_s": 10.00016759999562,
+      "metrics": {
+        "prefill_tps": {
+          "median": 2864.3124390114544,
+          "values": [
+            2862.034028578416,
+            2866.590849444493
+          ]
+        },
+        "decode_tps": {
+          "median": 100.24655925658693,
+          "values": [
+            98.6365234478474,
+            101.85659506532647
+          ]
+        },
+        "ttft_s": {
+          "median": 5.933165940499748,
+          "values": [
+            6.028462716989452,
+            5.837869164010044
+          ]
+        },
+        "wall_s": {
+          "median": 26.155636584502645,
+          "values": [
+            26.488458762993105,
+            25.822814406012185
+          ]
+        }
+      },
+      "helper_request_end": [
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 77506 experts 160752 upload_bytes 29920296960 prepare_ms 1040.312 launch_ms 585.327 wait_ms 1239.746 fallbacks 0 window_calls 17640 columns 76766",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 115481 experts 211351 upload_bytes 38617067520 prepare_ms 1342.853 launch_ms 896.664 wait_ms 2194.530 fallbacks 0 window_calls 31758 columns 113671",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 150330 experts 257278 upload_bytes 42097029120 prepare_ms 1463.979 launch_ms 1171.188 wait_ms 3057.051 fallbacks 0 window_calls 45000 columns 147595"
+      ],
+      "resync_lines": [
+        "expert helper resync: 901 promotions in 610.8 ms",
+        "expert helper resync: 310 promotions in 209.1 ms",
+        "expert helper resync: 169 promotions in 113.1 ms"
+      ]
+    }
+  ],
+  "interrupt_smoke": [
+    {
+      "case": "back-to-back-r0",
+      "resync": 0,
+      "requested_pause_s": 0.0,
+      "rows": [
+        {
+          "case": "back-to-back-r0",
+          "name": "warmup-01",
+          "input_tokens": 16384,
+          "output_tokens": 512,
+          "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+          "output_ids_sha256": "eed77e627d67fdb8215b9c4a3e681b40b4a2819d31d1d1be2c98e649063516b5",
+          "prefill_tps": 2702.0251995514213,
+          "decode_tps": 60.35529464464641,
+          "prefill_ms": 6063.6,
+          "decode_ms": 8483.1,
+          "ttft_s": 8.071294128982117,
+          "wall_s": 14.547281711973483,
+          "draft_accepted": 389,
+          "draft_offered": 457,
+          "reused": 0,
+          "done": "DONE 512 16384 6063.6 8483.1 length 389 457 0 81933 139200 115",
+          "prompt_progress": [
+            {
+              "client_elapsed_s": 1.2079958969843574,
+              "line": "PP 4096 16384 1207.5 3392.2 0 0.0"
+            },
+            {
+              "client_elapsed_s": 2.244030568981543,
+              "line": "PP 8192 16384 2243.5 3651.4 0 0.0"
+            },
+            {
+              "client_elapsed_s": 3.312002531980397,
+              "line": "PP 12288 16384 3311.5 3710.7 0 0.0"
+            },
+            {
+              "client_elapsed_s": 3.918483353976626,
+              "line": "PP 13715 16384 3918.0 3500.5 0 0.0"
+            },
+            {
+              "client_elapsed_s": 6.029136346973246,
+              "line": "PP 16383 16384 6028.6 2717.5 0 0.0"
+            },
+            {
+              "client_elapsed_s": 6.064081252989126,
+              "line": "PP 16384 16384 6063.6 2702.0 0 0.0"
+            }
+          ],
+          "send_elapsed_s": 29.30124784601503,
+          "done_elapsed_s": 43.84852955798851,
+          "requested_pause_s": 0.0,
+          "purpose": "interrupt_smoke",
+          "dispatch_write_ms": 0.07568299770355225,
+          "client_gap_since_previous_done_ms": null,
+          "wall_minus_native_ms": 0.5817119734820153
+        },
+        {
+          "case": "back-to-back-r0",
+          "name": "trial-01",
+          "input_tokens": 16384,
+          "output_tokens": 512,
+          "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+          "output_ids_sha256": "906bd5a1a7f2269a4f63685eebf4c127d215b9e9b95a2ec07e919fbce71a0b9f",
+          "prefill_tps": 2736.6416676410163,
+          "decode_tps": 89.68295673497985,
+          "prefill_ms": 5986.9,
+          "decode_ms": 5709.0,
+          "ttft_s": 6.070118197007105,
+          "wall_s": 11.696492152026622,
+          "draft_accepted": 393,
+          "draft_offered": 473,
+          "reused": 0,
+          "done": "DONE 512 16384 5986.9 5709.0 length 393 473 0 92832 142080 110",
+          "prompt_progress": [
+            {
+              "client_elapsed_s": 1.1255953120125923,
+              "line": "PP 4096 16384 1125.0 3640.8 0 0.0"
+            },
+            {
+              "client_elapsed_s": 2.1907714690023568,
+              "line": "PP 8192 16384 2190.2 3740.3 0 0.0"
+            },
+            {
+              "client_elapsed_s": 3.2863852260052226,
+              "line": "PP 12288 16384 3285.8 3739.7 0 0.0"
+            },
+            {
+              "client_elapsed_s": 3.91439354600152,
+              "line": "PP 13715 16384 3913.8 3504.2 0 0.0"
+            },
+            {
+              "client_elapsed_s": 5.958282395004062,
+              "line": "PP 16383 16384 5957.7 2749.9 0 0.0"
+            },
+            {
+              "client_elapsed_s": 5.9873995030066,
+              "line": "PP 16384 16384 5986.9 2736.7 0 0.0"
+            }
+          ],
+          "send_elapsed_s": 43.848609807988396,
+          "done_elapsed_s": 55.54510196001502,
+          "requested_pause_s": 0.0,
+          "purpose": "interrupt_smoke",
+          "dispatch_write_ms": 0.05341100040823221,
+          "client_gap_since_previous_done_ms": 0.08024999988265336,
+          "wall_minus_native_ms": 0.5921520266219886
+        },
+        {
+          "case": "back-to-back-r0",
+          "name": "trial-02",
+          "input_tokens": 16384,
+          "output_tokens": 512,
+          "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+          "output_ids_sha256": "45e72bb43cdf4c79f7b65c887da9a2306c386ff1795bf7c205243fed38bbdb53",
+          "prefill_tps": 2735.1340522854,
+          "decode_tps": 93.30636196307837,
+          "prefill_ms": 5990.2,
+          "decode_ms": 5487.3,
+          "ttft_s": 6.0164534139912575,
+          "wall_s": 11.478225964994635,
+          "draft_accepted": 381,
+          "draft_offered": 443,
+          "reused": 0,
+          "done": "DONE 512 16384 5990.2 5487.3 length 381 443 0 89608 137760 114",
+          "prompt_progress": [
+            {
+              "client_elapsed_s": 1.127977992000524,
+              "line": "PP 4096 16384 1127.3 3633.3 0 0.0"
+            },
+            {
+              "client_elapsed_s": 2.1999933990009595,
+              "line": "PP 8192 16384 2199.3 3724.7 0 0.0"
+            },
+            {
+              "client_elapsed_s": 3.2970155859948136,
+              "line": "PP 12288 16384 3296.4 3727.7 0 0.0"
+            },
+            {
+              "client_elapsed_s": 3.929823059006594,
+              "line": "PP 13715 16384 3929.2 3490.6 0 0.0"
+            },
+            {
+              "client_elapsed_s": 5.965845788014121,
+              "line": "PP 16383 16384 5965.2 2746.4 0 0.0"
+            },
+            {
+              "client_elapsed_s": 5.990838831989095,
+              "line": "PP 16384 16384 5990.2 2735.1 0 0.0"
+            }
+          ],
+          "send_elapsed_s": 55.54517805299838,
+          "done_elapsed_s": 67.02340401799302,
+          "requested_pause_s": 0.0,
+          "purpose": "interrupt_smoke",
+          "dispatch_write_ms": 0.055935990530997515,
+          "client_gap_since_previous_done_ms": 0.07609298336319625,
+          "wall_minus_native_ms": 0.725964994635433
+        }
+      ],
+      "resync_lines": [],
+      "helper_request_end": [
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 19908 experts 42470 upload_bytes 29920296960 prepare_ms 1040.230 launch_ms 143.305 wait_ms 144.756 fallbacks 0 window_calls 4552 columns 19603",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 39913 experts 84435 upload_bytes 32279777280 prepare_ms 1122.354 launch_ms 299.892 wait_ms 478.907 fallbacks 0 window_calls 8911 columns 39272",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 59770 experts 126502 upload_bytes 32998348800 prepare_ms 1147.395 launch_ms 472.695 wait_ms 884.848 fallbacks 0 window_calls 13398 columns 58502"
+      ],
+      "excluded_from_primary_performance": true,
+      "resync_events": []
+    },
+    {
+      "case": "back-to-back-r8192",
+      "resync": 8192,
+      "requested_pause_s": 0.0,
+      "rows": [
+        {
+          "case": "back-to-back-r8192",
+          "name": "warmup-01",
+          "input_tokens": 16384,
+          "output_tokens": 512,
+          "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+          "output_ids_sha256": "164093072da0c420d0cd163b009bed535641ee55bddbb5898a53481fdbc1d653",
+          "prefill_tps": 2698.59832325861,
+          "decode_tps": 60.257270298579485,
+          "prefill_ms": 6071.3,
+          "decode_ms": 8496.9,
+          "ttft_s": 8.092712668993045,
+          "wall_s": 14.568967275990872,
+          "draft_accepted": 382,
+          "draft_offered": 444,
+          "reused": 0,
+          "done": "DONE 512 16384 6071.3 8496.9 length 382 444 0 79519 137760 114",
+          "prompt_progress": [
+            {
+              "client_elapsed_s": 1.217705886985641,
+              "line": "PP 4096 16384 1217.0 3365.7 0 0.0"
+            },
+            {
+              "client_elapsed_s": 2.255775547993835,
+              "line": "PP 8192 16384 2255.0 3632.8 0 0.0"
+            },
+            {
+              "client_elapsed_s": 3.326016298989998,
+              "line": "PP 12288 16384 3325.3 3695.3 0 0.0"
+            },
+            {
+              "client_elapsed_s": 3.9310203249915503,
+              "line": "PP 13715 16384 3930.3 3489.6 0 0.0"
+            },
+            {
+              "client_elapsed_s": 6.034689230000367,
+              "line": "PP 16383 16384 6033.9 2715.1 0 0.0"
+            },
+            {
+              "client_elapsed_s": 6.071993802994257,
+              "line": "PP 16384 16384 6071.3 2698.6 0 0.0"
+            }
+          ],
+          "send_elapsed_s": 29.38603217698983,
+          "done_elapsed_s": 43.9549994529807,
+          "requested_pause_s": 0.0,
+          "purpose": "interrupt_smoke",
+          "dispatch_write_ms": 0.038422003854066133,
+          "client_gap_since_previous_done_ms": null,
+          "wall_minus_native_ms": 0.767275990872804
+        },
+        {
+          "case": "back-to-back-r8192",
+          "name": "trial-01",
+          "input_tokens": 16384,
+          "output_tokens": 512,
+          "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+          "output_ids_sha256": "2b12eaccdec8bed830797e54e33602c3ba3bcee222e3e03537b78b8f185cb8b4",
+          "prefill_tps": 2720.2390835131996,
+          "decode_tps": 92.41376820749778,
+          "prefill_ms": 6023.0,
+          "decode_ms": 5540.3,
+          "ttft_s": 6.165658231009729,
+          "wall_s": 11.606500627007335,
+          "draft_accepted": 384,
+          "draft_offered": 445,
+          "reused": 0,
+          "done": "DONE 512 16384 6023.0 5540.3 length 384 445 0 101249 137520 114",
+          "prompt_progress": [
+            {
+              "client_elapsed_s": 1.22233340900857,
+              "line": "PP 4096 16384 1179.2 3473.7 0 0.0"
+            },
+            {
+              "client_elapsed_s": 2.2893171859905124,
+              "line": "PP 8192 16384 2246.1 3647.2 0 0.0"
+            },
+            {
+              "client_elapsed_s": 3.387418995000189,
+              "line": "PP 12288 16384 3344.2 3674.4 0 0.0"
+            },
+            {
+              "client_elapsed_s": 4.006901023996761,
+              "line": "PP 13715 16384 3963.7 3460.1 0 0.0"
+            },
+            {
+              "client_elapsed_s": 6.0394168620114215,
+              "line": "PP 16383 16384 5996.2 2732.2 0 0.0"
+            },
+            {
+              "client_elapsed_s": 6.066145508986665,
+              "line": "PP 16384 16384 6023.0 2720.3 0 0.0"
+            }
+          ],
+          "send_elapsed_s": 43.955072810989805,
+          "done_elapsed_s": 55.56157343799714,
+          "requested_pause_s": 0.0,
+          "purpose": "interrupt_smoke",
+          "dispatch_write_ms": 0.04897199687547982,
+          "client_gap_since_previous_done_ms": 0.07335800910368562,
+          "wall_minus_native_ms": 43.20062700733524
+        },
+        {
+          "case": "back-to-back-r8192",
+          "name": "trial-02",
+          "input_tokens": 16384,
+          "output_tokens": 512,
+          "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+          "output_ids_sha256": "d5091371b920256a397eb4713095aea730df5e9f93ee2f02459c5f0e37d5931b",
+          "prefill_tps": 2739.1580566422576,
+          "decode_tps": 95.44937640983575,
+          "prefill_ms": 5981.4,
+          "decode_ms": 5364.1,
+          "ttft_s": 6.073146896000253,
+          "wall_s": 11.387663214001805,
+          "draft_accepted": 386,
+          "draft_offered": 448,
+          "reused": 0,
+          "done": "DONE 512 16384 5981.4 5364.1 length 386 448 0 109555 137760 113",
+          "prompt_progress": [
+            {
+              "client_elapsed_s": 1.2059972120041493,
+              "line": "PP 4096 16384 1163.9 3519.3 0 0.0"
+            },
+            {
+              "client_elapsed_s": 2.2738963720039465,
+              "line": "PP 8192 16384 2231.8 3670.6 0 0.0"
+            },
+            {
+              "client_elapsed_s": 3.3745938210049644,
+              "line": "PP 12288 16384 3332.5 3687.4 0 0.0"
+            },
+            {
+              "client_elapsed_s": 3.990844605024904,
+              "line": "PP 13715 16384 3948.7 3473.3 0 0.0"
+            },
+            {
+              "client_elapsed_s": 6.0005243250052445,
+              "line": "PP 16383 16384 5958.4 2749.6 0 0.0"
+            },
+            {
+              "client_elapsed_s": 6.023507590027293,
+              "line": "PP 16384 16384 5981.4 2739.2 0 0.0"
+            }
+          ],
+          "send_elapsed_s": 55.561646153975744,
+          "done_elapsed_s": 66.94930936797755,
+          "requested_pause_s": 0.0,
+          "purpose": "interrupt_smoke",
+          "dispatch_write_ms": 0.049924012273550034,
+          "client_gap_since_previous_done_ms": 0.07271597860381007,
+          "wall_minus_native_ms": 42.16321400180459
+        }
+      ],
+      "resync_lines": [
+        "expert helper resync: 120 promotions in 42.9 ms (stopped: the next request)",
+        "expert helper resync: 120 promotions in 41.8 ms (stopped: the next request)",
+        "expert helper resync: 892 promotions in 583.2 ms"
+      ],
+      "helper_request_end": [
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 20161 experts 43781 upload_bytes 29920296960 prepare_ms 1040.243 launch_ms 139.729 wait_ms 170.662 fallbacks 0 window_calls 4524 columns 19571",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 37131 experts 73968 upload_bytes 32759285760 prepare_ms 1139.101 launch_ms 268.096 wait_ms 479.317 fallbacks 0 window_calls 8908 columns 36038",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 51897 experts 97801 upload_bytes 34165923840 prepare_ms 1188.125 launch_ms 385.851 wait_ms 806.778 fallbacks 0 window_calls 13184 columns 50387"
+      ],
+      "excluded_from_primary_performance": true,
+      "resync_events": [
+        {
+          "promotions": 120,
+          "ms": 42.9,
+          "stopped_on_next_request": true,
+          "completion_elapsed_s": 43.99788703399827
+        },
+        {
+          "promotions": 120,
+          "ms": 41.8,
+          "stopped_on_next_request": true,
+          "completion_elapsed_s": 55.60339668698725
+        },
+        {
+          "promotions": 892,
+          "ms": 583.2,
+          "stopped_on_next_request": false,
+          "completion_elapsed_s": 67.5324733099842
+        }
+      ]
+    }
+  ],
+  "bounded_extension": {
+    "threshold_warmup_prefill_tps": 2500,
+    "flagged_original_cases": [
+      {
+        "case": "original-r8192-A",
+        "family": "original",
+        "warmup_prefill_tps": 2045.3155233755695
+      }
+    ],
+    "affected_families": [
+      "original"
+    ],
+    "sequence": [
+      "original-r0-C",
+      "original-r8192-C"
+    ],
+    "bounded": true,
+    "all_original_runs_retained": true
+  },
+  "sampling": "Initially four measured requests per family/mode from two fresh processes; one discarded warm-up plus two measured requests per process. For any family with an original warm-up Prefill below 2500 tok/s, one bounded matched process pair is added, retaining all original data. Counts are explicit per family/mode. Request send starts five seconds after previous DONE, before metric I/O. This idle gap is excluded from request wall time. Process pair span includes the gaps, while measured_response_wall_sum_s excludes them. Final post-DONE resync is drained before QUIT. Two separate no-pause 16K/512 smoke processes and one two-request 16K/512 numerical-check process are excluded from the primary comparison.",
+  "limitations": "Synthetic 16K/2K workload; short numerical checks apply to sampled RAM-tier contributions, not full-model quality. Generated output IDs may differ across modes and repeated runs."
+}
