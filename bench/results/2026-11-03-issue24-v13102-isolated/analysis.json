@@ -1,0 +1,2849 @@
+{
+  "version": "1.3.102",
+  "commit": "e4eaf01f089a3e7fb2621720fac17e5cb241c223",
+  "engine_sha256": "42ac81a4724fe30b7e6bc08b5d5b44c0c1025d5cb5d28ee5302f11a6380422d0",
+  "pair_found": true,
+  "selected": {
+    "slow_band": "default-02",
+    "fast_band": "default-01"
+  },
+  "profiles": [
+    {
+      "case": "default-01",
+      "mode": "default",
+      "classification": "fast_band",
+      "profile_tokens": 49149,
+      "stream_ms_rounded": 17771.0,
+      "stream_ms_sum_stages": 17771.0,
+      "disk_wait_ms": 0.0,
+      "plan_host_ms": 31.0,
+      "disk_experts_used": 0,
+      "disk_experts_read": 0,
+      "stages": {
+        "moe_staged": {
+          "ms": 3258.5,
+          "percent": 18.3,
+          "ms_per_reported_token": 0.066
+        },
+        "v41_attn": {
+          "ms": 2471.2,
+          "percent": 13.9,
+          "ms_per_reported_token": 0.05
+        },
+        "moe_resident": {
+          "ms": 2182.1,
+          "percent": 12.3,
+          "ms_per_reported_token": 0.044
+        },
+        "moe_prestaged": {
+          "ms": 1853.5,
+          "percent": 10.4,
+          "ms_per_reported_token": 0.038
+        },
+        "v41_index": {
+          "ms": 1545.4,
+          "percent": 8.7,
+          "ms_per_reported_token": 0.031
+        },
+        "v41_out": {
+          "ms": 1263.1,
+          "percent": 7.1,
+          "ms_per_reported_token": 0.026
+        },
+        "shexp": {
+          "ms": 1094.0,
+          "percent": 6.2,
+          "ms_per_reported_token": 0.022
+        },
+        "engram": {
+          "ms": 1021.2,
+          "percent": 5.7,
+          "ms_per_reported_token": 0.021
+        },
+        "hc": {
+          "ms": 906.5,
+          "percent": 5.1,
+          "ms_per_reported_token": 0.018
+        },
+        "plan": {
+          "ms": 751.2,
+          "percent": 4.2,
+          "ms_per_reported_token": 0.015
+        },
+        "v41_q": {
+          "ms": 641.2,
+          "percent": 3.6,
+          "ms_per_reported_token": 0.013
+        },
+        "moe_light": {
+          "ms": 268.5,
+          "percent": 1.5,
+          "ms_per_reported_token": 0.005
+        },
+        "v41_proj": {
+          "ms": 196.0,
+          "percent": 1.1,
+          "ms_per_reported_token": 0.004
+        },
+        "router": {
+          "ms": 172.2,
+          "percent": 1.0,
+          "ms_per_reported_token": 0.004
+        },
+        "combine": {
+          "ms": 112.1,
+          "percent": 0.6,
+          "ms_per_reported_token": 0.002
+        },
+        "route": {
+          "ms": 33.5,
+          "percent": 0.2,
+          "ms_per_reported_token": 0.001
+        },
+        "dsa": {
+          "ms": 0.8,
+          "percent": 0.0,
+          "ms_per_reported_token": 0.0
+        }
+      },
+      "prefill_tps_all_three": [
+        2667.1441827150043,
+        2729.529362765514,
+        2726.1231281198
+      ],
+      "native_prompt_ms_all_three": [
+        6142.9,
+        6002.5,
+        6010.0
+      ],
+      "native_decode_tps_all_three": [
+        82.64496160318312,
+        99.8493483952435,
+        100.72742117144811
+      ],
+      "startup_lines": [
+        "glm fast: CUDA0 zero-copy token boundary: token_embd pinned (434 MB), the table edits and the token are read and written host-mapped",
+        "glm prefill: CUDA0 deepseek41 attention projections batched",
+        "glm prefill: CUDA0 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 2048), borrowing 3630 MB of the expert pool while a prompt runs (activations 1670, weight scratch 84, expert staging 130, prestage 1731: 160 experts); disk landing ring 96 experts (1038 MB pinned)",
+        "glm fast: CUDA0 VRAM before the expert pool: 7.82 of 71.12 GB in use - dense weights 5.24, state/KV (32768 ctx) 0.00, activations 0.09, other (context, MTP, scratch, prompt path) 2.49",
+        "glm fast: CUDA0 layers [0,40) expert pool 61.48 GB, 170-170 slots/layer (6800 total)",
+        "glm fast: RAM tier 31.3 GB registered from an mmap, MADV_HUGEPAGE on 28.1 GB of it; the process now holds 28.1 GB in transparent huge pages (free 2 MB blocks before: 29.1 GB)",
+        "glm fast: RAM tier 17.0 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 28.1 GB in transparent huge pages (free 2 MB blocks before: 0.3 GB)",
+        "glm fast: RAM tier 8.9 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 28.1 GB in transparent huge pages (free 2 MB blocks before: 0.3 GB)",
+        "glm fast: RAM tier 12.3 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 28.1 GB in transparent huge pages (free 2 MB blocks before: 0.4 GB)",
+        "glm fast: RAM tier 2.5 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 28.1 GB in transparent huge pages (free 2 MB blocks before: 0.3 GB)",
+        "glm fast: RAM tier 5.0 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 28.1 GB in transparent huge pages (free 2 MB blocks before: 0.3 GB)",
+        "glm fast: RAM tier 6.9 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 28.1 GB in transparent huge pages (free 2 MB blocks before: 0.4 GB)",
+        "glm fast: CUDA0 RAM tier 83.87 GB pinned, 9272 slots",
+        "glm fast: CUDA0 warming the expert tiers 10% (14.9 of 149.1 GB, 2 s)",
+        "glm fast: CUDA0 warming the expert tiers 20% (29.8 of 149.1 GB, 5 s)",
+        "glm fast: CUDA0 warming the expert tiers 30% (44.8 of 149.1 GB, 7 s)",
+        "glm fast: CUDA0 warming the expert tiers 40% (59.6 of 149.1 GB, 9 s)",
+        "glm fast: CUDA0 warming the expert tiers 50% (74.5 of 149.1 GB, 11 s)",
+        "glm fast: CUDA0 warming the expert tiers 60% (89.5 of 149.1 GB, 13 s)",
+        "glm fast: CUDA0 warming the expert tiers 70% (104.3 of 149.1 GB, 14 s)",
+        "glm fast: CUDA0 warming the expert tiers 80% (119.3 of 149.1 GB, 16 s)",
+        "glm fast: CUDA0 warming the expert tiers 90% (134.2 of 149.1 GB, 18 s)",
+        "glm fast: CUDA0 warming the expert tiers 100% (149.1 of 149.1 GB, 19 s)",
+        "glm fast: CUDA0 tiers warm: 15360 experts (149.1 GB) in 19 s (7.68 GB/s)",
+        "glm fast: CUDA0 CPU lane: 12 threads, an expert 0.155 ms on the CPU vs 0.342 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 1 1 2 3 4 4 5 6",
+        "glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 174 experts leave VRAM (0 of them moved over colder ones)",
+        "glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention",
+        "glm prefill: a down matrix's MMQ over-read passes its slot (stride 9123840)",
+        "glm prefill: 16383 tokens in 6041.7 ms (0.37 ms/token, 2712 tok/s) | staged experts: 71 vram, 4415 ram, 0 disk, 5987 on the host (26315 rows, 2579 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.70, 0.016 ms a CPU row), 4457 prestaged (3846 routed, 814743 rows) | rows resident 68.0% | plan 15.3 ms (cumulative)",
+        "glm fast: dense GEMV tune for device 0 (sm_120, 110 CUs): Q6_K 4 warps a row (up to 4,096 blocks)",
+        "glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 241 experts leave VRAM (150 of them moved over colder ones)",
+        "glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention",
+        "glm prefill: 16383 tokens in 5889.4 ms (0.36 ms/token, 2782 tok/s) | staged experts: 188 vram, 8387 ram, 0 disk, 11820 on the host (53790 rows, 5214 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.53, 0.016 ms a CPU row), 8913 prestaged (8284 routed, 2028826 rows) | rows resident 74.3% | plan 19.5 ms (cumulative)",
+        "glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 192 experts leave VRAM (110 of them moved over colder ones)",
+        "glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention",
+        "glm prefill: 16383 tokens in 5917.3 ms (0.36 ms/token, 2769 tok/s) | staged experts: 305 vram, 12298 ram, 0 disk, 17491 on the host (81300 rows, 7862 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.53, 0.019 ms a CPU row), 13375 prestaged (12727 routed, 3253625 rows) | rows resident 76.8% | plan 30.6 ms (cumulative)",
+        "glm prefill prof CUDA0 (49149 tokens, 17771 ms of stream time; waits on disk 0 ms, plan 31 ms host; disk experts used 0, read 0):",
+        "glm fast CPU lane CUDA0: 13952 verify-window calls of 2.61 columns each, 2.58 experts read for 3.06 uses"
+      ],
+      "verbose": [
+        {
+          "batched_tokens": 16383.0,
+          "batch_wall_ms": 6041.7,
+          "batch_ms_per_token": 0.37,
+          "batch_tps": 2712.0,
+          "staged_vram": 71.0,
+          "staged_ram": 4415.0,
+          "staged_disk": 0.0,
+          "host_experts": 5987.0,
+          "host_rows": 26315.0,
+          "host_ms": 2579.0,
+          "igpu_experts": 0.0,
+          "igpu_rows": 0.0,
+          "igpu_row_ms": 0.009,
+          "kappa": 0.7,
+          "cpu_row_ms": 0.016,
+          "prestaged": 4457.0,
+          "pre_routed": 3846.0,
+          "pre_rows": 814743.0,
+          "resident_percent": 68.0,
+          "plan_host_ms": 15.3,
+          "cumulative_increments": {
+            "staged_vram": 71.0,
+            "staged_ram": 4415.0,
+            "staged_disk": 0.0,
+            "host_experts": 5987.0,
+            "host_rows": 26315.0,
+            "host_ms": 2579.0,
+            "igpu_experts": 0.0,
+            "igpu_rows": 0.0,
+            "prestaged": 4457.0,
+            "pre_routed": 3846.0,
+            "pre_rows": 814743.0,
+            "plan_host_ms": 15.3
+          },
+          "native_line": "glm prefill: 16383 tokens in 6041.7 ms (0.37 ms/token, 2712 tok/s) | staged experts: 71 vram, 4415 ram, 0 disk, 5987 on the host (26315 rows, 2579 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.70, 0.016 ms a CPU row), 4457 prestaged (3846 routed, 814743 rows) | rows resident 68.0% | plan 15.3 ms (cumulative)"
+        },
+        {
+          "batched_tokens": 16383.0,
+          "batch_wall_ms": 5889.4,
+          "batch_ms_per_token": 0.36,
+          "batch_tps": 2782.0,
+          "staged_vram": 188.0,
+          "staged_ram": 8387.0,
+          "staged_disk": 0.0,
+          "host_experts": 11820.0,
+          "host_rows": 53790.0,
+          "host_ms": 5214.0,
+          "igpu_experts": 0.0,
+          "igpu_rows": 0.0,
+          "igpu_row_ms": 0.009,
+          "kappa": 0.53,
+          "cpu_row_ms": 0.016,
+          "prestaged": 8913.0,
+          "pre_routed": 8284.0,
+          "pre_rows": 2028826.0,
+          "resident_percent": 74.3,
+          "plan_host_ms": 19.5,
+          "cumulative_increments": {
+            "staged_vram": 117.0,
+            "staged_ram": 3972.0,
+            "staged_disk": 0.0,
+            "host_experts": 5833.0,
+            "host_rows": 27475.0,
+            "host_ms": 2635.0,
+            "igpu_experts": 0.0,
+            "igpu_rows": 0.0,
+            "prestaged": 4456.0,
+            "pre_routed": 4438.0,
+            "pre_rows": 1214083.0,
+            "plan_host_ms": 4.199999999999999
+          },
+          "native_line": "glm prefill: 16383 tokens in 5889.4 ms (0.36 ms/token, 2782 tok/s) | staged experts: 188 vram, 8387 ram, 0 disk, 11820 on the host (53790 rows, 5214 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.53, 0.016 ms a CPU row), 8913 prestaged (8284 routed, 2028826 rows) | rows resident 74.3% | plan 19.5 ms (cumulative)"
+        },
+        {
+          "batched_tokens": 16383.0,
+          "batch_wall_ms": 5917.3,
+          "batch_ms_per_token": 0.36,
+          "batch_tps": 2769.0,
+          "staged_vram": 305.0,
+          "staged_ram": 12298.0,
+          "staged_disk": 0.0,
+          "host_experts": 17491.0,
+          "host_rows": 81300.0,
+          "host_ms": 7862.0,
+          "igpu_experts": 0.0,
+          "igpu_rows": 0.0,
+          "igpu_row_ms": 0.009,
+          "kappa": 0.53,
+          "cpu_row_ms": 0.019,
+          "prestaged": 13375.0,
+          "pre_routed": 12727.0,
+          "pre_rows": 3253625.0,
+          "resident_percent": 76.8,
+          "plan_host_ms": 30.6,
+          "cumulative_increments": {
+            "staged_vram": 117.0,
+            "staged_ram": 3911.0,
+            "staged_disk": 0.0,
+            "host_experts": 5671.0,
+            "host_rows": 27510.0,
+            "host_ms": 2648.0,
+            "igpu_experts": 0.0,
+            "igpu_rows": 0.0,
+            "prestaged": 4462.0,
+            "pre_routed": 4443.0,
+            "pre_rows": 1224799.0,
+            "plan_host_ms": 11.100000000000001
+          },
+          "native_line": "glm prefill: 16383 tokens in 5917.3 ms (0.36 ms/token, 2769 tok/s) | staged experts: 305 vram, 12298 ram, 0 disk, 17491 on the host (81300 rows, 7862 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.53, 0.019 ms a CPU row), 13375 prestaged (12727 routed, 3253625 rows) | rows resident 76.8% | plan 30.6 ms (cumulative)"
+        }
+      ],
+      "host_audit": {
+        "samples": 62,
+        "preflight_samples": 4,
+        "quiet_preflight_intervals": 3,
+        "max_interval_s": 2.1043282069731504,
+        "max_independent_cpu_cores": 0.004933959295309044,
+        "mean_independent_cpu_cores": 0.00032250917561956984,
+        "max_independent_physical_io_mib_s": 0.0019277161540624743,
+        "max_independent_rss_bytes": 3145728,
+        "contention_detected": false,
+        "scope": "Same-user process CPU/IO/RSS plus all GPU compute processes; whole-NVMe counters in preflight. Two-second sampling, not a proof of zero brief OS activity."
+      },
+      "calibration": {
+        "cpu_ms_per_expert": 0.155,
+        "pcie_ms_per_expert": 0.342,
+        "native_line": "glm fast: CUDA0 CPU lane: 12 threads, an expert 0.155 ms on the CPU vs 0.342 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 1 1 2 3 4 4 5 6"
+      }
+    },
+    {
+      "case": "default-02",
+      "mode": "default",
+      "classification": "slow_band",
+      "profile_tokens": 49149,
+      "stream_ms_rounded": 23410.0,
+      "stream_ms_sum_stages": 23410.0,
+      "disk_wait_ms": 0.0,
+      "plan_host_ms": 4.0,
+      "disk_experts_used": 0,
+      "disk_experts_read": 0,
+      "stages": {
+        "moe_staged": {
+          "ms": 9326.4,
+          "percent": 39.8,
+          "ms_per_reported_token": 0.19
+        },
+        "v41_attn": {
+          "ms": 2476.7,
+          "percent": 10.6,
+          "ms_per_reported_token": 0.05
+        },
+        "moe_resident": {
+          "ms": 2202.7,
+          "percent": 9.4,
+          "ms_per_reported_token": 0.045
+        },
+        "moe_prestaged": {
+          "ms": 1780.6,
+          "percent": 7.6,
+          "ms_per_reported_token": 0.036
+        },
+        "v41_index": {
+          "ms": 1549.2,
+          "percent": 6.6,
+          "ms_per_reported_token": 0.032
+        },
+        "v41_out": {
+          "ms": 1267.5,
+          "percent": 5.4,
+          "ms_per_reported_token": 0.026
+        },
+        "shexp": {
+          "ms": 1086.8,
+          "percent": 4.6,
+          "ms_per_reported_token": 0.022
+        },
+        "hc": {
+          "ms": 909.2,
+          "percent": 3.9,
+          "ms_per_reported_token": 0.018
+        },
+        "engram": {
+          "ms": 896.9,
+          "percent": 3.8,
+          "ms_per_reported_token": 0.018
+        },
+        "v41_q": {
+          "ms": 648.9,
+          "percent": 2.8,
+          "ms_per_reported_token": 0.013
+        },
+        "plan": {
+          "ms": 503.1,
+          "percent": 2.1,
+          "ms_per_reported_token": 0.01
+        },
+        "moe_light": {
+          "ms": 272.4,
+          "percent": 1.2,
+          "ms_per_reported_token": 0.006
+        },
+        "v41_proj": {
+          "ms": 195.7,
+          "percent": 0.8,
+          "ms_per_reported_token": 0.004
+        },
+        "router": {
+          "ms": 163.8,
+          "percent": 0.7,
+          "ms_per_reported_token": 0.003
+        },
+        "combine": {
+          "ms": 101.8,
+          "percent": 0.4,
+          "ms_per_reported_token": 0.002
+        },
+        "route": {
+          "ms": 28.0,
+          "percent": 0.1,
+          "ms_per_reported_token": 0.001
+        },
+        "dsa": {
+          "ms": 0.3,
+          "percent": 0.0,
+          "ms_per_reported_token": 0.0
+        }
+      },
+      "prefill_tps_all_three": [
+        2038.4194286851796,
+        2077.526850360752,
+        2080.111724750841
+      ],
+      "native_prompt_ms_all_three": [
+        8037.6,
+        7886.3,
+        7876.5
+      ],
+      "native_decode_tps_all_three": [
+        83.75216230253015,
+        100.31347962382445,
+        100.6769146065096
+      ],
+      "startup_lines": [
+        "glm fast: CUDA0 zero-copy token boundary: token_embd pinned (434 MB), the table edits and the token are read and written host-mapped",
+        "glm prefill: CUDA0 deepseek41 attention projections batched",
+        "glm prefill: CUDA0 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 2048), borrowing 3630 MB of the expert pool while a prompt runs (activations 1670, weight scratch 84, expert staging 130, prestage 1731: 160 experts); disk landing ring 96 experts (1038 MB pinned)",
+        "glm fast: CUDA0 VRAM before the expert pool: 7.82 of 71.12 GB in use - dense weights 5.24, state/KV (32768 ctx) 0.00, activations 0.09, other (context, MTP, scratch, prompt path) 2.49",
+        "glm fast: CUDA0 layers [0,40) expert pool 61.48 GB, 170-170 slots/layer (6800 total)",
+        "glm fast: RAM tier 31.3 GB registered from an mmap, MADV_HUGEPAGE on 31.3 GB of it; the process now holds 31.3 GB in transparent huge pages (free 2 MB blocks before: 42.0 GB)",
+        "glm fast: RAM tier 17.0 GB registered from an mmap, MADV_HUGEPAGE on 9.6 GB of it; the process now holds 40.8 GB in transparent huge pages (free 2 MB blocks before: 10.6 GB)",
+        "glm fast: RAM tier 8.9 GB registered from an mmap, MADV_HUGEPAGE on 3.3 GB of it; the process now holds 44.1 GB in transparent huge pages (free 2 MB blocks before: 4.3 GB)",
+        "glm fast: RAM tier 12.3 GB registered from an mmap, MADV_HUGEPAGE on 1.0 GB of it; the process now holds 45.0 GB in transparent huge pages (free 2 MB blocks before: 2.0 GB)",
+        "glm fast: RAM tier 2.5 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 45.0 GB in transparent huge pages (free 2 MB blocks before: 1.0 GB)",
+        "glm fast: RAM tier 5.0 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 45.0 GB in transparent huge pages (free 2 MB blocks before: 1.0 GB)",
+        "glm fast: RAM tier 6.9 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 45.0 GB in transparent huge pages (free 2 MB blocks before: 1.0 GB)",
+        "glm fast: CUDA0 RAM tier 83.87 GB pinned, 9272 slots",
+        "glm fast: CUDA0 warming the expert tiers 10% (14.9 of 149.1 GB, 2 s)",
+        "glm fast: CUDA0 warming the expert tiers 20% (29.8 of 149.1 GB, 4 s)",
+        "glm fast: CUDA0 warming the expert tiers 30% (44.8 of 149.1 GB, 7 s)",
+        "glm fast: CUDA0 warming the expert tiers 40% (59.6 of 149.1 GB, 9 s)",
+        "glm fast: CUDA0 warming the expert tiers 50% (74.5 of 149.1 GB, 11 s)",
+        "glm fast: CUDA0 warming the expert tiers 60% (89.5 of 149.1 GB, 12 s)",
+        "glm fast: CUDA0 warming the expert tiers 70% (104.3 of 149.1 GB, 14 s)",
+        "glm fast: CUDA0 warming the expert tiers 80% (119.3 of 149.1 GB, 16 s)",
+        "glm fast: CUDA0 warming the expert tiers 90% (134.2 of 149.1 GB, 17 s)",
+        "glm fast: CUDA0 warming the expert tiers 100% (149.1 of 149.1 GB, 19 s)",
+        "glm fast: CUDA0 tiers warm: 15360 experts (149.1 GB) in 19 s (7.79 GB/s)",
+        "glm fast: CUDA0 CPU lane: 12 threads, an expert 0.160 ms on the CPU vs 0.342 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 1 1 2 3 4 4 5 6",
+        "glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 174 experts leave VRAM (0 of them moved over colder ones)",
+        "glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention",
+        "glm prefill: a down matrix's MMQ over-read passes its slot (stride 9123840)",
+        "glm prefill: 16383 tokens in 7943.3 ms (0.48 ms/token, 2063 tok/s) | staged experts: 72 vram, 11050 ram, 0 disk, 0 on the host (0 rows, 0 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 1.00, 0.050 ms a CPU row), 3782 prestaged (3215 routed, 780009 rows) | rows resident 65.2% | plan 1.5 ms (cumulative)",
+        "glm fast: dense GEMV tune for device 0 (sm_120, 110 CUs): Q6_K 4 warps a row (up to 4,096 blocks)",
+        "glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 244 experts leave VRAM (147 of them moved over colder ones)",
+        "glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention",
+        "glm prefill: 16383 tokens in 7771.0 ms (0.47 ms/token, 2108 tok/s) | staged experts: 188 vram, 21408 ram, 0 disk, 0 on the host (0 rows, 0 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 1.00, 0.050 ms a CPU row), 7564 prestaged (6981 routed, 1955247 rows) | rows resident 70.7% | plan 2.9 ms (cumulative)",
+        "glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 222 experts leave VRAM (100 of them moved over colder ones)",
+        "glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention",
+        "glm prefill: 16383 tokens in 7773.9 ms (0.47 ms/token, 2107 tok/s) | staged experts: 301 vram, 31728 ram, 0 disk, 0 on the host (0 rows, 0 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 1.00, 0.050 ms a CPU row), 11346 prestaged (10746 routed, 3153533 rows) | rows resident 72.5% | plan 4.2 ms (cumulative)",
+        "glm prefill prof CUDA0 (49149 tokens, 23410 ms of stream time; waits on disk 0 ms, plan 4 ms host; disk experts used 0, read 0):",
+        "glm fast CPU lane CUDA0: 14142 verify-window calls of 2.62 columns each, 2.59 experts read for 3.07 uses"
+      ],
+      "verbose": [
+        {
+          "batched_tokens": 16383.0,
+          "batch_wall_ms": 7943.3,
+          "batch_ms_per_token": 0.48,
+          "batch_tps": 2063.0,
+          "staged_vram": 72.0,
+          "staged_ram": 11050.0,
+          "staged_disk": 0.0,
+          "host_experts": 0.0,
+          "host_rows": 0.0,
+          "host_ms": 0.0,
+          "igpu_experts": 0.0,
+          "igpu_rows": 0.0,
+          "igpu_row_ms": 0.009,
+          "kappa": 1.0,
+          "cpu_row_ms": 0.05,
+          "prestaged": 3782.0,
+          "pre_routed": 3215.0,
+          "pre_rows": 780009.0,
+          "resident_percent": 65.2,
+          "plan_host_ms": 1.5,
+          "cumulative_increments": {
+            "staged_vram": 72.0,
+            "staged_ram": 11050.0,
+            "staged_disk": 0.0,
+            "host_experts": 0.0,
+            "host_rows": 0.0,
+            "host_ms": 0.0,
+            "igpu_experts": 0.0,
+            "igpu_rows": 0.0,
+            "prestaged": 3782.0,
+            "pre_routed": 3215.0,
+            "pre_rows": 780009.0,
+            "plan_host_ms": 1.5
+          },
+          "native_line": "glm prefill: 16383 tokens in 7943.3 ms (0.48 ms/token, 2063 tok/s) | staged experts: 72 vram, 11050 ram, 0 disk, 0 on the host (0 rows, 0 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 1.00, 0.050 ms a CPU row), 3782 prestaged (3215 routed, 780009 rows) | rows resident 65.2% | plan 1.5 ms (cumulative)"
+        },
+        {
+          "batched_tokens": 16383.0,
+          "batch_wall_ms": 7771.0,
+          "batch_ms_per_token": 0.47,
+          "batch_tps": 2108.0,
+          "staged_vram": 188.0,
+          "staged_ram": 21408.0,
+          "staged_disk": 0.0,
+          "host_experts": 0.0,
+          "host_rows": 0.0,
+          "host_ms": 0.0,
+          "igpu_experts": 0.0,
+          "igpu_rows": 0.0,
+          "igpu_row_ms": 0.009,
+          "kappa": 1.0,
+          "cpu_row_ms": 0.05,
+          "prestaged": 7564.0,
+          "pre_routed": 6981.0,
+          "pre_rows": 1955247.0,
+          "resident_percent": 70.7,
+          "plan_host_ms": 2.9,
+          "cumulative_increments": {
+            "staged_vram": 116.0,
+            "staged_ram": 10358.0,
+            "staged_disk": 0.0,
+            "host_experts": 0.0,
+            "host_rows": 0.0,
+            "host_ms": 0.0,
+            "igpu_experts": 0.0,
+            "igpu_rows": 0.0,
+            "prestaged": 3782.0,
+            "pre_routed": 3766.0,
+            "pre_rows": 1175238.0,
+            "plan_host_ms": 1.4
+          },
+          "native_line": "glm prefill: 16383 tokens in 7771.0 ms (0.47 ms/token, 2108 tok/s) | staged experts: 188 vram, 21408 ram, 0 disk, 0 on the host (0 rows, 0 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 1.00, 0.050 ms a CPU row), 7564 prestaged (6981 routed, 1955247 rows) | rows resident 70.7% | plan 2.9 ms (cumulative)"
+        },
+        {
+          "batched_tokens": 16383.0,
+          "batch_wall_ms": 7773.9,
+          "batch_ms_per_token": 0.47,
+          "batch_tps": 2107.0,
+          "staged_vram": 301.0,
+          "staged_ram": 31728.0,
+          "staged_disk": 0.0,
+          "host_experts": 0.0,
+          "host_rows": 0.0,
+          "host_ms": 0.0,
+          "igpu_experts": 0.0,
+          "igpu_rows": 0.0,
+          "igpu_row_ms": 0.009,
+          "kappa": 1.0,
+          "cpu_row_ms": 0.05,
+          "prestaged": 11346.0,
+          "pre_routed": 10746.0,
+          "pre_rows": 3153533.0,
+          "resident_percent": 72.5,
+          "plan_host_ms": 4.2,
+          "cumulative_increments": {
+            "staged_vram": 113.0,
+            "staged_ram": 10320.0,
+            "staged_disk": 0.0,
+            "host_experts": 0.0,
+            "host_rows": 0.0,
+            "host_ms": 0.0,
+            "igpu_experts": 0.0,
+            "igpu_rows": 0.0,
+            "prestaged": 3782.0,
+            "pre_routed": 3765.0,
+            "pre_rows": 1198286.0,
+            "plan_host_ms": 1.3000000000000003
+          },
+          "native_line": "glm prefill: 16383 tokens in 7773.9 ms (0.47 ms/token, 2107 tok/s) | staged experts: 301 vram, 31728 ram, 0 disk, 0 on the host (0 rows, 0 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 1.00, 0.050 ms a CPU row), 11346 prestaged (10746 routed, 3153533 rows) | rows resident 72.5% | plan 4.2 ms (cumulative)"
+        }
+      ],
+      "host_audit": {
+        "samples": 64,
+        "preflight_samples": 4,
+        "quiet_preflight_intervals": 3,
+        "max_interval_s": 2.13621729798615,
+        "max_independent_cpu_cores": 0.004933937906850342,
+        "mean_independent_cpu_cores": 0.00015614143588675545,
+        "max_independent_physical_io_mib_s": 0.001930360694516568,
+        "max_independent_rss_bytes": 3145728,
+        "contention_detected": false,
+        "scope": "Same-user process CPU/IO/RSS plus all GPU compute processes; whole-NVMe counters in preflight. Two-second sampling, not a proof of zero brief OS activity."
+      },
+      "calibration": {
+        "cpu_ms_per_expert": 0.16,
+        "pcie_ms_per_expert": 0.342,
+        "native_line": "glm fast: CUDA0 CPU lane: 12 threads, an expert 0.160 ms on the CPU vs 0.342 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 1 1 2 3 4 4 5 6"
+      }
+    },
+    {
+      "case": "cpu0-01",
+      "mode": "cpu0",
+      "classification": "slow_band",
+      "profile_tokens": 49149,
+      "stream_ms_rounded": 23418.0,
+      "stream_ms_sum_stages": 23418.100000000002,
+      "disk_wait_ms": 0.0,
+      "plan_host_ms": 4.0,
+      "disk_experts_used": 0,
+      "disk_experts_read": 0,
+      "stages": {
+        "moe_staged": {
+          "ms": 9325.6,
+          "percent": 39.8,
+          "ms_per_reported_token": 0.19
+        },
+        "v41_attn": {
+          "ms": 2477.4,
+          "percent": 10.6,
+          "ms_per_reported_token": 0.05
+        },
+        "moe_resident": {
+          "ms": 2208.1,
+          "percent": 9.4,
+          "ms_per_reported_token": 0.045
+        },
+        "moe_prestaged": {
+          "ms": 1783.6,
+          "percent": 7.6,
+          "ms_per_reported_token": 0.036
+        },
+        "v41_index": {
+          "ms": 1549.2,
+          "percent": 6.6,
+          "ms_per_reported_token": 0.032
+        },
+        "v41_out": {
+          "ms": 1272.5,
+          "percent": 5.4,
+          "ms_per_reported_token": 0.026
+        },
+        "shexp": {
+          "ms": 1088.4,
+          "percent": 4.6,
+          "ms_per_reported_token": 0.022
+        },
+        "hc": {
+          "ms": 909.6,
+          "percent": 3.9,
+          "ms_per_reported_token": 0.019
+        },
+        "engram": {
+          "ms": 885.8,
+          "percent": 3.8,
+          "ms_per_reported_token": 0.018
+        },
+        "v41_q": {
+          "ms": 651.1,
+          "percent": 2.8,
+          "ms_per_reported_token": 0.013
+        },
+        "plan": {
+          "ms": 502.2,
+          "percent": 2.1,
+          "ms_per_reported_token": 0.01
+        },
+        "moe_light": {
+          "ms": 273.0,
+          "percent": 1.2,
+          "ms_per_reported_token": 0.006
+        },
+        "v41_proj": {
+          "ms": 197.7,
+          "percent": 0.8,
+          "ms_per_reported_token": 0.004
+        },
+        "router": {
+          "ms": 163.8,
+          "percent": 0.7,
+          "ms_per_reported_token": 0.003
+        },
+        "combine": {
+          "ms": 101.8,
+          "percent": 0.4,
+          "ms_per_reported_token": 0.002
+        },
+        "route": {
+          "ms": 28.0,
+          "percent": 0.1,
+          "ms_per_reported_token": 0.001
+        },
+        "dsa": {
+          "ms": 0.3,
+          "percent": 0.0,
+          "ms_per_reported_token": 0.0
+        }
+      },
+      "prefill_tps_all_three": [
+        2036.519123441598,
+        2076.894798889551,
+        2079.6100731112915
+      ],
+      "native_prompt_ms_all_three": [
+        8045.1,
+        7888.7,
+        7878.4
+      ],
+      "native_decode_tps_all_three": [
+        85.35289337139761,
+        102.16400115732657,
+        102.27931041371183
+      ],
+      "startup_lines": [
+        "glm fast: CUDA0 zero-copy token boundary: token_embd pinned (434 MB), the table edits and the token are read and written host-mapped",
+        "glm prefill: CUDA0 deepseek41 attention projections batched",
+        "glm prefill: CUDA0 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 2048), borrowing 3630 MB of the expert pool while a prompt runs (activations 1670, weight scratch 84, expert staging 130, prestage 1731: 160 experts); disk landing ring 96 experts (1038 MB pinned)",
+        "glm fast: CUDA0 VRAM before the expert pool: 7.82 of 71.12 GB in use - dense weights 5.24, state/KV (32768 ctx) 0.00, activations 0.09, other (context, MTP, scratch, prompt path) 2.49",
+        "glm fast: CUDA0 layers [0,40) expert pool 61.48 GB, 170-170 slots/layer (6800 total)",
+        "glm fast: RAM tier 31.3 GB registered from an mmap, MADV_HUGEPAGE on 31.3 GB of it; the process now holds 31.3 GB in transparent huge pages (free 2 MB blocks before: 51.2 GB)",
+        "glm fast: RAM tier 17.0 GB registered from an mmap, MADV_HUGEPAGE on 17.0 GB of it; the process now holds 48.2 GB in transparent huge pages (free 2 MB blocks before: 19.8 GB)",
+        "glm fast: RAM tier 8.9 GB registered from an mmap, MADV_HUGEPAGE on 2.5 GB of it; the process now holds 50.7 GB in transparent huge pages (free 2 MB blocks before: 3.5 GB)",
+        "glm fast: RAM tier 12.3 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 50.7 GB in transparent huge pages (free 2 MB blocks before: 1.0 GB)",
+        "glm fast: RAM tier 2.5 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 50.7 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)",
+        "glm fast: RAM tier 5.0 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 50.7 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)",
+        "glm fast: RAM tier 6.9 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 50.7 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)",
+        "glm fast: CUDA0 RAM tier 83.87 GB pinned, 9272 slots",
+        "glm fast: CUDA0 warming the expert tiers 10% (14.9 of 149.1 GB, 2 s)",
+        "glm fast: CUDA0 warming the expert tiers 20% (29.8 of 149.1 GB, 4 s)",
+        "glm fast: CUDA0 warming the expert tiers 30% (44.8 of 149.1 GB, 7 s)",
+        "glm fast: CUDA0 warming the expert tiers 40% (59.6 of 149.1 GB, 9 s)",
+        "glm fast: CUDA0 warming the expert tiers 50% (74.5 of 149.1 GB, 11 s)",
+        "glm fast: CUDA0 warming the expert tiers 60% (89.5 of 149.1 GB, 12 s)",
+        "glm fast: CUDA0 warming the expert tiers 70% (104.3 of 149.1 GB, 14 s)",
+        "glm fast: CUDA0 warming the expert tiers 80% (119.3 of 149.1 GB, 16 s)",
+        "glm fast: CUDA0 warming the expert tiers 90% (134.2 of 149.1 GB, 17 s)",
+        "glm fast: CUDA0 warming the expert tiers 100% (149.1 of 149.1 GB, 19 s)",
+        "glm fast: CUDA0 tiers warm: 15360 experts (149.1 GB) in 19 s (7.80 GB/s)",
+        "glm fast: CUDA0 CPU lane: 12 threads, an expert 0.155 ms on the CPU vs 0.342 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 1 1 2 3 4 4 5 6",
+        "glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 174 experts leave VRAM (0 of them moved over colder ones)",
+        "glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention",
+        "glm prefill: a down matrix's MMQ over-read passes its slot (stride 9123840)",
+        "glm prefill: 16383 tokens in 7949.3 ms (0.49 ms/token, 2061 tok/s) | staged experts: 72 vram, 11050 ram, 0 disk, 0 on the host (0 rows, 0 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 1.00, 0.050 ms a CPU row), 3782 prestaged (3215 routed, 780009 rows) | rows resident 65.2% | plan 1.7 ms (cumulative)",
+        "glm fast: dense GEMV tune for device 0 (sm_120, 110 CUs): Q6_K 4 warps a row (up to 4,096 blocks)",
+        "glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 244 experts leave VRAM (147 of them moved over colder ones)",
+        "glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention",
+        "glm prefill: 16383 tokens in 7773.5 ms (0.47 ms/token, 2108 tok/s) | staged experts: 188 vram, 21408 ram, 0 disk, 0 on the host (0 rows, 0 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 1.00, 0.050 ms a CPU row), 7564 prestaged (6981 routed, 1955247 rows) | rows resident 70.7% | plan 3.0 ms (cumulative)",
+        "glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 222 experts leave VRAM (100 of them moved over colder ones)",
+        "glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention",
+        "glm prefill: 16383 tokens in 7775.5 ms (0.47 ms/token, 2107 tok/s) | staged experts: 301 vram, 31728 ram, 0 disk, 0 on the host (0 rows, 0 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 1.00, 0.050 ms a CPU row), 11346 prestaged (10746 routed, 3153533 rows) | rows resident 72.5% | plan 4.4 ms (cumulative)",
+        "glm prefill prof CUDA0 (49149 tokens, 23418 ms of stream time; waits on disk 0 ms, plan 4 ms host; disk experts used 0, read 0):",
+        "glm fast CPU lane CUDA0: 14142 verify-window calls of 2.62 columns each, 2.59 experts read for 3.07 uses"
+      ],
+      "verbose": [
+        {
+          "batched_tokens": 16383.0,
+          "batch_wall_ms": 7949.3,
+          "batch_ms_per_token": 0.49,
+          "batch_tps": 2061.0,
+          "staged_vram": 72.0,
+          "staged_ram": 11050.0,
+          "staged_disk": 0.0,
+          "host_experts": 0.0,
+          "host_rows": 0.0,
+          "host_ms": 0.0,
+          "igpu_experts": 0.0,
+          "igpu_rows": 0.0,
+          "igpu_row_ms": 0.009,
+          "kappa": 1.0,
+          "cpu_row_ms": 0.05,
+          "prestaged": 3782.0,
+          "pre_routed": 3215.0,
+          "pre_rows": 780009.0,
+          "resident_percent": 65.2,
+          "plan_host_ms": 1.7,
+          "cumulative_increments": {
+            "staged_vram": 72.0,
+            "staged_ram": 11050.0,
+            "staged_disk": 0.0,
+            "host_experts": 0.0,
+            "host_rows": 0.0,
+            "host_ms": 0.0,
+            "igpu_experts": 0.0,
+            "igpu_rows": 0.0,
+            "prestaged": 3782.0,
+            "pre_routed": 3215.0,
+            "pre_rows": 780009.0,
+            "plan_host_ms": 1.7
+          },
+          "native_line": "glm prefill: 16383 tokens in 7949.3 ms (0.49 ms/token, 2061 tok/s) | staged experts: 72 vram, 11050 ram, 0 disk, 0 on the host (0 rows, 0 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 1.00, 0.050 ms a CPU row), 3782 prestaged (3215 routed, 780009 rows) | rows resident 65.2% | plan 1.7 ms (cumulative)"
+        },
+        {
+          "batched_tokens": 16383.0,
+          "batch_wall_ms": 7773.5,
+          "batch_ms_per_token": 0.47,
+          "batch_tps": 2108.0,
+          "staged_vram": 188.0,
+          "staged_ram": 21408.0,
+          "staged_disk": 0.0,
+          "host_experts": 0.0,
+          "host_rows": 0.0,
+          "host_ms": 0.0,
+          "igpu_experts": 0.0,
+          "igpu_rows": 0.0,
+          "igpu_row_ms": 0.009,
+          "kappa": 1.0,
+          "cpu_row_ms": 0.05,
+          "prestaged": 7564.0,
+          "pre_routed": 6981.0,
+          "pre_rows": 1955247.0,
+          "resident_percent": 70.7,
+          "plan_host_ms": 3.0,
+          "cumulative_increments": {
+            "staged_vram": 116.0,
+            "staged_ram": 10358.0,
+            "staged_disk": 0.0,
+            "host_experts": 0.0,
+            "host_rows": 0.0,
+            "host_ms": 0.0,
+            "igpu_experts": 0.0,
+            "igpu_rows": 0.0,
+            "prestaged": 3782.0,
+            "pre_routed": 3766.0,
+            "pre_rows": 1175238.0,
+            "plan_host_ms": 1.3
+          },
+          "native_line": "glm prefill: 16383 tokens in 7773.5 ms (0.47 ms/token, 2108 tok/s) | staged experts: 188 vram, 21408 ram, 0 disk, 0 on the host (0 rows, 0 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 1.00, 0.050 ms a CPU row), 7564 prestaged (6981 routed, 1955247 rows) | rows resident 70.7% | plan 3.0 ms (cumulative)"
+        },
+        {
+          "batched_tokens": 16383.0,
+          "batch_wall_ms": 7775.5,
+          "batch_ms_per_token": 0.47,
+          "batch_tps": 2107.0,
+          "staged_vram": 301.0,
+          "staged_ram": 31728.0,
+          "staged_disk": 0.0,
+          "host_experts": 0.0,
+          "host_rows": 0.0,
+          "host_ms": 0.0,
+          "igpu_experts": 0.0,
+          "igpu_rows": 0.0,
+          "igpu_row_ms": 0.009,
+          "kappa": 1.0,
+          "cpu_row_ms": 0.05,
+          "prestaged": 11346.0,
+          "pre_routed": 10746.0,
+          "pre_rows": 3153533.0,
+          "resident_percent": 72.5,
+          "plan_host_ms": 4.4,
+          "cumulative_increments": {
+            "staged_vram": 113.0,
+            "staged_ram": 10320.0,
+            "staged_disk": 0.0,
+            "host_experts": 0.0,
+            "host_rows": 0.0,
+            "host_ms": 0.0,
+            "igpu_experts": 0.0,
+            "igpu_rows": 0.0,
+            "prestaged": 3782.0,
+            "pre_routed": 3765.0,
+            "pre_rows": 1198286.0,
+            "plan_host_ms": 1.4000000000000004
+          },
+          "native_line": "glm prefill: 16383 tokens in 7775.5 ms (0.47 ms/token, 2107 tok/s) | staged experts: 301 vram, 31728 ram, 0 disk, 0 on the host (0 rows, 0 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 1.00, 0.050 ms a CPU row), 11346 prestaged (10746 routed, 3153533 rows) | rows resident 72.5% | plan 4.4 ms (cumulative)"
+        }
+      ],
+      "host_audit": {
+        "samples": 63,
+        "preflight_samples": 4,
+        "quiet_preflight_intervals": 3,
+        "max_interval_s": 2.0462503349990584,
+        "max_independent_cpu_cores": 0.0049400150325940115,
+        "mean_independent_cpu_cores": 0.00015884830166543534,
+        "max_independent_physical_io_mib_s": 0.001927862150771587,
+        "max_independent_rss_bytes": 3145728,
+        "contention_detected": false,
+        "scope": "Same-user process CPU/IO/RSS plus all GPU compute processes; whole-NVMe counters in preflight. Two-second sampling, not a proof of zero brief OS activity."
+      },
+      "calibration": {
+        "cpu_ms_per_expert": 0.155,
+        "pcie_ms_per_expert": 0.342,
+        "native_line": "glm fast: CUDA0 CPU lane: 12 threads, an expert 0.155 ms on the CPU vs 0.342 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 1 1 2 3 4 4 5 6"
+      }
+    },
+    {
+      "case": "cpu0-02",
+      "mode": "cpu0",
+      "classification": "slow_band",
+      "profile_tokens": 49149,
+      "stream_ms_rounded": 23432.0,
+      "stream_ms_sum_stages": 23431.9,
+      "disk_wait_ms": 0.0,
+      "plan_host_ms": 4.0,
+      "disk_experts_used": 0,
+      "disk_experts_read": 0,
+      "stages": {
+        "moe_staged": {
+          "ms": 9325.1,
+          "percent": 39.8,
+          "ms_per_reported_token": 0.19
+        },
+        "v41_attn": {
+          "ms": 2477.7,
+          "percent": 10.6,
+          "ms_per_reported_token": 0.05
+        },
+        "moe_resident": {
+          "ms": 2210.2,
+          "percent": 9.4,
+          "ms_per_reported_token": 0.045
+        },
+        "moe_prestaged": {
+          "ms": 1785.2,
+          "percent": 7.6,
+          "ms_per_reported_token": 0.036
+        },
+        "v41_index": {
+          "ms": 1549.4,
+          "percent": 6.6,
+          "ms_per_reported_token": 0.032
+        },
+        "v41_out": {
+          "ms": 1274.1,
+          "percent": 5.4,
+          "ms_per_reported_token": 0.026
+        },
+        "shexp": {
+          "ms": 1089.4,
+          "percent": 4.6,
+          "ms_per_reported_token": 0.022
+        },
+        "hc": {
+          "ms": 908.6,
+          "percent": 3.9,
+          "ms_per_reported_token": 0.018
+        },
+        "engram": {
+          "ms": 897.2,
+          "percent": 3.8,
+          "ms_per_reported_token": 0.018
+        },
+        "v41_q": {
+          "ms": 652.0,
+          "percent": 2.8,
+          "ms_per_reported_token": 0.013
+        },
+        "plan": {
+          "ms": 498.2,
+          "percent": 2.1,
+          "ms_per_reported_token": 0.01
+        },
+        "moe_light": {
+          "ms": 273.1,
+          "percent": 1.2,
+          "ms_per_reported_token": 0.006
+        },
+        "v41_proj": {
+          "ms": 197.7,
+          "percent": 0.8,
+          "ms_per_reported_token": 0.004
+        },
+        "router": {
+          "ms": 163.9,
+          "percent": 0.7,
+          "ms_per_reported_token": 0.003
+        },
+        "combine": {
+          "ms": 101.8,
+          "percent": 0.4,
+          "ms_per_reported_token": 0.002
+        },
+        "route": {
+          "ms": 28.0,
+          "percent": 0.1,
+          "ms_per_reported_token": 0.001
+        },
+        "dsa": {
+          "ms": 0.3,
+          "percent": 0.0,
+          "ms_per_reported_token": 0.0
+        }
+      },
+      "prefill_tps_all_three": [
+        2036.266017076596,
+        2075.1849224845478,
+        2078.0274973365126
+      ],
+      "native_prompt_ms_all_three": [
+        8046.1,
+        7895.2,
+        7884.4
+      ],
+      "native_decode_tps_all_three": [
+        85.74526789116045,
+        102.32479127841036,
+        101.92452210438306
+      ],
+      "startup_lines": [
+        "glm fast: CUDA0 zero-copy token boundary: token_embd pinned (434 MB), the table edits and the token are read and written host-mapped",
+        "glm prefill: CUDA0 deepseek41 attention projections batched",
+        "glm prefill: CUDA0 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 2048), borrowing 3630 MB of the expert pool while a prompt runs (activations 1670, weight scratch 84, expert staging 130, prestage 1731: 160 experts); disk landing ring 96 experts (1038 MB pinned)",
+        "glm fast: CUDA0 VRAM before the expert pool: 7.82 of 71.12 GB in use - dense weights 5.24, state/KV (32768 ctx) 0.00, activations 0.09, other (context, MTP, scratch, prompt path) 2.49",
+        "glm fast: CUDA0 layers [0,40) expert pool 61.48 GB, 170-170 slots/layer (6800 total)",
+        "glm fast: RAM tier 31.3 GB registered from an mmap, MADV_HUGEPAGE on 31.3 GB of it; the process now holds 31.3 GB in transparent huge pages (free 2 MB blocks before: 53.5 GB)",
+        "glm fast: RAM tier 17.0 GB registered from an mmap, MADV_HUGEPAGE on 17.0 GB of it; the process now holds 48.2 GB in transparent huge pages (free 2 MB blocks before: 22.1 GB)",
+        "glm fast: RAM tier 8.9 GB registered from an mmap, MADV_HUGEPAGE on 4.0 GB of it; the process now holds 52.3 GB in transparent huge pages (free 2 MB blocks before: 5.0 GB)",
+        "glm fast: RAM tier 12.3 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 52.3 GB in transparent huge pages (free 2 MB blocks before: 1.0 GB)",
+        "glm fast: RAM tier 2.5 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 52.3 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)",
+        "glm fast: RAM tier 5.0 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 52.3 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)",
+        "glm fast: RAM tier 6.9 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 52.3 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)",
+        "glm fast: CUDA0 RAM tier 83.87 GB pinned, 9272 slots",
+        "glm fast: CUDA0 warming the expert tiers 10% (14.9 of 149.1 GB, 2 s)",
+        "glm fast: CUDA0 warming the expert tiers 20% (29.8 of 149.1 GB, 4 s)",
+        "glm fast: CUDA0 warming the expert tiers 30% (44.8 of 149.1 GB, 7 s)",
+        "glm fast: CUDA0 warming the expert tiers 40% (59.6 of 149.1 GB, 9 s)",
+        "glm fast: CUDA0 warming the expert tiers 50% (74.5 of 149.1 GB, 11 s)",
+        "glm fast: CUDA0 warming the expert tiers 60% (89.5 of 149.1 GB, 12 s)",
+        "glm fast: CUDA0 warming the expert tiers 70% (104.3 of 149.1 GB, 14 s)",
+        "glm fast: CUDA0 warming the expert tiers 80% (119.3 of 149.1 GB, 16 s)",
+        "glm fast: CUDA0 warming the expert tiers 90% (134.2 of 149.1 GB, 17 s)",
+        "glm fast: CUDA0 warming the expert tiers 100% (149.1 of 149.1 GB, 19 s)",
+        "glm fast: CUDA0 tiers warm: 15360 experts (149.1 GB) in 19 s (7.83 GB/s)",
+        "glm fast: CUDA0 CPU lane: 12 threads, an expert 0.155 ms on the CPU vs 0.342 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 1 1 2 3 4 4 5 6",
+        "glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 174 experts leave VRAM (0 of them moved over colder ones)",
+        "glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention",
+        "glm prefill: a down matrix's MMQ over-read passes its slot (stride 9123840)",
+        "glm prefill: 16383 tokens in 7952.2 ms (0.49 ms/token, 2060 tok/s) | staged experts: 72 vram, 11050 ram, 0 disk, 0 on the host (0 rows, 0 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 1.00, 0.050 ms a CPU row), 3782 prestaged (3215 routed, 780009 rows) | rows resident 65.2% | plan 1.4 ms (cumulative)",
+        "glm fast: dense GEMV tune for device 0 (sm_120, 110 CUs): Q6_K 4 warps a row (up to 4,096 blocks)",
+        "glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 244 experts leave VRAM (147 of them moved over colder ones)",
+        "glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention",
+        "glm prefill: 16383 tokens in 7778.7 ms (0.47 ms/token, 2106 tok/s) | staged experts: 188 vram, 21408 ram, 0 disk, 0 on the host (0 rows, 0 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 1.00, 0.050 ms a CPU row), 7564 prestaged (6981 routed, 1955247 rows) | rows resident 70.7% | plan 2.8 ms (cumulative)",
+        "glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 222 experts leave VRAM (100 of them moved over colder ones)",
+        "glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention",
+        "glm prefill: 16383 tokens in 7780.7 ms (0.47 ms/token, 2106 tok/s) | staged experts: 301 vram, 31728 ram, 0 disk, 0 on the host (0 rows, 0 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 1.00, 0.050 ms a CPU row), 11346 prestaged (10746 routed, 3153533 rows) | rows resident 72.5% | plan 4.1 ms (cumulative)",
+        "glm prefill prof CUDA0 (49149 tokens, 23432 ms of stream time; waits on disk 0 ms, plan 4 ms host; disk experts used 0, read 0):",
+        "glm fast CPU lane CUDA0: 14142 verify-window calls of 2.62 columns each, 2.59 experts read for 3.07 uses"
+      ],
+      "verbose": [
+        {
+          "batched_tokens": 16383.0,
+          "batch_wall_ms": 7952.2,
+          "batch_ms_per_token": 0.49,
+          "batch_tps": 2060.0,
+          "staged_vram": 72.0,
+          "staged_ram": 11050.0,
+          "staged_disk": 0.0,
+          "host_experts": 0.0,
+          "host_rows": 0.0,
+          "host_ms": 0.0,
+          "igpu_experts": 0.0,
+          "igpu_rows": 0.0,
+          "igpu_row_ms": 0.009,
+          "kappa": 1.0,
+          "cpu_row_ms": 0.05,
+          "prestaged": 3782.0,
+          "pre_routed": 3215.0,
+          "pre_rows": 780009.0,
+          "resident_percent": 65.2,
+          "plan_host_ms": 1.4,
+          "cumulative_increments": {
+            "staged_vram": 72.0,
+            "staged_ram": 11050.0,
+            "staged_disk": 0.0,
+            "host_experts": 0.0,
+            "host_rows": 0.0,
+            "host_ms": 0.0,
+            "igpu_experts": 0.0,
+            "igpu_rows": 0.0,
+            "prestaged": 3782.0,
+            "pre_routed": 3215.0,
+            "pre_rows": 780009.0,
+            "plan_host_ms": 1.4
+          },
+          "native_line": "glm prefill: 16383 tokens in 7952.2 ms (0.49 ms/token, 2060 tok/s) | staged experts: 72 vram, 11050 ram, 0 disk, 0 on the host (0 rows, 0 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 1.00, 0.050 ms a CPU row), 3782 prestaged (3215 routed, 780009 rows) | rows resident 65.2% | plan 1.4 ms (cumulative)"
+        },
+        {
+          "batched_tokens": 16383.0,
+          "batch_wall_ms": 7778.7,
+          "batch_ms_per_token": 0.47,
+          "batch_tps": 2106.0,
+          "staged_vram": 188.0,
+          "staged_ram": 21408.0,
+          "staged_disk": 0.0,
+          "host_experts": 0.0,
+          "host_rows": 0.0,
+          "host_ms": 0.0,
+          "igpu_experts": 0.0,
+          "igpu_rows": 0.0,
+          "igpu_row_ms": 0.009,
+          "kappa": 1.0,
+          "cpu_row_ms": 0.05,
+          "prestaged": 7564.0,
+          "pre_routed": 6981.0,
+          "pre_rows": 1955247.0,
+          "resident_percent": 70.7,
+          "plan_host_ms": 2.8,
+          "cumulative_increments": {
+            "staged_vram": 116.0,
+            "staged_ram": 10358.0,
+            "staged_disk": 0.0,
+            "host_experts": 0.0,
+            "host_rows": 0.0,
+            "host_ms": 0.0,
+            "igpu_experts": 0.0,
+            "igpu_rows": 0.0,
+            "prestaged": 3782.0,
+            "pre_routed": 3766.0,
+            "pre_rows": 1175238.0,
+            "plan_host_ms": 1.4
+          },
+          "native_line": "glm prefill: 16383 tokens in 7778.7 ms (0.47 ms/token, 2106 tok/s) | staged experts: 188 vram, 21408 ram, 0 disk, 0 on the host (0 rows, 0 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 1.00, 0.050 ms a CPU row), 7564 prestaged (6981 routed, 1955247 rows) | rows resident 70.7% | plan 2.8 ms (cumulative)"
+        },
+        {
+          "batched_tokens": 16383.0,
+          "batch_wall_ms": 7780.7,
+          "batch_ms_per_token": 0.47,
+          "batch_tps": 2106.0,
+          "staged_vram": 301.0,
+          "staged_ram": 31728.0,
+          "staged_disk": 0.0,
+          "host_experts": 0.0,
+          "host_rows": 0.0,
+          "host_ms": 0.0,
+          "igpu_experts": 0.0,
+          "igpu_rows": 0.0,
+          "igpu_row_ms": 0.009,
+          "kappa": 1.0,
+          "cpu_row_ms": 0.05,
+          "prestaged": 11346.0,
+          "pre_routed": 10746.0,
+          "pre_rows": 3153533.0,
+          "resident_percent": 72.5,
+          "plan_host_ms": 4.1,
+          "cumulative_increments": {
+            "staged_vram": 113.0,
+            "staged_ram": 10320.0,
+            "staged_disk": 0.0,
+            "host_experts": 0.0,
+            "host_rows": 0.0,
+            "host_ms": 0.0,
+            "igpu_experts": 0.0,
+            "igpu_rows": 0.0,
+            "prestaged": 3782.0,
+            "pre_routed": 3765.0,
+            "pre_rows": 1198286.0,
+            "plan_host_ms": 1.2999999999999998
+          },
+          "native_line": "glm prefill: 16383 tokens in 7780.7 ms (0.47 ms/token, 2106 tok/s) | staged experts: 301 vram, 31728 ram, 0 disk, 0 on the host (0 rows, 0 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 1.00, 0.050 ms a CPU row), 11346 prestaged (10746 routed, 3153533 rows) | rows resident 72.5% | plan 4.1 ms (cumulative)"
+        }
+      ],
+      "host_audit": {
+        "samples": 63,
+        "preflight_samples": 4,
+        "quiet_preflight_intervals": 3,
+        "max_interval_s": 2.0970365700195543,
+        "max_independent_cpu_cores": 0.0049351012397585835,
+        "mean_independent_cpu_cores": 0.0002381171881137335,
+        "max_independent_physical_io_mib_s": 0.0019292775379773407,
+        "max_independent_rss_bytes": 3145728,
+        "contention_detected": false,
+        "scope": "Same-user process CPU/IO/RSS plus all GPU compute processes; whole-NVMe counters in preflight. Two-second sampling, not a proof of zero brief OS activity."
+      },
+      "calibration": {
+        "cpu_ms_per_expert": 0.155,
+        "pcie_ms_per_expert": 0.342,
+        "native_line": "glm fast: CUDA0 CPU lane: 12 threads, an expert 0.155 ms on the CPU vs 0.342 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 1 1 2 3 4 4 5 6"
+      }
+    },
+    {
+      "case": "cpu0-03",
+      "mode": "cpu0",
+      "classification": "slow_band",
+      "profile_tokens": 49149,
+      "stream_ms_rounded": 23431.0,
+      "stream_ms_sum_stages": 23430.7,
+      "disk_wait_ms": 0.0,
+      "plan_host_ms": 4.0,
+      "disk_experts_used": 0,
+      "disk_experts_read": 0,
+      "stages": {
+        "moe_staged": {
+          "ms": 9326.0,
+          "percent": 39.8,
+          "ms_per_reported_token": 0.19
+        },
+        "v41_attn": {
+          "ms": 2477.8,
+          "percent": 10.6,
+          "ms_per_reported_token": 0.05
+        },
+        "moe_resident": {
+          "ms": 2210.7,
+          "percent": 9.4,
+          "ms_per_reported_token": 0.045
+        },
+        "moe_prestaged": {
+          "ms": 1785.4,
+          "percent": 7.6,
+          "ms_per_reported_token": 0.036
+        },
+        "v41_index": {
+          "ms": 1549.5,
+          "percent": 6.6,
+          "ms_per_reported_token": 0.032
+        },
+        "v41_out": {
+          "ms": 1274.2,
+          "percent": 5.4,
+          "ms_per_reported_token": 0.026
+        },
+        "shexp": {
+          "ms": 1089.6,
+          "percent": 4.7,
+          "ms_per_reported_token": 0.022
+        },
+        "hc": {
+          "ms": 908.8,
+          "percent": 3.9,
+          "ms_per_reported_token": 0.018
+        },
+        "engram": {
+          "ms": 893.2,
+          "percent": 3.8,
+          "ms_per_reported_token": 0.018
+        },
+        "v41_q": {
+          "ms": 652.1,
+          "percent": 2.8,
+          "ms_per_reported_token": 0.013
+        },
+        "plan": {
+          "ms": 498.3,
+          "percent": 2.1,
+          "ms_per_reported_token": 0.01
+        },
+        "moe_light": {
+          "ms": 273.1,
+          "percent": 1.2,
+          "ms_per_reported_token": 0.006
+        },
+        "v41_proj": {
+          "ms": 198.2,
+          "percent": 0.8,
+          "ms_per_reported_token": 0.004
+        },
+        "router": {
+          "ms": 163.7,
+          "percent": 0.7,
+          "ms_per_reported_token": 0.003
+        },
+        "combine": {
+          "ms": 101.8,
+          "percent": 0.4,
+          "ms_per_reported_token": 0.002
+        },
+        "route": {
+          "ms": 28.0,
+          "percent": 0.1,
+          "ms_per_reported_token": 0.001
+        },
+        "dsa": {
+          "ms": 0.3,
+          "percent": 0.0,
+          "ms_per_reported_token": 0.0
+        }
+      },
+      "prefill_tps_all_three": [
+        2036.5950676213206,
+        2074.9746707193517,
+        2078.4756492064903
+      ],
+      "native_prompt_ms_all_three": [
+        8044.8,
+        7896.0,
+        7882.7
+      ],
+      "native_decode_tps_all_three": [
+        85.69754791195916,
+        102.24254647842324,
+        102.24765100001
+      ],
+      "startup_lines": [
+        "glm fast: CUDA0 zero-copy token boundary: token_embd pinned (434 MB), the table edits and the token are read and written host-mapped",
+        "glm prefill: CUDA0 deepseek41 attention projections batched",
+        "glm prefill: CUDA0 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 2048), borrowing 3630 MB of the expert pool while a prompt runs (activations 1670, weight scratch 84, expert staging 130, prestage 1731: 160 experts); disk landing ring 96 experts (1038 MB pinned)",
+        "glm fast: CUDA0 VRAM before the expert pool: 7.82 of 71.12 GB in use - dense weights 5.24, state/KV (32768 ctx) 0.00, activations 0.09, other (context, MTP, scratch, prompt path) 2.49",
+        "glm fast: CUDA0 layers [0,40) expert pool 61.48 GB, 170-170 slots/layer (6800 total)",
+        "glm fast: RAM tier 31.3 GB registered from an mmap, MADV_HUGEPAGE on 31.3 GB of it; the process now holds 31.3 GB in transparent huge pages (free 2 MB blocks before: 53.8 GB)",
+        "glm fast: RAM tier 17.0 GB registered from an mmap, MADV_HUGEPAGE on 17.0 GB of it; the process now holds 48.2 GB in transparent huge pages (free 2 MB blocks before: 22.4 GB)",
+        "glm fast: RAM tier 8.9 GB registered from an mmap, MADV_HUGEPAGE on 4.3 GB of it; the process now holds 52.6 GB in transparent huge pages (free 2 MB blocks before: 5.3 GB)",
+        "glm fast: RAM tier 12.3 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 52.6 GB in transparent huge pages (free 2 MB blocks before: 1.0 GB)",
+        "glm fast: RAM tier 2.5 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 52.6 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)",
+        "glm fast: RAM tier 5.0 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 52.6 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)",
+        "glm fast: RAM tier 6.9 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 52.6 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)",
+        "glm fast: CUDA0 RAM tier 83.87 GB pinned, 9272 slots",
+        "glm fast: CUDA0 warming the expert tiers 10% (14.9 of 149.1 GB, 2 s)",
+        "glm fast: CUDA0 warming the expert tiers 20% (29.8 of 149.1 GB, 4 s)",
+        "glm fast: CUDA0 warming the expert tiers 30% (44.8 of 149.1 GB, 7 s)",
+        "glm fast: CUDA0 warming the expert tiers 40% (59.6 of 149.1 GB, 9 s)",
+        "glm fast: CUDA0 warming the expert tiers 50% (74.5 of 149.1 GB, 11 s)",
+        "glm fast: CUDA0 warming the expert tiers 60% (89.5 of 149.1 GB, 12 s)",
+        "glm fast: CUDA0 warming the expert tiers 70% (104.3 of 149.1 GB, 14 s)",
+        "glm fast: CUDA0 warming the expert tiers 80% (119.3 of 149.1 GB, 16 s)",
+        "glm fast: CUDA0 warming the expert tiers 90% (134.2 of 149.1 GB, 17 s)",
+        "glm fast: CUDA0 warming the expert tiers 100% (149.1 of 149.1 GB, 19 s)",
+        "glm fast: CUDA0 tiers warm: 15360 experts (149.1 GB) in 19 s (7.82 GB/s)",
+        "glm fast: CUDA0 CPU lane: 12 threads, an expert 0.155 ms on the CPU vs 0.342 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 1 1 2 3 4 4 5 6",
+        "glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 174 experts leave VRAM (0 of them moved over colder ones)",
+        "glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention",
+        "glm prefill: a down matrix's MMQ over-read passes its slot (stride 9123840)",
+        "glm prefill: 16383 tokens in 7951.2 ms (0.49 ms/token, 2060 tok/s) | staged experts: 72 vram, 11050 ram, 0 disk, 0 on the host (0 rows, 0 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 1.00, 0.050 ms a CPU row), 3782 prestaged (3215 routed, 780009 rows) | rows resident 65.2% | plan 1.4 ms (cumulative)",
+        "glm fast: dense GEMV tune for device 0 (sm_120, 110 CUs): Q6_K 4 warps a row (up to 4,096 blocks)",
+        "glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 244 experts leave VRAM (147 of them moved over colder ones)",
+        "glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention",
+        "glm prefill: 16383 tokens in 7778.8 ms (0.47 ms/token, 2106 tok/s) | staged experts: 188 vram, 21408 ram, 0 disk, 0 on the host (0 rows, 0 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 1.00, 0.050 ms a CPU row), 7564 prestaged (6981 routed, 1955247 rows) | rows resident 70.7% | plan 2.7 ms (cumulative)",
+        "glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 222 experts leave VRAM (100 of them moved over colder ones)",
+        "glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention",
+        "glm prefill: 16383 tokens in 7779.5 ms (0.47 ms/token, 2106 tok/s) | staged experts: 301 vram, 31728 ram, 0 disk, 0 on the host (0 rows, 0 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 1.00, 0.050 ms a CPU row), 11346 prestaged (10746 routed, 3153533 rows) | rows resident 72.5% | plan 4.1 ms (cumulative)",
+        "glm prefill prof CUDA0 (49149 tokens, 23431 ms of stream time; waits on disk 0 ms, plan 4 ms host; disk experts used 0, read 0):",
+        "glm fast CPU lane CUDA0: 14142 verify-window calls of 2.62 columns each, 2.59 experts read for 3.07 uses"
+      ],
+      "verbose": [
+        {
+          "batched_tokens": 16383.0,
+          "batch_wall_ms": 7951.2,
+          "batch_ms_per_token": 0.49,
+          "batch_tps": 2060.0,
+          "staged_vram": 72.0,
+          "staged_ram": 11050.0,
+          "staged_disk": 0.0,
+          "host_experts": 0.0,
+          "host_rows": 0.0,
+          "host_ms": 0.0,
+          "igpu_experts": 0.0,
+          "igpu_rows": 0.0,
+          "igpu_row_ms": 0.009,
+          "kappa": 1.0,
+          "cpu_row_ms": 0.05,
+          "prestaged": 3782.0,
+          "pre_routed": 3215.0,
+          "pre_rows": 780009.0,
+          "resident_percent": 65.2,
+          "plan_host_ms": 1.4,
+          "cumulative_increments": {
+            "staged_vram": 72.0,
+            "staged_ram": 11050.0,
+            "staged_disk": 0.0,
+            "host_experts": 0.0,
+            "host_rows": 0.0,
+            "host_ms": 0.0,
+            "igpu_experts": 0.0,
+            "igpu_rows": 0.0,
+            "prestaged": 3782.0,
+            "pre_routed": 3215.0,
+            "pre_rows": 780009.0,
+            "plan_host_ms": 1.4
+          },
+          "native_line": "glm prefill: 16383 tokens in 7951.2 ms (0.49 ms/token, 2060 tok/s) | staged experts: 72 vram, 11050 ram, 0 disk, 0 on the host (0 rows, 0 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 1.00, 0.050 ms a CPU row), 3782 prestaged (3215 routed, 780009 rows) | rows resident 65.2% | plan 1.4 ms (cumulative)"
+        },
+        {
+          "batched_tokens": 16383.0,
+          "batch_wall_ms": 7778.8,
+          "batch_ms_per_token": 0.47,
+          "batch_tps": 2106.0,
+          "staged_vram": 188.0,
+          "staged_ram": 21408.0,
+          "staged_disk": 0.0,
+          "host_experts": 0.0,
+          "host_rows": 0.0,
+          "host_ms": 0.0,
+          "igpu_experts": 0.0,
+          "igpu_rows": 0.0,
+          "igpu_row_ms": 0.009,
+          "kappa": 1.0,
+          "cpu_row_ms": 0.05,
+          "prestaged": 7564.0,
+          "pre_routed": 6981.0,
+          "pre_rows": 1955247.0,
+          "resident_percent": 70.7,
+          "plan_host_ms": 2.7,
+          "cumulative_increments": {
+            "staged_vram": 116.0,
+            "staged_ram": 10358.0,
+            "staged_disk": 0.0,
+            "host_experts": 0.0,
+            "host_rows": 0.0,
+            "host_ms": 0.0,
+            "igpu_experts": 0.0,
+            "igpu_rows": 0.0,
+            "prestaged": 3782.0,
+            "pre_routed": 3766.0,
+            "pre_rows": 1175238.0,
+            "plan_host_ms": 1.3000000000000003
+          },
+          "native_line": "glm prefill: 16383 tokens in 7778.8 ms (0.47 ms/token, 2106 tok/s) | staged experts: 188 vram, 21408 ram, 0 disk, 0 on the host (0 rows, 0 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 1.00, 0.050 ms a CPU row), 7564 prestaged (6981 routed, 1955247 rows) | rows resident 70.7% | plan 2.7 ms (cumulative)"
+        },
+        {
+          "batched_tokens": 16383.0,
+          "batch_wall_ms": 7779.5,
+          "batch_ms_per_token": 0.47,
+          "batch_tps": 2106.0,
+          "staged_vram": 301.0,
+          "staged_ram": 31728.0,
+          "staged_disk": 0.0,
+          "host_experts": 0.0,
+          "host_rows": 0.0,
+          "host_ms": 0.0,
+          "igpu_experts": 0.0,
+          "igpu_rows": 0.0,
+          "igpu_row_ms": 0.009,
+          "kappa": 1.0,
+          "cpu_row_ms": 0.05,
+          "prestaged": 11346.0,
+          "pre_routed": 10746.0,
+          "pre_rows": 3153533.0,
+          "resident_percent": 72.5,
+          "plan_host_ms": 4.1,
+          "cumulative_increments": {
+            "staged_vram": 113.0,
+            "staged_ram": 10320.0,
+            "staged_disk": 0.0,
+            "host_experts": 0.0,
+            "host_rows": 0.0,
+            "host_ms": 0.0,
+            "igpu_experts": 0.0,
+            "igpu_rows": 0.0,
+            "prestaged": 3782.0,
+            "pre_routed": 3765.0,
+            "pre_rows": 1198286.0,
+            "plan_host_ms": 1.3999999999999995
+          },
+          "native_line": "glm prefill: 16383 tokens in 7779.5 ms (0.47 ms/token, 2106 tok/s) | staged experts: 301 vram, 31728 ram, 0 disk, 0 on the host (0 rows, 0 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 1.00, 0.050 ms a CPU row), 11346 prestaged (10746 routed, 3153533 rows) | rows resident 72.5% | plan 4.1 ms (cumulative)"
+        }
+      ],
+      "host_audit": {
+        "samples": 63,
+        "preflight_samples": 4,
+        "quiet_preflight_intervals": 3,
+        "max_interval_s": 2.0916721660178155,
+        "max_independent_cpu_cores": 0.004937650745871934,
+        "mean_independent_cpu_cores": 0.00015872082167927914,
+        "max_independent_physical_io_mib_s": 0.0019282620651159931,
+        "max_independent_rss_bytes": 3145728,
+        "contention_detected": false,
+        "scope": "Same-user process CPU/IO/RSS plus all GPU compute processes; whole-NVMe counters in preflight. Two-second sampling, not a proof of zero brief OS activity."
+      },
+      "calibration": {
+        "cpu_ms_per_expert": 0.155,
+        "pcie_ms_per_expert": 0.342,
+        "native_line": "glm fast: CUDA0 CPU lane: 12 threads, an expert 0.155 ms on the CPU vs 0.342 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 1 1 2 3 4 4 5 6"
+      }
+    }
+  ],
+  "mode_counts": {
+    "default": 2,
+    "cpu0": 3
+  },
+  "comparison": {
+    "slow": "default-02",
+    "fast": "default-01",
+    "stream_delta_ms": 5639.0,
+    "stage_comparison": [
+      {
+        "stage": "moe_staged",
+        "slow_ms": 9326.4,
+        "fast_ms": 3258.5,
+        "delta_ms": 6067.9,
+        "ratio": 2.862175847782722,
+        "share_of_total_delta_percent": 107.60595850328072
+      },
+      {
+        "stage": "moe_resident",
+        "slow_ms": 2202.7,
+        "fast_ms": 2182.1,
+        "delta_ms": 20.59999999999991,
+        "ratio": 1.0094404472755603,
+        "share_of_total_delta_percent": 0.36531299875864354
+      },
+      {
+        "stage": "v41_q",
+        "slow_ms": 648.9,
+        "fast_ms": 641.2,
+        "delta_ms": 7.699999999999932,
+        "ratio": 1.012008733624454,
+        "share_of_total_delta_percent": 0.13654903351657974
+      },
+      {
+        "stage": "v41_attn",
+        "slow_ms": 2476.7,
+        "fast_ms": 2471.2,
+        "delta_ms": 5.5,
+        "ratio": 1.0022256393654905,
+        "share_of_total_delta_percent": 0.09753502394041497
+      },
+      {
+        "stage": "v41_out",
+        "slow_ms": 1267.5,
+        "fast_ms": 1263.1,
+        "delta_ms": 4.400000000000091,
+        "ratio": 1.0034834929934289,
+        "share_of_total_delta_percent": 0.0780280191523336
+      },
+      {
+        "stage": "moe_light",
+        "slow_ms": 272.4,
+        "fast_ms": 268.5,
+        "delta_ms": 3.8999999999999773,
+        "ratio": 1.0145251396648043,
+        "share_of_total_delta_percent": 0.06916119879411202
+      },
+      {
+        "stage": "v41_index",
+        "slow_ms": 1549.2,
+        "fast_ms": 1545.4,
+        "delta_ms": 3.7999999999999545,
+        "ratio": 1.0024589103144816,
+        "share_of_total_delta_percent": 0.0673878347224677
+      },
+      {
+        "stage": "hc",
+        "slow_ms": 909.2,
+        "fast_ms": 906.5,
+        "delta_ms": 2.7000000000000455,
+        "ratio": 1.0029784886927744,
+        "share_of_total_delta_percent": 0.04788082993438633
+      },
+      {
+        "stage": "v41_proj",
+        "slow_ms": 195.7,
+        "fast_ms": 196.0,
+        "delta_ms": -0.30000000000001137,
+        "ratio": 0.998469387755102,
+        "share_of_total_delta_percent": -0.0053200922149319275
+      },
+      {
+        "stage": "dsa",
+        "slow_ms": 0.3,
+        "fast_ms": 0.8,
+        "delta_ms": -0.5,
+        "ratio": 0.37499999999999994,
+        "share_of_total_delta_percent": -0.008866820358219542
+      },
+      {
+        "stage": "route",
+        "slow_ms": 28.0,
+        "fast_ms": 33.5,
+        "delta_ms": -5.5,
+        "ratio": 0.835820895522388,
+        "share_of_total_delta_percent": -0.09753502394041497
+      },
+      {
+        "stage": "shexp",
+        "slow_ms": 1086.8,
+        "fast_ms": 1094.0,
+        "delta_ms": -7.2000000000000455,
+        "ratio": 0.993418647166362,
+        "share_of_total_delta_percent": -0.12768221315836223
+      },
+      {
+        "stage": "router",
+        "slow_ms": 163.8,
+        "fast_ms": 172.2,
+        "delta_ms": -8.399999999999977,
+        "ratio": 0.9512195121951221,
+        "share_of_total_delta_percent": -0.1489625820180879
+      },
+      {
+        "stage": "combine",
+        "slow_ms": 101.8,
+        "fast_ms": 112.1,
+        "delta_ms": -10.299999999999997,
+        "ratio": 0.9081177520071365,
+        "share_of_total_delta_percent": -0.18265649937932252
+      },
+      {
+        "stage": "moe_prestaged",
+        "slow_ms": 1780.6,
+        "fast_ms": 1853.5,
+        "delta_ms": -72.90000000000009,
+        "ratio": 0.9606690045859185,
+        "share_of_total_delta_percent": -1.292782408228411
+      },
+      {
+        "stage": "engram",
+        "slow_ms": 896.9,
+        "fast_ms": 1021.2,
+        "delta_ms": -124.30000000000007,
+        "ratio": 0.8782804543674109,
+        "share_of_total_delta_percent": -2.2042915410533794
+      },
+      {
+        "stage": "plan",
+        "slow_ms": 503.1,
+        "fast_ms": 751.2,
+        "delta_ms": -248.10000000000002,
+        "ratio": 0.6697284345047924,
+        "share_of_total_delta_percent": -4.399716261748537
+      }
+    ]
+  },
+  "previous_confounded_profile_comment": "https://github.com/zephel01/Abyss/issues/24#issuecomment-6595924525",
+  "request_rows": [
+    {
+      "case": "default-01",
+      "name": "warmup-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "52f79ca8587f4dab1b81b9294bd0093b81b3f78a4f3571f144c81fe006c40218",
+      "prefill_tps": 2667.1441827150043,
+      "decode_tps": 82.64496160318312,
+      "prefill_ms": 6142.9,
+      "decode_ms": 24780.7,
+      "ttft_s": 8.231389007007238,
+      "wall_s": 30.924218825995922,
+      "draft_accepted": 1585,
+      "draft_offered": 1813,
+      "reused": 0,
+      "done": "DONE 2048 16384 6142.9 24780.7 length 1585 1813 0 357148 546000 449",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.2347501880140044,
+          "line": "PP 4096 16384 1234.0 3319.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.291702628019266,
+          "line": "PP 8192 16384 2291.0 3575.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.374331598985009,
+          "line": "PP 12288 16384 3373.6 3642.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.977749494020827,
+          "line": "PP 13715 16384 3977.0 3448.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.101087898015976,
+          "line": "PP 16383 16384 6100.4 2685.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.14354928600369,
+          "line": "PP 16384 16384 6142.8 2667.2 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 39.536356106982566,
+      "done_elapsed_s": 70.46057493297849,
+      "requested_pause_s": 0.0,
+      "purpose": "isolated_prefill_diagnostic",
+      "dispatch_write_ms": 0.03183900844305754,
+      "client_gap_since_previous_done_ms": null,
+      "wall_minus_native_ms": 0.6188259959199058,
+      "first_request": true,
+      "included_in_profiler": true,
+      "classification": "fast_band",
+      "mode": "default",
+      "native_stat": {
+        "tok_s": "82.65",
+        "ms_tok": "12.10",
+        "vram_hit": "0.6541",
+        "ram_fetch": "1.093",
+        "disk": "0.000",
+        "promo": "1.083",
+        "vram_used": "6680",
+        "vram_slots": "6800",
+        "ram_used": "8680",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.007",
+        "miss_ms": "0.000",
+        "lane": "91.112",
+        "lane_ms": "3.444",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "8.54",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "1.921",
+        "spec_acc": "1585",
+        "spec_offered": "1813",
+        "spec_rounds": "449"
+      }
+    },
+    {
+      "case": "default-01",
+      "name": "trial-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "31e28b099ecfce3ce32fcea236e5c6d2d5e1a9235d3f398f521b23bf229f488e",
+      "prefill_tps": 2729.529362765514,
+      "decode_tps": 99.8493483952435,
+      "prefill_ms": 6002.5,
+      "decode_ms": 20510.9,
+      "ttft_s": 6.109073352999985,
+      "wall_s": 26.51398018898908,
+      "draft_accepted": 1594,
+      "draft_offered": 1826,
+      "reused": 0,
+      "done": "DONE 2048 16384 6002.5 20510.9 length 1594 1826 0 369390 546960 444",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.137153182993643,
+          "line": "PP 4096 16384 1136.5 3604.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.214195402979385,
+          "line": "PP 8192 16384 2210.9 3705.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.3058430919772945,
+          "line": "PP 12288 16384 3305.2 3717.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.939744141011033,
+          "line": "PP 13715 16384 3939.1 3481.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.9745067289914005,
+          "line": "PP 16383 16384 5973.9 2742.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.003093263017945,
+          "line": "PP 16384 16384 6002.5 2729.5 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 70.46069252397865,
+      "done_elapsed_s": 96.97467271296773,
+      "requested_pause_s": 0.0,
+      "purpose": "isolated_prefill_diagnostic",
+      "dispatch_write_ms": 0.04549598088487983,
+      "client_gap_since_previous_done_ms": 0.11759100016206503,
+      "wall_minus_native_ms": 0.5801889890790335,
+      "first_request": false,
+      "included_in_profiler": true,
+      "classification": "fast_band",
+      "mode": "default",
+      "native_stat": {
+        "tok_s": "99.85",
+        "ms_tok": "10.01",
+        "vram_hit": "0.6754",
+        "ram_fetch": "0.285",
+        "disk": "0.000",
+        "promo": "0.284",
+        "vram_used": "6647",
+        "vram_slots": "6800",
+        "ram_used": "8713",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.001",
+        "miss_ms": "0.000",
+        "lane": "86.418",
+        "lane_ms": "2.557",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "9.96",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.585",
+        "spec_acc": "1594",
+        "spec_offered": "1826",
+        "spec_rounds": "444"
+      }
+    },
+    {
+      "case": "default-01",
+      "name": "trial-02",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "9a7b498cae093e7e810636f71385ab44518859489147b5ee28236cd1c577a5dc",
+      "prefill_tps": 2726.1231281198,
+      "decode_tps": 100.72742117144811,
+      "prefill_ms": 6010.0,
+      "decode_ms": 20332.1,
+      "ttft_s": 6.036239089968149,
+      "wall_s": 26.342661817965563,
+      "draft_accepted": 1618,
+      "draft_offered": 1818,
+      "reused": 0,
+      "done": "DONE 2048 16384 6010.0 20332.1 length 1618 1818 0 373093 539520 408",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.1262655109749176,
+          "line": "PP 4096 16384 1125.7 3638.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.20523536199471,
+          "line": "PP 8192 16384 2204.6 3715.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.3042933929827996,
+          "line": "PP 12288 16384 3303.7 3719.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.9353287759586237,
+          "line": "PP 13715 16384 3934.8 3485.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.984894564957358,
+          "line": "PP 16383 16384 5984.4 2737.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.010516854003072,
+          "line": "PP 16384 16384 6010.0 2726.1 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 96.97475256299367,
+      "done_elapsed_s": 123.31741438095924,
+      "requested_pause_s": 0.0,
+      "purpose": "isolated_prefill_diagnostic",
+      "dispatch_write_ms": 0.0371999922208488,
+      "client_gap_since_previous_done_ms": 0.07985002594068646,
+      "wall_minus_native_ms": 0.5618179655648419,
+      "first_request": false,
+      "included_in_profiler": true,
+      "classification": "fast_band",
+      "mode": "default",
+      "native_stat": {
+        "tok_s": "100.73",
+        "ms_tok": "9.93",
+        "vram_hit": "0.6915",
+        "ram_fetch": "0.337",
+        "disk": "0.000",
+        "promo": "0.336",
+        "vram_used": "6671",
+        "vram_slots": "6800",
+        "ram_used": "8687",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.001",
+        "miss_ms": "0.000",
+        "lane": "80.925",
+        "lane_ms": "2.440",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "10.12",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.508",
+        "spec_acc": "1618",
+        "spec_offered": "1818",
+        "spec_rounds": "408"
+      }
+    },
+    {
+      "case": "default-02",
+      "name": "warmup-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "3f5cd1e0a26ea65265960555839707cba731a9641384f5d6f556c5af5044a18c",
+      "prefill_tps": 2038.4194286851796,
+      "decode_tps": 83.75216230253015,
+      "prefill_ms": 8037.6,
+      "decode_ms": 24453.1,
+      "ttft_s": 10.131790573999751,
+      "wall_s": 32.491405565990135,
+      "draft_accepted": 1596,
+      "draft_offered": 1804,
+      "reused": 0,
+      "done": "DONE 2048 16384 8037.6 24453.1 length 1596 1804 0 345663 541440 430",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.5442942320369184,
+          "line": "PP 4096 16384 1543.6 2653.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.828269084042404,
+          "line": "PP 8192 16384 2827.5 2897.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.161223023023922,
+          "line": "PP 12288 16384 4160.5 2953.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.026966511039063,
+          "line": "PP 13715 16384 5026.3 2728.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 8.002602540014777,
+          "line": "PP 16383 16384 8001.9 2047.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 8.038262251007836,
+          "line": "PP 16384 16384 8037.5 2038.4 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 38.22879491496133,
+      "done_elapsed_s": 70.72020048095146,
+      "requested_pause_s": 0.0,
+      "purpose": "isolated_prefill_diagnostic",
+      "dispatch_write_ms": 0.04256999818608165,
+      "client_gap_since_previous_done_ms": null,
+      "wall_minus_native_ms": 0.705565990137984,
+      "first_request": true,
+      "included_in_profiler": true,
+      "classification": "slow_band",
+      "mode": "default",
+      "native_stat": {
+        "tok_s": "83.75",
+        "ms_tok": "11.94",
+        "vram_hit": "0.6384",
+        "ram_fetch": "1.078",
+        "disk": "0.000",
+        "promo": "1.061",
+        "vram_used": "6685",
+        "vram_slots": "6800",
+        "ram_used": "8672",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.006",
+        "miss_ms": "0.000",
+        "lane": "94.510",
+        "lane_ms": "3.469",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "9.98",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.378",
+        "spec_acc": "1596",
+        "spec_offered": "1804",
+        "spec_rounds": "430"
+      }
+    },
+    {
+      "case": "default-02",
+      "name": "trial-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "9e11146aba5f3964eb46c26a991c72dfeb912e28c735f6f8d839a1220a392249",
+      "prefill_tps": 2077.526850360752,
+      "decode_tps": 100.31347962382445,
+      "prefill_ms": 7886.3,
+      "decode_ms": 20416.0,
+      "ttft_s": 7.987596234015655,
+      "wall_s": 28.303008526039775,
+      "draft_accepted": 1616,
+      "draft_offered": 1814,
+      "reused": 0,
+      "done": "DONE 2048 16384 7886.3 20416.0 length 1616 1814 0 371737 539040 410",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.4568736820365302,
+          "line": "PP 4096 16384 1456.2 2812.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.7540745200240053,
+          "line": "PP 8192 16384 2753.4 2975.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.091842629015446,
+          "line": "PP 12288 16384 4091.2 3003.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.973088113008998,
+          "line": "PP 13715 16384 4972.4 2758.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.857993460027501,
+          "line": "PP 16383 16384 7857.3 2085.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.886988541053142,
+          "line": "PP 16384 16384 7886.3 2077.5 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 70.72028841695283,
+      "done_elapsed_s": 99.0232969429926,
+      "requested_pause_s": 0.0,
+      "purpose": "isolated_prefill_diagnostic",
+      "dispatch_write_ms": 0.060193007811903954,
+      "client_gap_since_previous_done_ms": 0.0879360013641417,
+      "wall_minus_native_ms": 0.7085260397761886,
+      "first_request": false,
+      "included_in_profiler": true,
+      "classification": "slow_band",
+      "mode": "default",
+      "native_stat": {
+        "tok_s": "100.31",
+        "ms_tok": "9.97",
+        "vram_hit": "0.6896",
+        "ram_fetch": "0.356",
+        "disk": "0.000",
+        "promo": "0.356",
+        "vram_used": "6671",
+        "vram_slots": "6800",
+        "ram_used": "8689",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.001",
+        "miss_ms": "0.000",
+        "lane": "81.333",
+        "lane_ms": "2.507",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "8.85",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "1.993",
+        "spec_acc": "1616",
+        "spec_offered": "1814",
+        "spec_rounds": "410"
+      }
+    },
+    {
+      "case": "default-02",
+      "name": "trial-02",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "5e4c1f0aa3bf2804190cde8b4fc4de70fcba3a4a0e17ef54dac85d032e921fc7",
+      "prefill_tps": 2080.111724750841,
+      "decode_tps": 100.6769146065096,
+      "prefill_ms": 7876.5,
+      "decode_ms": 20342.3,
+      "ttft_s": 7.904161502956413,
+      "wall_s": 28.219391808961518,
+      "draft_accepted": 1602,
+      "draft_offered": 1823,
+      "reused": 0,
+      "done": "DONE 2048 16384 7876.5 20342.3 length 1602 1823 0 372176 544560 428",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.4534327649744228,
+          "line": "PP 4096 16384 1452.9 2819.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.7533011049963534,
+          "line": "PP 8192 16384 2752.7 2976.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.098503821005579,
+          "line": "PP 12288 16384 4097.9 2998.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.975944964971859,
+          "line": "PP 13715 16384 4975.4 2756.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.8514114409917966,
+          "line": "PP 16383 16384 7850.8 2086.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.877013304969296,
+          "line": "PP 16384 16384 7876.4 2080.1 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 99.02387004200136,
+      "done_elapsed_s": 127.24326185096288,
+      "requested_pause_s": 0.0,
+      "purpose": "isolated_prefill_diagnostic",
+      "dispatch_write_ms": 0.04333199467509985,
+      "client_gap_since_previous_done_ms": 0.5730990087613463,
+      "wall_minus_native_ms": 0.5918089615188364,
+      "first_request": false,
+      "included_in_profiler": true,
+      "classification": "slow_band",
+      "mode": "default",
+      "native_stat": {
+        "tok_s": "100.68",
+        "ms_tok": "9.93",
+        "vram_hit": "0.6834",
+        "ram_fetch": "0.279",
+        "disk": "0.000",
+        "promo": "0.278",
+        "vram_used": "6644",
+        "vram_slots": "6800",
+        "ram_used": "8716",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.001",
+        "miss_ms": "0.000",
+        "lane": "83.892",
+        "lane_ms": "2.512",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "10.66",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.618",
+        "spec_acc": "1602",
+        "spec_offered": "1823",
+        "spec_rounds": "428"
+      }
+    },
+    {
+      "case": "cpu0-01",
+      "name": "warmup-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "3f5cd1e0a26ea65265960555839707cba731a9641384f5d6f556c5af5044a18c",
+      "prefill_tps": 2036.519123441598,
+      "decode_tps": 85.35289337139761,
+      "prefill_ms": 8045.1,
+      "decode_ms": 23994.5,
+      "ttft_s": 10.248437502013985,
+      "wall_s": 32.04024170199409,
+      "draft_accepted": 1596,
+      "draft_offered": 1804,
+      "reused": 0,
+      "done": "DONE 2048 16384 8045.1 23994.5 length 1596 1804 0 345663 541440 430",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.5455092869815417,
+          "line": "PP 4096 16384 1545.0 2651.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.830438888981007,
+          "line": "PP 8192 16384 2829.9 2894.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.163830814999528,
+          "line": "PP 12288 16384 4163.3 2951.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.030094898014795,
+          "line": "PP 13715 16384 5029.6 2726.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 8.008395430981182,
+          "line": "PP 16383 16384 8007.9 2045.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 8.045612993999384,
+          "line": "PP 16384 16384 8045.1 2036.5 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 37.707697913981974,
+      "done_elapsed_s": 69.74793961597607,
+      "requested_pause_s": 0.0,
+      "purpose": "isolated_prefill_diagnostic",
+      "dispatch_write_ms": 0.0696309725753963,
+      "client_gap_since_previous_done_ms": null,
+      "wall_minus_native_ms": 0.6417019940927275,
+      "first_request": true,
+      "included_in_profiler": true,
+      "classification": "slow_band",
+      "mode": "cpu0",
+      "native_stat": {
+        "tok_s": "85.35",
+        "ms_tok": "11.72",
+        "vram_hit": "0.6384",
+        "ram_fetch": "1.078",
+        "disk": "0.000",
+        "promo": "1.061",
+        "vram_used": "6685",
+        "vram_slots": "6800",
+        "ram_used": "8672",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.006",
+        "miss_ms": "0.000",
+        "lane": "94.510",
+        "lane_ms": "3.461",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "9.60",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.373",
+        "spec_acc": "1596",
+        "spec_offered": "1804",
+        "spec_rounds": "430"
+      }
+    },
+    {
+      "case": "cpu0-01",
+      "name": "trial-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "9e11146aba5f3964eb46c26a991c72dfeb912e28c735f6f8d839a1220a392249",
+      "prefill_tps": 2076.894798889551,
+      "decode_tps": 102.16400115732657,
+      "prefill_ms": 7888.7,
+      "decode_ms": 20046.2,
+      "ttft_s": 7.989967126981355,
+      "wall_s": 27.93567808298394,
+      "draft_accepted": 1616,
+      "draft_offered": 1814,
+      "reused": 0,
+      "done": "DONE 2048 16384 7888.7 20046.2 length 1616 1814 0 371737 539040 410",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.457165420986712,
+          "line": "PP 4096 16384 1456.5 2812.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.7552908349898644,
+          "line": "PP 8192 16384 2754.6 2973.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.092994917999022,
+          "line": "PP 12288 16384 4092.3 3002.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.97435959498398,
+          "line": "PP 13715 16384 4973.7 2757.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.860578320978675,
+          "line": "PP 16383 16384 7859.9 2084.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.889394939003978,
+          "line": "PP 16384 16384 7888.7 2076.9 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 69.74802785197971,
+      "done_elapsed_s": 97.68370593496365,
+      "requested_pause_s": 0.0,
+      "purpose": "isolated_prefill_diagnostic",
+      "dispatch_write_ms": 0.051476992666721344,
+      "client_gap_since_previous_done_ms": 0.08823600364848971,
+      "wall_minus_native_ms": 0.7780829839393846,
+      "first_request": false,
+      "included_in_profiler": true,
+      "classification": "slow_band",
+      "mode": "cpu0",
+      "native_stat": {
+        "tok_s": "102.16",
+        "ms_tok": "9.79",
+        "vram_hit": "0.6896",
+        "ram_fetch": "0.356",
+        "disk": "0.000",
+        "promo": "0.356",
+        "vram_used": "6671",
+        "vram_slots": "6800",
+        "ram_used": "8689",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.001",
+        "miss_ms": "0.000",
+        "lane": "81.333",
+        "lane_ms": "2.549",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "8.61",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.013",
+        "spec_acc": "1616",
+        "spec_offered": "1814",
+        "spec_rounds": "410"
+      }
+    },
+    {
+      "case": "cpu0-01",
+      "name": "trial-02",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "5e4c1f0aa3bf2804190cde8b4fc4de70fcba3a4a0e17ef54dac85d032e921fc7",
+      "prefill_tps": 2079.6100731112915,
+      "decode_tps": 102.27931041371183,
+      "prefill_ms": 7878.4,
+      "decode_ms": 20023.6,
+      "ttft_s": 7.906197771022562,
+      "wall_s": 27.90262764901854,
+      "draft_accepted": 1602,
+      "draft_offered": 1823,
+      "reused": 0,
+      "done": "DONE 2048 16384 7878.4 20023.6 length 1602 1823 0 372176 544560 428",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.453188974992372,
+          "line": "PP 4096 16384 1452.6 2819.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.7526647010236047,
+          "line": "PP 8192 16384 2752.1 2976.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.098872143018525,
+          "line": "PP 12288 16384 4098.3 2998.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.976341990986839,
+          "line": "PP 13715 16384 4975.8 2756.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.852985727018677,
+          "line": "PP 16383 16384 7852.4 2086.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.8789936330285855,
+          "line": "PP 16384 16384 7878.4 2079.6 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 97.68379867996555,
+      "done_elapsed_s": 125.58642632898409,
+      "requested_pause_s": 0.0,
+      "purpose": "isolated_prefill_diagnostic",
+      "dispatch_write_ms": 0.057658005971461535,
+      "client_gap_since_previous_done_ms": 0.09274500189349055,
+      "wall_minus_native_ms": 0.6276490185409784,
+      "first_request": false,
+      "included_in_profiler": true,
+      "classification": "slow_band",
+      "mode": "cpu0",
+      "native_stat": {
+        "tok_s": "102.28",
+        "ms_tok": "9.78",
+        "vram_hit": "0.6834",
+        "ram_fetch": "0.279",
+        "disk": "0.000",
+        "promo": "0.278",
+        "vram_used": "6644",
+        "vram_slots": "6800",
+        "ram_used": "8716",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.001",
+        "miss_ms": "0.000",
+        "lane": "83.892",
+        "lane_ms": "2.525",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "10.28",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.602",
+        "spec_acc": "1602",
+        "spec_offered": "1823",
+        "spec_rounds": "428"
+      }
+    },
+    {
+      "case": "cpu0-02",
+      "name": "warmup-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "3f5cd1e0a26ea65265960555839707cba731a9641384f5d6f556c5af5044a18c",
+      "prefill_tps": 2036.266017076596,
+      "decode_tps": 85.74526789116045,
+      "prefill_ms": 8046.1,
+      "decode_ms": 23884.7,
+      "ttft_s": 10.116961189021822,
+      "wall_s": 31.931591633008793,
+      "draft_accepted": 1596,
+      "draft_offered": 1804,
+      "reused": 0,
+      "done": "DONE 2048 16384 8046.1 23884.7 length 1596 1804 0 345663 541440 430",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.5465826780418865,
+          "line": "PP 4096 16384 1545.9 2649.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.832537876034621,
+          "line": "PP 8192 16384 2831.8 2892.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.1675383250112645,
+          "line": "PP 12288 16384 4166.8 2949.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.033991912030615,
+          "line": "PP 13715 16384 5033.2 2724.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 8.011569371039513,
+          "line": "PP 16383 16384 8010.8 2045.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 8.046825474011712,
+          "line": "PP 16384 16384 8046.1 2036.3 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 37.43352104595397,
+      "done_elapsed_s": 69.36511267896276,
+      "requested_pause_s": 0.0,
+      "purpose": "isolated_prefill_diagnostic",
+      "dispatch_write_ms": 0.05126703763380647,
+      "client_gap_since_previous_done_ms": null,
+      "wall_minus_native_ms": 0.791633008793724,
+      "first_request": true,
+      "included_in_profiler": true,
+      "classification": "slow_band",
+      "mode": "cpu0",
+      "native_stat": {
+        "tok_s": "85.75",
+        "ms_tok": "11.66",
+        "vram_hit": "0.6384",
+        "ram_fetch": "1.078",
+        "disk": "0.000",
+        "promo": "1.061",
+        "vram_used": "6685",
+        "vram_slots": "6800",
+        "ram_used": "8672",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.006",
+        "miss_ms": "0.000",
+        "lane": "94.510",
+        "lane_ms": "3.445",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "9.63",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.369",
+        "spec_acc": "1596",
+        "spec_offered": "1804",
+        "spec_rounds": "430"
+      }
+    },
+    {
+      "case": "cpu0-02",
+      "name": "trial-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "9e11146aba5f3964eb46c26a991c72dfeb912e28c735f6f8d839a1220a392249",
+      "prefill_tps": 2075.1849224845478,
+      "decode_tps": 102.32479127841036,
+      "prefill_ms": 7895.2,
+      "decode_ms": 20014.7,
+      "ttft_s": 7.996352516987827,
+      "wall_s": 27.910537308023777,
+      "draft_accepted": 1616,
+      "draft_offered": 1814,
+      "reused": 0,
+      "done": "DONE 2048 16384 7895.2 20014.7 length 1616 1814 0 371737 539040 410",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.4586785649880767,
+          "line": "PP 4096 16384 1458.1 2809.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.7580631569726393,
+          "line": "PP 8192 16384 2757.5 2970.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.096977518987842,
+          "line": "PP 12288 16384 4096.4 2999.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.978774246992543,
+          "line": "PP 13715 16384 4978.2 2755.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.865738662017975,
+          "line": "PP 16383 16384 7865.1 2083.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.8957785299862735,
+          "line": "PP 16384 16384 7895.2 2075.2 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 69.36520604498219,
+      "done_elapsed_s": 97.27574335300596,
+      "requested_pause_s": 0.0,
+      "purpose": "isolated_prefill_diagnostic",
+      "dispatch_write_ms": 0.03836199175566435,
+      "client_gap_since_previous_done_ms": 0.09336601942777634,
+      "wall_minus_native_ms": 0.6373080237754039,
+      "first_request": false,
+      "included_in_profiler": true,
+      "classification": "slow_band",
+      "mode": "cpu0",
+      "native_stat": {
+        "tok_s": "102.33",
+        "ms_tok": "9.77",
+        "vram_hit": "0.6896",
+        "ram_fetch": "0.356",
+        "disk": "0.000",
+        "promo": "0.356",
+        "vram_used": "6671",
+        "vram_slots": "6800",
+        "ram_used": "8689",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.001",
+        "miss_ms": "0.000",
+        "lane": "81.333",
+        "lane_ms": "2.503",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "8.61",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "1.995",
+        "spec_acc": "1616",
+        "spec_offered": "1814",
+        "spec_rounds": "410"
+      }
+    },
+    {
+      "case": "cpu0-02",
+      "name": "trial-02",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "5e4c1f0aa3bf2804190cde8b4fc4de70fcba3a4a0e17ef54dac85d032e921fc7",
+      "prefill_tps": 2078.0274973365126,
+      "decode_tps": 101.92452210438306,
+      "prefill_ms": 7884.4,
+      "decode_ms": 20093.3,
+      "ttft_s": 7.912155550031457,
+      "wall_s": 27.978350410005078,
+      "draft_accepted": 1602,
+      "draft_offered": 1823,
+      "reused": 0,
+      "done": "DONE 2048 16384 7884.4 20093.3 length 1602 1823 0 372176 544560 428",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.454996339045465,
+          "line": "PP 4096 16384 1454.4 2816.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.7559888180112466,
+          "line": "PP 8192 16384 2755.4 2973.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.102963694022037,
+          "line": "PP 12288 16384 4102.4 2995.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.9807188080158085,
+          "line": "PP 13715 16384 4980.1 2753.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.858147350023501,
+          "line": "PP 16383 16384 7857.6 2085.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.88498511700891,
+          "line": "PP 16384 16384 7884.4 2078.0 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 97.28471007494954,
+      "done_elapsed_s": 125.26306048495462,
+      "requested_pause_s": 0.0,
+      "purpose": "isolated_prefill_diagnostic",
+      "dispatch_write_ms": 0.046527013182640076,
+      "client_gap_since_previous_done_ms": 8.966721943579614,
+      "wall_minus_native_ms": 0.6504100050769921,
+      "first_request": false,
+      "included_in_profiler": true,
+      "classification": "slow_band",
+      "mode": "cpu0",
+      "native_stat": {
+        "tok_s": "101.93",
+        "ms_tok": "9.81",
+        "vram_hit": "0.6834",
+        "ram_fetch": "0.279",
+        "disk": "0.000",
+        "promo": "0.278",
+        "vram_used": "6644",
+        "vram_slots": "6800",
+        "ram_used": "8716",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.001",
+        "miss_ms": "0.000",
+        "lane": "83.892",
+        "lane_ms": "2.544",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "10.30",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.601",
+        "spec_acc": "1602",
+        "spec_offered": "1823",
+        "spec_rounds": "428"
+      }
+    },
+    {
+      "case": "cpu0-03",
+      "name": "warmup-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "3f5cd1e0a26ea65265960555839707cba731a9641384f5d6f556c5af5044a18c",
+      "prefill_tps": 2036.5950676213206,
+      "decode_tps": 85.69754791195916,
+      "prefill_ms": 8044.8,
+      "decode_ms": 23898.0,
+      "ttft_s": 10.128637682995759,
+      "wall_s": 31.943492027989123,
+      "draft_accepted": 1596,
+      "draft_offered": 1804,
+      "reused": 0,
+      "done": "DONE 2048 16384 8044.8 23898.0 length 1596 1804 0 345663 541440 430",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.547234606987331,
+          "line": "PP 4096 16384 1546.5 2648.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.8322354499832727,
+          "line": "PP 8192 16384 2831.5 2893.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.167141154001001,
+          "line": "PP 12288 16384 4166.4 2949.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.033426163019612,
+          "line": "PP 13715 16384 5032.7 2725.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 8.010448899003677,
+          "line": "PP 16383 16384 8009.8 2045.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 8.045440350018907,
+          "line": "PP 16384 16384 8044.7 2036.6 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 37.44342637999216,
+      "done_elapsed_s": 69.38691840798128,
+      "requested_pause_s": 0.0,
+      "purpose": "isolated_prefill_diagnostic",
+      "dispatch_write_ms": 0.036258017644286156,
+      "client_gap_since_previous_done_ms": null,
+      "wall_minus_native_ms": 0.6920279891237442,
+      "first_request": true,
+      "included_in_profiler": true,
+      "classification": "slow_band",
+      "mode": "cpu0",
+      "native_stat": {
+        "tok_s": "85.70",
+        "ms_tok": "11.67",
+        "vram_hit": "0.6384",
+        "ram_fetch": "1.078",
+        "disk": "0.000",
+        "promo": "1.061",
+        "vram_used": "6685",
+        "vram_slots": "6800",
+        "ram_used": "8672",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.006",
+        "miss_ms": "0.000",
+        "lane": "94.510",
+        "lane_ms": "3.445",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "9.62",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.360",
+        "spec_acc": "1596",
+        "spec_offered": "1804",
+        "spec_rounds": "430"
+      }
+    },
+    {
+      "case": "cpu0-03",
+      "name": "trial-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "9e11146aba5f3964eb46c26a991c72dfeb912e28c735f6f8d839a1220a392249",
+      "prefill_tps": 2074.9746707193517,
+      "decode_tps": 102.24254647842324,
+      "prefill_ms": 7896.0,
+      "decode_ms": 20030.8,
+      "ttft_s": 7.99713267799234,
+      "wall_s": 27.9274600300123,
+      "draft_accepted": 1616,
+      "draft_offered": 1814,
+      "reused": 0,
+      "done": "DONE 2048 16384 7896.0 20030.8 length 1616 1814 0 371737 539040 410",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.458824668021407,
+          "line": "PP 4096 16384 1458.1 2809.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.7579682820360176,
+          "line": "PP 8192 16384 2757.3 2971.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.097220922994893,
+          "line": "PP 12288 16384 4096.6 2999.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.978997716039885,
+          "line": "PP 13715 16384 4978.3 2754.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.865881438017823,
+          "line": "PP 16383 16384 7865.2 2083.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.89660985203227,
+          "line": "PP 16384 16384 7896.0 2075.0 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 69.38700851798058,
+      "done_elapsed_s": 97.31446854799287,
+      "requested_pause_s": 0.0,
+      "purpose": "isolated_prefill_diagnostic",
+      "dispatch_write_ms": 0.04986400017514825,
+      "client_gap_since_previous_done_ms": 0.0901099992915988,
+      "wall_minus_native_ms": 0.660030012299103,
+      "first_request": false,
+      "included_in_profiler": true,
+      "classification": "slow_band",
+      "mode": "cpu0",
+      "native_stat": {
+        "tok_s": "102.24",
+        "ms_tok": "9.78",
+        "vram_hit": "0.6896",
+        "ram_fetch": "0.356",
+        "disk": "0.000",
+        "promo": "0.356",
+        "vram_used": "6671",
+        "vram_slots": "6800",
+        "ram_used": "8689",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.001",
+        "miss_ms": "0.000",
+        "lane": "81.333",
+        "lane_ms": "2.523",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "8.62",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.004",
+        "spec_acc": "1616",
+        "spec_offered": "1814",
+        "spec_rounds": "410"
+      }
+    },
+    {
+      "case": "cpu0-03",
+      "name": "trial-02",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "5e4c1f0aa3bf2804190cde8b4fc4de70fcba3a4a0e17ef54dac85d032e921fc7",
+      "prefill_tps": 2078.4756492064903,
+      "decode_tps": 102.24765100001,
+      "prefill_ms": 7882.7,
+      "decode_ms": 20029.8,
+      "ttft_s": 7.910452653013635,
+      "wall_s": 27.913163680990692,
+      "draft_accepted": 1602,
+      "draft_offered": 1823,
+      "reused": 0,
+      "done": "DONE 2048 16384 7882.7 20029.8 length 1602 1823 0 372176 544560 428",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.4544834200059995,
+          "line": "PP 4096 16384 1453.9 2817.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.7552618460031226,
+          "line": "PP 8192 16384 2754.6 2973.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.101708101981785,
+          "line": "PP 12288 16384 4101.1 2996.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.979276975966059,
+          "line": "PP 13715 16384 4978.7 2754.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.856950733985286,
+          "line": "PP 16383 16384 7856.4 2085.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.88326817296911,
+          "line": "PP 16384 16384 7882.7 2078.5 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 97.31455542100593,
+      "done_elapsed_s": 125.22771910199663,
+      "requested_pause_s": 0.0,
+      "purpose": "isolated_prefill_diagnostic",
+      "dispatch_write_ms": 0.0414879759773612,
+      "client_gap_since_previous_done_ms": 0.08687301306053996,
+      "wall_minus_native_ms": 0.6636809906922281,
+      "first_request": false,
+      "included_in_profiler": true,
+      "classification": "slow_band",
+      "mode": "cpu0",
+      "native_stat": {
+        "tok_s": "102.25",
+        "ms_tok": "9.78",
+        "vram_hit": "0.6834",
+        "ram_fetch": "0.279",
+        "disk": "0.000",
+        "promo": "0.278",
+        "vram_used": "6644",
+        "vram_slots": "6800",
+        "ram_used": "8716",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.001",
+        "miss_ms": "0.000",
+        "lane": "83.892",
+        "lane_ms": "2.509",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "10.30",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.612",
+        "spec_acc": "1602",
+        "spec_offered": "1823",
+        "spec_rounds": "428"
+      }
+    }
+  ],
+  "policy": {
+    "declared_at_utc": "2026-11-03T06:06:00.076210+00:00",
+    "default_max_processes": 6,
+    "default_stop": "Stop after both slow_band (all three prompts <2300 tok/s) and fast_band (all three >2500), else stop at six. Retain all.",
+    "cpu0_processes": 3,
+    "sequence": "Default CPU share diagnostics first, then CPU=0 ablation. CPU0 band labels are descriptive and are not a claim about an identical baseline.",
+    "settings": "All PROF=1 and VERBOSE=1, helperON/PROMOTE0/RESYNC0, same original trial-01 16K input repeated3 times,2K generation.",
+    "host_isolation": "Exclusive advisory lock plus per-process CPU/IO/RSS and GPU audits before Popen and through exit. Four preflight samples, three consecutive low global-NVMe-IO intervals. Stop only our own engine if contention is detected. No services/power/clocks/fan changes.",
+    "limitations": "Process-exit profiles include all three prompts including warm-up. Instrumented diagnostic, not clean performance/accuracy ranking. Two-second host audit cannot exclude all brief OS activity."
+  },
+  "temperature_maxima_c": {
+    "0": 55.0,
+    "1": 83.0
+  },
+  "thermal_flags": [],
+  "preservation": {
+    "source_pack_hashes_unchanged": true,
+    "model_sizes_and_mtimes_unchanged": true,
+    "running_user_services_unchanged": true,
+    "gpu_compute_apps_after": ""
+  },
+  "limitations": "Host audit samples same-user process CPU/IO/RSS and all GPU compute PIDs every ~2 seconds, with whole-NVMe settling checks before each case; it cannot exclude every short OS event. CPU0 changes the intended prompt baseline, so band labels are descriptive. Diagnostic profiling adds CUDA events and synchronization. Every process runs three identical 16K/2K requests; the exit profiler includes the first warm-up and all subsequent prefill work. Stage event intervals are accumulated GPU stream time, may include stream stalls, and are not a pure kernel breakdown or a sum of end-to-end request wall time. This is a state-finding diagnostic selected by a predeclared rule, not an unbiased frequency estimate or a clean speed/quality comparison. Output IDs can differ; no new numerical CHECK run."
+}

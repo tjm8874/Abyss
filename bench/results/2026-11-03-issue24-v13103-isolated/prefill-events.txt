@@ -1,0 +1,193 @@
+[default-01 / warmup-01]
+PP 4096 16384 1216.4 3367.3 0 0.0
+PP 8192 16384 2253.3 3635.6 0 0.0
+PP 12288 16384 3316.6 3705.0 0 0.0
+PP 13715 16384 3917.7 3500.8 0 0.0
+PP 16383 16384 6011.2 2725.4 0 0.0
+PP 16384 16384 6046.8 2709.6 0 0.0
+STAT tok_s=83.74 ms_tok=11.94 vram_hit=0.6367 ram_fetch=1.081 disk=0.000 promo=1.065 vram_used=6681 vram_slots=6800 ram_used=8678 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.004 miss_ms=0.000 lane=96.451 lane_ms=3.492 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=9.41 w_disk_ms=0.000 w_lane_ms=2.440 spec_acc=1601 spec_offered=1844 spec_rounds=429
+DONE 2048 16384 6046.8 24456.5 length 1601 1844 0 350087 549840 429
+ds4 dspark: thr 0.60: 429 windows (1844 drafted, 1601 accepted = 87%) and 18 single tokens; the repeats' windows 31 (70 drafted, 38 accepted); the drafter's steps 416, drafts kept 0..5: 18 12 28 28 28 302; 48.3 ms a window, 19.5 a single token, 2.84 a draft; 4.58 tokens a step
+glm stat: decode 11.94 ms/tok (83.74 tok/s) | vram hit 63.67% | ram fetches 1.08/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 1.07/tok | cpu lane 96.45/tok in 3.49 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6680/6800 ram 8679/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 79494 experts 165599 upload_bytes 29920296960 prepare_ms 1040.261 launch_ms 551.398 wait_ms 1188.478 fallbacks 0 window_calls 17071 columns 78814
+
+[default-01 / trial-01]
+PP 4096 16384 1135.0 3608.8 0 0.0
+PP 8192 16384 2200.9 3722.1 0 0.0
+PP 12288 16384 3296.3 3727.8 0 0.0
+PP 13715 16384 3929.6 3490.2 0 0.0
+PP 16383 16384 5962.7 2747.6 0 0.0
+PP 16384 16384 5992.9 2733.9 0 0.0
+STAT tok_s=100.18 ms_tok=9.98 vram_hit=0.6813 ram_fetch=0.358 disk=0.000 promo=0.358 vram_used=6674 vram_slots=6800 ram_used=8685 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.003 miss_ms=0.000 lane=83.778 lane_ms=2.598 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=10.49 w_disk_ms=0.000 w_lane_ms=2.705 spec_acc=1606 spec_offered=1811 spec_rounds=422
+DONE 2048 16384 5992.9 20443.3 length 1606 1811 0 368403 540720 422
+ds4 dspark: thr 0.60: 422 windows (1811 drafted, 1606 accepted = 89%) and 20 single tokens; the repeats' windows 9 (17 drafted, 5 accepted); the drafter's steps 433, drafts kept 0..5: 20 21 34 26 33 299; 44.5 ms a window, 16.4 a single token, 2.84 a draft; 4.63 tokens a step
+glm stat: decode 9.98 ms/tok (100.18 tok/s) | vram hit 68.13% | ram fetches 0.36/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.36/tok | cpu lane 83.78/tok in 2.60 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6672/6800 ram 8686/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 156114 experts 321081 upload_bytes 33083043840 prepare_ms 1150.328 launch_ms 1114.315 wait_ms 3082.586 fallbacks 0 window_calls 33762 columns 154665
+
+[default-01 / trial-02]
+PP 4096 16384 1143.0 3583.5 0 0.0
+PP 8192 16384 2227.4 3677.9 0 0.0
+PP 12288 16384 3335.4 3684.1 0 0.0
+PP 13715 16384 3977.3 3448.3 0 0.0
+PP 16383 16384 6025.2 2719.1 0 0.0
+PP 16384 16384 6049.7 2708.2 0 0.0
+STAT tok_s=102.91 ms_tok=9.72 vram_hit=0.6756 ram_fetch=0.258 disk=0.000 promo=0.260 vram_used=6630 vram_slots=6800 ram_used=8729 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.002 miss_ms=0.000 lane=85.270 lane_ms=2.502 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=9.13 w_disk_ms=0.000 w_lane_ms=2.286 spec_acc=1609 spec_offered=1811 spec_rounds=417
+DONE 2048 16384 6049.8 19900.1 length 1609 1811 0 364834 540000 417
+ds4 dspark: thr 0.60: 417 windows (1811 drafted, 1609 accepted = 89%) and 22 single tokens; the repeats' windows 22 (51 drafted, 28 accepted); the drafter's steps 417, drafts kept 0..5: 22 15 27 24 26 303; 44.0 ms a window, 14.9 a single token, 2.84 a draft; 4.67 tokens a step
+glm stat: decode 9.72 ms/tok (102.91 tok/s) | vram hit 67.56% | ram fetches 0.26/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.26/tok | cpu lane 85.27/tok in 2.50 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6629/6800 ram 8730/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 233521 experts 482081 upload_bytes 33852764160 prepare_ms 1177.159 launch_ms 1690.165 wait_ms 5218.291 fallbacks 0 window_calls 50289 columns 231234
+
+[default-01 process-exit profile, includes all three requests]
+glm prefill prof CUDA0 (49149 tokens, 17701 ms of stream time; waits on disk 0 ms, plan 28 ms host; disk experts used 0, read 0):
+  moe_staged        3292.0 ms   18.6%  (0.067 ms/token)
+  v41_attn          2473.2 ms   14.0%  (0.050 ms/token)
+  moe_resident      2128.5 ms   12.0%  (0.043 ms/token)
+  moe_prestaged     1902.1 ms   10.7%  (0.039 ms/token)
+  v41_index         1546.8 ms    8.7%  (0.031 ms/token)
+  v41_out           1264.3 ms    7.1%  (0.026 ms/token)
+  shexp             1094.6 ms    6.2%  (0.022 ms/token)
+  engram             934.1 ms    5.3%  (0.019 ms/token)
+  hc                 906.5 ms    5.1%  (0.018 ms/token)
+  plan               733.8 ms    4.1%  (0.015 ms/token)
+  v41_q              643.2 ms    3.6%  (0.013 ms/token)
+  moe_light          271.8 ms    1.5%  (0.006 ms/token)
+  v41_proj           196.7 ms    1.1%  (0.004 ms/token)
+  router             168.2 ms    1.0%  (0.003 ms/token)
+  combine            110.5 ms    0.6%  (0.002 ms/token)
+  route               33.6 ms    0.2%  (0.001 ms/token)
+  dsa                  0.8 ms    0.0%  (0.000 ms/token)
+
+[default-01 startup]
+glm fast: CUDA0 zero-copy token boundary: token_embd pinned (434 MB), the table edits and the token are read and written host-mapped
+glm prefill: CUDA0 deepseek41 attention projections batched
+glm prefill: CUDA0 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 2048), borrowing 3630 MB of the expert pool while a prompt runs (activations 1670, weight scratch 84, expert staging 130, prestage 1731: 160 experts); disk landing ring 96 experts (1038 MB pinned)
+glm fast: CUDA0 VRAM before the expert pool: 7.82 of 71.12 GB in use - dense weights 5.24, state/KV (32768 ctx) 0.00, activations 0.09, other (context, MTP, scratch, prompt path) 2.49
+glm fast: CUDA0 layers [0,40) expert pool 61.48 GB, 170-170 slots/layer (6800 total)
+glm fast: RAM tier 31.3 GB registered from an mmap, MADV_HUGEPAGE on 31.3 GB of it; the process now holds 31.3 GB in transparent huge pages (free 2 MB blocks before: 53.9 GB)
+glm fast: RAM tier 17.0 GB registered from an mmap, MADV_HUGEPAGE on 17.0 GB of it; the process now holds 48.2 GB in transparent huge pages (free 2 MB blocks before: 22.5 GB)
+glm fast: RAM tier 8.9 GB registered from an mmap, MADV_HUGEPAGE on 4.5 GB of it; the process now holds 52.8 GB in transparent huge pages (free 2 MB blocks before: 5.5 GB)
+glm fast: RAM tier 12.3 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 52.8 GB in transparent huge pages (free 2 MB blocks before: 1.0 GB)
+glm fast: RAM tier 2.5 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 52.8 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)
+glm fast: RAM tier 5.0 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 52.8 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)
+glm fast: RAM tier 6.9 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 52.8 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)
+glm fast: CUDA0 RAM tier 83.87 GB pinned, 9272 slots
+glm fast: CUDA0 warming the expert tiers 10% (14.9 of 149.1 GB, 2 s)
+glm fast: CUDA0 warming the expert tiers 20% (29.8 of 149.1 GB, 4 s)
+glm fast: CUDA0 warming the expert tiers 30% (44.8 of 149.1 GB, 7 s)
+glm fast: CUDA0 warming the expert tiers 40% (59.6 of 149.1 GB, 9 s)
+glm fast: CUDA0 warming the expert tiers 50% (74.5 of 149.1 GB, 11 s)
+glm fast: CUDA0 warming the expert tiers 60% (89.5 of 149.1 GB, 12 s)
+glm fast: CUDA0 warming the expert tiers 70% (104.3 of 149.1 GB, 14 s)
+glm fast: CUDA0 warming the expert tiers 80% (119.3 of 149.1 GB, 16 s)
+glm fast: CUDA0 warming the expert tiers 90% (134.2 of 149.1 GB, 18 s)
+glm fast: CUDA0 warming the expert tiers 100% (149.1 of 149.1 GB, 19 s)
+glm fast: CUDA0 tiers warm: 15360 experts (149.1 GB) in 19 s (7.74 GB/s)
+glm fast: CUDA0 CPU lane: 12 threads, an expert 0.155 ms on the CPU vs 0.342 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 1 1 2 3 4 4 5 6
+glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 174 experts leave VRAM (0 of them moved over colder ones)
+glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention
+glm prefill: a down matrix's MMQ over-read passes its slot (stride 9123840)
+glm prefill: 16383 tokens in 5952.6 ms (0.36 ms/token, 2752 tok/s) | staged experts: 73 vram, 4431 ram, 0 disk, 5958 on the host (25781 rows, 2583 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.70, 0.017 ms a CPU row), 4462 prestaged (3846 routed, 815247 rows) | rows resident 67.9% | plan 14.2 ms (cumulative)
+glm fast: dense GEMV tune for device 0 (sm_120, 110 CUs): Q6_K 4 warps a row (up to 4,096 blocks)
+glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 240 experts leave VRAM (154 of them moved over colder ones)
+glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention
+glm prefill: 16383 tokens in 5878.3 ms (0.36 ms/token, 2787 tok/s) | staged experts: 187 vram, 8404 ram, 0 disk, 11842 on the host (54279 rows, 5209 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.54, 0.018 ms a CPU row), 8917 prestaged (8283 routed, 2081389 rows) | rows resident 73.5% | plan 17.8 ms (cumulative)
+glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 221 experts leave VRAM (115 of them moved over colder ones)
+glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention
+glm prefill: 16383 tokens in 5948.2 ms (0.36 ms/token, 2754 tok/s) | staged experts: 307 vram, 12402 ram, 0 disk, 17573 on the host (82390 rows, 7887 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.51, 0.016 ms a CPU row), 13373 prestaged (12723 routed, 3360647 rows) | rows resident 75.5% | plan 28.4 ms (cumulative)
+
+[default-02 / warmup-01]
+PP 4096 16384 1225.4 3342.7 0 0.0
+PP 8192 16384 2267.8 3612.3 0 0.0
+PP 12288 16384 3339.6 3679.5 0 0.0
+PP 13715 16384 3940.2 3480.8 0 0.0
+PP 16383 16384 6045.9 2709.8 0 0.0
+PP 16384 16384 6080.5 2694.5 0 0.0
+STAT tok_s=87.13 ms_tok=11.48 vram_hit=0.6344 ram_fetch=1.054 disk=0.000 promo=1.040 vram_used=6687 vram_slots=6800 ram_used=8671 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.005 miss_ms=0.000 lane=93.507 lane_ms=3.402 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=9.26 w_disk_ms=0.000 w_lane_ms=2.487 spec_acc=1621 spec_offered=1781 spec_rounds=405
+DONE 2048 16384 6080.5 23506.4 length 1621 1781 0 336008 529680 405
+ds4 dspark: thr 0.60: 405 windows (1781 drafted, 1621 accepted = 91%) and 21 single tokens; the repeats' windows 5 (12 drafted, 2 accepted); the drafter's steps 421, drafts kept 0..5: 21 17 26 29 27 301; 49.0 ms a window, 18.6 a single token, 2.84 a draft; 4.81 tokens a step
+glm stat: decode 11.48 ms/tok (87.13 tok/s) | vram hit 63.44% | ram fetches 1.05/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 1.04/tok | cpu lane 93.51/tok in 3.40 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6680/6800 ram 8673/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 76700 experts 160657 upload_bytes 29920296960 prepare_ms 1040.442 launch_ms 542.745 wait_ms 1115.786 fallbacks 0 window_calls 16100 columns 75912
+
+[default-02 / trial-01]
+PP 4096 16384 1149.1 3564.7 0 0.0
+PP 8192 16384 2233.7 3667.4 0 0.0
+PP 12288 16384 3344.1 3674.5 0 0.0
+PP 13715 16384 3974.9 3450.4 0 0.0
+PP 16383 16384 6020.7 2721.1 0 0.0
+PP 16384 16384 6049.5 2708.3 0 0.0
+STAT tok_s=100.93 ms_tok=9.91 vram_hit=0.6814 ram_fetch=0.358 disk=0.000 promo=0.359 vram_used=6669 vram_slots=6800 ram_used=8689 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.004 miss_ms=0.000 lane=83.195 lane_ms=2.595 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=9.47 w_disk_ms=0.000 w_lane_ms=2.362 spec_acc=1596 spec_offered=1786 spec_rounds=431
+DONE 2048 16384 6049.5 20292.2 length 1596 1786 0 365995 537120 431
+ds4 dspark: thr 0.60: 431 windows (1786 drafted, 1596 accepted = 89%) and 21 single tokens; the repeats' windows 21 (37 drafted, 26 accepted); the drafter's steps 431, drafts kept 0..5: 21 31 27 29 38 285; 43.2 ms a window, 15.7 a single token, 2.85 a draft; 4.53 tokens a step
+glm stat: decode 9.91 ms/tok (100.93 tok/s) | vram hit 68.14% | ram fetches 0.36/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.36/tok | cpu lane 83.19/tok in 2.59 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6668/6800 ram 8691/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 152775 experts 314990 upload_bytes 33058713600 prepare_ms 1149.705 launch_ms 1118.030 wait_ms 3010.039 fallbacks 0 window_calls 33076 columns 151130
+
+[default-02 / trial-02]
+PP 4096 16384 1138.4 3598.1 0 0.0
+PP 8192 16384 2224.5 3682.7 0 0.0
+PP 12288 16384 3337.3 3682.0 0 0.0
+PP 13715 16384 3972.6 3452.4 0 0.0
+PP 16383 16384 6019.1 2721.8 0 0.0
+PP 16384 16384 6045.8 2710.0 0 0.0
+STAT tok_s=102.81 ms_tok=9.73 vram_hit=0.6778 ram_fetch=0.255 disk=0.000 promo=0.253 vram_used=6632 vram_slots=6800 ram_used=8728 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.002 miss_ms=0.000 lane=84.667 lane_ms=2.516 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=9.36 w_disk_ms=0.000 w_lane_ms=2.292 spec_acc=1590 spec_offered=1791 spec_rounds=435
+DONE 2048 16384 6045.8 19919.7 length 1590 1791 0 365835 539760 435
+ds4 dspark: thr 0.60: 435 windows (1791 drafted, 1590 accepted = 89%) and 23 single tokens; the repeats' windows 56 (117 drafted, 72 accepted); the drafter's steps 402, drafts kept 0..5: 23 16 27 26 24 286; 42.3 ms a window, 14.9 a single token, 2.85 a draft; 4.47 tokens a step
+glm stat: decode 9.73 ms/tok (102.81 tok/s) | vram hit 67.78% | ram fetches 0.25/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.25/tok | cpu lane 84.67/tok in 2.52 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6631/6800 ram 8728/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 230174 experts 474652 upload_bytes 33768161280 prepare_ms 1174.577 launch_ms 1667.879 wait_ms 5188.877 fallbacks 0 window_calls 50267 columns 227618
+
+[default-02 process-exit profile, includes all three requests]
+glm prefill prof CUDA0 (49149 tokens, 17791 ms of stream time; waits on disk 0 ms, plan 29 ms host; disk experts used 0, read 0):
+  moe_staged        3263.1 ms   18.3%  (0.066 ms/token)
+  v41_attn          2477.3 ms   13.9%  (0.050 ms/token)
+  moe_resident      2162.1 ms   12.2%  (0.044 ms/token)
+  moe_prestaged     1930.1 ms   10.8%  (0.039 ms/token)
+  v41_index         1549.9 ms    8.7%  (0.032 ms/token)
+  v41_out           1279.4 ms    7.2%  (0.026 ms/token)
+  shexp             1104.7 ms    6.2%  (0.022 ms/token)
+  engram             939.9 ms    5.3%  (0.019 ms/token)
+  hc                 910.2 ms    5.1%  (0.019 ms/token)
+  plan               727.8 ms    4.1%  (0.015 ms/token)
+  v41_q              653.5 ms    3.7%  (0.013 ms/token)
+  moe_light          276.8 ms    1.6%  (0.006 ms/token)
+  v41_proj           199.3 ms    1.1%  (0.004 ms/token)
+  router             169.8 ms    1.0%  (0.003 ms/token)
+  combine            112.4 ms    0.6%  (0.002 ms/token)
+  route               33.6 ms    0.2%  (0.001 ms/token)
+  dsa                  0.8 ms    0.0%  (0.000 ms/token)
+
+[default-02 startup]
+glm fast: CUDA0 zero-copy token boundary: token_embd pinned (434 MB), the table edits and the token are read and written host-mapped
+glm prefill: CUDA0 deepseek41 attention projections batched
+glm prefill: CUDA0 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 2048), borrowing 3630 MB of the expert pool while a prompt runs (activations 1670, weight scratch 84, expert staging 130, prestage 1731: 160 experts); disk landing ring 96 experts (1038 MB pinned)
+glm fast: CUDA0 VRAM before the expert pool: 7.82 of 71.12 GB in use - dense weights 5.24, state/KV (32768 ctx) 0.00, activations 0.09, other (context, MTP, scratch, prompt path) 2.49
+glm fast: CUDA0 layers [0,40) expert pool 61.48 GB, 170-170 slots/layer (6800 total)
+glm fast: RAM tier 31.3 GB registered from an mmap, MADV_HUGEPAGE on 31.3 GB of it; the process now holds 31.3 GB in transparent huge pages (free 2 MB blocks before: 54.0 GB)
+glm fast: RAM tier 17.0 GB registered from an mmap, MADV_HUGEPAGE on 17.0 GB of it; the process now holds 48.2 GB in transparent huge pages (free 2 MB blocks before: 22.6 GB)
+glm fast: RAM tier 8.9 GB registered from an mmap, MADV_HUGEPAGE on 4.5 GB of it; the process now holds 52.8 GB in transparent huge pages (free 2 MB blocks before: 5.5 GB)
+glm fast: RAM tier 12.3 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 52.8 GB in transparent huge pages (free 2 MB blocks before: 1.0 GB)
+glm fast: RAM tier 2.5 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 52.8 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)
+glm fast: RAM tier 5.0 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 52.8 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)
+glm fast: RAM tier 6.9 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 52.8 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)
+glm fast: CUDA0 RAM tier 83.87 GB pinned, 9272 slots
+glm fast: CUDA0 warming the expert tiers 10% (14.9 of 149.1 GB, 2 s)
+glm fast: CUDA0 warming the expert tiers 20% (29.8 of 149.1 GB, 4 s)
+glm fast: CUDA0 warming the expert tiers 30% (44.8 of 149.1 GB, 7 s)
+glm fast: CUDA0 warming the expert tiers 40% (59.6 of 149.1 GB, 9 s)
+glm fast: CUDA0 warming the expert tiers 50% (74.5 of 149.1 GB, 11 s)
+glm fast: CUDA0 warming the expert tiers 60% (89.5 of 149.1 GB, 12 s)
+glm fast: CUDA0 warming the expert tiers 70% (104.3 of 149.1 GB, 14 s)
+glm fast: CUDA0 warming the expert tiers 80% (119.3 of 149.1 GB, 16 s)
+glm fast: CUDA0 warming the expert tiers 90% (134.2 of 149.1 GB, 18 s)
+glm fast: CUDA0 warming the expert tiers 100% (149.1 of 149.1 GB, 19 s)
+glm fast: CUDA0 tiers warm: 15360 experts (149.1 GB) in 19 s (7.75 GB/s)
+glm fast: CUDA0 CPU lane: 12 threads, an expert 0.155 ms on the CPU vs 0.342 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 1 1 2 3 4 4 5 6
+glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 174 experts leave VRAM (0 of them moved over colder ones)
+glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention
+glm prefill: a down matrix's MMQ over-read passes its slot (stride 9123840)
+glm prefill: 16383 tokens in 5987.3 ms (0.37 ms/token, 2736 tok/s) | staged experts: 67 vram, 4428 ram, 0 disk, 5980 on the host (25949 rows, 2595 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.69, 0.016 ms a CPU row), 4462 prestaged (3836 routed, 814885 rows) | rows resident 67.9% | plan 14.6 ms (cumulative)
+glm fast: dense GEMV tune for device 0 (sm_120, 110 CUs): Q6_K 4 warps a row (up to 4,096 blocks)
+glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 237 experts leave VRAM (174 of them moved over colder ones)
+glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention
+glm prefill: 16383 tokens in 5935.3 ms (0.36 ms/token, 2760 tok/s) | staged experts: 179 vram, 8390 ram, 0 disk, 11797 on the host (54141 rows, 5241 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.52, 0.018 ms a CPU row), 8918 prestaged (8273 routed, 2088160 rows) | rows resident 73.5% | plan 24.9 ms (cumulative)
+glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 213 experts leave VRAM (94 of them moved over colder ones)
+glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention
+glm prefill: 16383 tokens in 5945.1 ms (0.36 ms/token, 2756 tok/s) | staged experts: 298 vram, 12319 ram, 0 disk, 17483 on the host (82435 rows, 7903 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.52, 0.016 ms a CPU row), 13373 prestaged (12711 routed, 3372577 rows) | rows resident 75.5% | plan 28.8 ms (cumulative)
