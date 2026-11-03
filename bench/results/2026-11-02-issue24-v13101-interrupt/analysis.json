@@ -1,0 +1,950 @@
+{
+  "version": "1.3.101",
+  "upstream_commit": "f6380df9d614f5ce8e11c446ff76c28a3834f0e6",
+  "engine_sha256": "35ea6bec3b722f8ed5f7a3d319d4ddb32852da7c60c2371a1f3665510d530e57",
+  "request_rows": [
+    {
+      "case": "back-to-back-r0",
+      "name": "warmup-01",
+      "input_tokens": 16384,
+      "output_tokens": 512,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "d5091371b920256a397eb4713095aea730df5e9f93ee2f02459c5f0e37d5931b",
+      "prefill_tps": 2676.9929578615424,
+      "decode_tps": 58.33760610721814,
+      "prefill_ms": 6120.3,
+      "decode_ms": 8776.5,
+      "ttft_s": 8.300491297006374,
+      "wall_s": 14.89766596298432,
+      "draft_accepted": 386,
+      "draft_offered": 452,
+      "reused": 0,
+      "done": "DONE 512 16384 6120.3 8776.5 length 386 452 0 79418 138720 113",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.2373141949938145,
+          "line": "PP 4096 16384 1236.6 3312.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.287542347010458,
+          "line": "PP 8192 16384 2286.8 3582.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.3603091400000267,
+          "line": "PP 12288 16384 3359.6 3657.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.970209207996959,
+          "line": "PP 13715 16384 3969.5 3455.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.079551631002687,
+          "line": "PP 16383 16384 6078.8 2695.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.121049888984999,
+          "line": "PP 16384 16384 6120.3 2677.0 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 35.120448909001425,
+      "done_elapsed_s": 50.018114871985745,
+      "requested_pause_s": 0.0,
+      "purpose": "interrupt_smoke",
+      "dispatch_write_ms": 0.04481399082578719,
+      "client_gap_since_previous_done_ms": null,
+      "wall_minus_native_ms": 0.8659629843205039,
+      "resync": 0,
+      "warmup": true,
+      "native_stat": {
+        "tok_s": "58.34",
+        "ms_tok": "17.14",
+        "vram_hit": "0.5725",
+        "ram_fetch": "2.232",
+        "disk": "0.000",
+        "promo": "2.162",
+        "vram_used": "6686",
+        "vram_slots": "6800",
+        "ram_used": "8669",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.012",
+        "miss_ms": "0.000",
+        "lane": "113.580",
+        "lane_ms": "4.923",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "10.02",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "3.486",
+        "spec_acc": "386",
+        "spec_offered": "452",
+        "spec_rounds": "113"
+      },
+      "glm_stat": "glm stat: decode 17.14 ms/tok (58.34 tok/s) | vram hit 57.25% | ram fetches 2.23/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 2.16/tok | cpu lane 113.58/tok in 4.92 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6680/6800 ram 8674/9272",
+      "helper_request_end": "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 20357 experts 44767 upload_bytes 29920296960 prepare_ms 1040.106 launch_ms 145.306 wait_ms 163.053 fallbacks 0 window_calls 4492 columns 19881"
+    },
+    {
+      "case": "back-to-back-r0",
+      "name": "trial-01",
+      "input_tokens": 16384,
+      "output_tokens": 512,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "efc40809610cfc8b048f738c3520a7003606e57e1647b595287b0189067f8ac7",
+      "prefill_tps": 2756.3002590760743,
+      "decode_tps": 90.7753133698562,
+      "prefill_ms": 5944.2,
+      "decode_ms": 5640.3,
+      "ttft_s": 6.024762293993263,
+      "wall_s": 11.58516917398083,
+      "draft_accepted": 385,
+      "draft_offered": 439,
+      "reused": 0,
+      "done": "DONE 512 16384 5944.2 5640.3 length 385 439 0 86622 135840 110",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.1166213749966118,
+          "line": "PP 4096 16384 1115.9 3670.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.1737411079811864,
+          "line": "PP 8192 16384 2173.1 3769.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.259813596989261,
+          "line": "PP 12288 16384 3259.1 3770.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.881824420997873,
+          "line": "PP 13715 16384 3881.1 3533.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.915967683977215,
+          "line": "PP 16383 16384 5915.3 2769.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.944822154997382,
+          "line": "PP 16384 16384 5944.1 2756.3 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 50.01821715501137,
+      "done_elapsed_s": 61.6033863289922,
+      "requested_pause_s": 0.0,
+      "purpose": "interrupt_smoke",
+      "dispatch_write_ms": 0.062266975874081254,
+      "client_gap_since_previous_done_ms": 0.10228302562609315,
+      "wall_minus_native_ms": 0.6691739808302373,
+      "resync": 0,
+      "warmup": false,
+      "native_stat": {
+        "tok_s": "90.78",
+        "ms_tok": "11.02",
+        "vram_hit": "0.6377",
+        "ram_fetch": "0.561",
+        "disk": "0.000",
+        "promo": "0.568",
+        "vram_used": "6618",
+        "vram_slots": "6800",
+        "ram_used": "8739",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.008",
+        "miss_ms": "0.000",
+        "lane": "95.561",
+        "lane_ms": "3.266",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "9.34",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.870",
+        "spec_acc": "385",
+        "spec_offered": "439",
+        "spec_rounds": "110"
+      },
+      "glm_stat": "glm stat: decode 11.02 ms/tok (90.78 tok/s) | vram hit 63.77% | ram fetches 0.56/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 0.57/tok | cpu lane 95.56/tok in 3.27 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6616/6800 ram 8742/9272",
+      "helper_request_end": "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 39975 experts 86939 upload_bytes 32198123520 prepare_ms 1119.399 launch_ms 291.954 wait_ms 505.661 fallbacks 0 window_calls 8838 columns 38877"
+    },
+    {
+      "case": "back-to-back-r0",
+      "name": "trial-02",
+      "input_tokens": 16384,
+      "output_tokens": 512,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "bb3f2322e0b8062cd7b5e1215115ab57d2931dbf7b957a121599f74c8ee28c67",
+      "prefill_tps": 2762.620982699895,
+      "decode_tps": 93.24179126222433,
+      "prefill_ms": 5930.6,
+      "decode_ms": 5491.1,
+      "ttft_s": 5.951629228016827,
+      "wall_s": 11.422351092012832,
+      "draft_accepted": 383,
+      "draft_offered": 447,
+      "reused": 0,
+      "done": "DONE 512 16384 5930.6 5491.1 length 383 447 0 89900 138240 114",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.1075663280207664,
+          "line": "PP 4096 16384 1106.9 3700.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.1588404070062097,
+          "line": "PP 8192 16384 2158.2 3795.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.2478558770089876,
+          "line": "PP 12288 16384 3247.2 3784.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.8784830430231523,
+          "line": "PP 13715 16384 3877.8 3536.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.907419187016785,
+          "line": "PP 16383 16384 5906.8 2773.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.931202963023679,
+          "line": "PP 16384 16384 5930.6 2762.6 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 61.603512987989234,
+      "done_elapsed_s": 73.02586408000207,
+      "requested_pause_s": 0.0,
+      "purpose": "interrupt_smoke",
+      "dispatch_write_ms": 0.049021997256204486,
+      "client_gap_since_previous_done_ms": 0.12665899703279138,
+      "wall_minus_native_ms": 0.6510920128312137,
+      "resync": 0,
+      "warmup": false,
+      "native_stat": {
+        "tok_s": "93.24",
+        "ms_tok": "10.72",
+        "vram_hit": "0.6503",
+        "ram_fetch": "0.309",
+        "disk": "0.000",
+        "promo": "0.311",
+        "vram_used": "6579",
+        "vram_slots": "6800",
+        "ram_used": "8781",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.002",
+        "miss_ms": "0.000",
+        "lane": "94.104",
+        "lane_ms": "3.031",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "8.99",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.643",
+        "spec_acc": "383",
+        "spec_offered": "447",
+        "spec_rounds": "114"
+      },
+      "glm_stat": "glm stat: decode 10.72 ms/tok (93.24 tok/s) | vram hit 65.03% | ram fetches 0.31/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.31/tok | cpu lane 94.10/tok in 3.03 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6579/6800 ram 8781/9272",
+      "helper_request_end": "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 59787 experts 129179 upload_bytes 32767027200 prepare_ms 1139.240 launch_ms 426.104 wait_ms 908.197 fallbacks 0 window_calls 13335 columns 58127"
+    },
+    {
+      "case": "back-to-back-r8192",
+      "name": "warmup-01",
+      "input_tokens": 16384,
+      "output_tokens": 512,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "d1fc44f80b7168505916d702cd7d1f427c050b58996b8e186243bbf0822a3781",
+      "prefill_tps": 2716.495614544128,
+      "decode_tps": 56.02608714682774,
+      "prefill_ms": 6031.3,
+      "decode_ms": 9138.6,
+      "ttft_s": 8.135710536007537,
+      "wall_s": 15.170684040000197,
+      "draft_accepted": 378,
+      "draft_offered": 470,
+      "reused": 0,
+      "done": "DONE 512 16384 6031.3 9138.6 length 378 470 0 84628 144960 125",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.2144932899973355,
+          "line": "PP 4096 16384 1213.7 3374.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.246682698983932,
+          "line": "PP 8192 16384 2245.9 3647.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.3071223899896722,
+          "line": "PP 12288 16384 3306.4 3716.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.9121135209861677,
+          "line": "PP 13715 16384 3911.4 3506.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.997651645011501,
+          "line": "PP 16383 16384 5996.9 2731.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.032042067003204,
+          "line": "PP 16384 16384 6031.3 2716.5 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 33.6152606359974,
+      "done_elapsed_s": 48.7859446759976,
+      "requested_pause_s": 0.0,
+      "purpose": "interrupt_smoke",
+      "dispatch_write_ms": 0.03633898450061679,
+      "client_gap_since_previous_done_ms": null,
+      "wall_minus_native_ms": 0.7840400001969101,
+      "resync": 8192,
+      "warmup": true,
+      "native_stat": {
+        "tok_s": "56.03",
+        "ms_tok": "17.85",
+        "vram_hit": "0.5838",
+        "ram_fetch": "2.605",
+        "disk": "0.000",
+        "promo": "2.537",
+        "vram_used": "6687",
+        "vram_slots": "6800",
+        "ram_used": "8659",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.020",
+        "miss_ms": "0.000",
+        "lane": "115.211",
+        "lane_ms": "5.282",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "12.45",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "4.516",
+        "spec_acc": "378",
+        "spec_offered": "470",
+        "spec_rounds": "125"
+      },
+      "glm_stat": "glm stat: decode 17.85 ms/tok (56.03 tok/s) | vram hit 58.38% | ram fetches 2.61/tok | disk 0.00 reads/tok in 0.02 waits/tok, 0.00 ms/tok | promotions 2.54/tok | cpu lane 115.21/tok in 5.28 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6680/6800 ram 8673/9272",
+      "helper_request_end": "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 20851 experts 44516 upload_bytes 29920296960 prepare_ms 1040.909 launch_ms 159.528 wait_ms 155.108 fallbacks 0 window_calls 4943 columns 20503"
+    },
+    {
+      "case": "back-to-back-r8192",
+      "name": "trial-01",
+      "input_tokens": 16384,
+      "output_tokens": 512,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "4dcbeb89241abc7b378e0b97e5bb357f7c921df933c23620a7040f1b9dc78ae6",
+      "prefill_tps": 2736.5045430251203,
+      "decode_tps": 88.44054446210185,
+      "prefill_ms": 5987.2,
+      "decode_ms": 5789.2,
+      "ttft_s": 6.08053135900991,
+      "wall_s": 11.784452271007467,
+      "draft_accepted": 381,
+      "draft_offered": 452,
+      "reused": 0,
+      "done": "DONE 512 16384 5987.2 5789.2 length 381 452 0 90646 139920 119",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.1465604190016165,
+          "line": "PP 4096 16384 1138.6 3597.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.210001330007799,
+          "line": "PP 8192 16384 2202.0 3720.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.314097263995791,
+          "line": "PP 12288 16384 3306.1 3716.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.9379020009946544,
+          "line": "PP 13715 16384 3929.9 3489.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.965898127993569,
+          "line": "PP 16383 16384 5957.9 2749.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.995206211984623,
+          "line": "PP 16384 16384 5987.2 2736.5 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 48.78602240199689,
+      "done_elapsed_s": 60.570474673004355,
+      "requested_pause_s": 0.0,
+      "purpose": "interrupt_smoke",
+      "dispatch_write_ms": 0.052077986765652895,
+      "client_gap_since_previous_done_ms": 0.07772599929012358,
+      "wall_minus_native_ms": 8.052271007467425,
+      "resync": 8192,
+      "warmup": false,
+      "native_stat": {
+        "tok_s": "88.44",
+        "ms_tok": "11.31",
+        "vram_hit": "0.6478",
+        "ram_fetch": "0.723",
+        "disk": "0.000",
+        "promo": "0.725",
+        "vram_used": "6641",
+        "vram_slots": "6800",
+        "ram_used": "8718",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.004",
+        "miss_ms": "0.000",
+        "lane": "95.512",
+        "lane_ms": "3.228",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "9.59",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.743",
+        "spec_acc": "381",
+        "spec_offered": "452",
+        "spec_rounds": "119"
+      },
+      "glm_stat": "glm stat: decode 11.31 ms/tok (88.44 tok/s) | vram hit 64.78% | ram fetches 0.72/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.72/tok | cpu lane 95.51/tok in 3.23 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6639/6800 ram 8719/9272",
+      "helper_request_end": "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 40837 experts 86786 upload_bytes 32355440640 prepare_ms 1125.664 launch_ms 292.454 wait_ms 533.421 fallbacks 0 window_calls 9625 columns 40054",
+      "preceding_resync": {
+        "promotions": 16,
+        "ms": 7.5,
+        "stopped_on_next_request": true,
+        "completion_elapsed_s": 48.79346375100431,
+        "line": "expert helper resync: 16 promotions in 7.5 ms (stopped: the next request)"
+      },
+      "preceding_resync_complete_before_send": false
+    },
+    {
+      "case": "back-to-back-r8192",
+      "name": "trial-02",
+      "input_tokens": 16384,
+      "output_tokens": 512,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "10a606bdea7a480b59c99a3f7b575f14c203f2c42cc3498a53e899aa445f6048",
+      "prefill_tps": 2743.193918896293,
+      "decode_tps": 94.72710453283996,
+      "prefill_ms": 5972.6,
+      "decode_ms": 5405.0,
+      "ttft_s": 6.00685389697901,
+      "wall_s": 11.38422801499837,
+      "draft_accepted": 384,
+      "draft_offered": 444,
+      "reused": 0,
+      "done": "DONE 512 16384 5972.6 5405.0 length 384 444 0 92632 137280 113",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.1344812719908077,
+          "line": "PP 4096 16384 1127.9 3631.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.205357193975942,
+          "line": "PP 8192 16384 2198.8 3725.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.3000639859819785,
+          "line": "PP 12288 16384 3293.5 3731.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.9263071629975457,
+          "line": "PP 13715 16384 3919.7 3499.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.95500663400162,
+          "line": "PP 16383 16384 5948.5 2754.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.9791364789998624,
+          "line": "PP 16384 16384 5972.6 2743.2 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 60.57055032500648,
+      "done_elapsed_s": 71.95477834000485,
+      "requested_pause_s": 0.0,
+      "purpose": "interrupt_smoke",
+      "dispatch_write_ms": 0.060744001530110836,
+      "client_gap_since_previous_done_ms": 0.07565200212411582,
+      "wall_minus_native_ms": 6.628014998370418,
+      "resync": 8192,
+      "warmup": false,
+      "native_stat": {
+        "tok_s": "94.73",
+        "ms_tok": "10.56",
+        "vram_hit": "0.6748",
+        "ram_fetch": "0.416",
+        "disk": "0.000",
+        "promo": "0.416",
+        "vram_used": "6617",
+        "vram_slots": "6800",
+        "ram_used": "8743",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.000",
+        "miss_ms": "0.000",
+        "lane": "86.787",
+        "lane_ms": "2.884",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "8.72",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.439",
+        "spec_acc": "384",
+        "spec_offered": "444",
+        "spec_rounds": "113"
+      },
+      "glm_stat": "glm stat: decode 10.56 ms/tok (94.73 tok/s) | vram hit 67.48% | ram fetches 0.42/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.42/tok | cpu lane 86.79/tok in 2.88 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6614/6800 ram 8743/9272",
+      "helper_request_end": "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 60048 experts 126000 upload_bytes 33131335680 prepare_ms 1152.723 launch_ms 434.937 wait_ms 941.709 fallbacks 0 window_calls 14065 columns 58713",
+      "preceding_resync": {
+        "promotions": 16,
+        "ms": 6.1,
+        "stopped_on_next_request": true,
+        "completion_elapsed_s": 60.5765562710003,
+        "line": "expert helper resync: 16 promotions in 6.1 ms (stopped: the next request)"
+      },
+      "preceding_resync_complete_before_send": false
+    }
+  ],
+  "interrupt_smoke": [
+    {
+      "case": "back-to-back-r0",
+      "resync": 0,
+      "requested_pause_s": 0.0,
+      "rows": [
+        {
+          "case": "back-to-back-r0",
+          "name": "warmup-01",
+          "input_tokens": 16384,
+          "output_tokens": 512,
+          "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+          "output_ids_sha256": "d5091371b920256a397eb4713095aea730df5e9f93ee2f02459c5f0e37d5931b",
+          "prefill_tps": 2676.9929578615424,
+          "decode_tps": 58.33760610721814,
+          "prefill_ms": 6120.3,
+          "decode_ms": 8776.5,
+          "ttft_s": 8.300491297006374,
+          "wall_s": 14.89766596298432,
+          "draft_accepted": 386,
+          "draft_offered": 452,
+          "reused": 0,
+          "done": "DONE 512 16384 6120.3 8776.5 length 386 452 0 79418 138720 113",
+          "prompt_progress": [
+            {
+              "client_elapsed_s": 1.2373141949938145,
+              "line": "PP 4096 16384 1236.6 3312.4 0 0.0"
+            },
+            {
+              "client_elapsed_s": 2.287542347010458,
+              "line": "PP 8192 16384 2286.8 3582.3 0 0.0"
+            },
+            {
+              "client_elapsed_s": 3.3603091400000267,
+              "line": "PP 12288 16384 3359.6 3657.6 0 0.0"
+            },
+            {
+              "client_elapsed_s": 3.970209207996959,
+              "line": "PP 13715 16384 3969.5 3455.1 0 0.0"
+            },
+            {
+              "client_elapsed_s": 6.079551631002687,
+              "line": "PP 16383 16384 6078.8 2695.1 0 0.0"
+            },
+            {
+              "client_elapsed_s": 6.121049888984999,
+              "line": "PP 16384 16384 6120.3 2677.0 0 0.0"
+            }
+          ],
+          "send_elapsed_s": 35.120448909001425,
+          "done_elapsed_s": 50.018114871985745,
+          "requested_pause_s": 0.0,
+          "purpose": "interrupt_smoke",
+          "dispatch_write_ms": 0.04481399082578719,
+          "client_gap_since_previous_done_ms": null,
+          "wall_minus_native_ms": 0.8659629843205039
+        },
+        {
+          "case": "back-to-back-r0",
+          "name": "trial-01",
+          "input_tokens": 16384,
+          "output_tokens": 512,
+          "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+          "output_ids_sha256": "efc40809610cfc8b048f738c3520a7003606e57e1647b595287b0189067f8ac7",
+          "prefill_tps": 2756.3002590760743,
+          "decode_tps": 90.7753133698562,
+          "prefill_ms": 5944.2,
+          "decode_ms": 5640.3,
+          "ttft_s": 6.024762293993263,
+          "wall_s": 11.58516917398083,
+          "draft_accepted": 385,
+          "draft_offered": 439,
+          "reused": 0,
+          "done": "DONE 512 16384 5944.2 5640.3 length 385 439 0 86622 135840 110",
+          "prompt_progress": [
+            {
+              "client_elapsed_s": 1.1166213749966118,
+              "line": "PP 4096 16384 1115.9 3670.5 0 0.0"
+            },
+            {
+              "client_elapsed_s": 2.1737411079811864,
+              "line": "PP 8192 16384 2173.1 3769.8 0 0.0"
+            },
+            {
+              "client_elapsed_s": 3.259813596989261,
+              "line": "PP 12288 16384 3259.1 3770.3 0 0.0"
+            },
+            {
+              "client_elapsed_s": 3.881824420997873,
+              "line": "PP 13715 16384 3881.1 3533.7 0 0.0"
+            },
+            {
+              "client_elapsed_s": 5.915967683977215,
+              "line": "PP 16383 16384 5915.3 2769.6 0 0.0"
+            },
+            {
+              "client_elapsed_s": 5.944822154997382,
+              "line": "PP 16384 16384 5944.1 2756.3 0 0.0"
+            }
+          ],
+          "send_elapsed_s": 50.01821715501137,
+          "done_elapsed_s": 61.6033863289922,
+          "requested_pause_s": 0.0,
+          "purpose": "interrupt_smoke",
+          "dispatch_write_ms": 0.062266975874081254,
+          "client_gap_since_previous_done_ms": 0.10228302562609315,
+          "wall_minus_native_ms": 0.6691739808302373
+        },
+        {
+          "case": "back-to-back-r0",
+          "name": "trial-02",
+          "input_tokens": 16384,
+          "output_tokens": 512,
+          "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+          "output_ids_sha256": "bb3f2322e0b8062cd7b5e1215115ab57d2931dbf7b957a121599f74c8ee28c67",
+          "prefill_tps": 2762.620982699895,
+          "decode_tps": 93.24179126222433,
+          "prefill_ms": 5930.6,
+          "decode_ms": 5491.1,
+          "ttft_s": 5.951629228016827,
+          "wall_s": 11.422351092012832,
+          "draft_accepted": 383,
+          "draft_offered": 447,
+          "reused": 0,
+          "done": "DONE 512 16384 5930.6 5491.1 length 383 447 0 89900 138240 114",
+          "prompt_progress": [
+            {
+              "client_elapsed_s": 1.1075663280207664,
+              "line": "PP 4096 16384 1106.9 3700.3 0 0.0"
+            },
+            {
+              "client_elapsed_s": 2.1588404070062097,
+              "line": "PP 8192 16384 2158.2 3795.8 0 0.0"
+            },
+            {
+              "client_elapsed_s": 3.2478558770089876,
+              "line": "PP 12288 16384 3247.2 3784.2 0 0.0"
+            },
+            {
+              "client_elapsed_s": 3.8784830430231523,
+              "line": "PP 13715 16384 3877.8 3536.8 0 0.0"
+            },
+            {
+              "client_elapsed_s": 5.907419187016785,
+              "line": "PP 16383 16384 5906.8 2773.6 0 0.0"
+            },
+            {
+              "client_elapsed_s": 5.931202963023679,
+              "line": "PP 16384 16384 5930.6 2762.6 0 0.0"
+            }
+          ],
+          "send_elapsed_s": 61.603512987989234,
+          "done_elapsed_s": 73.02586408000207,
+          "requested_pause_s": 0.0,
+          "purpose": "interrupt_smoke",
+          "dispatch_write_ms": 0.049021997256204486,
+          "client_gap_since_previous_done_ms": 0.12665899703279138,
+          "wall_minus_native_ms": 0.6510920128312137
+        }
+      ],
+      "resync_lines": [],
+      "helper_request_end": [
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 20357 experts 44767 upload_bytes 29920296960 prepare_ms 1040.106 launch_ms 145.306 wait_ms 163.053 fallbacks 0 window_calls 4492 columns 19881",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 39975 experts 86939 upload_bytes 32198123520 prepare_ms 1119.399 launch_ms 291.954 wait_ms 505.661 fallbacks 0 window_calls 8838 columns 38877",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 59787 experts 129179 upload_bytes 32767027200 prepare_ms 1139.240 launch_ms 426.104 wait_ms 908.197 fallbacks 0 window_calls 13335 columns 58127"
+      ],
+      "excluded_from_primary_performance": true,
+      "resync_events": []
+    },
+    {
+      "case": "back-to-back-r8192",
+      "resync": 8192,
+      "requested_pause_s": 0.0,
+      "rows": [
+        {
+          "case": "back-to-back-r8192",
+          "name": "warmup-01",
+          "input_tokens": 16384,
+          "output_tokens": 512,
+          "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+          "output_ids_sha256": "d1fc44f80b7168505916d702cd7d1f427c050b58996b8e186243bbf0822a3781",
+          "prefill_tps": 2716.495614544128,
+          "decode_tps": 56.02608714682774,
+          "prefill_ms": 6031.3,
+          "decode_ms": 9138.6,
+          "ttft_s": 8.135710536007537,
+          "wall_s": 15.170684040000197,
+          "draft_accepted": 378,
+          "draft_offered": 470,
+          "reused": 0,
+          "done": "DONE 512 16384 6031.3 9138.6 length 378 470 0 84628 144960 125",
+          "prompt_progress": [
+            {
+              "client_elapsed_s": 1.2144932899973355,
+              "line": "PP 4096 16384 1213.7 3374.7 0 0.0"
+            },
+            {
+              "client_elapsed_s": 2.246682698983932,
+              "line": "PP 8192 16384 2245.9 3647.5 0 0.0"
+            },
+            {
+              "client_elapsed_s": 3.3071223899896722,
+              "line": "PP 12288 16384 3306.4 3716.4 0 0.0"
+            },
+            {
+              "client_elapsed_s": 3.9121135209861677,
+              "line": "PP 13715 16384 3911.4 3506.4 0 0.0"
+            },
+            {
+              "client_elapsed_s": 5.997651645011501,
+              "line": "PP 16383 16384 5996.9 2731.9 0 0.0"
+            },
+            {
+              "client_elapsed_s": 6.032042067003204,
+              "line": "PP 16384 16384 6031.3 2716.5 0 0.0"
+            }
+          ],
+          "send_elapsed_s": 33.6152606359974,
+          "done_elapsed_s": 48.7859446759976,
+          "requested_pause_s": 0.0,
+          "purpose": "interrupt_smoke",
+          "dispatch_write_ms": 0.03633898450061679,
+          "client_gap_since_previous_done_ms": null,
+          "wall_minus_native_ms": 0.7840400001969101
+        },
+        {
+          "case": "back-to-back-r8192",
+          "name": "trial-01",
+          "input_tokens": 16384,
+          "output_tokens": 512,
+          "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+          "output_ids_sha256": "4dcbeb89241abc7b378e0b97e5bb357f7c921df933c23620a7040f1b9dc78ae6",
+          "prefill_tps": 2736.5045430251203,
+          "decode_tps": 88.44054446210185,
+          "prefill_ms": 5987.2,
+          "decode_ms": 5789.2,
+          "ttft_s": 6.08053135900991,
+          "wall_s": 11.784452271007467,
+          "draft_accepted": 381,
+          "draft_offered": 452,
+          "reused": 0,
+          "done": "DONE 512 16384 5987.2 5789.2 length 381 452 0 90646 139920 119",
+          "prompt_progress": [
+            {
+              "client_elapsed_s": 1.1465604190016165,
+              "line": "PP 4096 16384 1138.6 3597.5 0 0.0"
+            },
+            {
+              "client_elapsed_s": 2.210001330007799,
+              "line": "PP 8192 16384 2202.0 3720.2 0 0.0"
+            },
+            {
+              "client_elapsed_s": 3.314097263995791,
+              "line": "PP 12288 16384 3306.1 3716.8 0 0.0"
+            },
+            {
+              "client_elapsed_s": 3.9379020009946544,
+              "line": "PP 13715 16384 3929.9 3489.9 0 0.0"
+            },
+            {
+              "client_elapsed_s": 5.965898127993569,
+              "line": "PP 16383 16384 5957.9 2749.8 0 0.0"
+            },
+            {
+              "client_elapsed_s": 5.995206211984623,
+              "line": "PP 16384 16384 5987.2 2736.5 0 0.0"
+            }
+          ],
+          "send_elapsed_s": 48.78602240199689,
+          "done_elapsed_s": 60.570474673004355,
+          "requested_pause_s": 0.0,
+          "purpose": "interrupt_smoke",
+          "dispatch_write_ms": 0.052077986765652895,
+          "client_gap_since_previous_done_ms": 0.07772599929012358,
+          "wall_minus_native_ms": 8.052271007467425
+        },
+        {
+          "case": "back-to-back-r8192",
+          "name": "trial-02",
+          "input_tokens": 16384,
+          "output_tokens": 512,
+          "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+          "output_ids_sha256": "10a606bdea7a480b59c99a3f7b575f14c203f2c42cc3498a53e899aa445f6048",
+          "prefill_tps": 2743.193918896293,
+          "decode_tps": 94.72710453283996,
+          "prefill_ms": 5972.6,
+          "decode_ms": 5405.0,
+          "ttft_s": 6.00685389697901,
+          "wall_s": 11.38422801499837,
+          "draft_accepted": 384,
+          "draft_offered": 444,
+          "reused": 0,
+          "done": "DONE 512 16384 5972.6 5405.0 length 384 444 0 92632 137280 113",
+          "prompt_progress": [
+            {
+              "client_elapsed_s": 1.1344812719908077,
+              "line": "PP 4096 16384 1127.9 3631.4 0 0.0"
+            },
+            {
+              "client_elapsed_s": 2.205357193975942,
+              "line": "PP 8192 16384 2198.8 3725.7 0 0.0"
+            },
+            {
+              "client_elapsed_s": 3.3000639859819785,
+              "line": "PP 12288 16384 3293.5 3731.0 0 0.0"
+            },
+            {
+              "client_elapsed_s": 3.9263071629975457,
+              "line": "PP 13715 16384 3919.7 3499.0 0 0.0"
+            },
+            {
+              "client_elapsed_s": 5.95500663400162,
+              "line": "PP 16383 16384 5948.5 2754.2 0 0.0"
+            },
+            {
+              "client_elapsed_s": 5.9791364789998624,
+              "line": "PP 16384 16384 5972.6 2743.2 0 0.0"
+            }
+          ],
+          "send_elapsed_s": 60.57055032500648,
+          "done_elapsed_s": 71.95477834000485,
+          "requested_pause_s": 0.0,
+          "purpose": "interrupt_smoke",
+          "dispatch_write_ms": 0.060744001530110836,
+          "client_gap_since_previous_done_ms": 0.07565200212411582,
+          "wall_minus_native_ms": 6.628014998370418
+        }
+      ],
+      "resync_lines": [
+        "expert helper resync: 16 promotions in 7.5 ms (stopped: the next request)",
+        "expert helper resync: 16 promotions in 6.1 ms (stopped: the next request)",
+        "expert helper resync: 826 promotions in 539.5 ms"
+      ],
+      "helper_request_end": [
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 20851 experts 44516 upload_bytes 29920296960 prepare_ms 1040.909 launch_ms 159.528 wait_ms 155.108 fallbacks 0 window_calls 4943 columns 20503",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 40837 experts 86786 upload_bytes 32355440640 prepare_ms 1125.664 launch_ms 292.454 wait_ms 533.421 fallbacks 0 window_calls 9625 columns 40054",
+        "expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 60048 experts 126000 upload_bytes 33131335680 prepare_ms 1152.723 launch_ms 434.937 wait_ms 941.709 fallbacks 0 window_calls 14065 columns 58713"
+      ],
+      "excluded_from_primary_performance": true,
+      "resync_events": [
+        {
+          "promotions": 16,
+          "ms": 7.5,
+          "stopped_on_next_request": true,
+          "completion_elapsed_s": 48.79346375100431,
+          "line": "expert helper resync: 16 promotions in 7.5 ms (stopped: the next request)"
+        },
+        {
+          "promotions": 16,
+          "ms": 6.1,
+          "stopped_on_next_request": true,
+          "completion_elapsed_s": 60.5765562710003,
+          "line": "expert helper resync: 16 promotions in 6.1 ms (stopped: the next request)"
+        },
+        {
+          "promotions": 826,
+          "ms": 539.5,
+          "stopped_on_next_request": false,
+          "completion_elapsed_s": 72.49433873000089,
+          "line": "expert helper resync: 826 promotions in 539.5 ms"
+        }
+      ]
+    }
+  ],
+  "previous_v1399_smoke": [
+    {
+      "version": "1.3.99",
+      "resync": 0,
+      "resync_lines": [],
+      "transitions": [
+        {
+          "name": "trial-01",
+          "client_gap_since_previous_done_ms": 0.08024999988265336,
+          "wall_minus_native_ms": 0.5921520266219886,
+          "prefill_tps": 2736.6416676410163,
+          "decode_tps": 89.68295673497985,
+          "wall_s": 11.696492152026622
+        },
+        {
+          "name": "trial-02",
+          "client_gap_since_previous_done_ms": 0.07609298336319625,
+          "wall_minus_native_ms": 0.725964994635433,
+          "prefill_tps": 2735.1340522854,
+          "decode_tps": 93.30636196307837,
+          "wall_s": 11.478225964994635
+        }
+      ]
+    },
+    {
+      "version": "1.3.99",
+      "resync": 8192,
+      "resync_lines": [
+        "expert helper resync: 120 promotions in 42.9 ms (stopped: the next request)",
+        "expert helper resync: 120 promotions in 41.8 ms (stopped: the next request)",
+        "expert helper resync: 892 promotions in 583.2 ms"
+      ],
+      "transitions": [
+        {
+          "name": "trial-01",
+          "client_gap_since_previous_done_ms": 0.07335800910368562,
+          "wall_minus_native_ms": 43.20062700733524,
+          "prefill_tps": 2720.2390835131996,
+          "decode_tps": 92.41376820749778,
+          "wall_s": 11.606500627007335
+        },
+        {
+          "name": "trial-02",
+          "client_gap_since_previous_done_ms": 0.07271597860381007,
+          "wall_minus_native_ms": 42.16321400180459,
+          "prefill_tps": 2739.1580566422576,
+          "decode_tps": 95.44937640983575,
+          "wall_s": 11.387663214001805
+        }
+      ]
+    }
+  ],
+  "temperature_maxima_c": {
+    "0": 44.0,
+    "1": 73.0
+  },
+  "thermal_flags": [],
+  "preservation": {
+    "source_pack_hashes_unchanged": true,
+    "model_sizes_and_mtimes_unchanged": true,
+    "running_user_services_unchanged": true,
+    "gpu_compute_apps_after": ""
+  },
+  "sampling": "One fresh process per RESYNC mode, three identical 16K/512 requests. First request is warm-up; two subsequent transitions per mode. Send immediately after DONE, before metrics I/O; timer starts before write/flush. Final post-DONE resync drains before QUIT. Six requests total. Historical v1.3.99 smoke is a previously collected reference, not a simultaneous randomized version A/B.",
+  "limitations": "Interruption smoke only, not a repeated 16K/2K performance comparison or a full-model accuracy test. No new numerical CHECK run. Output IDs may differ across modes or repeated processes. Startup tier records included; no dedicated startup investigation."
+}
