@@ -1,0 +1,1750 @@
+{
+  "version": "1.3.102",
+  "commit": "e4eaf01f089a3e7fb2621720fac17e5cb241c223",
+  "engine_sha256": "42ac81a4724fe30b7e6bc08b5d5b44c0c1025d5cb5d28ee5302f11a6380422d0",
+  "pair_found": true,
+  "selected": {
+    "slow": "profile-01",
+    "fast": "profile-04"
+  },
+  "profiles": [
+    {
+      "case": "profile-01",
+      "classification": "slow",
+      "profile_tokens": 49149,
+      "stream_ms_rounded": 23969.0,
+      "stream_ms_sum_stages": 23969.1,
+      "disk_wait_ms": 0.0,
+      "plan_host_ms": 18.0,
+      "disk_experts_used": 0,
+      "disk_experts_read": 0,
+      "stages": {
+        "moe_staged": {
+          "ms": 9449.8,
+          "percent": 39.4,
+          "ms_per_reported_token": 0.192
+        },
+        "v41_attn": {
+          "ms": 2474.1,
+          "percent": 10.3,
+          "ms_per_reported_token": 0.05
+        },
+        "moe_resident": {
+          "ms": 2057.5,
+          "percent": 8.6,
+          "ms_per_reported_token": 0.042
+        },
+        "moe_prestaged": {
+          "ms": 1848.9,
+          "percent": 7.7,
+          "ms_per_reported_token": 0.038
+        },
+        "v41_index": {
+          "ms": 1546.9,
+          "percent": 6.5,
+          "ms_per_reported_token": 0.031
+        },
+        "v41_out": {
+          "ms": 1261.4,
+          "percent": 5.3,
+          "ms_per_reported_token": 0.026
+        },
+        "engram": {
+          "ms": 1215.2,
+          "percent": 5.1,
+          "ms_per_reported_token": 0.025
+        },
+        "shexp": {
+          "ms": 1105.6,
+          "percent": 4.6,
+          "ms_per_reported_token": 0.022
+        },
+        "hc": {
+          "ms": 955.3,
+          "percent": 4.0,
+          "ms_per_reported_token": 0.019
+        },
+        "v41_q": {
+          "ms": 643.4,
+          "percent": 2.7,
+          "ms_per_reported_token": 0.013
+        },
+        "plan": {
+          "ms": 618.6,
+          "percent": 2.6,
+          "ms_per_reported_token": 0.013
+        },
+        "moe_light": {
+          "ms": 269.2,
+          "percent": 1.1,
+          "ms_per_reported_token": 0.005
+        },
+        "v41_proj": {
+          "ms": 229.7,
+          "percent": 1.0,
+          "ms_per_reported_token": 0.005
+        },
+        "router": {
+          "ms": 162.5,
+          "percent": 0.7,
+          "ms_per_reported_token": 0.003
+        },
+        "combine": {
+          "ms": 102.7,
+          "percent": 0.4,
+          "ms_per_reported_token": 0.002
+        },
+        "route": {
+          "ms": 28.0,
+          "percent": 0.1,
+          "ms_per_reported_token": 0.001
+        },
+        "dsa": {
+          "ms": 0.3,
+          "percent": 0.0,
+          "ms_per_reported_token": 0.0
+        }
+      },
+      "prefill_tps_all_three": [
+        1941.09423500699,
+        1995.3720618682255,
+        2076.368383033191
+      ],
+      "native_prompt_ms_all_three": [
+        8440.6,
+        8211.0,
+        7890.7
+      ],
+      "native_decode_tps_all_three": [
+        54.4119366185957,
+        75.0073249340756,
+        94.75909997362662
+      ],
+      "startup_lines": [
+        "glm fast: CUDA0 zero-copy token boundary: token_embd pinned (434 MB), the table edits and the token are read and written host-mapped",
+        "glm prefill: CUDA0 deepseek41 attention projections batched",
+        "glm prefill: CUDA0 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 2048), borrowing 3630 MB of the expert pool while a prompt runs (activations 1670, weight scratch 84, expert staging 130, prestage 1731: 160 experts); disk landing ring 96 experts (1038 MB pinned)",
+        "glm fast: CUDA0 VRAM before the expert pool: 7.82 of 71.12 GB in use - dense weights 5.24, state/KV (32768 ctx) 0.00, activations 0.09, other (context, MTP, scratch, prompt path) 2.49",
+        "glm fast: CUDA0 layers [0,40) expert pool 61.48 GB, 170-170 slots/layer (6800 total)",
+        "glm fast: RAM tier 31.3 GB registered from an mmap, MADV_HUGEPAGE on 20.4 GB of it; the process now holds 20.4 GB in transparent huge pages (free 2 MB blocks before: 21.4 GB)",
+        "glm fast: RAM tier 17.0 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 20.4 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)",
+        "glm fast: RAM tier 8.9 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 20.4 GB in transparent huge pages (free 2 MB blocks before: 0.8 GB)",
+        "glm fast: RAM tier 12.3 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 20.4 GB in transparent huge pages (free 2 MB blocks before: 0.7 GB)",
+        "glm fast: RAM tier 2.5 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 20.4 GB in transparent huge pages (free 2 MB blocks before: 0.7 GB)",
+        "glm fast: RAM tier 5.0 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 20.4 GB in transparent huge pages (free 2 MB blocks before: 0.7 GB)",
+        "glm fast: RAM tier 6.9 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 20.4 GB in transparent huge pages (free 2 MB blocks before: 0.6 GB)",
+        "glm fast: CUDA0 RAM tier 83.87 GB pinned, 9272 slots",
+        "glm fast: CUDA0 warming the expert tiers 10% (14.9 of 149.1 GB, 2 s)",
+        "glm fast: CUDA0 warming the expert tiers 20% (29.8 of 149.1 GB, 5 s)",
+        "glm fast: CUDA0 warming the expert tiers 30% (44.8 of 149.1 GB, 7 s)",
+        "glm fast: CUDA0 warming the expert tiers 40% (59.6 of 149.1 GB, 9 s)",
+        "glm fast: CUDA0 warming the expert tiers 50% (74.5 of 149.1 GB, 11 s)",
+        "glm fast: CUDA0 warming the expert tiers 60% (89.5 of 149.1 GB, 13 s)",
+        "glm fast: CUDA0 warming the expert tiers 70% (104.3 of 149.1 GB, 15 s)",
+        "glm fast: CUDA0 warming the expert tiers 80% (119.3 of 149.1 GB, 17 s)",
+        "glm fast: CUDA0 warming the expert tiers 90% (134.2 of 149.1 GB, 18 s)",
+        "glm fast: CUDA0 warming the expert tiers 100% (149.1 of 149.1 GB, 21 s)",
+        "glm fast: CUDA0 tiers warm: 15360 experts (149.1 GB) in 21 s (7.19 GB/s)",
+        "glm fast: CUDA0 CPU lane: 12 threads, an expert 0.923 ms on the CPU vs 0.363 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 0 0 1 1 1 1 2 2",
+        "glm prefill: a down matrix's MMQ over-read passes its slot (stride 9123840)",
+        "glm fast: dense GEMV tune for device 0 (sm_120, 110 CUs): Q6_K 4 warps a row (up to 4,096 blocks)",
+        "glm prefill prof CUDA0 (49149 tokens, 23969 ms of stream time; waits on disk 0 ms, plan 18 ms host; disk experts used 0, read 0):",
+        "glm fast CPU lane CUDA0: 2174 verify-window calls of 2.23 columns each, 1.98 experts read for 2.23 uses"
+      ]
+    },
+    {
+      "case": "profile-02",
+      "classification": "slow",
+      "profile_tokens": 49149,
+      "stream_ms_rounded": 23512.0,
+      "stream_ms_sum_stages": 23511.6,
+      "disk_wait_ms": 0.0,
+      "plan_host_ms": 8.0,
+      "disk_experts_used": 0,
+      "disk_experts_read": 0,
+      "stages": {
+        "moe_staged": {
+          "ms": 9343.8,
+          "percent": 39.7,
+          "ms_per_reported_token": 0.19
+        },
+        "v41_attn": {
+          "ms": 2477.6,
+          "percent": 10.5,
+          "ms_per_reported_token": 0.05
+        },
+        "moe_resident": {
+          "ms": 2196.8,
+          "percent": 9.3,
+          "ms_per_reported_token": 0.045
+        },
+        "moe_prestaged": {
+          "ms": 1788.6,
+          "percent": 7.6,
+          "ms_per_reported_token": 0.036
+        },
+        "v41_index": {
+          "ms": 1549.7,
+          "percent": 6.6,
+          "ms_per_reported_token": 0.032
+        },
+        "v41_out": {
+          "ms": 1270.2,
+          "percent": 5.4,
+          "ms_per_reported_token": 0.026
+        },
+        "shexp": {
+          "ms": 1089.9,
+          "percent": 4.6,
+          "ms_per_reported_token": 0.022
+        },
+        "engram": {
+          "ms": 923.0,
+          "percent": 3.9,
+          "ms_per_reported_token": 0.019
+        },
+        "hc": {
+          "ms": 920.0,
+          "percent": 3.9,
+          "ms_per_reported_token": 0.019
+        },
+        "v41_q": {
+          "ms": 649.8,
+          "percent": 2.8,
+          "ms_per_reported_token": 0.013
+        },
+        "plan": {
+          "ms": 530.6,
+          "percent": 2.3,
+          "ms_per_reported_token": 0.011
+        },
+        "moe_light": {
+          "ms": 274.0,
+          "percent": 1.2,
+          "ms_per_reported_token": 0.006
+        },
+        "v41_proj": {
+          "ms": 203.7,
+          "percent": 0.9,
+          "ms_per_reported_token": 0.004
+        },
+        "router": {
+          "ms": 163.7,
+          "percent": 0.7,
+          "ms_per_reported_token": 0.003
+        },
+        "combine": {
+          "ms": 101.9,
+          "percent": 0.4,
+          "ms_per_reported_token": 0.002
+        },
+        "route": {
+          "ms": 28.0,
+          "percent": 0.1,
+          "ms_per_reported_token": 0.001
+        },
+        "dsa": {
+          "ms": 0.3,
+          "percent": 0.0,
+          "ms_per_reported_token": 0.0
+        }
+      },
+      "prefill_tps_all_three": [
+        2018.5543385858784,
+        2066.7036681971845,
+        2082.8619010691446
+      ],
+      "native_prompt_ms_all_three": [
+        8116.7,
+        7927.6,
+        7866.1
+      ],
+      "native_decode_tps_all_three": [
+        80.58423570888944,
+        101.04498672797781,
+        101.6377171215881
+      ],
+      "startup_lines": [
+        "glm fast: CUDA0 zero-copy token boundary: token_embd pinned (434 MB), the table edits and the token are read and written host-mapped",
+        "glm prefill: CUDA0 deepseek41 attention projections batched",
+        "glm prefill: CUDA0 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 2048), borrowing 3630 MB of the expert pool while a prompt runs (activations 1670, weight scratch 84, expert staging 130, prestage 1731: 160 experts); disk landing ring 96 experts (1038 MB pinned)",
+        "glm fast: CUDA0 VRAM before the expert pool: 7.82 of 71.12 GB in use - dense weights 5.24, state/KV (32768 ctx) 0.00, activations 0.09, other (context, MTP, scratch, prompt path) 2.49",
+        "glm fast: CUDA0 layers [0,40) expert pool 61.48 GB, 170-170 slots/layer (6800 total)",
+        "glm fast: RAM tier 31.3 GB registered from an mmap, MADV_HUGEPAGE on 22.4 GB of it; the process now holds 22.4 GB in transparent huge pages (free 2 MB blocks before: 23.4 GB)",
+        "glm fast: RAM tier 17.0 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 22.4 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)",
+        "glm fast: RAM tier 8.9 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 22.4 GB in transparent huge pages (free 2 MB blocks before: 0.8 GB)",
+        "glm fast: RAM tier 12.3 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 22.4 GB in transparent huge pages (free 2 MB blocks before: 0.7 GB)",
+        "glm fast: RAM tier 2.5 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 22.4 GB in transparent huge pages (free 2 MB blocks before: 0.7 GB)",
+        "glm fast: RAM tier 5.0 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 22.4 GB in transparent huge pages (free 2 MB blocks before: 0.7 GB)",
+        "glm fast: RAM tier 6.9 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 22.4 GB in transparent huge pages (free 2 MB blocks before: 0.6 GB)",
+        "glm fast: CUDA0 RAM tier 83.87 GB pinned, 9272 slots",
+        "glm fast: CUDA0 warming the expert tiers 10% (14.9 of 149.1 GB, 2 s)",
+        "glm fast: CUDA0 warming the expert tiers 20% (29.8 of 149.1 GB, 5 s)",
+        "glm fast: CUDA0 warming the expert tiers 30% (44.8 of 149.1 GB, 7 s)",
+        "glm fast: CUDA0 warming the expert tiers 40% (59.6 of 149.1 GB, 9 s)",
+        "glm fast: CUDA0 warming the expert tiers 50% (74.5 of 149.1 GB, 11 s)",
+        "glm fast: CUDA0 warming the expert tiers 60% (89.5 of 149.1 GB, 13 s)",
+        "glm fast: CUDA0 warming the expert tiers 70% (104.3 of 149.1 GB, 15 s)",
+        "glm fast: CUDA0 warming the expert tiers 80% (119.3 of 149.1 GB, 17 s)",
+        "glm fast: CUDA0 warming the expert tiers 90% (134.2 of 149.1 GB, 18 s)",
+        "glm fast: CUDA0 warming the expert tiers 100% (149.1 of 149.1 GB, 20 s)",
+        "glm fast: CUDA0 tiers warm: 15360 experts (149.1 GB) in 20 s (7.35 GB/s)",
+        "glm fast: CUDA0 CPU lane: 12 threads, an expert 0.212 ms on the CPU vs 0.342 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 1 1 2 3 3 4 4 5",
+        "glm prefill: a down matrix's MMQ over-read passes its slot (stride 9123840)",
+        "glm fast: dense GEMV tune for device 0 (sm_120, 110 CUs): Q6_K 4 warps a row (up to 4,096 blocks)",
+        "glm prefill prof CUDA0 (49149 tokens, 23512 ms of stream time; waits on disk 0 ms, plan 8 ms host; disk experts used 0, read 0):",
+        "glm fast CPU lane CUDA0: 13651 verify-window calls of 2.59 columns each, 2.55 experts read for 3.00 uses"
+      ]
+    },
+    {
+      "case": "profile-03",
+      "classification": "slow",
+      "profile_tokens": 49149,
+      "stream_ms_rounded": 23429.0,
+      "stream_ms_sum_stages": 23429.3,
+      "disk_wait_ms": 0.0,
+      "plan_host_ms": 5.0,
+      "disk_experts_used": 0,
+      "disk_experts_read": 0,
+      "stages": {
+        "moe_staged": {
+          "ms": 9318.0,
+          "percent": 39.8,
+          "ms_per_reported_token": 0.19
+        },
+        "v41_attn": {
+          "ms": 2478.2,
+          "percent": 10.6,
+          "ms_per_reported_token": 0.05
+        },
+        "moe_resident": {
+          "ms": 2201.9,
+          "percent": 9.4,
+          "ms_per_reported_token": 0.045
+        },
+        "moe_prestaged": {
+          "ms": 1791.5,
+          "percent": 7.6,
+          "ms_per_reported_token": 0.036
+        },
+        "v41_index": {
+          "ms": 1549.8,
+          "percent": 6.6,
+          "ms_per_reported_token": 0.032
+        },
+        "v41_out": {
+          "ms": 1274.2,
+          "percent": 5.4,
+          "ms_per_reported_token": 0.026
+        },
+        "shexp": {
+          "ms": 1089.3,
+          "percent": 4.6,
+          "ms_per_reported_token": 0.022
+        },
+        "hc": {
+          "ms": 909.4,
+          "percent": 3.9,
+          "ms_per_reported_token": 0.019
+        },
+        "engram": {
+          "ms": 896.3,
+          "percent": 3.8,
+          "ms_per_reported_token": 0.018
+        },
+        "v41_q": {
+          "ms": 652.0,
+          "percent": 2.8,
+          "ms_per_reported_token": 0.013
+        },
+        "plan": {
+          "ms": 501.3,
+          "percent": 2.1,
+          "ms_per_reported_token": 0.01
+        },
+        "moe_light": {
+          "ms": 274.5,
+          "percent": 1.2,
+          "ms_per_reported_token": 0.006
+        },
+        "v41_proj": {
+          "ms": 199.0,
+          "percent": 0.8,
+          "ms_per_reported_token": 0.004
+        },
+        "router": {
+          "ms": 163.7,
+          "percent": 0.7,
+          "ms_per_reported_token": 0.003
+        },
+        "combine": {
+          "ms": 101.9,
+          "percent": 0.4,
+          "ms_per_reported_token": 0.002
+        },
+        "route": {
+          "ms": 28.0,
+          "percent": 0.1,
+          "ms_per_reported_token": 0.001
+        },
+        "dsa": {
+          "ms": 0.3,
+          "percent": 0.0,
+          "ms_per_reported_token": 0.0
+        }
+      },
+      "prefill_tps_all_three": [
+        2034.2686863670226,
+        2073.661561827617,
+        2082.491261518907
+      ],
+      "native_prompt_ms_all_three": [
+        8054.0,
+        7901.0,
+        7867.5
+      ],
+      "native_decode_tps_all_three": [
+        86.46238801685341,
+        103.43329865354895,
+        103.6023047465841
+      ],
+      "startup_lines": [
+        "glm fast: CUDA0 zero-copy token boundary: token_embd pinned (434 MB), the table edits and the token are read and written host-mapped",
+        "glm prefill: CUDA0 deepseek41 attention projections batched",
+        "glm prefill: CUDA0 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 2048), borrowing 3630 MB of the expert pool while a prompt runs (activations 1670, weight scratch 84, expert staging 130, prestage 1731: 160 experts); disk landing ring 96 experts (1038 MB pinned)",
+        "glm fast: CUDA0 VRAM before the expert pool: 7.82 of 71.12 GB in use - dense weights 5.24, state/KV (32768 ctx) 0.00, activations 0.09, other (context, MTP, scratch, prompt path) 2.49",
+        "glm fast: CUDA0 layers [0,40) expert pool 61.48 GB, 170-170 slots/layer (6800 total)",
+        "glm fast: RAM tier 31.3 GB registered from an mmap, MADV_HUGEPAGE on 24.1 GB of it; the process now holds 24.1 GB in transparent huge pages (free 2 MB blocks before: 25.1 GB)",
+        "glm fast: RAM tier 17.0 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 24.1 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)",
+        "glm fast: RAM tier 8.9 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 24.1 GB in transparent huge pages (free 2 MB blocks before: 0.8 GB)",
+        "glm fast: RAM tier 12.3 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 24.1 GB in transparent huge pages (free 2 MB blocks before: 0.8 GB)",
+        "glm fast: RAM tier 2.5 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 24.1 GB in transparent huge pages (free 2 MB blocks before: 0.7 GB)",
+        "glm fast: RAM tier 5.0 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 24.1 GB in transparent huge pages (free 2 MB blocks before: 0.7 GB)",
+        "glm fast: RAM tier 6.9 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 24.1 GB in transparent huge pages (free 2 MB blocks before: 0.7 GB)",
+        "glm fast: CUDA0 RAM tier 83.87 GB pinned, 9272 slots",
+        "glm fast: CUDA0 warming the expert tiers 10% (14.9 of 149.1 GB, 2 s)",
+        "glm fast: CUDA0 warming the expert tiers 20% (29.8 of 149.1 GB, 4 s)",
+        "glm fast: CUDA0 warming the expert tiers 30% (44.8 of 149.1 GB, 7 s)",
+        "glm fast: CUDA0 warming the expert tiers 40% (59.6 of 149.1 GB, 9 s)",
+        "glm fast: CUDA0 warming the expert tiers 50% (74.5 of 149.1 GB, 11 s)",
+        "glm fast: CUDA0 warming the expert tiers 60% (89.5 of 149.1 GB, 12 s)",
+        "glm fast: CUDA0 warming the expert tiers 70% (104.3 of 149.1 GB, 14 s)",
+        "glm fast: CUDA0 warming the expert tiers 80% (119.3 of 149.1 GB, 16 s)",
+        "glm fast: CUDA0 warming the expert tiers 90% (134.2 of 149.1 GB, 17 s)",
+        "glm fast: CUDA0 warming the expert tiers 100% (149.1 of 149.1 GB, 19 s)",
+        "glm fast: CUDA0 tiers warm: 15360 experts (149.1 GB) in 19 s (7.78 GB/s)",
+        "glm fast: CUDA0 CPU lane: 12 threads, an expert 0.169 ms on the CPU vs 0.342 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 1 1 2 3 3 4 5 5",
+        "glm prefill: a down matrix's MMQ over-read passes its slot (stride 9123840)",
+        "glm fast: dense GEMV tune for device 0 (sm_120, 110 CUs): Q6_K 4 warps a row (up to 4,096 blocks)",
+        "glm prefill prof CUDA0 (49149 tokens, 23429 ms of stream time; waits on disk 0 ms, plan 5 ms host; disk experts used 0, read 0):",
+        "glm fast CPU lane CUDA0: 13651 verify-window calls of 2.59 columns each, 2.55 experts read for 3.00 uses"
+      ]
+    },
+    {
+      "case": "profile-04",
+      "classification": "fast",
+      "profile_tokens": 49149,
+      "stream_ms_rounded": 17856.0,
+      "stream_ms_sum_stages": 17856.5,
+      "disk_wait_ms": 0.0,
+      "plan_host_ms": 30.0,
+      "disk_experts_used": 0,
+      "disk_experts_read": 0,
+      "stages": {
+        "moe_staged": {
+          "ms": 3294.6,
+          "percent": 18.5,
+          "ms_per_reported_token": 0.067
+        },
+        "v41_attn": {
+          "ms": 2480.4,
+          "percent": 13.9,
+          "ms_per_reported_token": 0.05
+        },
+        "moe_resident": {
+          "ms": 2207.6,
+          "percent": 12.4,
+          "ms_per_reported_token": 0.045
+        },
+        "moe_prestaged": {
+          "ms": 1915.1,
+          "percent": 10.7,
+          "ms_per_reported_token": 0.039
+        },
+        "v41_index": {
+          "ms": 1551.5,
+          "percent": 8.7,
+          "ms_per_reported_token": 0.032
+        },
+        "v41_out": {
+          "ms": 1285.2,
+          "percent": 7.2,
+          "ms_per_reported_token": 0.026
+        },
+        "shexp": {
+          "ms": 1107.1,
+          "percent": 6.2,
+          "ms_per_reported_token": 0.023
+        },
+        "engram": {
+          "ms": 935.9,
+          "percent": 5.2,
+          "ms_per_reported_token": 0.019
+        },
+        "hc": {
+          "ms": 908.6,
+          "percent": 5.1,
+          "ms_per_reported_token": 0.018
+        },
+        "plan": {
+          "ms": 727.5,
+          "percent": 4.1,
+          "ms_per_reported_token": 0.015
+        },
+        "v41_q": {
+          "ms": 657.0,
+          "percent": 3.7,
+          "ms_per_reported_token": 0.013
+        },
+        "moe_light": {
+          "ms": 272.7,
+          "percent": 1.5,
+          "ms_per_reported_token": 0.006
+        },
+        "v41_proj": {
+          "ms": 198.6,
+          "percent": 1.1,
+          "ms_per_reported_token": 0.004
+        },
+        "router": {
+          "ms": 169.8,
+          "percent": 1.0,
+          "ms_per_reported_token": 0.003
+        },
+        "combine": {
+          "ms": 110.5,
+          "percent": 0.6,
+          "ms_per_reported_token": 0.002
+        },
+        "route": {
+          "ms": 33.6,
+          "percent": 0.2,
+          "ms_per_reported_token": 0.001
+        },
+        "dsa": {
+          "ms": 0.8,
+          "percent": 0.0,
+          "ms_per_reported_token": 0.0
+        }
+      },
+      "prefill_tps_all_three": [
+        2683.3942054146128,
+        2699.532063533909,
+        2698.2872200263505
+      ],
+      "native_prompt_ms_all_three": [
+        6105.7,
+        6069.2,
+        6072.0
+      ],
+      "native_decode_tps_all_three": [
+        83.05317755455434,
+        97.48435157198277,
+        98.76400322140401
+      ],
+      "startup_lines": [
+        "glm fast: CUDA0 zero-copy token boundary: token_embd pinned (434 MB), the table edits and the token are read and written host-mapped",
+        "glm prefill: CUDA0 deepseek41 attention projections batched",
+        "glm prefill: CUDA0 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 2048), borrowing 3630 MB of the expert pool while a prompt runs (activations 1670, weight scratch 84, expert staging 130, prestage 1731: 160 experts); disk landing ring 96 experts (1038 MB pinned)",
+        "glm fast: CUDA0 VRAM before the expert pool: 7.82 of 71.12 GB in use - dense weights 5.24, state/KV (32768 ctx) 0.00, activations 0.09, other (context, MTP, scratch, prompt path) 2.49",
+        "glm fast: CUDA0 layers [0,40) expert pool 61.48 GB, 170-170 slots/layer (6800 total)",
+        "glm fast: RAM tier 31.3 GB registered from an mmap, MADV_HUGEPAGE on 24.6 GB of it; the process now holds 24.6 GB in transparent huge pages (free 2 MB blocks before: 25.6 GB)",
+        "glm fast: RAM tier 17.0 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 24.6 GB in transparent huge pages (free 2 MB blocks before: 1.0 GB)",
+        "glm fast: RAM tier 8.9 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 24.6 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)",
+        "glm fast: RAM tier 12.3 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 24.6 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)",
+        "glm fast: RAM tier 2.5 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 24.6 GB in transparent huge pages (free 2 MB blocks before: 0.8 GB)",
+        "glm fast: RAM tier 5.0 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 24.6 GB in transparent huge pages (free 2 MB blocks before: 0.8 GB)",
+        "glm fast: RAM tier 6.9 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 24.6 GB in transparent huge pages (free 2 MB blocks before: 0.8 GB)",
+        "glm fast: CUDA0 RAM tier 83.87 GB pinned, 9272 slots",
+        "glm fast: CUDA0 warming the expert tiers 10% (14.9 of 149.1 GB, 2 s)",
+        "glm fast: CUDA0 warming the expert tiers 20% (29.8 of 149.1 GB, 4 s)",
+        "glm fast: CUDA0 warming the expert tiers 30% (44.8 of 149.1 GB, 7 s)",
+        "glm fast: CUDA0 warming the expert tiers 40% (59.6 of 149.1 GB, 9 s)",
+        "glm fast: CUDA0 warming the expert tiers 50% (74.5 of 149.1 GB, 11 s)",
+        "glm fast: CUDA0 warming the expert tiers 60% (89.5 of 149.1 GB, 12 s)",
+        "glm fast: CUDA0 warming the expert tiers 70% (104.3 of 149.1 GB, 14 s)",
+        "glm fast: CUDA0 warming the expert tiers 80% (119.3 of 149.1 GB, 16 s)",
+        "glm fast: CUDA0 warming the expert tiers 90% (134.2 of 149.1 GB, 17 s)",
+        "glm fast: CUDA0 warming the expert tiers 100% (149.1 of 149.1 GB, 19 s)",
+        "glm fast: CUDA0 tiers warm: 15360 experts (149.1 GB) in 19 s (7.79 GB/s)",
+        "glm fast: CUDA0 CPU lane: 12 threads, an expert 0.155 ms on the CPU vs 0.342 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 1 1 2 3 4 4 5 6",
+        "glm prefill: a down matrix's MMQ over-read passes its slot (stride 9123840)",
+        "glm fast: dense GEMV tune for device 0 (sm_120, 110 CUs): Q6_K 4 warps a row (up to 4,096 blocks)",
+        "glm prefill prof CUDA0 (49149 tokens, 17856 ms of stream time; waits on disk 0 ms, plan 30 ms host; disk experts used 0, read 0):",
+        "glm fast CPU lane CUDA0: 14202 verify-window calls of 2.61 columns each, 2.60 experts read for 3.07 uses"
+      ]
+    }
+  ],
+  "comparison": {
+    "slow": "profile-01",
+    "fast": "profile-04",
+    "stream_delta_ms": 6112.5999999999985,
+    "stage_comparison": [
+      {
+        "stage": "moe_staged",
+        "slow_ms": 9449.8,
+        "fast_ms": 3294.6,
+        "delta_ms": 6155.199999999999,
+        "ratio": 2.8682692891398043,
+        "share_of_total_delta_percent": 100.69692111376503
+      },
+      {
+        "stage": "engram",
+        "slow_ms": 1215.2,
+        "fast_ms": 935.9,
+        "delta_ms": 279.30000000000007,
+        "ratio": 1.2984293193717278,
+        "share_of_total_delta_percent": 4.56925040081144
+      },
+      {
+        "stage": "hc",
+        "slow_ms": 955.3,
+        "fast_ms": 908.6,
+        "delta_ms": 46.69999999999993,
+        "ratio": 1.0513977547875852,
+        "share_of_total_delta_percent": 0.7639956810522518
+      },
+      {
+        "stage": "v41_proj",
+        "slow_ms": 229.7,
+        "fast_ms": 198.6,
+        "delta_ms": 31.099999999999994,
+        "ratio": 1.1565961732124874,
+        "share_of_total_delta_percent": 0.508785132349573
+      },
+      {
+        "stage": "dsa",
+        "slow_ms": 0.3,
+        "fast_ms": 0.8,
+        "delta_ms": -0.5,
+        "ratio": 0.37499999999999994,
+        "share_of_total_delta_percent": -0.008179825278932044
+      },
+      {
+        "stage": "shexp",
+        "slow_ms": 1105.6,
+        "fast_ms": 1107.1,
+        "delta_ms": -1.5,
+        "ratio": 0.9986451088429229,
+        "share_of_total_delta_percent": -0.024539475836796134
+      },
+      {
+        "stage": "moe_light",
+        "slow_ms": 269.2,
+        "fast_ms": 272.7,
+        "delta_ms": -3.5,
+        "ratio": 0.9871653832049871,
+        "share_of_total_delta_percent": -0.05725877695252431
+      },
+      {
+        "stage": "v41_index",
+        "slow_ms": 1546.9,
+        "fast_ms": 1551.5,
+        "delta_ms": -4.599999999999909,
+        "ratio": 0.9970351272961651,
+        "share_of_total_delta_percent": -0.07525439256617332
+      },
+      {
+        "stage": "route",
+        "slow_ms": 28.0,
+        "fast_ms": 33.6,
+        "delta_ms": -5.600000000000001,
+        "ratio": 0.8333333333333333,
+        "share_of_total_delta_percent": -0.09161404312403892
+      },
+      {
+        "stage": "v41_attn",
+        "slow_ms": 2474.1,
+        "fast_ms": 2480.4,
+        "delta_ms": -6.300000000000182,
+        "ratio": 0.9974600870827285,
+        "share_of_total_delta_percent": -0.10306579851454672
+      },
+      {
+        "stage": "router",
+        "slow_ms": 162.5,
+        "fast_ms": 169.8,
+        "delta_ms": -7.300000000000011,
+        "ratio": 0.9570082449941106,
+        "share_of_total_delta_percent": -0.11942544907240804
+      },
+      {
+        "stage": "combine",
+        "slow_ms": 102.7,
+        "fast_ms": 110.5,
+        "delta_ms": -7.799999999999997,
+        "ratio": 0.9294117647058824,
+        "share_of_total_delta_percent": -0.12760527435133984
+      },
+      {
+        "stage": "v41_q",
+        "slow_ms": 643.4,
+        "fast_ms": 657.0,
+        "delta_ms": -13.600000000000023,
+        "ratio": 0.9792998477929984,
+        "share_of_total_delta_percent": -0.22249124758695193
+      },
+      {
+        "stage": "v41_out",
+        "slow_ms": 1261.4,
+        "fast_ms": 1285.2,
+        "delta_ms": -23.799999999999955,
+        "ratio": 0.9814814814814815,
+        "share_of_total_delta_percent": -0.3893596832771645
+      },
+      {
+        "stage": "moe_prestaged",
+        "slow_ms": 1848.9,
+        "fast_ms": 1915.1,
+        "delta_ms": -66.19999999999982,
+        "ratio": 0.9654326144848834,
+        "share_of_total_delta_percent": -1.0830088669305995
+      },
+      {
+        "stage": "plan",
+        "slow_ms": 618.6,
+        "fast_ms": 727.5,
+        "delta_ms": -108.89999999999998,
+        "ratio": 0.8503092783505155,
+        "share_of_total_delta_percent": -1.781565945751399
+      },
+      {
+        "stage": "moe_resident",
+        "slow_ms": 2057.5,
+        "fast_ms": 2207.6,
+        "delta_ms": -150.0999999999999,
+        "ratio": 0.9320076100742889,
+        "share_of_total_delta_percent": -2.4555835487353983
+      }
+    ]
+  },
+  "request_rows": [
+    {
+      "case": "profile-01",
+      "name": "warmup-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "2fd1ec5e25f0fead81864658840af1fbe92f3cd77ef7bf426d4702f880458df1",
+      "prefill_tps": 1941.09423500699,
+      "decode_tps": 54.4119366185957,
+      "prefill_ms": 8440.6,
+      "decode_ms": 37638.8,
+      "ttft_s": 11.46230590500636,
+      "wall_s": 46.08500046399422,
+      "draft_accepted": 1614,
+      "draft_offered": 1791,
+      "reused": 0,
+      "done": "DONE 2048 16384 8440.6 37638.8 length 1614 1791 0 361613 534000 411",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.6751344809890725,
+          "line": "PP 4096 16384 1672.8 2448.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.0200376859866083,
+          "line": "PP 8192 16384 3015.3 2716.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.408204924024176,
+          "line": "PP 12288 16384 4406.5 2788.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.288958202989306,
+          "line": "PP 13715 16384 5287.3 2594.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 8.311590271012392,
+          "line": "PP 16383 16384 8309.8 1971.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 8.442074163991492,
+          "line": "PP 16384 16384 8440.4 1941.1 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 36.312076164002065,
+      "done_elapsed_s": 82.39707662799628,
+      "requested_pause_s": 0.0,
+      "purpose": "prefill_profile",
+      "dispatch_write_ms": 0.28696999652311206,
+      "client_gap_since_previous_done_ms": null,
+      "wall_minus_native_ms": 5.600463994218444,
+      "first_request": true,
+      "included_in_profiler": true,
+      "classification": "slow",
+      "native_stat": {
+        "tok_s": "54.41",
+        "ms_tok": "18.38",
+        "vram_hit": "0.6772",
+        "ram_fetch": "3.606",
+        "disk": "0.000",
+        "promo": "3.152",
+        "vram_used": "6687",
+        "vram_slots": "6800",
+        "ram_used": "8665",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.034",
+        "miss_ms": "0.000",
+        "lane": "80.533",
+        "lane_ms": "5.459",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "14.85",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "4.948",
+        "spec_acc": "1614",
+        "spec_offered": "1791",
+        "spec_rounds": "411"
+      }
+    },
+    {
+      "case": "profile-01",
+      "name": "trial-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "7ae5e559bd99bca25c297c5a683e9c1e1b69586e20791849cca05d09e8dd84ed",
+      "prefill_tps": 1995.3720618682255,
+      "decode_tps": 75.0073249340756,
+      "prefill_ms": 8211.0,
+      "decode_ms": 27304.0,
+      "ttft_s": 8.36518092895858,
+      "wall_s": 35.5179501749808,
+      "draft_accepted": 1611,
+      "draft_offered": 1783,
+      "reused": 0,
+      "done": "DONE 2048 16384 8211.0 27304.0 length 1611 1783 0 368949 532800 413",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.5338967589777894,
+          "line": "PP 4096 16384 1527.6 2681.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.898947583977133,
+          "line": "PP 8192 16384 2896.1 2828.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.30780401796801,
+          "line": "PP 12288 16384 4304.9 2854.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.244334423972759,
+          "line": "PP 13715 16384 5241.4 2616.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 8.153656846960075,
+          "line": "PP 16383 16384 8150.8 2010.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 8.213666561990976,
+          "line": "PP 16384 16384 8210.8 1995.4 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 82.39723181002773,
+      "done_elapsed_s": 117.91518198500853,
+      "requested_pause_s": 0.0,
+      "purpose": "prefill_profile",
+      "dispatch_write_ms": 0.04710897337645292,
+      "client_gap_since_previous_done_ms": 0.1551820314489305,
+      "wall_minus_native_ms": 2.9501749807968736,
+      "first_request": false,
+      "included_in_profiler": true,
+      "classification": "slow",
+      "native_stat": {
+        "tok_s": "75.01",
+        "ms_tok": "13.33",
+        "vram_hit": "0.6925",
+        "ram_fetch": "2.809",
+        "disk": "0.000",
+        "promo": "2.507",
+        "vram_used": "6696",
+        "vram_slots": "6800",
+        "ram_used": "8655",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.038",
+        "miss_ms": "0.000",
+        "lane": "77.159",
+        "lane_ms": "3.564",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "11.09",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.066",
+        "spec_acc": "1611",
+        "spec_offered": "1783",
+        "spec_rounds": "413"
+      }
+    },
+    {
+      "case": "profile-01",
+      "name": "trial-02",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "78957e32d0faaac637133c32c59ba8e28aad85f2dd4e6a8c4d36d7e05811e996",
+      "prefill_tps": 2076.368383033191,
+      "decode_tps": 94.75909997362662,
+      "prefill_ms": 7890.7,
+      "decode_ms": 21612.7,
+      "ttft_s": 7.933449672011193,
+      "wall_s": 29.504241860006005,
+      "draft_accepted": 1625,
+      "draft_offered": 1782,
+      "reused": 0,
+      "done": "DONE 2048 16384 7890.7 21612.7 length 1625 1782 0 364993 528960 403",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.4554282400058582,
+          "line": "PP 4096 16384 1454.8 2815.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.7624760040198453,
+          "line": "PP 8192 16384 2761.8 2966.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.11316251399694,
+          "line": "PP 12288 16384 4112.5 2988.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.0034043220221065,
+          "line": "PP 13715 16384 5002.8 2741.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.853143492015079,
+          "line": "PP 16383 16384 7852.5 2086.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.891278687980957,
+          "line": "PP 16384 16384 7890.6 2076.4 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 117.91528899600962,
+      "done_elapsed_s": 147.41953085601563,
+      "requested_pause_s": 0.0,
+      "purpose": "prefill_profile",
+      "dispatch_write_ms": 0.053010007832199335,
+      "client_gap_since_previous_done_ms": 0.10701100109145045,
+      "wall_minus_native_ms": 0.8418600060031167,
+      "first_request": false,
+      "included_in_profiler": true,
+      "classification": "slow",
+      "native_stat": {
+        "tok_s": "94.76",
+        "ms_tok": "10.55",
+        "vram_hit": "0.6900",
+        "ram_fetch": "2.703",
+        "disk": "0.000",
+        "promo": "2.389",
+        "vram_used": "6717",
+        "vram_slots": "6800",
+        "ram_used": "8628",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.037",
+        "miss_ms": "0.000",
+        "lane": "77.322",
+        "lane_ms": "2.240",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "9.91",
+        "w_disk_ms": "0.003",
+        "w_lane_ms": "1.965",
+        "spec_acc": "1625",
+        "spec_offered": "1782",
+        "spec_rounds": "403"
+      }
+    },
+    {
+      "case": "profile-02",
+      "name": "warmup-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "8ad747c59bc77b835824af3c153ccdf1c97c6f8983b5cac9581ab5ff217d3734",
+      "prefill_tps": 2018.5543385858784,
+      "decode_tps": 80.58423570888944,
+      "prefill_ms": 8116.7,
+      "decode_ms": 25414.4,
+      "ttft_s": 10.421118911006488,
+      "wall_s": 33.53188440698432,
+      "draft_accepted": 1606,
+      "draft_offered": 1782,
+      "reused": 0,
+      "done": "DONE 2048 16384 8116.7 25414.4 length 1606 1782 0 341740 533760 423",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.574050237017218,
+          "line": "PP 4096 16384 1573.2 2603.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.8656211699708365,
+          "line": "PP 8192 16384 2864.8 2859.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.208267193986103,
+          "line": "PP 12288 16384 4207.5 2920.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.084788465988822,
+          "line": "PP 13715 16384 5084.0 2697.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 8.0775945460191,
+          "line": "PP 16383 16384 8076.8 2028.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 8.117469115008134,
+          "line": "PP 16384 16384 8116.7 2018.6 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 36.350148110999726,
+      "done_elapsed_s": 69.88203251798404,
+      "requested_pause_s": 0.0,
+      "purpose": "prefill_profile",
+      "dispatch_write_ms": 0.13198901433497667,
+      "client_gap_since_previous_done_ms": null,
+      "wall_minus_native_ms": 0.784406984315865,
+      "first_request": true,
+      "included_in_profiler": true,
+      "classification": "slow",
+      "native_stat": {
+        "tok_s": "80.58",
+        "ms_tok": "12.41",
+        "vram_hit": "0.6403",
+        "ram_fetch": "1.089",
+        "disk": "0.000",
+        "promo": "1.065",
+        "vram_used": "6680",
+        "vram_slots": "6800",
+        "ram_used": "8680",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.005",
+        "miss_ms": "0.000",
+        "lane": "92.666",
+        "lane_ms": "3.958",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "10.16",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.723",
+        "spec_acc": "1606",
+        "spec_offered": "1782",
+        "spec_rounds": "423"
+      }
+    },
+    {
+      "case": "profile-02",
+      "name": "trial-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "6a1be232e9fce0c5de09d26b20a11d0cad03c2b910af9e0a6b4d6dd0ced48f4d",
+      "prefill_tps": 2066.7036681971845,
+      "decode_tps": 101.04498672797781,
+      "prefill_ms": 7927.6,
+      "decode_ms": 20268.2,
+      "ttft_s": 8.032201033027377,
+      "wall_s": 28.196553079003934,
+      "draft_accepted": 1615,
+      "draft_offered": 1795,
+      "reused": 0,
+      "done": "DONE 2048 16384 7927.6 20268.2 length 1615 1795 0 360348 534720 414",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.4546435300144367,
+          "line": "PP 4096 16384 1453.9 2817.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.758341194014065,
+          "line": "PP 8192 16384 2757.6 2970.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.099485947052017,
+          "line": "PP 12288 16384 4098.8 2997.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.984924798016436,
+          "line": "PP 13715 16384 4984.3 2751.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.897174555051606,
+          "line": "PP 16383 16384 7896.5 2074.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.928254138038028,
+          "line": "PP 16384 16384 7927.6 2066.7 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 69.88213066296885,
+      "done_elapsed_s": 98.07868374197278,
+      "requested_pause_s": 0.0,
+      "purpose": "prefill_profile",
+      "dispatch_write_ms": 0.04917202750220895,
+      "client_gap_since_previous_done_ms": 0.09814498480409384,
+      "wall_minus_native_ms": 0.7530790039345447,
+      "first_request": false,
+      "included_in_profiler": true,
+      "classification": "slow",
+      "native_stat": {
+        "tok_s": "101.05",
+        "ms_tok": "9.90",
+        "vram_hit": "0.6739",
+        "ram_fetch": "0.359",
+        "disk": "0.000",
+        "promo": "0.356",
+        "vram_used": "6666",
+        "vram_slots": "6800",
+        "ram_used": "8690",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.003",
+        "miss_ms": "0.000",
+        "lane": "84.781",
+        "lane_ms": "2.614",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "10.33",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.470",
+        "spec_acc": "1615",
+        "spec_offered": "1795",
+        "spec_rounds": "414"
+      }
+    },
+    {
+      "case": "profile-02",
+      "name": "trial-02",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "9e2b2ba6027143e74dc75137c3edd2f74424ab0166d0178546cfe8fb42be7945",
+      "prefill_tps": 2082.8619010691446,
+      "decode_tps": 101.6377171215881,
+      "prefill_ms": 7866.1,
+      "decode_ms": 20150.0,
+      "ttft_s": 7.896108368004207,
+      "wall_s": 28.01732650300255,
+      "draft_accepted": 1594,
+      "draft_offered": 1789,
+      "reused": 0,
+      "done": "DONE 2048 16384 7866.1 20150.0 length 1594 1789 0 365421 538320 430",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.4454004690051079,
+          "line": "PP 4096 16384 1444.2 2836.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.74935653997818,
+          "line": "PP 8192 16384 2748.2 2980.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.093809899990447,
+          "line": "PP 12288 16384 4092.6 3002.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.974903257971164,
+          "line": "PP 13715 16384 4973.7 2757.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.840848589956295,
+          "line": "PP 16383 16384 7839.7 2089.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.8672921559773386,
+          "line": "PP 16384 16384 7866.1 2082.9 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 98.07876648701495,
+      "done_elapsed_s": 126.0960929900175,
+      "requested_pause_s": 0.0,
+      "purpose": "prefill_profile",
+      "dispatch_write_ms": 0.05999300628900528,
+      "client_gap_since_previous_done_ms": 0.08274504216387868,
+      "wall_minus_native_ms": 1.2265030025519081,
+      "first_request": false,
+      "included_in_profiler": true,
+      "classification": "slow",
+      "native_stat": {
+        "tok_s": "101.64",
+        "ms_tok": "9.84",
+        "vram_hit": "0.6788",
+        "ram_fetch": "0.324",
+        "disk": "0.000",
+        "promo": "0.322",
+        "vram_used": "6658",
+        "vram_slots": "6800",
+        "ram_used": "8701",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.001",
+        "miss_ms": "0.000",
+        "lane": "84.098",
+        "lane_ms": "2.549",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "8.46",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.175",
+        "spec_acc": "1594",
+        "spec_offered": "1789",
+        "spec_rounds": "430"
+      }
+    },
+    {
+      "case": "profile-03",
+      "name": "warmup-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "8ad747c59bc77b835824af3c153ccdf1c97c6f8983b5cac9581ab5ff217d3734",
+      "prefill_tps": 2034.2686863670226,
+      "decode_tps": 86.46238801685341,
+      "prefill_ms": 8054.0,
+      "decode_ms": 23686.6,
+      "ttft_s": 10.290682822000235,
+      "wall_s": 31.741107337002177,
+      "draft_accepted": 1606,
+      "draft_offered": 1782,
+      "reused": 0,
+      "done": "DONE 2048 16384 8054.0 23686.6 length 1606 1782 0 341740 533760 423",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.5494466100353748,
+          "line": "PP 4096 16384 1548.9 2644.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.836841356009245,
+          "line": "PP 8192 16384 2836.3 2888.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.172698212030809,
+          "line": "PP 12288 16384 4172.2 2945.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.039910864026751,
+          "line": "PP 13715 16384 5039.4 2721.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 8.018884039018303,
+          "line": "PP 16383 16384 8018.4 2043.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 8.054495741031133,
+          "line": "PP 16384 16384 8054.0 2034.3 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 32.71901906095445,
+      "done_elapsed_s": 64.46012639795663,
+      "requested_pause_s": 0.0,
+      "purpose": "prefill_profile",
+      "dispatch_write_ms": 0.06631400901824236,
+      "client_gap_since_previous_done_ms": null,
+      "wall_minus_native_ms": 0.5073370021782466,
+      "first_request": true,
+      "included_in_profiler": true,
+      "classification": "slow",
+      "native_stat": {
+        "tok_s": "86.46",
+        "ms_tok": "11.57",
+        "vram_hit": "0.6403",
+        "ram_fetch": "1.089",
+        "disk": "0.000",
+        "promo": "1.065",
+        "vram_used": "6680",
+        "vram_slots": "6800",
+        "ram_used": "8680",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.005",
+        "miss_ms": "0.000",
+        "lane": "92.666",
+        "lane_ms": "3.372",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "9.75",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.659",
+        "spec_acc": "1606",
+        "spec_offered": "1782",
+        "spec_rounds": "423"
+      }
+    },
+    {
+      "case": "profile-03",
+      "name": "trial-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "6a1be232e9fce0c5de09d26b20a11d0cad03c2b910af9e0a6b4d6dd0ced48f4d",
+      "prefill_tps": 2073.661561827617,
+      "decode_tps": 103.43329865354895,
+      "prefill_ms": 7901.0,
+      "decode_ms": 19800.2,
+      "ttft_s": 8.005583287973423,
+      "wall_s": 27.701883676985744,
+      "draft_accepted": 1615,
+      "draft_offered": 1795,
+      "reused": 0,
+      "done": "DONE 2048 16384 7901.0 19800.2 length 1615 1795 0 360348 534720 414",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.4549181869952008,
+          "line": "PP 4096 16384 1454.3 2816.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.758820325951092,
+          "line": "PP 8192 16384 2758.2 2970.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.099369184987154,
+          "line": "PP 12288 16384 4098.7 2998.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.982417992956471,
+          "line": "PP 13715 16384 4981.8 2753.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.870494521979708,
+          "line": "PP 16383 16384 7869.9 2081.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.90164072799962,
+          "line": "PP 16384 16384 7901.0 2073.7 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 64.46021057700273,
+      "done_elapsed_s": 92.16209425398847,
+      "requested_pause_s": 0.0,
+      "purpose": "prefill_profile",
+      "dispatch_write_ms": 0.040184997487813234,
+      "client_gap_since_previous_done_ms": 0.08417904609814286,
+      "wall_minus_native_ms": 0.6836769857436593,
+      "first_request": false,
+      "included_in_profiler": true,
+      "classification": "slow",
+      "native_stat": {
+        "tok_s": "103.43",
+        "ms_tok": "9.67",
+        "vram_hit": "0.6739",
+        "ram_fetch": "0.359",
+        "disk": "0.000",
+        "promo": "0.356",
+        "vram_used": "6666",
+        "vram_slots": "6800",
+        "ram_used": "8690",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.003",
+        "miss_ms": "0.000",
+        "lane": "84.781",
+        "lane_ms": "2.533",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "9.82",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.386",
+        "spec_acc": "1615",
+        "spec_offered": "1795",
+        "spec_rounds": "414"
+      }
+    },
+    {
+      "case": "profile-03",
+      "name": "trial-02",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "9e2b2ba6027143e74dc75137c3edd2f74424ab0166d0178546cfe8fb42be7945",
+      "prefill_tps": 2082.491261518907,
+      "decode_tps": 103.6023047465841,
+      "prefill_ms": 7867.5,
+      "decode_ms": 19767.9,
+      "ttft_s": 7.896805824013427,
+      "wall_s": 27.635920284024905,
+      "draft_accepted": 1594,
+      "draft_offered": 1789,
+      "reused": 0,
+      "done": "DONE 2048 16384 7867.5 19767.9 length 1594 1789 0 365421 538320 430",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.4453758980380371,
+          "line": "PP 4096 16384 1444.8 2835.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.7495891280123033,
+          "line": "PP 8192 16384 2749.0 2980.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.094132640049793,
+          "line": "PP 12288 16384 4093.6 3001.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.975236356025562,
+          "line": "PP 13715 16384 4974.7 2757.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.840954626037274,
+          "line": "PP 16383 16384 7840.4 2089.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 7.868003961048089,
+          "line": "PP 16384 16384 7867.4 2082.5 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 92.1621797249536,
+      "done_elapsed_s": 119.79810000897851,
+      "requested_pause_s": 0.0,
+      "purpose": "prefill_profile",
+      "dispatch_write_ms": 0.04048604751005769,
+      "client_gap_since_previous_done_ms": 0.08547096513211727,
+      "wall_minus_native_ms": 0.5202840249039582,
+      "first_request": false,
+      "included_in_profiler": true,
+      "classification": "slow",
+      "native_stat": {
+        "tok_s": "103.60",
+        "ms_tok": "9.65",
+        "vram_hit": "0.6788",
+        "ram_fetch": "0.324",
+        "disk": "0.000",
+        "promo": "0.322",
+        "vram_used": "6658",
+        "vram_slots": "6800",
+        "ram_used": "8701",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.001",
+        "miss_ms": "0.000",
+        "lane": "84.098",
+        "lane_ms": "2.501",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "8.34",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.150",
+        "spec_acc": "1594",
+        "spec_offered": "1789",
+        "spec_rounds": "430"
+      }
+    },
+    {
+      "case": "profile-04",
+      "name": "warmup-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "474c600279795b542d140e6d8892116921573f86df19085cfe337346eb3d36b4",
+      "prefill_tps": 2683.3942054146128,
+      "decode_tps": 83.05317755455434,
+      "prefill_ms": 6105.7,
+      "decode_ms": 24658.9,
+      "ttft_s": 8.192952544020955,
+      "wall_s": 30.765192687977105,
+      "draft_accepted": 1599,
+      "draft_offered": 1833,
+      "reused": 0,
+      "done": "DONE 2048 16384 6105.7 24658.9 length 1599 1833 0 352352 547680 431",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.2281943910056725,
+          "line": "PP 4096 16384 1227.6 3336.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.272728935990017,
+          "line": "PP 8192 16384 2272.2 3605.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.3494858409976587,
+          "line": "PP 12288 16384 3348.9 3669.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.9603371910052374,
+          "line": "PP 13715 16384 3959.8 3463.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.072326810972299,
+          "line": "PP 16383 16384 6071.8 2698.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.1062293340219185,
+          "line": "PP 16384 16384 6105.7 2683.4 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 32.60200692201033,
+      "done_elapsed_s": 63.36719960998744,
+      "requested_pause_s": 0.0,
+      "purpose": "prefill_profile",
+      "dispatch_write_ms": 0.03746099537238479,
+      "client_gap_since_previous_done_ms": null,
+      "wall_minus_native_ms": 0.5926879771031963,
+      "first_request": true,
+      "included_in_profiler": true,
+      "classification": "fast",
+      "native_stat": {
+        "tok_s": "83.05",
+        "ms_tok": "12.04",
+        "vram_hit": "0.6434",
+        "ram_fetch": "1.116",
+        "disk": "0.000",
+        "promo": "1.094",
+        "vram_used": "6684",
+        "vram_slots": "6800",
+        "ram_used": "8673",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.003",
+        "miss_ms": "0.000",
+        "lane": "94.256",
+        "lane_ms": "3.482",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "9.72",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.752",
+        "spec_acc": "1599",
+        "spec_offered": "1833",
+        "spec_rounds": "431"
+      }
+    },
+    {
+      "case": "profile-04",
+      "name": "trial-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "d063d206d8382c0c7bf310afb4dbb930555c59d1d66b3fdcd4bbc5a2371e4292",
+      "prefill_tps": 2699.532063533909,
+      "decode_tps": 97.48435157198277,
+      "prefill_ms": 6069.2,
+      "decode_ms": 21008.5,
+      "ttft_s": 6.177667771000415,
+      "wall_s": 27.07848783803638,
+      "draft_accepted": 1593,
+      "draft_offered": 1821,
+      "reused": 0,
+      "done": "DONE 2048 16384 6069.2 21008.5 length 1593 1821 0 374667 546000 435",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.150907855015248,
+          "line": "PP 4096 16384 1150.2 3561.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.233227198012173,
+          "line": "PP 8192 16384 2232.5 3669.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.350155544001609,
+          "line": "PP 12288 16384 3349.4 3668.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.986499972001184,
+          "line": "PP 13715 16384 3985.8 3441.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.040058717015199,
+          "line": "PP 16383 16384 6039.3 2712.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.069869579048827,
+          "line": "PP 16384 16384 6069.2 2699.5 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 63.367320898978505,
+      "done_elapsed_s": 90.44580873701489,
+      "requested_pause_s": 0.0,
+      "purpose": "prefill_profile",
+      "dispatch_write_ms": 0.05602504825219512,
+      "client_gap_since_previous_done_ms": 0.12128899106755853,
+      "wall_minus_native_ms": 0.7878380363799806,
+      "first_request": false,
+      "included_in_profiler": true,
+      "classification": "fast",
+      "native_stat": {
+        "tok_s": "97.48",
+        "ms_tok": "10.26",
+        "vram_hit": "0.6862",
+        "ram_fetch": "0.373",
+        "disk": "0.000",
+        "promo": "0.375",
+        "vram_used": "6672",
+        "vram_slots": "6800",
+        "ram_used": "8688",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.003",
+        "miss_ms": "0.000",
+        "lane": "83.283",
+        "lane_ms": "2.637",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "10.22",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.562",
+        "spec_acc": "1593",
+        "spec_offered": "1821",
+        "spec_rounds": "435"
+      }
+    },
+    {
+      "case": "profile-04",
+      "name": "trial-02",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "9efa88568c91f8f8e60bc1e6ba0af4247b12a926bcb6453636a361cb775ed4ca",
+      "prefill_tps": 2698.2872200263505,
+      "decode_tps": 98.76400322140401,
+      "prefill_ms": 6072.0,
+      "decode_ms": 20736.3,
+      "ttft_s": 6.102515410981141,
+      "wall_s": 26.80899077100912,
+      "draft_accepted": 1599,
+      "draft_offered": 1843,
+      "reused": 0,
+      "done": "DONE 2048 16384 6072.0 20736.3 length 1599 1843 0 380796 549840 431",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.1424547139904462,
+          "line": "PP 4096 16384 1141.8 3587.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.234651919978205,
+          "line": "PP 8192 16384 2234.0 3666.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.360327710979618,
+          "line": "PP 12288 16384 3359.7 3657.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.999075155996252,
+          "line": "PP 13715 16384 3998.4 3430.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.046109982999042,
+          "line": "PP 16383 16384 6045.5 2709.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.072623096988536,
+          "line": "PP 16384 16384 6072.0 2698.3 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 90.44589388702298,
+      "done_elapsed_s": 117.2548846580321,
+      "requested_pause_s": 0.0,
+      "purpose": "prefill_profile",
+      "dispatch_write_ms": 0.04277098923921585,
+      "client_gap_since_previous_done_ms": 0.08515000808984041,
+      "wall_minus_native_ms": 0.6907710091218178,
+      "first_request": false,
+      "included_in_profiler": true,
+      "classification": "fast",
+      "native_stat": {
+        "tok_s": "98.76",
+        "ms_tok": "10.13",
+        "vram_hit": "0.6926",
+        "ram_fetch": "0.315",
+        "disk": "0.000",
+        "promo": "0.314",
+        "vram_used": "6648",
+        "vram_slots": "6800",
+        "ram_used": "8712",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.005",
+        "miss_ms": "0.000",
+        "lane": "82.221",
+        "lane_ms": "2.491",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "8.65",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.104",
+        "spec_acc": "1599",
+        "spec_offered": "1843",
+        "spec_rounds": "431"
+      }
+    }
+  ],
+  "policy": {
+    "declared_at_utc": "2026-11-03T04:50:28.086844+00:00",
+    "upstream_commit": "e4eaf01f089a3e7fb2621720fac17e5cb241c223",
+    "max_processes": 6,
+    "stop_rule": "Stop once both a stable slow process and a stable fast process are collected, or after six processes. Slow: all three whole-16K Prefill rates below 2300 tok/s. Fast: all three above 2500 tok/s. Retain every process and request, including mixed/intermediate.",
+    "settings": "Helper ON, PROMOTE0, RESYNC0, STRATA_GLM_PREFILL_PROF=1; same trial-01 IDs in three 16K/2K requests per fresh process. No reuse.",
+    "profile_scope": "All three prompts, including the first warm-up, contribute to the process-exit profiler. Diagnostic profiling only; not a clean throughput benchmark. Same v1.3.102 engine binary reused, not rebuilt for a runtime flag."
+  },
+  "conditional_unprofiled_controls": {
+    "triggered": false,
+    "profiled_processes": 4,
+    "reason": "Two uninstrumented controls only if all six profiled processes were slow."
+  },
+  "cleanup": {
+    "our_test_runners_exited": true,
+    "our_gpu_compute_processes_exited": true,
+    "our_runner_lock_released": true,
+    "global_lock_free_at_later_check": false,
+    "later_lock_holder_is_independent_job": true,
+    "independent_job_left_undisturbed": true
+  },
+  "temperature_maxima_c": {
+    "0": 55.0,
+    "1": 83.0
+  },
+  "thermal_flags": [],
+  "preservation": {
+    "source_pack_hashes_unchanged": true,
+    "model_sizes_and_mtimes_unchanged": true,
+    "running_user_services_unchanged": true,
+    "gpu_compute_apps_after": ""
+  },
+  "limitations": "Diagnostic profiling adds CUDA events and synchronization. Every process runs three identical 16K/2K requests; the exit profiler includes the first warm-up and all subsequent prefill work. Stage event intervals are accumulated GPU stream time, may include stream stalls, and are not a pure kernel breakdown or a sum of end-to-end request wall time. This is a state-finding diagnostic selected by a predeclared rule, not an unbiased frequency estimate or a clean speed/quality comparison. Output IDs can differ; no new numerical CHECK run."
+}
