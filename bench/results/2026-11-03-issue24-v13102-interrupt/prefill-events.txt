@@ -1,0 +1,144 @@
+[back-to-back-r0 / warmup-01]
+PP 4096 16384 1491.2 2746.8 0 0.0
+PP 8192 16384 2771.8 2955.5 0 0.0
+PP 12288 16384 4090.0 3004.4 0 0.0
+PP 13715 16384 4958.1 2766.2 0 0.0
+PP 16383 16384 7964.3 2057.1 0 0.0
+PP 16384 16384 8002.3 2047.4 0 0.0
+STAT tok_s=58.12 ms_tok=17.21 vram_hit=0.5702 ram_fetch=2.221 disk=0.000 promo=2.150 vram_used=6682 vram_slots=6800 ram_used=8676 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.014 miss_ms=0.000 lane=113.004 lane_ms=5.138 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=10.02 w_disk_ms=0.000 w_lane_ms=3.561 spec_acc=384 spec_offered=444 spec_rounds=113
+DONE 512 16384 8002.4 8809.7 length 384 444 0 78278 137280 113
+ds4 dspark: thr 0.60: 113 windows (444 drafted, 384 accepted = 86%) and 15 single tokens; the repeats' windows 2 (5 drafted, 0 accepted); the drafter's steps 126, drafts kept 0..5: 15 10 16 7 14 64; 52.7 ms a window, 20.0 a single token, 2.82 a draft; 4.00 tokens a step
+glm stat: decode 17.21 ms/tok (58.12 tok/s) | vram hit 57.02% | ram fetches 2.22/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 2.15/tok | cpu lane 113.00/tok in 5.14 ms/tok | tail skip 0.00/tok | prompt 0.5 ms/tok | vram 6680/6800 ram 8678/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 20105 experts 44438 upload_bytes 29920296960 prepare_ms 1040.105 launch_ms 158.930 wait_ms 159.861 fallbacks 0 window_calls 4491 columns 19563
+
+[back-to-back-r0 / trial-01]
+PP 4096 16384 1387.6 2951.9 0 0.0
+PP 8192 16384 2686.6 3049.2 0 0.0
+PP 12288 16384 4023.2 3054.3 0 0.0
+PP 13715 16384 4914.0 2791.0 0 0.0
+PP 16383 16384 7868.5 2082.1 0 0.0
+PP 16384 16384 7897.7 2074.5 0 0.0
+STAT tok_s=92.39 ms_tok=10.82 vram_hit=0.6437 ram_fetch=0.590 disk=0.000 promo=0.592 vram_used=6621 vram_slots=6800 ram_used=8738 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.002 miss_ms=0.000 lane=95.115 lane_ms=3.240 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=8.99 w_disk_ms=0.000 w_lane_ms=2.824 spec_acc=387 spec_offered=448 spec_rounds=112
+DONE 512 16384 7897.7 5542.0 length 387 448 0 88518 137520 112
+ds4 dspark: thr 0.60: 112 windows (448 drafted, 387 accepted = 86%) and 13 single tokens; the repeats' windows 2 (5 drafted, 0 accepted); the drafter's steps 123, drafts kept 0..5: 13 8 15 8 14 65; 43.8 ms a window, 15.9 a single token, 2.83 a draft; 4.10 tokens a step
+glm stat: decode 10.82 ms/tok (92.39 tok/s) | vram hit 64.37% | ram fetches 0.59/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.59/tok | cpu lane 95.12/tok in 3.24 ms/tok | tail skip 0.00/tok | prompt 0.5 ms/tok | vram 6619/6800 ram 8739/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 39757 experts 86235 upload_bytes 32252497920 prepare_ms 1121.285 launch_ms 294.723 wait_ms 499.437 fallbacks 0 window_calls 8912 columns 38728
+
+[back-to-back-r0 / trial-02]
+PP 4096 16384 1355.2 3022.5 0 0.0
+PP 8192 16384 2651.0 3090.2 0 0.0
+PP 12288 16384 3978.5 3088.6 0 0.0
+PP 13715 16384 4864.9 2819.2 0 0.0
+PP 16383 16384 7797.7 2101.0 0 0.0
+PP 16384 16384 7821.5 2094.7 0 0.0
+STAT tok_s=92.73 ms_tok=10.78 vram_hit=0.6488 ram_fetch=0.338 disk=0.000 promo=0.340 vram_used=6577 vram_slots=6800 ram_used=8782 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.002 miss_ms=0.000 lane=95.465 lane_ms=3.059 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=9.31 w_disk_ms=0.000 w_lane_ms=2.646 spec_acc=382 spec_offered=452 spec_rounds=117
+DONE 512 16384 7821.5 5521.3 length 382 452 0 90628 139680 117
+ds4 dspark: thr 0.60: 117 windows (452 drafted, 382 accepted = 85%) and 13 single tokens; the repeats' windows 2 (5 drafted, 0 accepted); the drafter's steps 128, drafts kept 0..5: 13 13 13 11 15 63; 42.2 ms a window, 15.7 a single token, 2.83 a draft; 3.94 tokens a step
+glm stat: decode 10.78 ms/tok (92.73 tok/s) | vram hit 64.88% | ram fetches 0.34/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.34/tok | cpu lane 95.46/tok in 3.06 ms/tok | tail skip 0.00/tok | prompt 0.5 ms/tok | vram 6574/6800 ram 8783/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 59796 experts 129321 upload_bytes 32843612160 prepare_ms 1141.916 launch_ms 435.674 wait_ms 916.575 fallbacks 0 window_calls 13524 columns 58278
+
+[back-to-back-r0 resync]
+
+[back-to-back-r0 startup tier and prefill records]
+glm fast: CUDA0 zero-copy token boundary: token_embd pinned (434 MB), the table edits and the token are read and written host-mapped
+glm prefill: CUDA0 deepseek41 attention projections batched
+glm prefill: CUDA0 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 2048), borrowing 3630 MB of the expert pool while a prompt runs (activations 1670, weight scratch 84, expert staging 130, prestage 1731: 160 experts); disk landing ring 96 experts (1038 MB pinned)
+glm fast: CUDA0 VRAM before the expert pool: 7.82 of 71.12 GB in use - dense weights 5.24, state/KV (32768 ctx) 0.00, activations 0.09, other (context, MTP, scratch, prompt path) 2.49
+glm fast: CUDA0 layers [0,40) expert pool 61.48 GB, 170-170 slots/layer (6800 total)
+glm fast: RAM tier 31.3 GB registered from an mmap, MADV_HUGEPAGE on 7.4 GB of it; the process now holds 7.4 GB in transparent huge pages (free 2 MB blocks before: 8.4 GB)
+glm fast: RAM tier 17.0 GB registered from an mmap, MADV_HUGEPAGE on 1.2 GB of it; the process now holds 8.6 GB in transparent huge pages (free 2 MB blocks before: 2.2 GB)
+glm fast: RAM tier 8.9 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 8.6 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)
+glm fast: RAM tier 12.3 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 8.6 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)
+glm fast: RAM tier 2.5 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 8.6 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)
+glm fast: RAM tier 5.0 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 8.6 GB in transparent huge pages (free 2 MB blocks before: 0.8 GB)
+glm fast: RAM tier 6.9 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 8.6 GB in transparent huge pages (free 2 MB blocks before: 0.7 GB)
+glm fast: CUDA0 RAM tier 83.87 GB pinned, 9272 slots
+glm fast: CUDA0 warming the expert tiers 10% (14.9 of 149.1 GB, 2 s)
+glm fast: CUDA0 warming the expert tiers 20% (29.8 of 149.1 GB, 4 s)
+glm fast: CUDA0 warming the expert tiers 30% (44.8 of 149.1 GB, 7 s)
+glm fast: CUDA0 warming the expert tiers 40% (59.6 of 149.1 GB, 9 s)
+glm fast: CUDA0 warming the expert tiers 50% (74.5 of 149.1 GB, 11 s)
+glm fast: CUDA0 warming the expert tiers 60% (89.5 of 149.1 GB, 12 s)
+glm fast: CUDA0 warming the expert tiers 70% (104.3 of 149.1 GB, 14 s)
+glm fast: CUDA0 warming the expert tiers 80% (119.3 of 149.1 GB, 16 s)
+glm fast: CUDA0 warming the expert tiers 90% (134.2 of 149.1 GB, 18 s)
+glm fast: CUDA0 warming the expert tiers 100% (149.1 of 149.1 GB, 19 s)
+glm fast: CUDA0 tiers warm: 15360 experts (149.1 GB) in 19 s (7.71 GB/s)
+glm fast: CUDA0 CPU lane: 12 threads, an expert 0.159 ms on the CPU vs 0.342 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 1 1 2 3 4 4 5 6
+glm prefill: a down matrix's MMQ over-read passes its slot (stride 9123840)
+glm fast: dense GEMV tune for device 0 (sm_120, 110 CUs): Q6_K 4 warps a row (up to 4,096 blocks)
+glm fast CPU lane CUDA0: 6027 verify-window calls of 2.79 columns each, 2.84 experts read for 3.43 uses
+
+[back-to-back-r8192 / warmup-01]
+PP 4096 16384 1217.9 3363.2 0 0.0
+PP 8192 16384 2248.5 3643.3 0 0.0
+PP 12288 16384 3313.3 3708.7 0 0.0
+PP 13715 16384 3920.8 3498.0 0 0.0
+PP 16383 16384 6021.8 2720.6 0 0.0
+PP 16384 16384 6056.5 2705.2 0 0.0
+STAT tok_s=57.31 ms_tok=17.45 vram_hit=0.5871 ram_fetch=2.449 disk=0.000 promo=2.408 vram_used=6680 vram_slots=6800 ram_used=8679 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.002 disk_waits=0.029 miss_ms=0.002 lane=112.287 lane_ms=5.028 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=12.03 w_disk_ms=0.000 w_lane_ms=3.958 spec_acc=381 spec_offered=462 spec_rounds=121
+DONE 512 16384 6056.5 8934.3 length 381 462 0 83560 142320 121
+ds4 dspark: thr 0.60: 121 windows (462 drafted, 381 accepted = 82%) and 10 single tokens; the repeats' windows 4 (9 drafted, 1 accepted); the drafter's steps 127, drafts kept 0..5: 10 7 23 12 11 64; 51.6 ms a window, 20.3 a single token, 2.85 a draft; 3.91 tokens a step
+glm stat: decode 17.45 ms/tok (57.31 tok/s) | vram hit 58.71% | ram fetches 2.45/tok | disk 0.00 reads/tok in 0.03 waits/tok, 0.00 ms/tok | promotions 2.41/tok | cpu lane 112.29/tok in 5.03 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6680/6800 ram 8680/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 20591 experts 44013 upload_bytes 29920296960 prepare_ms 1040.079 launch_ms 151.210 wait_ms 171.772 fallbacks 0 window_calls 4785 columns 20234
+
+[back-to-back-r8192 / trial-01]
+PP 4096 16384 1127.9 3631.5 0 0.0
+PP 8192 16384 2191.7 3737.8 0 0.0
+PP 12288 16384 3288.7 3736.4 0 0.0
+PP 13715 16384 3917.1 3501.3 0 0.0
+PP 16383 16384 5955.7 2750.8 0 0.0
+PP 16384 16384 5986.5 2736.8 0 0.0
+STAT tok_s=91.33 ms_tok=10.95 vram_hit=0.6416 ram_fetch=0.674 disk=0.000 promo=0.676 vram_used=6627 vram_slots=6800 ram_used=8730 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.006 miss_ms=0.000 lane=95.910 lane_ms=3.223 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=9.40 w_disk_ms=0.000 w_lane_ms=2.883 spec_acc=386 spec_offered=449 spec_rounds=114
+DONE 512 16384 5986.5 5606.1 length 386 449 0 88546 138000 114
+ds4 dspark: thr 0.60: 114 windows (449 drafted, 386 accepted = 86%) and 12 single tokens; the repeats' windows 2 (5 drafted, 0 accepted); the drafter's steps 124, drafts kept 0..5: 12 10 14 9 16 63; 43.7 ms a window, 15.9 a single token, 2.83 a draft; 4.06 tokens a step
+glm stat: decode 10.95 ms/tok (91.33 tok/s) | vram hit 64.16% | ram fetches 0.67/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 0.68/tok | cpu lane 95.91/tok in 3.22 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6624/6800 ram 8733/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 40436 experts 86488 upload_bytes 32297656320 prepare_ms 1122.831 launch_ms 297.498 wait_ms 530.746 fallbacks 0 window_calls 9291 columns 39626
+
+[back-to-back-r8192 / trial-02]
+PP 4096 16384 1105.1 3706.6 0 0.0
+PP 8192 16384 2174.0 3768.2 0 0.0
+PP 12288 16384 3269.0 3759.0 0 0.0
+PP 13715 16384 3893.4 3522.6 0 0.0
+PP 16383 16384 5936.4 2759.7 0 0.0
+PP 16384 16384 5959.9 2749.0 0 0.0
+STAT tok_s=91.07 ms_tok=10.98 vram_hit=0.6712 ram_fetch=0.529 disk=0.000 promo=0.533 vram_used=6635 vram_slots=6800 ram_used=8722 ram_slots=9272 ram_gb=83.9 vram_gb=61.5 disk_ms=0.000 disk_waits=0.004 miss_ms=0.000 lane=90.260 lane_ms=3.020 tail_skip=0.000 mirror_mb0=0.0 mirror_mb1=0.0 w_ms_tok=11.13 w_disk_ms=0.000 w_lane_ms=3.208 spec_acc=388 spec_offered=465 spec_rounds=115
+DONE 512 16384 5959.9 5622.2 length 388 465 0 94874 141360 115
+ds4 dspark: thr 0.60: 115 windows (465 drafted, 388 accepted = 83%) and 9 single tokens; the repeats' windows 2 (5 drafted, 0 accepted); the drafter's steps 122, drafts kept 0..5: 9 6 17 9 12 69; 44.4 ms a window, 16.1 a single token, 2.85 a draft; 4.13 tokens a step
+glm stat: decode 10.98 ms/tok (91.07 tok/s) | vram hit 67.12% | ram fetches 0.53/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.53/tok | cpu lane 90.26/tok in 3.02 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 6626/6800 ram 8725/9272
+expert helper request_end: GPU1 pool 27.865 GiB, resident 3096, calls 60057 experts 126921 upload_bytes 32859648000 prepare_ms 1142.429 launch_ms 441.932 wait_ms 920.914 fallbacks 0 window_calls 13808 columns 58896
+
+[back-to-back-r8192 resync]
+expert helper resync: 1 promotions in 0.5 ms (stopped: the next request) (longest gap between next-request checks 0.44 ms)
+expert helper resync: 0 promotions in 0.2 ms (stopped: the next request) (longest gap between next-request checks 0.11 ms)
+expert helper resync: 736 promotions in 502.4 ms (longest gap between next-request checks 1.21 ms)
+
+[back-to-back-r8192 startup tier and prefill records]
+glm fast: CUDA0 zero-copy token boundary: token_embd pinned (434 MB), the table edits and the token are read and written host-mapped
+glm prefill: CUDA0 deepseek41 attention projections batched
+glm prefill: CUDA0 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 2048), borrowing 3630 MB of the expert pool while a prompt runs (activations 1670, weight scratch 84, expert staging 130, prestage 1731: 160 experts); disk landing ring 96 experts (1038 MB pinned)
+glm fast: CUDA0 VRAM before the expert pool: 7.82 of 71.12 GB in use - dense weights 5.24, state/KV (32768 ctx) 0.00, activations 0.09, other (context, MTP, scratch, prompt path) 2.49
+glm fast: CUDA0 layers [0,40) expert pool 61.48 GB, 170-170 slots/layer (6800 total)
+glm fast: RAM tier 31.3 GB registered from an mmap, MADV_HUGEPAGE on 10.1 GB of it; the process now holds 10.1 GB in transparent huge pages (free 2 MB blocks before: 11.1 GB)
+glm fast: RAM tier 17.0 GB registered from an mmap, MADV_HUGEPAGE on 2.0 GB of it; the process now holds 12.1 GB in transparent huge pages (free 2 MB blocks before: 3.0 GB)
+glm fast: RAM tier 8.9 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 12.1 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)
+glm fast: RAM tier 12.3 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 12.1 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)
+glm fast: RAM tier 2.5 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 12.1 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)
+glm fast: RAM tier 5.0 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 12.1 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)
+glm fast: RAM tier 6.9 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 12.1 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)
+glm fast: CUDA0 RAM tier 83.87 GB pinned, 9272 slots
+glm fast: CUDA0 warming the expert tiers 10% (14.9 of 149.1 GB, 2 s)
+glm fast: CUDA0 warming the expert tiers 20% (29.8 of 149.1 GB, 4 s)
+glm fast: CUDA0 warming the expert tiers 30% (44.8 of 149.1 GB, 7 s)
+glm fast: CUDA0 warming the expert tiers 40% (59.6 of 149.1 GB, 9 s)
+glm fast: CUDA0 warming the expert tiers 50% (74.5 of 149.1 GB, 11 s)
+glm fast: CUDA0 warming the expert tiers 60% (89.5 of 149.1 GB, 12 s)
+glm fast: CUDA0 warming the expert tiers 70% (104.3 of 149.1 GB, 14 s)
+glm fast: CUDA0 warming the expert tiers 80% (119.3 of 149.1 GB, 16 s)
+glm fast: CUDA0 warming the expert tiers 90% (134.2 of 149.1 GB, 18 s)
+glm fast: CUDA0 warming the expert tiers 100% (149.1 of 149.1 GB, 19 s)
+glm fast: CUDA0 tiers warm: 15360 experts (149.1 GB) in 19 s (7.72 GB/s)
+glm fast: CUDA0 CPU lane: 12 threads, an expert 0.155 ms on the CPU vs 0.342 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 1 1 2 3 4 4 5 6
+glm prefill: a down matrix's MMQ over-read passes its slot (stride 9123840)
+glm fast: dense GEMV tune for device 0 (sm_120, 110 CUs): Q6_K 4 warps a row (up to 4,096 blocks)
+glm fast CPU lane CUDA0: 6127 verify-window calls of 2.77 columns each, 2.81 experts read for 3.39 uses
