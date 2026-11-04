@@ -1,0 +1,60 @@
+# Abyss v1.3.109: actual dual-GPU split and software-VRAM-budget search
+
+Pinned upstream `a7cd4ef57594f5da107f9ce3514e27a33e441b00`, `cat VERSION` = `1.3.109`; unpatched native CUDA engine, sm_120a, CUDA 13.0, driver 595.99.02. Main still matched this commit at the final check. GGML pinned to `3cf03257f219afbe7334045ff7c6a06ac68c627d`. This branch stores evidence; its inherited repository source was not the source used to build the measured engine.
+
+Model: `Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf` + `...-00002-of-00002.gguf`,83,617,662,656 bytes; same unmodified native pack and RT MTP assets on both systems. The native experts total 50,292,326,400 bytes; pack dense.bin 1,538,035,200 bytes. The per-layer embedding table remains in its GGUF rather than being uploaded wholesale, so the 83.6 GB GGUF set can run with the expert pool fully resident on the 72 GB card. Full original GGUF hashes freshly match the earlier records; all model/pack/MTP/profile file hashes agree between hosts. No weights are published.
+
+## Hardware and conditions
+
+* Dual PRO: Ryzen 9 9900X,192 GB installed RAM (OS MemTotal 200,146,288,640 B), PRO 4500 Blackwell 32 GB physical 0 and PRO 5000 Blackwell 72 GB physical 1. Both working links Gen5 x8, PHB topology; peer access unavailable, `peer` fell back to host. Model SSD Samsung 9100 PRO 2TB. Ubuntu 24.04.5 LTS, Linux 6.8.0-147-generic.
+* GeForce: i5-14400,128 GB installed RAM (after reboot OS MemTotal 134,844,608,512 B), RTX 5070 Ti 16 GB physical 0 on working Gen5 x16, RTX 5060 Ti 16 GB physical 1 on working Gen4 x4. Model SSD Samsung 990 PRO 1TB. Ubuntu 24.04.5 LTS, Linux 7.0.0-42-generic, driver 595.99.02.
+* Software 32+16 case: the **same PRO hardware**, with `STRATA_GLM_VRAM_GB_PARTS=16,32` in physical 0,1 layer order. This emulates VRAM budgets only, not RTX 5090/5070 Ti compute speed, memory bandwidth, clocks, or PCIe topology. Exploratory24+16 and32+24 budgets are in the archive; only32+16 received full-length final confirmation.
+* Context 32768; default KV configuration (`kv=fp16` as reported by INFO); RT MTP (stock Qwen K=4, threshold0.75); no DSpark, helper, lossy tail-skip override or kernel modification. Final runs explicitly use the shipped `data/expert_counts/qwen38-flash-next.txt` prior. RAM budget 128 decimal GB (119.2093GiB) on PRO, 90 GiB on GeForce. `CUDA_DEVICE_ORDER=PCI_BUS_ID` and physical GPU order are explicit in every config.
+
+## Full 16K prompt /2048 generated-token confirmation
+
+| System / budget | Layer layout | Prompt chunk | CPU lane | Prefill tok/s | Decode tok/s | Wall median [range], s | TTFT, s | n |
+|---|---|---:|---|---:|---:|---|---:|---:|
+| PRO native | 5000 alone | auto | inactive | 3261 | 140.9 | 19.636 [19.199, 19.845] | 5.030 | 6 |
+| PRO native | 4500 -> 5000, split22 | 2048 | inactive | 4372 | 131.5 | 19.252 [19.171, 19.537] | 3.750 | 6 |
+| PRO budgets 32+16 | 5000 alone,32GiB | 4096 | 12 | 2551 | 131.9 | 21.874 [21.606, 22.371] | 6.403 | 3 |
+| PRO budgets 32+16 | 4500(16) -> 5000(32),split20 | 4096 | 6 per GPU, own pools | 3990 | 126.2 | 20.316 [20.067, 20.612] | 4.108 | 3 |
+| GeForce actual 16+16 | 5070Ti alone | auto | 8 | 2072 | 56.3 | 43.984 [43.808, 45.156] | 7.905 | 3 |
+| GeForce actual 16+16 | 5070Ti -> 5060Ti,split32 | 4096 | 8 shared | 1972 | 78.5 | 34.176 [33.732, 35.254] | 8.315 | 3 |
+
+Prefill/decode columns are total tokens divided by total respective native time, not an average of reciprocals. Wall and TTFT use the direct native pipe client, including write/dispatch/wait time, not HTTP/UI latency. Native full-capacity n=6 = two fresh starts x three fixed measured prompts; other rows n=3 = one fresh start x three prompts. Every start had a separate full 16K/2048 warmup. Full-capacity order was single/2048/4096/4096/2048/single. All 33 measured final responses used the same three public prompts, greedy temperature 0, seed 42, thinking off, full independent prefill; reused tokens asserted 0. The next GEN was sent immediately after DONE; every final process was waited to normal exit. All 44 final outputs including warmups contain no im_end/endoftext marker before the length cap.
+
+The native split improves long-prompt processing and TTFT substantially, while single-GPU decode remains faster. Its approximately 2% wall difference is small and prompt dependent; this is a best-observed setting for this workload, not a universal win. The software-budget split reduces median wall by about 7%; the actual unequal-link GeForce pair reduces it by about 22% and increases generation throughput by about 40%. Different configurations can generate different greedy continuations, hence different routing/drafter work; equal token counts do not imply identical internal work. Complete output IDs and decoded final answers are supplied, not a task-quality ranking.
+
+Other final controls remain in results.json: native split 22/chunk 4096 and capped split 20/chunk 2048 with one shared CPU pool. The selected PRO budget run uses two 6-thread pools; the shared-pool alternative is within roughly 1% of its wall time. No claim of exhaustive global optimality is made. The bounded search covered GPU order, legal split positions, host/peer/socket transfer, prompt chunks 1024/2048/4096/auto, CPU pool sharing/counts, MTP depth/threshold/off, and VRAM budgets. 82 completed search/confirmation processes plus one rejected boundary 46 are retained. Early screens used shorter generations and are not mixed with this table. Early direct screens had no shipped routing prior; the partial-residency refinement, final runs and official benches use the shipped prior consistently.
+
+## Official stock benchmark and numerical checks
+
+The upstream `abyss.bench(..., deep=True)` function was called unchanged with isolated output and an external guard. Its fixed three 256-token topics,2K/8K prompts and PCIe/CPU sweep are different workloads from the table above. All six complete stock reports are linked below, including startup/glm stat lines and the before/after own-share controls.
+
+| Official --bench --deep configuration | Decode mean,3x256 | Prefill2K /8K | Quality vs shipped reference |
+|---|---:|---:|---|
+| [baseline-single5000](official-baseline-single5000.txt) | 174.1 | 2509 / 2925 | OK (KL 0.0019 vs a known-good run, same top token 99.0%) |
+| [cap-single32](official-cap-single32.txt) | 128.9 | 1821 / 2249 | OK (KL 0.0016 vs a known-good run, same top token 99.4%) |
+| [cap-split20-own6](official-cap-split20-own6.txt) | 145.6 | 2000 / 2844 | OK (KL 0.0018 vs a known-good run, same top token 99.2%) |
+| [native-split22-chunk2048](official-native-split22-chunk2048.txt) | 161.7 | 2258 / 3458 | OK (KL 0.0019 vs a known-good run, same top token 99.0%) |
+| [server-single5070](official-server-single5070.txt) | 54.7 | 923 / 1638 | OK (KL 0.0022 vs a known-good run, same top token 99.0%) |
+| [server-split32](official-server-split32.txt) | 70.9 | 977 / 1464 | OK (KL 0.0018 vs a known-good run, same top token 99.4%) |
+
+The stock quality pass uses context2048; the separate long-prefix check keeps context32768. The shipped reference has 512 input IDs and 511 scored positions, top 32 plus one rest-of-vocabulary bucket, same GGUF/dense sizes; it was made with v1.3.75 on AMD hardware. All official checks say OK (KL about 0.0016-0.0022). Greedy drafter checks are **not** exact 256-token identity: first differences range 12-225 tokens, which this release labels late near-ties. The raw reports retain those exact statements. Separately, a fixed 16K prefix plus 256 forced continuation tokens was scored outside speed runs: 255 continuation positions, because upstream SCORE skips the first continuation at c. Single-full-GPU repeat KL 0.000000; selected native split KL 0.001221; capped selected split 0.001090; GeForce selected split 0.001177, each versus the same full-resident PRO 5000 reference. This is a partial numerical comparison of the same quantized model, not full-precision accuracy or a general task-quality guarantee. Long-check timing is excluded from speed results.
+
+## Auto-selection and two startup edge cases
+
+1. At full PRO capacity auto selects PRO 5000 alone in either GPU order. Manual split 22/chunk 2048 trades faster long prefill for slower decode. On the real GeForce pair, the matched shipped-prior auto controls also select 5070 Ti alone in either order (about 16.5 ms predicted versus 16.7-17.2 ms for the best split), while manual split 32 on physical 0,1 wins for these measured long requests. This is workload-specific evidence for the predictor, not a universal claim about its policy.
+2. With PRO order physical 0,1 and `STRATA_GLM_VRAM_GB_PARTS=16,32`, auto predicts logical CUDA1 alone at 7.91 ms, then logs `CUDA1 VRAM cap 16.0 GB` after selecting it. The prediction used the second budget but loading the collapsed one-part model uses the first part's budget. The [cap lookup is indexed by part_](https://github.com/zephel01/Abyss/blob/a7cd4ef57594f5da107f9ce3514e27a33e441b00/src/core/glm_fast_path.cu#L6597). That row is a realized one-part 16 GiB run, **not** a 32+16 dual-GPU measurement. Manual splits or KEEP=1 preserve two parts. Full logs: runs/cap-auto16-32-4500-5000. Is this collapsed-part cap behavior intended?
+3. Manual `--layer-split 46` on this actual 48-layer Qwen is rejected with `1 boundaries (rising, 1..44) need 2 distinct devices of the 2 visible`; 44 succeeds and logs [44,48). The validation reads the geometry's default 45 layers before load_pack reads the actual GGUF geometry. See the [pinned default geometry](https://github.com/zephel01/Abyss/blob/a7cd4ef57594f5da107f9ce3514e27a33e441b00/include/strata/core/glm_model.hpp#L57) and [load_pack_env validation](https://github.com/zephel01/Abyss/blob/a7cd4ef57594f5da107f9ce3514e27a33e441b00/src/core/glm_model.cu#L2049). Rejected run is retained, not assigned throughput.
+
+`STRATA_GLM_HOP=peer` explicitly reports no peer access and host fallback on the PRO host. `sock` is an in-process byte stream here, not a multi-PC split, and did not improve the screen. No cross-PC inference is claimed.
+
+## Reproduction, safety and evidence
+
+Use the pinned upstream source and GGML revision, build flags/commands and per-host engine SHA256 in build-provenance.json and the archives. GGUF shards sit beside the copied pack metadata; dense weights, tokenizer and RT MTP assets are referenced, not modified. The exact pre-encoded fixtures, original synthetic request payloads, input/output hashes, per-request timings, complete stdout/stderr with T/PP/STAT/READY/DONE/glm stat, calibrated split/CPU/PCIe plans, official reports, score outputs/top-k reference, host activity and 2-second GPU/memory telemetry are included. Adapt redacted paths before using harnesses. Synthetic request nonces and model/token hashes are intentionally retained. No private IPs, hardware UUIDs, credentials or weights are included.
+
+GPU lock acquired for each experiment; audit starts with at least three quiet global-NVMe intervals before model load/calibration and remains through exit. Later screens and all final/official/diagnostic runs audit all readable processes for CPU/IO/RSS, plus all GPU compute processes and global memory/NVMe. Early PRO coarse/fine screens used the initial same-user CPU/IO audit. No independent heavy-work event or resource-guard trip was detected. This sampling cannot exclude every brief OS event or inaccessible per-process IO detail. Sampled peak temperatures: PRO 4500/5000 78/86 C (limits 85/90 C) ; 5070 Ti/5060 Ti 66/65 C (limits 85 C). No power/clock/fan policy changes. Original model hashes preserved, own GPU engines exited; the GeForce system's two previously active GPU services were restored and checked active with their expected GPU processes.
+
+The archives are evidence-only and have per-entry SHA256 manifests. Archive entry bytes and manifests were checked locally; GitHub readback is required before posting the issue. Model hashes, measured sample counts, every tested config and the two startup observations are included even when they did not win.

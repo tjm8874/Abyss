@@ -1,0 +1,23 @@
+{
+  "checks": [
+    {
+      "archive": "dual-pro-system-complete-logs.tar.gz",
+      "entry_manifest_valid": true,
+      "no_weights": true,
+      "json_records_parsed": 19428,
+      "output_hash_checks": 378,
+      "finite_topk_files": 1,
+      "archive_sha256": "09c507cefdafdbbb982f252c681772be9b5b4f8d6e2aeafc8da724d3d3f6eb9b"
+    },
+    {
+      "archive": "geforce-system-complete-logs.tar.gz",
+      "entry_manifest_valid": true,
+      "no_weights": true,
+      "json_records_parsed": 5201,
+      "output_hash_checks": 136,
+      "finite_topk_files": 1,
+      "archive_sha256": "75dba610235e9d7269a7d0949c68ed119f37649058135c4a8e0bbe856a292a6e"
+    }
+  ],
+  "all_passed": true
+}

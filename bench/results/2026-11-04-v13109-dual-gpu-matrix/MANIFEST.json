@@ -1,0 +1,82 @@
+{
+  "official-cap-split20-own6.txt": {
+    "bytes": 9970,
+    "sha256": "d4202477f67361479d648fd096cd6621f84dbe7924c149f423a9b75c5e7e41a4",
+    "git_blob_sha": "1f647079216f9d040d11ccceba12bbc459a7807b"
+  },
+  "archives.json": {
+    "bytes": 412,
+    "sha256": "5ee0b1fc3719b1b6b96956530f095844971a54a2a5f1ccb7b8b6e589e8183d8d",
+    "git_blob_sha": "5d97f837e2c6d3dc3991ffe0526e1eed83c5d8b0"
+  },
+  "dual-pro-system-complete-logs.tar.gz": {
+    "bytes": 2522011,
+    "sha256": "09c507cefdafdbbb982f252c681772be9b5b4f8d6e2aeafc8da724d3d3f6eb9b",
+    "git_blob_sha": "bdd1117743ff4f75c4b00e5eafd71e611b36eb57"
+  },
+  "official-server-split32.txt": {
+    "bytes": 10007,
+    "sha256": "23230c89a92c972cf719deb65199bebc452c5dd4e6793a17f6bd1b7a687e1e8f",
+    "git_blob_sha": "241717cc3404556967ff7fc9b79ec9da90be880c"
+  },
+  "results.json": {
+    "bytes": 216077,
+    "sha256": "495cb897306b6030462dbcaa0ab3b3fb7d8a9d59fec02cd8bc3c651e2a09cac3",
+    "git_blob_sha": "5f37a65bbd49a5b933269a490bb9fc9ff67a9c41"
+  },
+  "recommended-dual-pro-system-budget32-16.json": {
+    "bytes": 819,
+    "sha256": "b5233dafedfd208875a700e71bf575ba871da82511f0ca2485be39c8a892647f",
+    "git_blob_sha": "c71bb99b6e8c7d4f0af96307f69b86c9885065b2"
+  },
+  "official-cap-single32.txt": {
+    "bytes": 9185,
+    "sha256": "5dba6a3453d415ea4625e3b93fc435d5fd5d4cffe20d7330f6ebe68106113f9f",
+    "git_blob_sha": "786d86c577399ad8f3793660ac9cb2dcab9a4403"
+  },
+  "official-baseline-single5000.txt": {
+    "bytes": 8884,
+    "sha256": "a2d7bdeb25d09243789b1b141e5a5edd28439a056e3ae2d5667c5f3ea3facc45",
+    "git_blob_sha": "5657df48e7fbd522c3cffe93ac5ebf2c40b990af"
+  },
+  "build-provenance.json": {
+    "bytes": 942,
+    "sha256": "8981b5b0f9ef9f3d359b78293ba3a5a019134f32b879b5d02458ca25e5c3053b",
+    "git_blob_sha": "95ebd99ee9b843d4f3ffdbe216adfd2c6577182f"
+  },
+  "recommended-geforce-system.json": {
+    "bytes": 760,
+    "sha256": "19ceaf12ce92c7aa2e6851759c14399b6afbb1a2698f7d44e137b4336d48e457",
+    "git_blob_sha": "3a0f0df5476e2f957d47bc098e51c1e6cad85c63"
+  },
+  "README.md": {
+    "bytes": 12047,
+    "sha256": "82b564558437904540000dd6ead8f9facbd81f2e2d1c8cc63368cfa7182108fc",
+    "git_blob_sha": "611b6741fe4ccc3c4a200bacf6fdc53931340aa9"
+  },
+  "recommended-dual-pro-system-native.json": {
+    "bytes": 753,
+    "sha256": "89c5b668d88255f98d4d0f2b727a2a410a230a69a63c60d35d2605a3697bd10b",
+    "git_blob_sha": "8a906f61c92442aa60747dba40fed033d96eefc5"
+  },
+  "public-validation.json": {
+    "bytes": 685,
+    "sha256": "b711b07a4953242ddb846b214b780e03f4ba1f13675620c38be5a416a909454d",
+    "git_blob_sha": "b3d7b09566d0965fbd131af13cf962329111325d"
+  },
+  "official-native-split22-chunk2048.txt": {
+    "bytes": 9940,
+    "sha256": "f92362b44331d0782edcb63379c858f6fcc99a770d1c75da0d5dee239f6f83c1",
+    "git_blob_sha": "16d973a5e0cea912addf886c3eafe1d13fafc061"
+  },
+  "geforce-system-complete-logs.tar.gz": {
+    "bytes": 896381,
+    "sha256": "75dba610235e9d7269a7d0949c68ed119f37649058135c4a8e0bbe856a292a6e",
+    "git_blob_sha": "ab8b6a12681ab66738b729de91d46581a5caf773"
+  },
+  "official-server-single5070.txt": {
+    "bytes": 9034,
+    "sha256": "c131d708ac88845c4ef944effdd7b74f33dcf08d30440c6e1e09eeeac7d5129d",
+    "git_blob_sha": "ba166ca55ff1bb6db4d22a58e76be3d14867dd10"
+  }
+}

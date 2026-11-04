@@ -1,0 +1,14 @@
+{
+  "dual-pro-system": {
+    "archive": "dual-pro-system-complete-logs.tar.gz",
+    "bytes": 2522011,
+    "sha256": "09c507cefdafdbbb982f252c681772be9b5b4f8d6e2aeafc8da724d3d3f6eb9b",
+    "entries": 886
+  },
+  "geforce-system": {
+    "archive": "geforce-system-complete-logs.tar.gz",
+    "bytes": 896381,
+    "sha256": "75dba610235e9d7269a7d0949c68ed119f37649058135c4a8e0bbe856a292a6e",
+    "entries": 321
+  }
+}

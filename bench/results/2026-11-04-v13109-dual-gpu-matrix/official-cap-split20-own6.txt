@@ -1,0 +1,86 @@
+### Abyss benchmark
+
+Abyss v1.3.109 | Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S | NVIDIA RTX PRO 4500 Blackwell 32 GB, NVIDIA RTX PRO 5000 72GB Blackwell 72 GB | PCIe Gen5 x8 (~31.5 GB/s), the GPU can do Gen5 x16, Gen5 x8 (~31.5 GB/s), the GPU can do Gen5 x16 | RAM 186 GB | SSD 4.7 GB/s | decode 145.6 tok/s | prompt 8k 2844 tok/s | quality OK | bottleneck: gpu
+
+- date: 2026-11-04 17:32; setup: config.json, context 32768, GPUs [0, 1], backend cuda
+- model: Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S (83.6 GB of GGUF)
+- GPUs: NVIDIA RTX PRO 4500 Blackwell 32 GB, NVIDIA RTX PRO 5000 72GB Blackwell 72 GB; CPU AMD Ryzen 9 9900X 12-Core Processor; RAM 186 GB; model SSD reads 4.7 GB/s
+- PCIe while working: GPU 0 Gen5 x8 (~31.5 GB/s), the GPU can do Gen5 x16; GPU 1 Gen5 x8 (~31.5 GB/s), the GPU can do Gen5 x16
+
+decode (writing the answer): mean 145.6 tokens/s over 3 answers of 256 tokens (greedy, thinking off)
+   152.1 tokens/s  Write a Python function that parses a CSV file into a list of dictionaries, with type hints and a docstring.
+   145.0 tokens/s  Explain how photosynthesis works, step by step, for a high-school student.
+   139.8 tokens/s  Write a complete HTML page with a canvas that draws a bouncing ball animation in JavaScript.
+prefill (reading the prompt): 2000 tokens/s, 2048 tokens
+prefill (reading the prompt): 2844 tokens/s, 8192 tokens
+
+where a token's time goes (the engine's counters, decode answers):
+- a token: 6.9 ms (145.5 tokens/s)
+- SSD waits: 0.0 ms a token (0%), 0.0 expert reads a token
+- CPU lane: busy 0.8 ms a token (12%), 13 experts a token
+- GPU memory: holds 97% of the experts a token uses; 5.3 a token come over PCIe from RAM
+- drafter: 85% of its drafts accepted
+- likely bottleneck: the GPU itself: the memory tiers keep up
+- what moves it: ./abyss.sh --gpu-tune, and a report with this file: the kernels for this GPU may have room
+
+PCIe / CPU-lane share sweep (--deep; 0 = all missed experts on the CPU lane, 1 = all over PCIe;
+  every run writes the same answer on a warm GPU pool, so these run faster than the decode answers
+  above (new text) - compare the shares with each other; see the note below):
+  share 0.00:  162.3 tokens/s
+  share 0.25:  158.4 tokens/s
+  share 0.50:  161.6 tokens/s
+  share 0.75:  157.7 tokens/s
+  share 1.00:  164.6 tokens/s  <- fastest
+  the engine's own share (~0.29): 152.0 / 162.1 tokens/s, the same answer before and after the sweep
+  the share barely moves the speed: neither PCIe nor the CPU lane is what limits it
+
+quality: OK (KL 0.0018 vs a known-good run, same top token 99.2%)
+drafter check (greedy, the first answer): the same first 224 of 256 tokens with and without speculative decoding (a late near-tie: fine)
+  this model's support is BETA: it was measured on one PC only - please post this report (https://github.com/zephel01/Abyss/issues/new?template=bench.md), whatever the numbers
+
+<details><summary>engine lines</summary>
+
+```
+glm fast: RAM tier 0.4 GB registered from an mmap, MADV_HUGEPAGE on 0.4 GB of it; the process now holds 7.5 GB in transparent huge pages (free 2 MB blocks before: 47.0 GB)
+glm fast: RAM tier 0.5 GB registered from an mmap, MADV_HUGEPAGE on 0.5 GB of it; the process now holds 8.0 GB in transparent huge pages (free 2 MB blocks before: 46.6 GB)
+glm fast: CUDA0 RAM tier 8.00 GB pinned, 4425 slots
+glm fast: CUDA0 the warm-up follows the routing profile ~/abyss-v13109-split-search-20261104/source/data/expert_counts/qwen38-flash-next.txt (48 layers)
+glm fast: CUDA0 tiers warm: 10240 experts (19.8 GB) in 3 s (5.70 GB/s)
+glm fast: CUDA0 CPU lane: 6 threads, an expert 0.032 ms on the CPU vs 0.084 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 1 1 2 3 3 4 5 6 6 7
+glm fast: CUDA1 the NextN drafter reads a Q8_0 copy of token_embd (iq4_xs, 644 MB pinned)
+glm prefill: CUDA1 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 1024), borrowing 1298 MB of the expert pool while a prompt runs (activations 822, weight scratch 23, expert staging 30, prestage 406: 160 experts); disk landing ring 96 experts (244 MB pinned)
+glm fast: CUDA1 VRAM before the expert pool: 4.83 of 71.12 GB in use - dense weights 2.47, state/KV (32768 ctx) 0.00, activations 0.02, other (context, MTP, scratch, prompt path) 2.33
+glm fast: CUDA1 VRAM cap 32.0 GB: 4.83 GB already in use, 25.67 GB left for experts
+glm fast: CUDA1 layers [20,48) expert pool 25.67 GB, 421-499 slots/layer (12970 total)
+glm fast: RAM tier 0.2 GB registered from an mmap, MADV_HUGEPAGE on 0.2 GB of it; the process now holds 8.2 GB in transparent huge pages (free 2 MB blocks before: 46.0 GB)
+glm fast: RAM tier 0.1 GB registered from an mmap, MADV_HUGEPAGE on 0.1 GB of it; the process now holds 8.3 GB in transparent huge pages (free 2 MB blocks before: 45.8 GB)
+glm fast: RAM tier 1.6 GB registered from an mmap, MADV_HUGEPAGE on 1.6 GB of it; the process now holds 9.9 GB in transparent huge pages (free 2 MB blocks before: 45.7 GB)
+glm fast: RAM tier 0.8 GB registered from an mmap, MADV_HUGEPAGE on 0.8 GB of it; the process now holds 10.6 GB in transparent huge pages (free 2 MB blocks before: 44.1 GB)
+glm fast: RAM tier 1.4 GB registered from an mmap, MADV_HUGEPAGE on 1.4 GB of it; the process now holds 12.0 GB in transparent huge pages (free 2 MB blocks before: 43.4 GB)
+glm fast: RAM tier 0.1 GB registered from an mmap, MADV_HUGEPAGE on 0.1 GB of it; the process now holds 12.2 GB in transparent huge pages (free 2 MB blocks before: 42.0 GB)
+glm fast: RAM tier 0.3 GB registered from an mmap, MADV_HUGEPAGE on 0.3 GB of it; the process now holds 12.5 GB in transparent huge pages (free 2 MB blocks before: 41.8 GB)
+glm fast: CUDA1 RAM tier 4.52 GB pinned, 2262 slots
+glm fast: CUDA1 the warm-up follows the routing profile ~/abyss-v13109-split-search-20261104/source/data/expert_counts/qwen38-flash-next.txt (48 layers)
+glm fast: CUDA1 tiers warm: 14336 experts (30.5 GB) in 6 s (5.49 GB/s)
+glm fast: CUDA1 CPU lane: 6 threads, an expert 0.089 ms on the CPU vs 0.067 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 0 1 1 1 2 2 3 3 4 4
+glm split: layers [0, 20) on CUDA0, [20, 48) on CUDA1 (a hop per boundary per token: host)
+glm fast: dense GEMV tune for device 1 (sm_120, 110 CUs): Q6_K 4 warps a row (up to 4,096 blocks)
+glm stat: decode 7.55 ms/tok (132.47 tok/s) | vram hit 95.15% | ram fetches 8.05/tok | disk 0.00 reads/tok in 0.08 waits/tok, 0.00 ms/tok | promotions 7.34/tok | cpu lane 16.62/tok in 1.18 ms/tok | tail skip 0.00/tok | prompt 11.0 ms/tok | vram 19540/19645 ram 5025/6687
+glm stat: decode 6.57 ms/tok (152.09 tok/s) | vram hit 96.61% | ram fetches 5.29/tok | disk 0.00 reads/tok in 0.05 waits/tok, 0.00 ms/tok | promotions 4.73/tok | cpu lane 12.89/tok in 0.84 ms/tok | tail skip 0.00/tok | prompt 5.9 ms/tok | vram 19485/19645 ram 5079/6687
+glm stat: decode 6.90 ms/tok (145.02 tok/s) | vram hit 96.77% | ram fetches 5.12/tok | disk 0.00 reads/tok in 0.02 waits/tok, 0.00 ms/tok | promotions 4.41/tok | cpu lane 12.68/tok in 0.81 ms/tok | tail skip 0.00/tok | prompt 10.9 ms/tok | vram 19496/19645 ram 5060/6687
+glm stat: decode 7.15 ms/tok (139.79 tok/s) | vram hit 96.43% | ram fetches 5.61/tok | disk 0.00 reads/tok in 0.04 waits/tok, 0.00 ms/tok | promotions 5.32/tok | cpu lane 12.62/tok in 0.82 ms/tok | tail skip 0.00/tok | prompt 10.6 ms/tok | vram 19508/19645 ram 5061/6687
+glm stat: decode 10.08 ms/tok (99.16 tok/s) | vram hit 97.38% | ram fetches 2.94/tok | disk 0.00 reads/tok in 0.02 waits/tok, 0.00 ms/tok | promotions 2.95/tok | cpu lane 9.57/tok in 0.68 ms/tok | tail skip 0.00/tok | prompt 2.3 ms/tok | vram 19464/19645 ram 5111/6687
+glm stat (prompt only): prompt 0.6 ms/tok | vram 18757/19645 ram 5819/6687
+glm stat (prompt only): prompt 0.5 ms/tok | vram 18769/19645 ram 5793/6687
+glm stat (prompt only): prompt 0.4 ms/tok | vram 18563/19645 ram 6009/6687
+glm stat: decode 6.18 ms/tok (161.69 tok/s) | vram hit 99.11% | ram fetches 0.69/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.69/tok | cpu lane 4.12/tok in 0.28 ms/tok | tail skip 0.00/tok | prompt 2.0 ms/tok | vram 18636/19645 ram 5940/6687
+glm stat: decode 6.58 ms/tok (152.02 tok/s) | vram hit 99.26% | ram fetches 0.23/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.23/tok | cpu lane 4.02/tok in 0.26 ms/tok | tail skip 0.00/tok | prompt 2.0 ms/tok | vram 18648/19645 ram 5928/6687
+glm stat: decode 6.16 ms/tok (162.29 tok/s) | vram hit 99.68% | ram fetches 0.00/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.00/tok | cpu lane 1.75/tok in 0.10 ms/tok | tail skip 0.00/tok | prompt 2.0 ms/tok | vram 19501/19645 ram 5075/6687
+glm stat: decode 6.31 ms/tok (158.44 tok/s) | vram hit 99.80% | ram fetches 0.02/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.02/tok | cpu lane 1.12/tok in 0.07 ms/tok | tail skip 0.00/tok | prompt 2.2 ms/tok | vram 19399/19645 ram 5177/6687
+glm stat: decode 6.19 ms/tok (161.64 tok/s) | vram hit 99.84% | ram fetches 0.90/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.90/tok | cpu lane 0.01/tok in 0.00 ms/tok | tail skip 0.00/tok | prompt 2.0 ms/tok | vram 19425/19645 ram 5150/6687
+glm stat: decode 6.34 ms/tok (157.71 tok/s) | vram hit 99.98% | ram fetches 0.12/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.12/tok | cpu lane 0.00/tok in 0.00 ms/tok | tail skip 0.00/tok | prompt 2.0 ms/tok | vram 19405/19645 ram 5171/6687
+glm stat: decode 6.07 ms/tok (164.62 tok/s) | vram hit 99.99% | ram fetches 0.03/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.03/tok | cpu lane 0.00/tok in 0.00 ms/tok | tail skip 0.00/tok | prompt 2.0 ms/tok | vram 19400/19645 ram 5176/6687
+glm stat: decode 6.17 ms/tok (162.07 tok/s) | vram hit 99.98% | ram fetches 0.02/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.02/tok | cpu lane 0.06/tok in 0.00 ms/tok | tail skip 0.00/tok | prompt 2.0 ms/tok | vram 19399/19645 ram 5177/6687
+```
+
+</details>

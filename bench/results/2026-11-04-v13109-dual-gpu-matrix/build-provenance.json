@@ -1,0 +1,15 @@
+{
+  "Abyss_commit": "a7cd4ef57594f5da107f9ce3514e27a33e441b00",
+  "Abyss_version": "1.3.109",
+  "ggml_pinned_commit": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+  "ggml_source_match_checks": {
+    "ggml/src/ggml.c": "1752814093b5cf973a820794e0dbe53fb8c6fe5b",
+    "ggml/src/ggml-quants.c": "1ebc50a763f16db909de37090da38cc8c0fdde94",
+    "ggml/src/ggml-cpu/ggml-cpu.c": "8bb0ff7bc3366be957dd20aba3fbe0f50dd249d7",
+    "ggml/src/ggml-cuda/mmq.cuh": "6923f3510c03c2d04fda508aae5c9208014fb12e"
+  },
+  "checked_against": "GitHub official source metadata at pinned commit; all four remote built dependency blob hashes equal",
+  "dual-pro-system_binary_sha256": "26895f9fa383833f366dd989a351008c844b50807fcad962666cfc798b7f54b7",
+  "geforce-system_binary_sha256": "6a060f02e77e9158206feed15c4531c36a940ce5fb6c5da84073416b60c52fbd",
+  "geforce-system_bench_status": "not measured; user paused to reseat missing RTX5060Ti; services never changed"
+}
