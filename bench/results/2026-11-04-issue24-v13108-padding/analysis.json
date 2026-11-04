@@ -1,0 +1,4002 @@
+{
+  "version": "1.3.108",
+  "commit": "1c302cedfee31a03ea47a197fb0c18ba7fe0e5e1",
+  "engine_sha256": "7b8cdc9348cc2f546e54e3a063c0e3324e338f5c26d0e1f630729c9818614e17",
+  "pair_found": false,
+  "selected": {
+    "fast_band": "default-01"
+  },
+  "profiles": [
+    {
+      "case": "default-01",
+      "mode": "default",
+      "classification": "fast_band",
+      "profile_tokens": 49149,
+      "stream_ms_rounded": 17693.0,
+      "stream_ms_sum_stages": 17692.7,
+      "disk_wait_ms": 0.0,
+      "plan_host_ms": 69.0,
+      "disk_experts_used": 0,
+      "disk_experts_read": 0,
+      "stages": {
+        "moe_staged": {
+          "ms": 3243.5,
+          "percent": 18.3,
+          "ms_per_reported_token": 0.066
+        },
+        "v41_attn": {
+          "ms": 2469.6,
+          "percent": 14.0,
+          "ms_per_reported_token": 0.05
+        },
+        "moe_resident": {
+          "ms": 2132.9,
+          "percent": 12.1,
+          "ms_per_reported_token": 0.043
+        },
+        "moe_prestaged": {
+          "ms": 1887.3,
+          "percent": 10.7,
+          "ms_per_reported_token": 0.038
+        },
+        "v41_index": {
+          "ms": 1544.1,
+          "percent": 8.7,
+          "ms_per_reported_token": 0.031
+        },
+        "v41_out": {
+          "ms": 1261.8,
+          "percent": 7.1,
+          "ms_per_reported_token": 0.026
+        },
+        "shexp": {
+          "ms": 1093.6,
+          "percent": 6.2,
+          "ms_per_reported_token": 0.022
+        },
+        "engram": {
+          "ms": 936.8,
+          "percent": 5.3,
+          "ms_per_reported_token": 0.019
+        },
+        "hc": {
+          "ms": 908.0,
+          "percent": 5.1,
+          "ms_per_reported_token": 0.018
+        },
+        "plan": {
+          "ms": 793.2,
+          "percent": 4.5,
+          "ms_per_reported_token": 0.016
+        },
+        "v41_q": {
+          "ms": 640.9,
+          "percent": 3.6,
+          "ms_per_reported_token": 0.013
+        },
+        "moe_light": {
+          "ms": 272.2,
+          "percent": 1.5,
+          "ms_per_reported_token": 0.006
+        },
+        "v41_proj": {
+          "ms": 195.7,
+          "percent": 1.1,
+          "ms_per_reported_token": 0.004
+        },
+        "router": {
+          "ms": 168.1,
+          "percent": 1.0,
+          "ms_per_reported_token": 0.003
+        },
+        "combine": {
+          "ms": 110.7,
+          "percent": 0.6,
+          "ms_per_reported_token": 0.002
+        },
+        "route": {
+          "ms": 33.5,
+          "percent": 0.2,
+          "ms_per_reported_token": 0.001
+        },
+        "dsa": {
+          "ms": 0.8,
+          "percent": 0.0,
+          "ms_per_reported_token": 0.0
+        }
+      },
+      "prefill_tps_all_three": [
+        2702.1143252960387,
+        2727.6208234138544,
+        2728.34757123112
+      ],
+      "native_prompt_ms_all_three": [
+        6063.4,
+        6006.7,
+        6005.1
+      ],
+      "native_decode_tps_all_three": [
+        83.36080820908583,
+        100.2589697020135,
+        103.71615804559865
+      ],
+      "startup_lines": [
+        "glm fast: CUDA0 zero-copy token boundary: token_embd pinned (434 MB), the table edits and the token are read and written host-mapped",
+        "glm prefill: CUDA0 deepseek41 attention projections batched",
+        "glm prefill: CUDA0 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 2048), borrowing 3630 MB of the expert pool while a prompt runs (activations 1670, weight scratch 84, expert staging 130, prestage 1731: 160 experts); disk landing ring 96 experts (1038 MB pinned)",
+        "glm fast: CUDA0 VRAM before the expert pool: 7.82 of 71.12 GB in use - dense weights 5.24, state/KV (32768 ctx) 0.00, activations 0.09, other (context, MTP, scratch, prompt path) 2.49",
+        "glm fast: CUDA0 layers [0,40) expert pool 61.48 GB, 170-170 slots/layer (6800 total)",
+        "glm fast: RAM tier 31.3 GB registered from an mmap, MADV_HUGEPAGE on 31.3 GB of it; the process now holds 31.3 GB in transparent huge pages (free 2 MB blocks before: 55.0 GB)",
+        "glm fast: RAM tier 17.0 GB registered from an mmap, MADV_HUGEPAGE on 17.0 GB of it; the process now holds 48.2 GB in transparent huge pages (free 2 MB blocks before: 23.6 GB)",
+        "glm fast: RAM tier 8.9 GB registered from an mmap, MADV_HUGEPAGE on 5.6 GB of it; the process now holds 53.8 GB in transparent huge pages (free 2 MB blocks before: 6.6 GB)",
+        "glm fast: RAM tier 12.3 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 53.8 GB in transparent huge pages (free 2 MB blocks before: 1.0 GB)",
+        "glm fast: RAM tier 2.5 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 53.8 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)",
+        "glm fast: RAM tier 5.0 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 53.8 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)",
+        "glm fast: RAM tier 6.9 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 53.8 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)",
+        "glm fast: CUDA0 RAM tier 83.87 GB pinned, 9272 slots",
+        "glm fast: CUDA0 warming the expert tiers 10% (14.9 of 149.1 GB, 2 s)",
+        "glm fast: CUDA0 warming the expert tiers 20% (29.8 of 149.1 GB, 4 s)",
+        "glm fast: CUDA0 warming the expert tiers 30% (44.8 of 149.1 GB, 7 s)",
+        "glm fast: CUDA0 warming the expert tiers 40% (59.6 of 149.1 GB, 9 s)",
+        "glm fast: CUDA0 warming the expert tiers 50% (74.5 of 149.1 GB, 11 s)",
+        "glm fast: CUDA0 warming the expert tiers 60% (89.5 of 149.1 GB, 12 s)",
+        "glm fast: CUDA0 warming the expert tiers 70% (104.3 of 149.1 GB, 14 s)",
+        "glm fast: CUDA0 warming the expert tiers 80% (119.3 of 149.1 GB, 16 s)",
+        "glm fast: CUDA0 warming the expert tiers 90% (134.2 of 149.1 GB, 18 s)",
+        "glm fast: CUDA0 warming the expert tiers 100% (149.1 of 149.1 GB, 19 s)",
+        "glm fast: CUDA0 tiers warm: 15360 experts (149.1 GB) in 19 s (7.74 GB/s)",
+        "glm fast: CUDA0 CPU lane: 12 threads, an expert 0.155 ms on the CPU vs 0.342 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 1 1 2 3 4 4 5 6",
+        "glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 174 experts leave VRAM (0 of them moved over colder ones)",
+        "glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention",
+        "glm prefill: 16383 tokens in 5970.4 ms (0.36 ms/token, 2744 tok/s) | staged experts: 72 vram, 4362 ram, 0 disk, 6073 on the host (27229 rows, 2550 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.68, 0.013 ms a CPU row), 4457 prestaged (3841 routed, 814409 rows) | rows resident 68.0% | plan 60.4 ms (cumulative)",
+        "glm fast: dense GEMV tune for device 0 (sm_120, 110 CUs): Q6_K 4 warps a row (up to 4,096 blocks)",
+        "glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 239 experts leave VRAM (162 of them moved over colder ones)",
+        "glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention",
+        "glm prefill: 16383 tokens in 5893.6 ms (0.36 ms/token, 2780 tok/s) | staged experts: 181 vram, 8344 ram, 0 disk, 11867 on the host (55094 rows, 5186 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.54, 0.018 ms a CPU row), 8913 prestaged (8279 routed, 2075788 rows) | rows resident 73.5% | plan 64.4 ms (cumulative)",
+        "glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 216 experts leave VRAM (83 of them moved over colder ones)",
+        "glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention",
+        "glm prefill: 16383 tokens in 5904.9 ms (0.36 ms/token, 2774 tok/s) | staged experts: 301 vram, 12264 ram, 0 disk, 17545 on the host (82691 rows, 7839 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.52, 0.016 ms a CPU row), 13375 prestaged (12725 routed, 3344295 rows) | rows resident 75.8% | plan 68.6 ms (cumulative)",
+        "glm prefill prof CUDA0 (49149 tokens, 17693 ms of stream time; waits on disk 0 ms, plan 69 ms host; disk experts used 0, read 0):",
+        "glm fast CPU lane CUDA0: 14204 verify-window calls of 2.62 columns each, 2.61 experts read for 3.10 uses"
+      ],
+      "verbose": [
+        {
+          "batched_tokens": 16383.0,
+          "batch_wall_ms": 5970.4,
+          "batch_ms_per_token": 0.36,
+          "batch_tps": 2744.0,
+          "staged_vram": 72.0,
+          "staged_ram": 4362.0,
+          "staged_disk": 0.0,
+          "host_experts": 6073.0,
+          "host_rows": 27229.0,
+          "host_ms": 2550.0,
+          "igpu_experts": 0.0,
+          "igpu_rows": 0.0,
+          "igpu_row_ms": 0.009,
+          "kappa": 0.68,
+          "cpu_row_ms": 0.013,
+          "prestaged": 4457.0,
+          "pre_routed": 3841.0,
+          "pre_rows": 814409.0,
+          "resident_percent": 68.0,
+          "plan_host_ms": 60.4,
+          "cumulative_increments": {
+            "staged_vram": 72.0,
+            "staged_ram": 4362.0,
+            "staged_disk": 0.0,
+            "host_experts": 6073.0,
+            "host_rows": 27229.0,
+            "host_ms": 2550.0,
+            "igpu_experts": 0.0,
+            "igpu_rows": 0.0,
+            "prestaged": 4457.0,
+            "pre_routed": 3841.0,
+            "pre_rows": 814409.0,
+            "plan_host_ms": 60.4
+          },
+          "native_line": "glm prefill: 16383 tokens in 5970.4 ms (0.36 ms/token, 2744 tok/s) | staged experts: 72 vram, 4362 ram, 0 disk, 6073 on the host (27229 rows, 2550 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.68, 0.013 ms a CPU row), 4457 prestaged (3841 routed, 814409 rows) | rows resident 68.0% | plan 60.4 ms (cumulative)"
+        },
+        {
+          "batched_tokens": 16383.0,
+          "batch_wall_ms": 5893.6,
+          "batch_ms_per_token": 0.36,
+          "batch_tps": 2780.0,
+          "staged_vram": 181.0,
+          "staged_ram": 8344.0,
+          "staged_disk": 0.0,
+          "host_experts": 11867.0,
+          "host_rows": 55094.0,
+          "host_ms": 5186.0,
+          "igpu_experts": 0.0,
+          "igpu_rows": 0.0,
+          "igpu_row_ms": 0.009,
+          "kappa": 0.54,
+          "cpu_row_ms": 0.018,
+          "prestaged": 8913.0,
+          "pre_routed": 8279.0,
+          "pre_rows": 2075788.0,
+          "resident_percent": 73.5,
+          "plan_host_ms": 64.4,
+          "cumulative_increments": {
+            "staged_vram": 109.0,
+            "staged_ram": 3982.0,
+            "staged_disk": 0.0,
+            "host_experts": 5794.0,
+            "host_rows": 27865.0,
+            "host_ms": 2636.0,
+            "igpu_experts": 0.0,
+            "igpu_rows": 0.0,
+            "prestaged": 4456.0,
+            "pre_routed": 4438.0,
+            "pre_rows": 1261379.0,
+            "plan_host_ms": 4.000000000000007
+          },
+          "native_line": "glm prefill: 16383 tokens in 5893.6 ms (0.36 ms/token, 2780 tok/s) | staged experts: 181 vram, 8344 ram, 0 disk, 11867 on the host (55094 rows, 5186 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.54, 0.018 ms a CPU row), 8913 prestaged (8279 routed, 2075788 rows) | rows resident 73.5% | plan 64.4 ms (cumulative)"
+        },
+        {
+          "batched_tokens": 16383.0,
+          "batch_wall_ms": 5904.9,
+          "batch_ms_per_token": 0.36,
+          "batch_tps": 2774.0,
+          "staged_vram": 301.0,
+          "staged_ram": 12264.0,
+          "staged_disk": 0.0,
+          "host_experts": 17545.0,
+          "host_rows": 82691.0,
+          "host_ms": 7839.0,
+          "igpu_experts": 0.0,
+          "igpu_rows": 0.0,
+          "igpu_row_ms": 0.009,
+          "kappa": 0.52,
+          "cpu_row_ms": 0.016,
+          "prestaged": 13375.0,
+          "pre_routed": 12725.0,
+          "pre_rows": 3344295.0,
+          "resident_percent": 75.8,
+          "plan_host_ms": 68.6,
+          "cumulative_increments": {
+            "staged_vram": 120.0,
+            "staged_ram": 3920.0,
+            "staged_disk": 0.0,
+            "host_experts": 5678.0,
+            "host_rows": 27597.0,
+            "host_ms": 2653.0,
+            "igpu_experts": 0.0,
+            "igpu_rows": 0.0,
+            "prestaged": 4462.0,
+            "pre_routed": 4446.0,
+            "pre_rows": 1268507.0,
+            "plan_host_ms": 4.199999999999989
+          },
+          "native_line": "glm prefill: 16383 tokens in 5904.9 ms (0.36 ms/token, 2774 tok/s) | staged experts: 301 vram, 12264 ram, 0 disk, 17545 on the host (82691 rows, 7839 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.52, 0.016 ms a CPU row), 13375 prestaged (12725 routed, 3344295 rows) | rows resident 75.8% | plan 68.6 ms (cumulative)"
+        }
+      ],
+      "host_audit": {
+        "samples": 61,
+        "preflight_samples": 4,
+        "quiet_preflight_intervals": 3,
+        "max_interval_s": 2.083424592972733,
+        "max_independent_cpu_cores": 0.004943524958245688,
+        "mean_independent_cpu_cores": 0.00106531784064681,
+        "max_independent_physical_io_mib_s": 0.005781995120108,
+        "max_independent_rss_bytes": 21233664,
+        "contention_detected": false,
+        "scope": "Same-user process CPU/IO/RSS plus all GPU compute processes; whole-NVMe counters in preflight. Two-second sampling, not a proof of zero brief OS activity."
+      },
+      "mmq_slot_overread_lines": [],
+      "light_check_records": [],
+      "pin_failure_lines": [],
+      "calibration_retry_lines": [],
+      "calibration": {
+        "cpu_ms_per_expert": 0.155,
+        "pcie_ms_per_expert": 0.342,
+        "native_line": "glm fast: CUDA0 CPU lane: 12 threads, an expert 0.155 ms on the CPU vs 0.342 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 1 1 2 3 4 4 5 6"
+      }
+    },
+    {
+      "case": "default-02",
+      "mode": "default",
+      "classification": "fast_band",
+      "profile_tokens": 49149,
+      "stream_ms_rounded": 17847.0,
+      "stream_ms_sum_stages": 17846.7,
+      "disk_wait_ms": 0.0,
+      "plan_host_ms": 69.0,
+      "disk_experts_used": 0,
+      "disk_experts_read": 0,
+      "stages": {
+        "moe_staged": {
+          "ms": 3256.7,
+          "percent": 18.2,
+          "ms_per_reported_token": 0.066
+        },
+        "v41_attn": {
+          "ms": 2476.5,
+          "percent": 13.9,
+          "ms_per_reported_token": 0.05
+        },
+        "moe_resident": {
+          "ms": 2204.6,
+          "percent": 12.4,
+          "ms_per_reported_token": 0.045
+        },
+        "moe_prestaged": {
+          "ms": 1899.7,
+          "percent": 10.6,
+          "ms_per_reported_token": 0.039
+        },
+        "v41_index": {
+          "ms": 1549.2,
+          "percent": 8.7,
+          "ms_per_reported_token": 0.032
+        },
+        "v41_out": {
+          "ms": 1276.0,
+          "percent": 7.1,
+          "ms_per_reported_token": 0.026
+        },
+        "shexp": {
+          "ms": 1103.3,
+          "percent": 6.2,
+          "ms_per_reported_token": 0.022
+        },
+        "engram": {
+          "ms": 929.4,
+          "percent": 5.2,
+          "ms_per_reported_token": 0.019
+        },
+        "hc": {
+          "ms": 913.2,
+          "percent": 5.1,
+          "ms_per_reported_token": 0.019
+        },
+        "plan": {
+          "ms": 779.4,
+          "percent": 4.4,
+          "ms_per_reported_token": 0.016
+        },
+        "v41_q": {
+          "ms": 652.6,
+          "percent": 3.7,
+          "ms_per_reported_token": 0.013
+        },
+        "moe_light": {
+          "ms": 274.0,
+          "percent": 1.5,
+          "ms_per_reported_token": 0.006
+        },
+        "v41_proj": {
+          "ms": 216.8,
+          "percent": 1.2,
+          "ms_per_reported_token": 0.004
+        },
+        "router": {
+          "ms": 169.9,
+          "percent": 1.0,
+          "ms_per_reported_token": 0.003
+        },
+        "combine": {
+          "ms": 111.0,
+          "percent": 0.6,
+          "ms_per_reported_token": 0.002
+        },
+        "route": {
+          "ms": 33.6,
+          "percent": 0.2,
+          "ms_per_reported_token": 0.001
+        },
+        "dsa": {
+          "ms": 0.8,
+          "percent": 0.0,
+          "ms_per_reported_token": 0.0
+        }
+      },
+      "prefill_tps_all_three": [
+        2666.8836982176285,
+        2704.433660163085,
+        2717.3516436129635
+      ],
+      "native_prompt_ms_all_three": [
+        6143.5,
+        6058.2,
+        6029.4
+      ],
+      "native_decode_tps_all_three": [
+        85.07279788979584,
+        101.63670832051294,
+        100.83504017646132
+      ],
+      "startup_lines": [
+        "glm fast: CUDA0 zero-copy token boundary: token_embd pinned (434 MB), the table edits and the token are read and written host-mapped",
+        "glm prefill: CUDA0 deepseek41 attention projections batched",
+        "glm prefill: CUDA0 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 2048), borrowing 3630 MB of the expert pool while a prompt runs (activations 1670, weight scratch 84, expert staging 130, prestage 1731: 160 experts); disk landing ring 96 experts (1038 MB pinned)",
+        "glm fast: CUDA0 VRAM before the expert pool: 7.82 of 71.12 GB in use - dense weights 5.24, state/KV (32768 ctx) 0.00, activations 0.09, other (context, MTP, scratch, prompt path) 2.49",
+        "glm fast: CUDA0 layers [0,40) expert pool 61.48 GB, 170-170 slots/layer (6800 total)",
+        "glm fast: RAM tier 31.3 GB registered from an mmap, MADV_HUGEPAGE on 31.3 GB of it; the process now holds 31.3 GB in transparent huge pages (free 2 MB blocks before: 55.1 GB)",
+        "glm fast: RAM tier 17.0 GB registered from an mmap, MADV_HUGEPAGE on 17.0 GB of it; the process now holds 48.2 GB in transparent huge pages (free 2 MB blocks before: 23.7 GB)",
+        "glm fast: RAM tier 8.9 GB registered from an mmap, MADV_HUGEPAGE on 5.6 GB of it; the process now holds 53.9 GB in transparent huge pages (free 2 MB blocks before: 6.6 GB)",
+        "glm fast: RAM tier 12.3 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 53.9 GB in transparent huge pages (free 2 MB blocks before: 1.0 GB)",
+        "glm fast: RAM tier 2.5 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 53.9 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)",
+        "glm fast: RAM tier 5.0 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 53.9 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)",
+        "glm fast: RAM tier 6.9 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 53.9 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)",
+        "glm fast: CUDA0 RAM tier 83.87 GB pinned, 9272 slots",
+        "glm fast: CUDA0 warming the expert tiers 10% (14.9 of 149.1 GB, 2 s)",
+        "glm fast: CUDA0 warming the expert tiers 20% (29.8 of 149.1 GB, 4 s)",
+        "glm fast: CUDA0 warming the expert tiers 30% (44.8 of 149.1 GB, 6 s)",
+        "glm fast: CUDA0 warming the expert tiers 40% (59.6 of 149.1 GB, 9 s)",
+        "glm fast: CUDA0 warming the expert tiers 50% (74.5 of 149.1 GB, 10 s)",
+        "glm fast: CUDA0 warming the expert tiers 60% (89.5 of 149.1 GB, 12 s)",
+        "glm fast: CUDA0 warming the expert tiers 70% (104.3 of 149.1 GB, 14 s)",
+        "glm fast: CUDA0 warming the expert tiers 80% (119.3 of 149.1 GB, 15 s)",
+        "glm fast: CUDA0 warming the expert tiers 90% (134.2 of 149.1 GB, 17 s)",
+        "glm fast: CUDA0 warming the expert tiers 100% (149.1 of 149.1 GB, 19 s)",
+        "glm fast: CUDA0 tiers warm: 15360 experts (149.1 GB) in 19 s (7.95 GB/s)",
+        "glm fast: CUDA0 CPU lane: 12 threads, an expert 0.162 ms on the CPU vs 0.342 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 1 1 2 3 3 4 5 6",
+        "glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 174 experts leave VRAM (0 of them moved over colder ones)",
+        "glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention",
+        "glm prefill: 16383 tokens in 6049.8 ms (0.37 ms/token, 2708 tok/s) | staged experts: 71 vram, 4390 ram, 0 disk, 6023 on the host (26697 rows, 2587 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.69, 0.013 ms a CPU row), 4462 prestaged (3842 routed, 815209 rows) | rows resident 68.0% | plan 60.5 ms (cumulative)",
+        "glm fast: dense GEMV tune for device 0 (sm_120, 110 CUs): Q6_K 4 warps a row (up to 4,096 blocks)",
+        "glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 243 experts leave VRAM (170 of them moved over colder ones)",
+        "glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention",
+        "glm prefill: 16383 tokens in 5944.5 ms (0.36 ms/token, 2756 tok/s) | staged experts: 186 vram, 8369 ram, 0 disk, 11840 on the host (54296 rows, 5243 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.52, 0.017 ms a CPU row), 8919 prestaged (8281 routed, 2045499 rows) | rows resident 74.1% | plan 64.7 ms (cumulative)",
+        "glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 209 experts leave VRAM (120 of them moved over colder ones)",
+        "glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention",
+        "glm prefill: 16383 tokens in 5930.0 ms (0.36 ms/token, 2763 tok/s) | staged experts: 301 vram, 12229 ram, 0 disk, 17647 on the host (82787 rows, 7898 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.50, 0.015 ms a CPU row), 13381 prestaged (12724 routed, 3291747 rows) | rows resident 76.4% | plan 68.6 ms (cumulative)",
+        "glm prefill prof CUDA0 (49149 tokens, 17847 ms of stream time; waits on disk 0 ms, plan 69 ms host; disk experts used 0, read 0):",
+        "glm fast CPU lane CUDA0: 13857 verify-window calls of 2.60 columns each, 2.57 experts read for 3.01 uses"
+      ],
+      "verbose": [
+        {
+          "batched_tokens": 16383.0,
+          "batch_wall_ms": 6049.8,
+          "batch_ms_per_token": 0.37,
+          "batch_tps": 2708.0,
+          "staged_vram": 71.0,
+          "staged_ram": 4390.0,
+          "staged_disk": 0.0,
+          "host_experts": 6023.0,
+          "host_rows": 26697.0,
+          "host_ms": 2587.0,
+          "igpu_experts": 0.0,
+          "igpu_rows": 0.0,
+          "igpu_row_ms": 0.009,
+          "kappa": 0.69,
+          "cpu_row_ms": 0.013,
+          "prestaged": 4462.0,
+          "pre_routed": 3842.0,
+          "pre_rows": 815209.0,
+          "resident_percent": 68.0,
+          "plan_host_ms": 60.5,
+          "cumulative_increments": {
+            "staged_vram": 71.0,
+            "staged_ram": 4390.0,
+            "staged_disk": 0.0,
+            "host_experts": 6023.0,
+            "host_rows": 26697.0,
+            "host_ms": 2587.0,
+            "igpu_experts": 0.0,
+            "igpu_rows": 0.0,
+            "prestaged": 4462.0,
+            "pre_routed": 3842.0,
+            "pre_rows": 815209.0,
+            "plan_host_ms": 60.5
+          },
+          "native_line": "glm prefill: 16383 tokens in 6049.8 ms (0.37 ms/token, 2708 tok/s) | staged experts: 71 vram, 4390 ram, 0 disk, 6023 on the host (26697 rows, 2587 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.69, 0.013 ms a CPU row), 4462 prestaged (3842 routed, 815209 rows) | rows resident 68.0% | plan 60.5 ms (cumulative)"
+        },
+        {
+          "batched_tokens": 16383.0,
+          "batch_wall_ms": 5944.5,
+          "batch_ms_per_token": 0.36,
+          "batch_tps": 2756.0,
+          "staged_vram": 186.0,
+          "staged_ram": 8369.0,
+          "staged_disk": 0.0,
+          "host_experts": 11840.0,
+          "host_rows": 54296.0,
+          "host_ms": 5243.0,
+          "igpu_experts": 0.0,
+          "igpu_rows": 0.0,
+          "igpu_row_ms": 0.009,
+          "kappa": 0.52,
+          "cpu_row_ms": 0.017,
+          "prestaged": 8919.0,
+          "pre_routed": 8281.0,
+          "pre_rows": 2045499.0,
+          "resident_percent": 74.1,
+          "plan_host_ms": 64.7,
+          "cumulative_increments": {
+            "staged_vram": 115.0,
+            "staged_ram": 3979.0,
+            "staged_disk": 0.0,
+            "host_experts": 5817.0,
+            "host_rows": 27599.0,
+            "host_ms": 2656.0,
+            "igpu_experts": 0.0,
+            "igpu_rows": 0.0,
+            "prestaged": 4457.0,
+            "pre_routed": 4439.0,
+            "pre_rows": 1230290.0,
+            "plan_host_ms": 4.200000000000003
+          },
+          "native_line": "glm prefill: 16383 tokens in 5944.5 ms (0.36 ms/token, 2756 tok/s) | staged experts: 186 vram, 8369 ram, 0 disk, 11840 on the host (54296 rows, 5243 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.52, 0.017 ms a CPU row), 8919 prestaged (8281 routed, 2045499 rows) | rows resident 74.1% | plan 64.7 ms (cumulative)"
+        },
+        {
+          "batched_tokens": 16383.0,
+          "batch_wall_ms": 5930.0,
+          "batch_ms_per_token": 0.36,
+          "batch_tps": 2763.0,
+          "staged_vram": 301.0,
+          "staged_ram": 12229.0,
+          "staged_disk": 0.0,
+          "host_experts": 17647.0,
+          "host_rows": 82787.0,
+          "host_ms": 7898.0,
+          "igpu_experts": 0.0,
+          "igpu_rows": 0.0,
+          "igpu_row_ms": 0.009,
+          "kappa": 0.5,
+          "cpu_row_ms": 0.015,
+          "prestaged": 13381.0,
+          "pre_routed": 12724.0,
+          "pre_rows": 3291747.0,
+          "resident_percent": 76.4,
+          "plan_host_ms": 68.6,
+          "cumulative_increments": {
+            "staged_vram": 115.0,
+            "staged_ram": 3860.0,
+            "staged_disk": 0.0,
+            "host_experts": 5807.0,
+            "host_rows": 28491.0,
+            "host_ms": 2655.0,
+            "igpu_experts": 0.0,
+            "igpu_rows": 0.0,
+            "prestaged": 4462.0,
+            "pre_routed": 4443.0,
+            "pre_rows": 1246248.0,
+            "plan_host_ms": 3.8999999999999915
+          },
+          "native_line": "glm prefill: 16383 tokens in 5930.0 ms (0.36 ms/token, 2763 tok/s) | staged experts: 301 vram, 12229 ram, 0 disk, 17647 on the host (82787 rows, 7898 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.50, 0.015 ms a CPU row), 13381 prestaged (12724 routed, 3291747 rows) | rows resident 76.4% | plan 68.6 ms (cumulative)"
+        }
+      ],
+      "host_audit": {
+        "samples": 61,
+        "preflight_samples": 4,
+        "quiet_preflight_intervals": 3,
+        "max_interval_s": 2.06377628602786,
+        "max_independent_cpu_cores": 0.00493538473869389,
+        "mean_independent_cpu_cores": 0.0009022986885193854,
+        "max_independent_physical_io_mib_s": 0.00379228733799266,
+        "max_independent_rss_bytes": 21233664,
+        "contention_detected": false,
+        "scope": "Same-user process CPU/IO/RSS plus all GPU compute processes; whole-NVMe counters in preflight. Two-second sampling, not a proof of zero brief OS activity."
+      },
+      "mmq_slot_overread_lines": [],
+      "light_check_records": [],
+      "pin_failure_lines": [],
+      "calibration_retry_lines": [],
+      "calibration": {
+        "cpu_ms_per_expert": 0.162,
+        "pcie_ms_per_expert": 0.342,
+        "native_line": "glm fast: CUDA0 CPU lane: 12 threads, an expert 0.162 ms on the CPU vs 0.342 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 1 1 2 3 3 4 5 6"
+      }
+    },
+    {
+      "case": "default-03",
+      "mode": "default",
+      "classification": "fast_band",
+      "profile_tokens": 49149,
+      "stream_ms_rounded": 17778.0,
+      "stream_ms_sum_stages": 17778.0,
+      "disk_wait_ms": 0.0,
+      "plan_host_ms": 69.0,
+      "disk_experts_used": 0,
+      "disk_experts_read": 0,
+      "stages": {
+        "moe_staged": {
+          "ms": 3180.2,
+          "percent": 17.9,
+          "ms_per_reported_token": 0.065
+        },
+        "v41_attn": {
+          "ms": 2477.6,
+          "percent": 13.9,
+          "ms_per_reported_token": 0.05
+        },
+        "moe_resident": {
+          "ms": 2214.3,
+          "percent": 12.5,
+          "ms_per_reported_token": 0.045
+        },
+        "moe_prestaged": {
+          "ms": 1905.9,
+          "percent": 10.7,
+          "ms_per_reported_token": 0.039
+        },
+        "v41_index": {
+          "ms": 1549.8,
+          "percent": 8.7,
+          "ms_per_reported_token": 0.032
+        },
+        "v41_out": {
+          "ms": 1281.8,
+          "percent": 7.2,
+          "ms_per_reported_token": 0.026
+        },
+        "shexp": {
+          "ms": 1106.6,
+          "percent": 6.2,
+          "ms_per_reported_token": 0.023
+        },
+        "engram": {
+          "ms": 936.5,
+          "percent": 5.3,
+          "ms_per_reported_token": 0.019
+        },
+        "hc": {
+          "ms": 908.7,
+          "percent": 5.1,
+          "ms_per_reported_token": 0.018
+        },
+        "plan": {
+          "ms": 773.1,
+          "percent": 4.3,
+          "ms_per_reported_token": 0.016
+        },
+        "v41_q": {
+          "ms": 656.0,
+          "percent": 3.7,
+          "ms_per_reported_token": 0.013
+        },
+        "moe_light": {
+          "ms": 275.5,
+          "percent": 1.5,
+          "ms_per_reported_token": 0.006
+        },
+        "v41_proj": {
+          "ms": 197.4,
+          "percent": 1.1,
+          "ms_per_reported_token": 0.004
+        },
+        "router": {
+          "ms": 170.4,
+          "percent": 1.0,
+          "ms_per_reported_token": 0.003
+        },
+        "combine": {
+          "ms": 109.8,
+          "percent": 0.6,
+          "ms_per_reported_token": 0.002
+        },
+        "route": {
+          "ms": 33.6,
+          "percent": 0.2,
+          "ms_per_reported_token": 0.001
+        },
+        "dsa": {
+          "ms": 0.8,
+          "percent": 0.0,
+          "ms_per_reported_token": 0.0
+        }
+      },
+      "prefill_tps_all_three": [
+        2674.502122102514,
+        2714.9651183985948,
+        2729.529362765514
+      ],
+      "native_prompt_ms_all_three": [
+        6126.0,
+        6034.7,
+        6002.5
+      ],
+      "native_decode_tps_all_three": [
+        84.67778613897411,
+        100.60866275956593,
+        105.87098008198798
+      ],
+      "startup_lines": [
+        "glm fast: CUDA0 zero-copy token boundary: token_embd pinned (434 MB), the table edits and the token are read and written host-mapped",
+        "glm prefill: CUDA0 deepseek41 attention projections batched",
+        "glm prefill: CUDA0 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 2048), borrowing 3630 MB of the expert pool while a prompt runs (activations 1670, weight scratch 84, expert staging 130, prestage 1731: 160 experts); disk landing ring 96 experts (1038 MB pinned)",
+        "glm fast: CUDA0 VRAM before the expert pool: 7.82 of 71.12 GB in use - dense weights 5.24, state/KV (32768 ctx) 0.00, activations 0.09, other (context, MTP, scratch, prompt path) 2.49",
+        "glm fast: CUDA0 layers [0,40) expert pool 61.48 GB, 170-170 slots/layer (6800 total)",
+        "glm fast: RAM tier 31.3 GB registered from an mmap, MADV_HUGEPAGE on 31.3 GB of it; the process now holds 31.3 GB in transparent huge pages (free 2 MB blocks before: 55.1 GB)",
+        "glm fast: RAM tier 17.0 GB registered from an mmap, MADV_HUGEPAGE on 17.0 GB of it; the process now holds 48.2 GB in transparent huge pages (free 2 MB blocks before: 23.7 GB)",
+        "glm fast: RAM tier 8.9 GB registered from an mmap, MADV_HUGEPAGE on 5.7 GB of it; the process now holds 53.9 GB in transparent huge pages (free 2 MB blocks before: 6.7 GB)",
+        "glm fast: RAM tier 12.3 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 53.9 GB in transparent huge pages (free 2 MB blocks before: 1.0 GB)",
+        "glm fast: RAM tier 2.5 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 53.9 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)",
+        "glm fast: RAM tier 5.0 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 53.9 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)",
+        "glm fast: RAM tier 6.9 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 53.9 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)",
+        "glm fast: CUDA0 RAM tier 83.87 GB pinned, 9272 slots",
+        "glm fast: CUDA0 warming the expert tiers 10% (14.9 of 149.1 GB, 2 s)",
+        "glm fast: CUDA0 warming the expert tiers 20% (29.8 of 149.1 GB, 4 s)",
+        "glm fast: CUDA0 warming the expert tiers 30% (44.8 of 149.1 GB, 7 s)",
+        "glm fast: CUDA0 warming the expert tiers 40% (59.6 of 149.1 GB, 9 s)",
+        "glm fast: CUDA0 warming the expert tiers 50% (74.5 of 149.1 GB, 11 s)",
+        "glm fast: CUDA0 warming the expert tiers 60% (89.5 of 149.1 GB, 12 s)",
+        "glm fast: CUDA0 warming the expert tiers 70% (104.3 of 149.1 GB, 14 s)",
+        "glm fast: CUDA0 warming the expert tiers 80% (119.3 of 149.1 GB, 16 s)",
+        "glm fast: CUDA0 warming the expert tiers 90% (134.2 of 149.1 GB, 18 s)",
+        "glm fast: CUDA0 warming the expert tiers 100% (149.1 of 149.1 GB, 19 s)",
+        "glm fast: CUDA0 tiers warm: 15360 experts (149.1 GB) in 19 s (7.73 GB/s)",
+        "glm fast: CUDA0 CPU lane: 12 threads, an expert 0.154 ms on the CPU vs 0.342 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 1 1 2 3 4 4 5 6",
+        "glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 174 experts leave VRAM (0 of them moved over colder ones)",
+        "glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention",
+        "glm prefill: 16383 tokens in 6033.0 ms (0.37 ms/token, 2716 tok/s) | staged experts: 72 vram, 4403 ram, 0 disk, 6018 on the host (26550 rows, 2593 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.70, 0.018 ms a CPU row), 4457 prestaged (3840 routed, 814500 rows) | rows resident 68.0% | plan 60.8 ms (cumulative)",
+        "glm fast: dense GEMV tune for device 0 (sm_120, 110 CUs): Q6_K 4 warps a row (up to 4,096 blocks)",
+        "glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 242 experts leave VRAM (144 of them moved over colder ones)",
+        "glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention",
+        "glm prefill: 16383 tokens in 5921.0 ms (0.36 ms/token, 2767 tok/s) | staged experts: 189 vram, 8335 ram, 0 disk, 11832 on the host (53622 rows, 5217 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.48, 0.011 ms a CPU row), 8912 prestaged (8278 routed, 2049802 rows) | rows resident 74.3% | plan 65.0 ms (cumulative)",
+        "glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 216 experts leave VRAM (109 of them moved over colder ones)",
+        "glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention",
+        "glm prefill: 16383 tokens in 5901.1 ms (0.36 ms/token, 2776 tok/s) | staged experts: 312 vram, 12132 ram, 0 disk, 17563 on the host (82084 rows, 7846 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.50, 0.014 ms a CPU row), 13374 prestaged (12722 routed, 3300407 rows) | rows resident 76.7% | plan 68.8 ms (cumulative)",
+        "glm prefill prof CUDA0 (49149 tokens, 17778 ms of stream time; waits on disk 0 ms, plan 69 ms host; disk experts used 0, read 0):",
+        "glm fast CPU lane CUDA0: 14179 verify-window calls of 2.60 columns each, 2.60 experts read for 3.06 uses"
+      ],
+      "verbose": [
+        {
+          "batched_tokens": 16383.0,
+          "batch_wall_ms": 6033.0,
+          "batch_ms_per_token": 0.37,
+          "batch_tps": 2716.0,
+          "staged_vram": 72.0,
+          "staged_ram": 4403.0,
+          "staged_disk": 0.0,
+          "host_experts": 6018.0,
+          "host_rows": 26550.0,
+          "host_ms": 2593.0,
+          "igpu_experts": 0.0,
+          "igpu_rows": 0.0,
+          "igpu_row_ms": 0.009,
+          "kappa": 0.7,
+          "cpu_row_ms": 0.018,
+          "prestaged": 4457.0,
+          "pre_routed": 3840.0,
+          "pre_rows": 814500.0,
+          "resident_percent": 68.0,
+          "plan_host_ms": 60.8,
+          "cumulative_increments": {
+            "staged_vram": 72.0,
+            "staged_ram": 4403.0,
+            "staged_disk": 0.0,
+            "host_experts": 6018.0,
+            "host_rows": 26550.0,
+            "host_ms": 2593.0,
+            "igpu_experts": 0.0,
+            "igpu_rows": 0.0,
+            "prestaged": 4457.0,
+            "pre_routed": 3840.0,
+            "pre_rows": 814500.0,
+            "plan_host_ms": 60.8
+          },
+          "native_line": "glm prefill: 16383 tokens in 6033.0 ms (0.37 ms/token, 2716 tok/s) | staged experts: 72 vram, 4403 ram, 0 disk, 6018 on the host (26550 rows, 2593 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.70, 0.018 ms a CPU row), 4457 prestaged (3840 routed, 814500 rows) | rows resident 68.0% | plan 60.8 ms (cumulative)"
+        },
+        {
+          "batched_tokens": 16383.0,
+          "batch_wall_ms": 5921.0,
+          "batch_ms_per_token": 0.36,
+          "batch_tps": 2767.0,
+          "staged_vram": 189.0,
+          "staged_ram": 8335.0,
+          "staged_disk": 0.0,
+          "host_experts": 11832.0,
+          "host_rows": 53622.0,
+          "host_ms": 5217.0,
+          "igpu_experts": 0.0,
+          "igpu_rows": 0.0,
+          "igpu_row_ms": 0.009,
+          "kappa": 0.48,
+          "cpu_row_ms": 0.011,
+          "prestaged": 8912.0,
+          "pre_routed": 8278.0,
+          "pre_rows": 2049802.0,
+          "resident_percent": 74.3,
+          "plan_host_ms": 65.0,
+          "cumulative_increments": {
+            "staged_vram": 117.0,
+            "staged_ram": 3932.0,
+            "staged_disk": 0.0,
+            "host_experts": 5814.0,
+            "host_rows": 27072.0,
+            "host_ms": 2624.0,
+            "igpu_experts": 0.0,
+            "igpu_rows": 0.0,
+            "prestaged": 4455.0,
+            "pre_routed": 4438.0,
+            "pre_rows": 1235302.0,
+            "plan_host_ms": 4.200000000000003
+          },
+          "native_line": "glm prefill: 16383 tokens in 5921.0 ms (0.36 ms/token, 2767 tok/s) | staged experts: 189 vram, 8335 ram, 0 disk, 11832 on the host (53622 rows, 5217 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.48, 0.011 ms a CPU row), 8912 prestaged (8278 routed, 2049802 rows) | rows resident 74.3% | plan 65.0 ms (cumulative)"
+        },
+        {
+          "batched_tokens": 16383.0,
+          "batch_wall_ms": 5901.1,
+          "batch_ms_per_token": 0.36,
+          "batch_tps": 2776.0,
+          "staged_vram": 312.0,
+          "staged_ram": 12132.0,
+          "staged_disk": 0.0,
+          "host_experts": 17563.0,
+          "host_rows": 82084.0,
+          "host_ms": 7846.0,
+          "igpu_experts": 0.0,
+          "igpu_rows": 0.0,
+          "igpu_row_ms": 0.009,
+          "kappa": 0.5,
+          "cpu_row_ms": 0.014,
+          "prestaged": 13374.0,
+          "pre_routed": 12722.0,
+          "pre_rows": 3300407.0,
+          "resident_percent": 76.7,
+          "plan_host_ms": 68.8,
+          "cumulative_increments": {
+            "staged_vram": 123.0,
+            "staged_ram": 3797.0,
+            "staged_disk": 0.0,
+            "host_experts": 5731.0,
+            "host_rows": 28462.0,
+            "host_ms": 2629.0,
+            "igpu_experts": 0.0,
+            "igpu_rows": 0.0,
+            "prestaged": 4462.0,
+            "pre_routed": 4444.0,
+            "pre_rows": 1250605.0,
+            "plan_host_ms": 3.799999999999997
+          },
+          "native_line": "glm prefill: 16383 tokens in 5901.1 ms (0.36 ms/token, 2776 tok/s) | staged experts: 312 vram, 12132 ram, 0 disk, 17563 on the host (82084 rows, 7846 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.50, 0.014 ms a CPU row), 13374 prestaged (12722 routed, 3300407 rows) | rows resident 76.7% | plan 68.8 ms (cumulative)"
+        }
+      ],
+      "host_audit": {
+        "samples": 60,
+        "preflight_samples": 4,
+        "quiet_preflight_intervals": 3,
+        "max_interval_s": 2.078997703967616,
+        "max_independent_cpu_cores": 0.009840273264929707,
+        "mean_independent_cpu_cores": 0.0010012209340789248,
+        "max_independent_physical_io_mib_s": 0.0019285691643004489,
+        "max_independent_rss_bytes": 21233664,
+        "contention_detected": false,
+        "scope": "Same-user process CPU/IO/RSS plus all GPU compute processes; whole-NVMe counters in preflight. Two-second sampling, not a proof of zero brief OS activity."
+      },
+      "mmq_slot_overread_lines": [],
+      "light_check_records": [],
+      "pin_failure_lines": [],
+      "calibration_retry_lines": [],
+      "calibration": {
+        "cpu_ms_per_expert": 0.154,
+        "pcie_ms_per_expert": 0.342,
+        "native_line": "glm fast: CUDA0 CPU lane: 12 threads, an expert 0.154 ms on the CPU vs 0.342 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 1 1 2 3 4 4 5 6"
+      }
+    },
+    {
+      "case": "lightcheck-01",
+      "mode": "lightcheck",
+      "classification": "fast_band",
+      "profile_tokens": 49149,
+      "stream_ms_rounded": 18322.0,
+      "stream_ms_sum_stages": 18322.0,
+      "disk_wait_ms": 0.0,
+      "plan_host_ms": 69.0,
+      "disk_experts_used": 0,
+      "disk_experts_read": 0,
+      "stages": {
+        "moe_staged": {
+          "ms": 3454.1,
+          "percent": 18.9,
+          "ms_per_reported_token": 0.07
+        },
+        "moe_resident": {
+          "ms": 2744.1,
+          "percent": 15.0,
+          "ms_per_reported_token": 0.056
+        },
+        "v41_attn": {
+          "ms": 2478.1,
+          "percent": 13.5,
+          "ms_per_reported_token": 0.05
+        },
+        "moe_prestaged": {
+          "ms": 1927.9,
+          "percent": 10.5,
+          "ms_per_reported_token": 0.039
+        },
+        "v41_index": {
+          "ms": 1550.1,
+          "percent": 8.5,
+          "ms_per_reported_token": 0.032
+        },
+        "v41_out": {
+          "ms": 1281.7,
+          "percent": 7.0,
+          "ms_per_reported_token": 0.026
+        },
+        "shexp": {
+          "ms": 1097.1,
+          "percent": 6.0,
+          "ms_per_reported_token": 0.022
+        },
+        "engram": {
+          "ms": 928.2,
+          "percent": 5.1,
+          "ms_per_reported_token": 0.019
+        },
+        "hc": {
+          "ms": 908.4,
+          "percent": 5.0,
+          "ms_per_reported_token": 0.018
+        },
+        "v41_q": {
+          "ms": 655.7,
+          "percent": 3.6,
+          "ms_per_reported_token": 0.013
+        },
+        "plan": {
+          "ms": 498.8,
+          "percent": 2.7,
+          "ms_per_reported_token": 0.01
+        },
+        "moe_light": {
+          "ms": 278.8,
+          "percent": 1.5,
+          "ms_per_reported_token": 0.006
+        },
+        "v41_proj": {
+          "ms": 197.6,
+          "percent": 1.1,
+          "ms_per_reported_token": 0.004
+        },
+        "router": {
+          "ms": 174.9,
+          "percent": 1.0,
+          "ms_per_reported_token": 0.004
+        },
+        "combine": {
+          "ms": 112.1,
+          "percent": 0.6,
+          "ms_per_reported_token": 0.002
+        },
+        "route": {
+          "ms": 33.6,
+          "percent": 0.2,
+          "ms_per_reported_token": 0.001
+        },
+        "dsa": {
+          "ms": 0.8,
+          "percent": 0.0,
+          "ms_per_reported_token": 0.0
+        }
+      },
+      "prefill_tps_all_three": [
+        2606.012406553205,
+        2644.030597424394,
+        2633.914217735194
+      ],
+      "native_prompt_ms_all_three": [
+        6287.0,
+        6196.6,
+        6220.4
+      ],
+      "native_decode_tps_all_three": [
+        87.07816200449848,
+        102.3053675350301,
+        103.65264218075443
+      ],
+      "startup_lines": [
+        "glm fast: CUDA0 zero-copy token boundary: token_embd pinned (434 MB), the table edits and the token are read and written host-mapped",
+        "glm prefill: CUDA0 deepseek41 attention projections batched",
+        "glm prefill: CUDA0 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 2048), borrowing 3630 MB of the expert pool while a prompt runs (activations 1670, weight scratch 84, expert staging 130, prestage 1731: 160 experts); disk landing ring 96 experts (1038 MB pinned)",
+        "glm fast: CUDA0 VRAM before the expert pool: 7.82 of 71.12 GB in use - dense weights 5.24, state/KV (32768 ctx) 0.00, activations 0.09, other (context, MTP, scratch, prompt path) 2.49",
+        "glm fast: CUDA0 layers [0,40) expert pool 61.48 GB, 170-170 slots/layer (6800 total)",
+        "glm fast: RAM tier 31.3 GB registered from an mmap, MADV_HUGEPAGE on 31.3 GB of it; the process now holds 31.3 GB in transparent huge pages (free 2 MB blocks before: 55.2 GB)",
+        "glm fast: RAM tier 17.0 GB registered from an mmap, MADV_HUGEPAGE on 17.0 GB of it; the process now holds 48.2 GB in transparent huge pages (free 2 MB blocks before: 23.8 GB)",
+        "glm fast: RAM tier 8.9 GB registered from an mmap, MADV_HUGEPAGE on 5.8 GB of it; the process now holds 54.0 GB in transparent huge pages (free 2 MB blocks before: 6.8 GB)",
+        "glm fast: RAM tier 12.3 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 54.0 GB in transparent huge pages (free 2 MB blocks before: 1.0 GB)",
+        "glm fast: RAM tier 2.5 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 54.0 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)",
+        "glm fast: RAM tier 5.0 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 54.0 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)",
+        "glm fast: RAM tier 6.9 GB registered from an mmap, MADV_HUGEPAGE on 0.0 GB of it; the process now holds 54.0 GB in transparent huge pages (free 2 MB blocks before: 0.9 GB)",
+        "glm fast: CUDA0 RAM tier 83.87 GB pinned, 9272 slots",
+        "glm fast: CUDA0 warming the expert tiers 10% (14.9 of 149.1 GB, 2 s)",
+        "glm fast: CUDA0 warming the expert tiers 20% (29.8 of 149.1 GB, 4 s)",
+        "glm fast: CUDA0 warming the expert tiers 30% (44.8 of 149.1 GB, 6 s)",
+        "glm fast: CUDA0 warming the expert tiers 40% (59.6 of 149.1 GB, 9 s)",
+        "glm fast: CUDA0 warming the expert tiers 50% (74.5 of 149.1 GB, 10 s)",
+        "glm fast: CUDA0 warming the expert tiers 60% (89.5 of 149.1 GB, 12 s)",
+        "glm fast: CUDA0 warming the expert tiers 70% (104.3 of 149.1 GB, 14 s)",
+        "glm fast: CUDA0 warming the expert tiers 80% (119.3 of 149.1 GB, 15 s)",
+        "glm fast: CUDA0 warming the expert tiers 90% (134.2 of 149.1 GB, 17 s)",
+        "glm fast: CUDA0 warming the expert tiers 100% (149.1 of 149.1 GB, 19 s)",
+        "glm fast: CUDA0 tiers warm: 15360 experts (149.1 GB) in 19 s (7.96 GB/s)",
+        "glm fast: CUDA0 CPU lane: 12 threads, an expert 0.155 ms on the CPU vs 0.342 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 1 1 2 3 4 4 5 6",
+        "glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 174 experts leave VRAM (0 of them moved over colder ones)",
+        "glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention",
+        "glm prefill light check layer 0: 51 experts, 233 rows, rel L2 1.636e-03, worst row 4.336e-03",
+        "glm prefill light check layer 1: 51 experts, 313 rows, rel L2 1.893e-03, worst row 3.224e-03",
+        "glm prefill light check layer 2: 47 experts, 374 rows, rel L2 1.715e-03, worst row 4.143e-03",
+        "glm prefill light check layer 3: 40 experts, 252 rows, rel L2 1.972e-03, worst row 6.130e-03",
+        "glm prefill light check layer 4: 45 experts, 302 rows, rel L2 1.671e-03, worst row 4.106e-03",
+        "glm prefill light check layer 5: 36 experts, 246 rows, rel L2 1.656e-03, worst row 4.581e-03",
+        "glm prefill light check layer 6: 39 experts, 245 rows, rel L2 1.975e-03, worst row 4.048e-03",
+        "glm prefill light check layer 7: 48 experts, 419 rows, rel L2 1.948e-03, worst row 4.265e-03",
+        "glm prefill light check layer 13: 69 experts, 592 rows, rel L2 1.972e-03, worst row 3.266e-03",
+        "glm prefill light check layer 15: 64 experts, 464 rows, rel L2 1.812e-03, worst row 5.175e-03",
+        "glm prefill light check layer 19: 72 experts, 550 rows, rel L2 1.767e-03, worst row 3.610e-03",
+        "glm prefill light check layer 0: 22 experts, 215 rows, rel L2 1.696e-03, worst row 4.390e-03",
+        "glm prefill light check layer 1: 31 experts, 174 rows, rel L2 1.919e-03, worst row 2.937e-03",
+        "glm prefill light check layer 2: 27 experts, 237 rows, rel L2 1.874e-03, worst row 3.778e-03",
+        "glm prefill light check layer 3: 24 experts, 223 rows, rel L2 1.929e-03, worst row 3.524e-03",
+        "glm prefill light check layer 4: 23 experts, 236 rows, rel L2 1.862e-03, worst row 4.068e-03",
+        "glm prefill light check layer 5: 18 experts, 157 rows, rel L2 1.852e-03, worst row 4.090e-03",
+        "glm prefill light check layer 6: 26 experts, 136 rows, rel L2 1.957e-03, worst row 3.194e-03",
+        "glm prefill light check layer 7: 32 experts, 308 rows, rel L2 2.114e-03, worst row 4.127e-03",
+        "glm prefill light check layer 13: 43 experts, 485 rows, rel L2 2.028e-03, worst row 3.761e-03",
+        "glm prefill light check layer 15: 37 experts, 297 rows, rel L2 1.900e-03, worst row 6.109e-03",
+        "glm prefill light check layer 19: 64 experts, 517 rows, rel L2 2.059e-03, worst row 4.272e-03",
+        "glm prefill light check layer 0: 22 experts, 136 rows, rel L2 1.654e-03, worst row 3.232e-03",
+        "glm prefill light check layer 1: 36 experts, 230 rows, rel L2 1.936e-03, worst row 3.088e-03",
+        "glm prefill light check layer 2: 26 experts, 175 rows, rel L2 1.925e-03, worst row 3.818e-03",
+        "glm prefill light check layer 3: 26 experts, 230 rows, rel L2 1.970e-03, worst row 3.747e-03",
+        "glm prefill light check layer 4: 24 experts, 298 rows, rel L2 1.897e-03, worst row 3.351e-03",
+        "glm prefill light check layer 5: 23 experts, 130 rows, rel L2 1.873e-03, worst row 3.381e-03",
+        "glm prefill light check layer 6: 29 experts, 141 rows, rel L2 2.003e-03, worst row 3.233e-03",
+        "glm prefill light check layer 7: 29 experts, 358 rows, rel L2 2.038e-03, worst row 4.137e-03",
+        "glm prefill light check layer 13: 43 experts, 518 rows, rel L2 1.879e-03, worst row 3.304e-03",
+        "glm prefill light check layer 15: 43 experts, 415 rows, rel L2 1.761e-03, worst row 3.551e-03",
+        "glm prefill light check layer 19: 68 experts, 656 rows, rel L2 1.976e-03, worst row 4.034e-03",
+        "glm prefill light check layer 0: 19 experts, 157 rows, rel L2 9.754e-04, worst row 2.922e-03",
+        "glm prefill light check layer 1: 33 experts, 212 rows, rel L2 1.903e-03, worst row 3.102e-03",
+        "glm prefill light check layer 2: 28 experts, 265 rows, rel L2 1.951e-03, worst row 3.343e-03",
+        "glm prefill light check layer 3: 19 experts, 155 rows, rel L2 1.902e-03, worst row 3.730e-03",
+        "glm prefill light check layer 4: 24 experts, 188 rows, rel L2 1.825e-03, worst row 4.304e-03",
+        "glm prefill light check layer 5: 24 experts, 227 rows, rel L2 1.666e-03, worst row 3.399e-03",
+        "glm prefill light check layer 6: 28 experts, 151 rows, rel L2 2.034e-03, worst row 4.059e-03",
+        "glm prefill light check layer 7: 42 experts, 520 rows, rel L2 2.018e-03, worst row 3.959e-03",
+        "glm prefill light check layer 13: 61 experts, 613 rows, rel L2 1.931e-03, worst row 4.487e-03",
+        "glm prefill light check layer 15: 49 experts, 424 rows, rel L2 1.886e-03, worst row 4.687e-03",
+        "glm prefill light check layer 19: 79 experts, 721 rows, rel L2 1.733e-03, worst row 3.997e-03",
+        "glm prefill light check layer 0: 63 experts, 310 rows, rel L2 1.454e-03, worst row 3.480e-03",
+        "glm prefill light check layer 1: 71 experts, 430 rows, rel L2 1.671e-03, worst row 3.569e-03",
+        "glm prefill light check layer 2: 58 experts, 358 rows, rel L2 1.682e-03, worst row 4.038e-03",
+        "glm prefill light check layer 3: 49 experts, 271 rows, rel L2 1.666e-03, worst row 3.033e-03",
+        "glm prefill light check layer 4: 76 experts, 425 rows, rel L2 1.715e-03, worst row 3.522e-03",
+        "glm prefill light check layer 5: 44 experts, 213 rows, rel L2 1.659e-03, worst row 3.619e-03",
+        "glm prefill light check layer 6: 57 experts, 356 rows, rel L2 1.652e-03, worst row 3.933e-03",
+        "glm prefill light check layer 7: 54 experts, 497 rows, rel L2 1.895e-03, worst row 3.666e-03",
+        "glm prefill light check layer 13: 75 experts, 785 rows, rel L2 1.963e-03, worst row 5.458e-03",
+        "glm prefill light check layer 15: 84 experts, 661 rows, rel L2 2.054e-03, worst row 4.011e-03",
+        "glm prefill light check layer 19: 87 experts, 721 rows, rel L2 1.884e-03, worst row 3.557e-03",
+        "glm prefill light check layer 20: 65 experts, 494 rows, rel L2 1.946e-03, worst row 3.625e-03",
+        "glm prefill light check layer 33: 73 experts, 664 rows, rel L2 2.153e-03, worst row 4.547e-03",
+        "glm prefill light check layer 35: 64 experts, 480 rows, rel L2 2.032e-03, worst row 3.931e-03",
+        "glm prefill light check layer 36: 60 experts, 587 rows, rel L2 2.229e-03, worst row 3.955e-03",
+        "glm prefill light check layer 37: 77 experts, 483 rows, rel L2 2.191e-03, worst row 4.347e-03",
+        "glm prefill: 16383 tokens in 6193.1 ms (0.38 ms/token, 2645 tok/s) | staged experts: 70 vram, 4569 ram, 0 disk, 5878 on the host (24860 rows, 2274 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.73, 0.014 ms a CPU row), 4434 prestaged (3823 routed, 814273 rows) | rows resident 67.9% | plan 61.3 ms (cumulative)",
+        "glm fast: dense GEMV tune for device 0 (sm_120, 110 CUs): Q6_K 4 warps a row (up to 4,096 blocks)",
+        "glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 237 experts leave VRAM (158 of them moved over colder ones)",
+        "glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention",
+        "glm prefill light check layer 0: 59 experts, 231 rows, rel L2 1.461e-03, worst row 3.367e-03",
+        "glm prefill light check layer 1: 74 experts, 398 rows, rel L2 3.586e-04, worst row 3.568e-03",
+        "glm prefill light check layer 2: 49 experts, 385 rows, rel L2 4.744e-04, worst row 3.965e-03",
+        "glm prefill light check layer 3: 47 experts, 253 rows, rel L2 8.948e-04, worst row 3.229e-03",
+        "glm prefill light check layer 4: 48 experts, 276 rows, rel L2 1.662e-03, worst row 4.294e-03",
+        "glm prefill light check layer 5: 43 experts, 261 rows, rel L2 1.668e-03, worst row 3.482e-03",
+        "glm prefill light check layer 6: 42 experts, 192 rows, rel L2 1.869e-03, worst row 3.751e-03",
+        "glm prefill light check layer 7: 52 experts, 444 rows, rel L2 1.936e-03, worst row 4.204e-03",
+        "glm prefill light check layer 13: 72 experts, 529 rows, rel L2 2.017e-03, worst row 3.749e-03",
+        "glm prefill light check layer 15: 67 experts, 406 rows, rel L2 3.742e-04, worst row 4.405e-03",
+        "glm prefill light check layer 19: 77 experts, 556 rows, rel L2 1.826e-03, worst row 5.226e-03",
+        "glm prefill light check layer 0: 22 experts, 164 rows, rel L2 1.636e-03, worst row 4.390e-03",
+        "glm prefill light check layer 1: 42 experts, 232 rows, rel L2 1.963e-03, worst row 4.622e-03",
+        "glm prefill light check layer 2: 27 experts, 220 rows, rel L2 1.803e-03, worst row 4.417e-03",
+        "glm prefill light check layer 3: 20 experts, 195 rows, rel L2 1.872e-03, worst row 3.214e-03",
+        "glm prefill light check layer 4: 23 experts, 235 rows, rel L2 1.853e-03, worst row 3.250e-03",
+        "glm prefill light check layer 5: 22 experts, 150 rows, rel L2 1.811e-03, worst row 3.294e-03",
+        "glm prefill light check layer 6: 25 experts, 120 rows, rel L2 2.012e-03, worst row 3.433e-03",
+        "glm prefill light check layer 7: 44 experts, 347 rows, rel L2 2.134e-03, worst row 3.598e-03",
+        "glm prefill light check layer 13: 56 experts, 487 rows, rel L2 2.066e-03, worst row 3.452e-03",
+        "glm prefill light check layer 15: 36 experts, 283 rows, rel L2 1.796e-03, worst row 3.572e-03",
+        "glm prefill light check layer 19: 65 experts, 482 rows, rel L2 1.754e-03, worst row 3.687e-03",
+        "glm prefill light check layer 0: 21 experts, 97 rows, rel L2 1.622e-03, worst row 3.232e-03",
+        "glm prefill light check layer 1: 49 experts, 257 rows, rel L2 1.970e-03, worst row 4.194e-03",
+        "glm prefill light check layer 2: 27 experts, 165 rows, rel L2 1.829e-03, worst row 2.997e-03",
+        "glm prefill light check layer 3: 28 experts, 215 rows, rel L2 1.913e-03, worst row 3.458e-03",
+        "glm prefill light check layer 4: 22 experts, 224 rows, rel L2 1.787e-03, worst row 3.622e-03",
+        "glm prefill light check layer 5: 24 experts, 116 rows, rel L2 1.805e-03, worst row 3.852e-03",
+        "glm prefill light check layer 6: 29 experts, 110 rows, rel L2 2.068e-03, worst row 3.702e-03",
+        "glm prefill light check layer 7: 42 experts, 374 rows, rel L2 2.051e-03, worst row 3.938e-03",
+        "glm prefill light check layer 13: 56 experts, 559 rows, rel L2 1.906e-03, worst row 3.593e-03",
+        "glm prefill light check layer 15: 48 experts, 299 rows, rel L2 1.865e-03, worst row 4.236e-03",
+        "glm prefill light check layer 19: 72 experts, 557 rows, rel L2 1.850e-03, worst row 3.446e-03",
+        "glm prefill light check layer 0: 18 experts, 110 rows, rel L2 1.029e-03, worst row 2.922e-03",
+        "glm prefill light check layer 1: 40 experts, 216 rows, rel L2 1.961e-03, worst row 3.714e-03",
+        "glm prefill light check layer 2: 24 experts, 240 rows, rel L2 1.971e-03, worst row 3.094e-03",
+        "glm prefill light check layer 3: 19 experts, 153 rows, rel L2 1.866e-03, worst row 3.382e-03",
+        "glm prefill light check layer 4: 22 experts, 167 rows, rel L2 1.807e-03, worst row 4.912e-03",
+        "glm prefill light check layer 5: 21 experts, 188 rows, rel L2 1.736e-03, worst row 4.571e-03",
+        "glm prefill light check layer 6: 25 experts, 125 rows, rel L2 1.956e-03, worst row 3.381e-03",
+        "glm prefill light check layer 7: 48 experts, 462 rows, rel L2 2.083e-03, worst row 4.410e-03",
+        "glm prefill light check layer 13: 67 experts, 574 rows, rel L2 1.910e-03, worst row 4.110e-03",
+        "glm prefill light check layer 15: 42 experts, 296 rows, rel L2 1.989e-03, worst row 3.901e-03",
+        "glm prefill light check layer 19: 73 experts, 619 rows, rel L2 1.658e-03, worst row 3.983e-03",
+        "glm prefill light check layer 0: 79 experts, 259 rows, rel L2 1.284e-03, worst row 3.373e-03",
+        "glm prefill light check layer 1: 88 experts, 532 rows, rel L2 1.699e-03, worst row 3.623e-03",
+        "glm prefill light check layer 2: 61 experts, 360 rows, rel L2 1.619e-03, worst row 3.923e-03",
+        "glm prefill light check layer 3: 64 experts, 298 rows, rel L2 1.580e-03, worst row 3.288e-03",
+        "glm prefill light check layer 4: 70 experts, 371 rows, rel L2 1.768e-03, worst row 3.204e-03",
+        "glm prefill light check layer 5: 51 experts, 216 rows, rel L2 1.559e-03, worst row 3.749e-03",
+        "glm prefill light check layer 6: 66 experts, 343 rows, rel L2 1.615e-03, worst row 4.075e-03",
+        "glm prefill light check layer 7: 75 experts, 505 rows, rel L2 1.872e-03, worst row 4.095e-03",
+        "glm prefill light check layer 13: 88 experts, 834 rows, rel L2 1.922e-03, worst row 3.472e-03",
+        "glm prefill light check layer 15: 98 experts, 704 rows, rel L2 2.024e-03, worst row 4.651e-03",
+        "glm prefill light check layer 19: 94 experts, 808 rows, rel L2 1.827e-03, worst row 3.920e-03",
+        "glm prefill light check layer 20: 70 experts, 472 rows, rel L2 1.958e-03, worst row 4.363e-03",
+        "glm prefill light check layer 33: 82 experts, 628 rows, rel L2 2.163e-03, worst row 4.467e-03",
+        "glm prefill light check layer 35: 79 experts, 521 rows, rel L2 2.156e-03, worst row 4.354e-03",
+        "glm prefill light check layer 36: 67 experts, 605 rows, rel L2 2.197e-03, worst row 3.601e-03",
+        "glm prefill light check layer 37: 94 experts, 504 rows, rel L2 2.157e-03, worst row 4.254e-03",
+        "glm prefill: 16383 tokens in 6083.8 ms (0.37 ms/token, 2693 tok/s) | staged experts: 187 vram, 8672 ram, 0 disk, 11584 on the host (51271 rows, 4580 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.55, 0.013 ms a CPU row), 8849 prestaged (8219 routed, 2079584 rows) | rows resident 73.5% | plan 65.1 ms (cumulative)",
+        "glm prefill: CUDA0 lends 2246 MB of the expert pool for 4096 tokens: 208 experts leave VRAM (94 of them moved over colder ones)",
+        "glm prefill: prompt skip - 13715 of 16383 rows stop at layer 20's attention",
+        "glm prefill light check layer 0: 62 experts, 232 rows, rel L2 1.583e-03, worst row 3.367e-03",
+        "glm prefill light check layer 1: 77 experts, 541 rows, rel L2 3.752e-04, worst row 4.188e-03",
+        "glm prefill light check layer 2: 50 experts, 339 rows, rel L2 4.503e-04, worst row 4.038e-03",
+        "glm prefill light check layer 3: 49 experts, 254 rows, rel L2 8.073e-04, worst row 3.366e-03",
+        "glm prefill light check layer 4: 47 experts, 288 rows, rel L2 1.722e-03, worst row 3.699e-03",
+        "glm prefill light check layer 5: 43 experts, 226 rows, rel L2 1.651e-03, worst row 3.562e-03",
+        "glm prefill light check layer 6: 42 experts, 188 rows, rel L2 1.926e-03, worst row 3.715e-03",
+        "glm prefill light check layer 7: 57 experts, 435 rows, rel L2 1.918e-03, worst row 3.689e-03",
+        "glm prefill light check layer 13: 77 experts, 609 rows, rel L2 1.963e-03, worst row 4.410e-03",
+        "glm prefill light check layer 15: 64 experts, 408 rows, rel L2 3.780e-04, worst row 3.568e-03",
+        "glm prefill light check layer 19: 82 experts, 642 rows, rel L2 1.762e-03, worst row 3.631e-03",
+        "glm prefill light check layer 0: 28 experts, 181 rows, rel L2 1.654e-03, worst row 4.390e-03",
+        "glm prefill light check layer 1: 51 experts, 362 rows, rel L2 1.927e-03, worst row 3.313e-03",
+        "glm prefill light check layer 2: 32 experts, 219 rows, rel L2 1.970e-03, worst row 4.490e-03",
+        "glm prefill light check layer 3: 22 experts, 203 rows, rel L2 1.959e-03, worst row 4.022e-03",
+        "glm prefill light check layer 4: 22 experts, 198 rows, rel L2 1.861e-03, worst row 4.051e-03",
+        "glm prefill light check layer 5: 19 experts, 109 rows, rel L2 1.872e-03, worst row 3.074e-03",
+        "glm prefill light check layer 6: 26 experts, 122 rows, rel L2 1.909e-03, worst row 3.144e-03",
+        "glm prefill light check layer 7: 46 experts, 363 rows, rel L2 2.146e-03, worst row 3.675e-03",
+        "glm prefill light check layer 13: 57 experts, 494 rows, rel L2 1.979e-03, worst row 3.601e-03",
+        "glm prefill light check layer 15: 40 experts, 308 rows, rel L2 1.788e-03, worst row 3.635e-03",
+        "glm prefill light check layer 19: 74 experts, 652 rows, rel L2 1.805e-03, worst row 3.637e-03",
+        "glm prefill light check layer 0: 24 experts, 103 rows, rel L2 1.609e-03, worst row 3.232e-03",
+        "glm prefill light check layer 1: 55 experts, 415 rows, rel L2 1.944e-03, worst row 3.452e-03",
+        "glm prefill light check layer 2: 28 experts, 164 rows, rel L2 1.916e-03, worst row 3.077e-03",
+        "glm prefill light check layer 3: 32 experts, 206 rows, rel L2 1.897e-03, worst row 3.179e-03",
+        "glm prefill light check layer 4: 21 experts, 217 rows, rel L2 1.818e-03, worst row 3.094e-03",
+        "glm prefill light check layer 5: 22 experts, 139 rows, rel L2 1.972e-03, worst row 4.256e-03",
+        "glm prefill light check layer 6: 30 experts, 118 rows, rel L2 2.028e-03, worst row 3.233e-03",
+        "glm prefill light check layer 7: 40 experts, 349 rows, rel L2 1.944e-03, worst row 3.465e-03",
+        "glm prefill light check layer 13: 56 experts, 636 rows, rel L2 1.907e-03, worst row 5.025e-03",
+        "glm prefill light check layer 15: 50 experts, 349 rows, rel L2 1.779e-03, worst row 4.155e-03",
+        "glm prefill light check layer 19: 83 experts, 766 rows, rel L2 1.897e-03, worst row 3.610e-03",
+        "glm prefill light check layer 0: 18 experts, 109 rows, rel L2 1.026e-03, worst row 2.922e-03",
+        "glm prefill light check layer 1: 46 experts, 223 rows, rel L2 1.893e-03, worst row 3.155e-03",
+        "glm prefill light check layer 2: 25 experts, 239 rows, rel L2 2.028e-03, worst row 3.174e-03",
+        "glm prefill light check layer 3: 22 experts, 130 rows, rel L2 1.751e-03, worst row 4.036e-03",
+        "glm prefill light check layer 4: 20 experts, 133 rows, rel L2 1.738e-03, worst row 2.974e-03",
+        "glm prefill light check layer 5: 20 experts, 180 rows, rel L2 1.584e-03, worst row 3.514e-03",
+        "glm prefill light check layer 6: 25 experts, 160 rows, rel L2 1.890e-03, worst row 3.187e-03",
+        "glm prefill light check layer 7: 52 experts, 460 rows, rel L2 2.017e-03, worst row 3.388e-03",
+        "glm prefill light check layer 13: 71 experts, 554 rows, rel L2 1.887e-03, worst row 4.123e-03",
+        "glm prefill light check layer 15: 41 experts, 259 rows, rel L2 1.909e-03, worst row 3.769e-03",
+        "glm prefill light check layer 19: 78 experts, 692 rows, rel L2 1.763e-03, worst row 4.674e-03",
+        "glm prefill light check layer 0: 82 experts, 289 rows, rel L2 1.283e-03, worst row 3.373e-03",
+        "glm prefill light check layer 1: 92 experts, 603 rows, rel L2 1.687e-03, worst row 3.859e-03",
+        "glm prefill light check layer 2: 60 experts, 345 rows, rel L2 1.550e-03, worst row 3.355e-03",
+        "glm prefill light check layer 3: 69 experts, 335 rows, rel L2 1.593e-03, worst row 3.104e-03",
+        "glm prefill light check layer 4: 69 experts, 384 rows, rel L2 1.740e-03, worst row 4.577e-03",
+        "glm prefill light check layer 5: 54 experts, 246 rows, rel L2 1.525e-03, worst row 4.304e-03",
+        "glm prefill light check layer 6: 66 experts, 342 rows, rel L2 1.628e-03, worst row 3.737e-03",
+        "glm prefill light check layer 7: 76 experts, 479 rows, rel L2 1.835e-03, worst row 4.196e-03",
+        "glm prefill light check layer 13: 95 experts, 881 rows, rel L2 1.947e-03, worst row 3.488e-03",
+        "glm prefill light check layer 15: 98 experts, 680 rows, rel L2 2.007e-03, worst row 4.007e-03",
+        "glm prefill light check layer 19: 97 experts, 896 rows, rel L2 1.806e-03, worst row 4.404e-03",
+        "glm prefill light check layer 20: 68 experts, 438 rows, rel L2 1.913e-03, worst row 3.624e-03",
+        "glm prefill light check layer 33: 88 experts, 709 rows, rel L2 1.939e-03, worst row 4.692e-03",
+        "glm prefill light check layer 35: 88 experts, 545 rows, rel L2 2.134e-03, worst row 4.327e-03",
+        "glm prefill light check layer 36: 75 experts, 637 rows, rel L2 2.143e-03, worst row 3.978e-03",
+        "glm prefill light check layer 37: 96 experts, 523 rows, rel L2 2.152e-03, worst row 5.659e-03",
+        "glm prefill: 16383 tokens in 6122.4 ms (0.37 ms/token, 2676 tok/s) | staged experts: 301 vram, 12684 ram, 0 disk, 17193 on the host (78121 rows, 6923 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.56, 0.015 ms a CPU row), 13276 prestaged (12629 routed, 3350995 rows) | rows resident 75.7% | plan 69.4 ms (cumulative)",
+        "glm prefill prof CUDA0 (49149 tokens, 18322 ms of stream time; waits on disk 0 ms, plan 69 ms host; disk experts used 0, read 0):",
+        "glm fast CPU lane CUDA0: 13717 verify-window calls of 2.61 columns each, 2.60 experts read for 3.07 uses"
+      ],
+      "verbose": [
+        {
+          "batched_tokens": 16383.0,
+          "batch_wall_ms": 6193.1,
+          "batch_ms_per_token": 0.38,
+          "batch_tps": 2645.0,
+          "staged_vram": 70.0,
+          "staged_ram": 4569.0,
+          "staged_disk": 0.0,
+          "host_experts": 5878.0,
+          "host_rows": 24860.0,
+          "host_ms": 2274.0,
+          "igpu_experts": 0.0,
+          "igpu_rows": 0.0,
+          "igpu_row_ms": 0.009,
+          "kappa": 0.73,
+          "cpu_row_ms": 0.014,
+          "prestaged": 4434.0,
+          "pre_routed": 3823.0,
+          "pre_rows": 814273.0,
+          "resident_percent": 67.9,
+          "plan_host_ms": 61.3,
+          "cumulative_increments": {
+            "staged_vram": 70.0,
+            "staged_ram": 4569.0,
+            "staged_disk": 0.0,
+            "host_experts": 5878.0,
+            "host_rows": 24860.0,
+            "host_ms": 2274.0,
+            "igpu_experts": 0.0,
+            "igpu_rows": 0.0,
+            "prestaged": 4434.0,
+            "pre_routed": 3823.0,
+            "pre_rows": 814273.0,
+            "plan_host_ms": 61.3
+          },
+          "native_line": "glm prefill: 16383 tokens in 6193.1 ms (0.38 ms/token, 2645 tok/s) | staged experts: 70 vram, 4569 ram, 0 disk, 5878 on the host (24860 rows, 2274 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.73, 0.014 ms a CPU row), 4434 prestaged (3823 routed, 814273 rows) | rows resident 67.9% | plan 61.3 ms (cumulative)"
+        },
+        {
+          "batched_tokens": 16383.0,
+          "batch_wall_ms": 6083.8,
+          "batch_ms_per_token": 0.37,
+          "batch_tps": 2693.0,
+          "staged_vram": 187.0,
+          "staged_ram": 8672.0,
+          "staged_disk": 0.0,
+          "host_experts": 11584.0,
+          "host_rows": 51271.0,
+          "host_ms": 4580.0,
+          "igpu_experts": 0.0,
+          "igpu_rows": 0.0,
+          "igpu_row_ms": 0.009,
+          "kappa": 0.55,
+          "cpu_row_ms": 0.013,
+          "prestaged": 8849.0,
+          "pre_routed": 8219.0,
+          "pre_rows": 2079584.0,
+          "resident_percent": 73.5,
+          "plan_host_ms": 65.1,
+          "cumulative_increments": {
+            "staged_vram": 117.0,
+            "staged_ram": 4103.0,
+            "staged_disk": 0.0,
+            "host_experts": 5706.0,
+            "host_rows": 26411.0,
+            "host_ms": 2306.0,
+            "igpu_experts": 0.0,
+            "igpu_rows": 0.0,
+            "prestaged": 4415.0,
+            "pre_routed": 4396.0,
+            "pre_rows": 1265311.0,
+            "plan_host_ms": 3.799999999999997
+          },
+          "native_line": "glm prefill: 16383 tokens in 6083.8 ms (0.37 ms/token, 2693 tok/s) | staged experts: 187 vram, 8672 ram, 0 disk, 11584 on the host (51271 rows, 4580 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.55, 0.013 ms a CPU row), 8849 prestaged (8219 routed, 2079584 rows) | rows resident 73.5% | plan 65.1 ms (cumulative)"
+        },
+        {
+          "batched_tokens": 16383.0,
+          "batch_wall_ms": 6122.4,
+          "batch_ms_per_token": 0.37,
+          "batch_tps": 2676.0,
+          "staged_vram": 301.0,
+          "staged_ram": 12684.0,
+          "staged_disk": 0.0,
+          "host_experts": 17193.0,
+          "host_rows": 78121.0,
+          "host_ms": 6923.0,
+          "igpu_experts": 0.0,
+          "igpu_rows": 0.0,
+          "igpu_row_ms": 0.009,
+          "kappa": 0.56,
+          "cpu_row_ms": 0.015,
+          "prestaged": 13276.0,
+          "pre_routed": 12629.0,
+          "pre_rows": 3350995.0,
+          "resident_percent": 75.7,
+          "plan_host_ms": 69.4,
+          "cumulative_increments": {
+            "staged_vram": 114.0,
+            "staged_ram": 4012.0,
+            "staged_disk": 0.0,
+            "host_experts": 5609.0,
+            "host_rows": 26850.0,
+            "host_ms": 2343.0,
+            "igpu_experts": 0.0,
+            "igpu_rows": 0.0,
+            "prestaged": 4427.0,
+            "pre_routed": 4410.0,
+            "pre_rows": 1271411.0,
+            "plan_host_ms": 4.300000000000011
+          },
+          "native_line": "glm prefill: 16383 tokens in 6122.4 ms (0.37 ms/token, 2676 tok/s) | staged experts: 301 vram, 12684 ram, 0 disk, 17193 on the host (78121 rows, 6923 ms; 0 experts / 0 rows of them on the iGPU, 0.0090 ms a row; split kappa 0.56, 0.015 ms a CPU row), 13276 prestaged (12629 routed, 3350995 rows) | rows resident 75.7% | plan 69.4 ms (cumulative)"
+        }
+      ],
+      "host_audit": {
+        "samples": 60,
+        "preflight_samples": 4,
+        "quiet_preflight_intervals": 3,
+        "max_interval_s": 2.0449045499553904,
+        "max_independent_cpu_cores": 0.009800554271161603,
+        "mean_independent_cpu_cores": 0.0010850241623548992,
+        "max_independent_physical_io_mib_s": 0.0019290913078892635,
+        "max_independent_rss_bytes": 21233664,
+        "contention_detected": false,
+        "scope": "Same-user process CPU/IO/RSS plus all GPU compute processes; whole-NVMe counters in preflight. Two-second sampling, not a proof of zero brief OS activity."
+      },
+      "mmq_slot_overread_lines": [],
+      "light_check_records": [
+        {
+          "layer": 0,
+          "experts": 51,
+          "rows": 233,
+          "relative_l2": 0.001636,
+          "worst_row_relative_l2": 0.004336,
+          "finite": true,
+          "native_line": "glm prefill light check layer 0: 51 experts, 233 rows, rel L2 1.636e-03, worst row 4.336e-03"
+        },
+        {
+          "layer": 1,
+          "experts": 51,
+          "rows": 313,
+          "relative_l2": 0.001893,
+          "worst_row_relative_l2": 0.003224,
+          "finite": true,
+          "native_line": "glm prefill light check layer 1: 51 experts, 313 rows, rel L2 1.893e-03, worst row 3.224e-03"
+        },
+        {
+          "layer": 2,
+          "experts": 47,
+          "rows": 374,
+          "relative_l2": 0.001715,
+          "worst_row_relative_l2": 0.004143,
+          "finite": true,
+          "native_line": "glm prefill light check layer 2: 47 experts, 374 rows, rel L2 1.715e-03, worst row 4.143e-03"
+        },
+        {
+          "layer": 3,
+          "experts": 40,
+          "rows": 252,
+          "relative_l2": 0.001972,
+          "worst_row_relative_l2": 0.00613,
+          "finite": true,
+          "native_line": "glm prefill light check layer 3: 40 experts, 252 rows, rel L2 1.972e-03, worst row 6.130e-03"
+        },
+        {
+          "layer": 4,
+          "experts": 45,
+          "rows": 302,
+          "relative_l2": 0.001671,
+          "worst_row_relative_l2": 0.004106,
+          "finite": true,
+          "native_line": "glm prefill light check layer 4: 45 experts, 302 rows, rel L2 1.671e-03, worst row 4.106e-03"
+        },
+        {
+          "layer": 5,
+          "experts": 36,
+          "rows": 246,
+          "relative_l2": 0.001656,
+          "worst_row_relative_l2": 0.004581,
+          "finite": true,
+          "native_line": "glm prefill light check layer 5: 36 experts, 246 rows, rel L2 1.656e-03, worst row 4.581e-03"
+        },
+        {
+          "layer": 6,
+          "experts": 39,
+          "rows": 245,
+          "relative_l2": 0.001975,
+          "worst_row_relative_l2": 0.004048,
+          "finite": true,
+          "native_line": "glm prefill light check layer 6: 39 experts, 245 rows, rel L2 1.975e-03, worst row 4.048e-03"
+        },
+        {
+          "layer": 7,
+          "experts": 48,
+          "rows": 419,
+          "relative_l2": 0.001948,
+          "worst_row_relative_l2": 0.004265,
+          "finite": true,
+          "native_line": "glm prefill light check layer 7: 48 experts, 419 rows, rel L2 1.948e-03, worst row 4.265e-03"
+        },
+        {
+          "layer": 13,
+          "experts": 69,
+          "rows": 592,
+          "relative_l2": 0.001972,
+          "worst_row_relative_l2": 0.003266,
+          "finite": true,
+          "native_line": "glm prefill light check layer 13: 69 experts, 592 rows, rel L2 1.972e-03, worst row 3.266e-03"
+        },
+        {
+          "layer": 15,
+          "experts": 64,
+          "rows": 464,
+          "relative_l2": 0.001812,
+          "worst_row_relative_l2": 0.005175,
+          "finite": true,
+          "native_line": "glm prefill light check layer 15: 64 experts, 464 rows, rel L2 1.812e-03, worst row 5.175e-03"
+        },
+        {
+          "layer": 19,
+          "experts": 72,
+          "rows": 550,
+          "relative_l2": 0.001767,
+          "worst_row_relative_l2": 0.00361,
+          "finite": true,
+          "native_line": "glm prefill light check layer 19: 72 experts, 550 rows, rel L2 1.767e-03, worst row 3.610e-03"
+        },
+        {
+          "layer": 0,
+          "experts": 22,
+          "rows": 215,
+          "relative_l2": 0.001696,
+          "worst_row_relative_l2": 0.00439,
+          "finite": true,
+          "native_line": "glm prefill light check layer 0: 22 experts, 215 rows, rel L2 1.696e-03, worst row 4.390e-03"
+        },
+        {
+          "layer": 1,
+          "experts": 31,
+          "rows": 174,
+          "relative_l2": 0.001919,
+          "worst_row_relative_l2": 0.002937,
+          "finite": true,
+          "native_line": "glm prefill light check layer 1: 31 experts, 174 rows, rel L2 1.919e-03, worst row 2.937e-03"
+        },
+        {
+          "layer": 2,
+          "experts": 27,
+          "rows": 237,
+          "relative_l2": 0.001874,
+          "worst_row_relative_l2": 0.003778,
+          "finite": true,
+          "native_line": "glm prefill light check layer 2: 27 experts, 237 rows, rel L2 1.874e-03, worst row 3.778e-03"
+        },
+        {
+          "layer": 3,
+          "experts": 24,
+          "rows": 223,
+          "relative_l2": 0.001929,
+          "worst_row_relative_l2": 0.003524,
+          "finite": true,
+          "native_line": "glm prefill light check layer 3: 24 experts, 223 rows, rel L2 1.929e-03, worst row 3.524e-03"
+        },
+        {
+          "layer": 4,
+          "experts": 23,
+          "rows": 236,
+          "relative_l2": 0.001862,
+          "worst_row_relative_l2": 0.004068,
+          "finite": true,
+          "native_line": "glm prefill light check layer 4: 23 experts, 236 rows, rel L2 1.862e-03, worst row 4.068e-03"
+        },
+        {
+          "layer": 5,
+          "experts": 18,
+          "rows": 157,
+          "relative_l2": 0.001852,
+          "worst_row_relative_l2": 0.00409,
+          "finite": true,
+          "native_line": "glm prefill light check layer 5: 18 experts, 157 rows, rel L2 1.852e-03, worst row 4.090e-03"
+        },
+        {
+          "layer": 6,
+          "experts": 26,
+          "rows": 136,
+          "relative_l2": 0.001957,
+          "worst_row_relative_l2": 0.003194,
+          "finite": true,
+          "native_line": "glm prefill light check layer 6: 26 experts, 136 rows, rel L2 1.957e-03, worst row 3.194e-03"
+        },
+        {
+          "layer": 7,
+          "experts": 32,
+          "rows": 308,
+          "relative_l2": 0.002114,
+          "worst_row_relative_l2": 0.004127,
+          "finite": true,
+          "native_line": "glm prefill light check layer 7: 32 experts, 308 rows, rel L2 2.114e-03, worst row 4.127e-03"
+        },
+        {
+          "layer": 13,
+          "experts": 43,
+          "rows": 485,
+          "relative_l2": 0.002028,
+          "worst_row_relative_l2": 0.003761,
+          "finite": true,
+          "native_line": "glm prefill light check layer 13: 43 experts, 485 rows, rel L2 2.028e-03, worst row 3.761e-03"
+        },
+        {
+          "layer": 15,
+          "experts": 37,
+          "rows": 297,
+          "relative_l2": 0.0019,
+          "worst_row_relative_l2": 0.006109,
+          "finite": true,
+          "native_line": "glm prefill light check layer 15: 37 experts, 297 rows, rel L2 1.900e-03, worst row 6.109e-03"
+        },
+        {
+          "layer": 19,
+          "experts": 64,
+          "rows": 517,
+          "relative_l2": 0.002059,
+          "worst_row_relative_l2": 0.004272,
+          "finite": true,
+          "native_line": "glm prefill light check layer 19: 64 experts, 517 rows, rel L2 2.059e-03, worst row 4.272e-03"
+        },
+        {
+          "layer": 0,
+          "experts": 22,
+          "rows": 136,
+          "relative_l2": 0.001654,
+          "worst_row_relative_l2": 0.003232,
+          "finite": true,
+          "native_line": "glm prefill light check layer 0: 22 experts, 136 rows, rel L2 1.654e-03, worst row 3.232e-03"
+        },
+        {
+          "layer": 1,
+          "experts": 36,
+          "rows": 230,
+          "relative_l2": 0.001936,
+          "worst_row_relative_l2": 0.003088,
+          "finite": true,
+          "native_line": "glm prefill light check layer 1: 36 experts, 230 rows, rel L2 1.936e-03, worst row 3.088e-03"
+        },
+        {
+          "layer": 2,
+          "experts": 26,
+          "rows": 175,
+          "relative_l2": 0.001925,
+          "worst_row_relative_l2": 0.003818,
+          "finite": true,
+          "native_line": "glm prefill light check layer 2: 26 experts, 175 rows, rel L2 1.925e-03, worst row 3.818e-03"
+        },
+        {
+          "layer": 3,
+          "experts": 26,
+          "rows": 230,
+          "relative_l2": 0.00197,
+          "worst_row_relative_l2": 0.003747,
+          "finite": true,
+          "native_line": "glm prefill light check layer 3: 26 experts, 230 rows, rel L2 1.970e-03, worst row 3.747e-03"
+        },
+        {
+          "layer": 4,
+          "experts": 24,
+          "rows": 298,
+          "relative_l2": 0.001897,
+          "worst_row_relative_l2": 0.003351,
+          "finite": true,
+          "native_line": "glm prefill light check layer 4: 24 experts, 298 rows, rel L2 1.897e-03, worst row 3.351e-03"
+        },
+        {
+          "layer": 5,
+          "experts": 23,
+          "rows": 130,
+          "relative_l2": 0.001873,
+          "worst_row_relative_l2": 0.003381,
+          "finite": true,
+          "native_line": "glm prefill light check layer 5: 23 experts, 130 rows, rel L2 1.873e-03, worst row 3.381e-03"
+        },
+        {
+          "layer": 6,
+          "experts": 29,
+          "rows": 141,
+          "relative_l2": 0.002003,
+          "worst_row_relative_l2": 0.003233,
+          "finite": true,
+          "native_line": "glm prefill light check layer 6: 29 experts, 141 rows, rel L2 2.003e-03, worst row 3.233e-03"
+        },
+        {
+          "layer": 7,
+          "experts": 29,
+          "rows": 358,
+          "relative_l2": 0.002038,
+          "worst_row_relative_l2": 0.004137,
+          "finite": true,
+          "native_line": "glm prefill light check layer 7: 29 experts, 358 rows, rel L2 2.038e-03, worst row 4.137e-03"
+        },
+        {
+          "layer": 13,
+          "experts": 43,
+          "rows": 518,
+          "relative_l2": 0.001879,
+          "worst_row_relative_l2": 0.003304,
+          "finite": true,
+          "native_line": "glm prefill light check layer 13: 43 experts, 518 rows, rel L2 1.879e-03, worst row 3.304e-03"
+        },
+        {
+          "layer": 15,
+          "experts": 43,
+          "rows": 415,
+          "relative_l2": 0.001761,
+          "worst_row_relative_l2": 0.003551,
+          "finite": true,
+          "native_line": "glm prefill light check layer 15: 43 experts, 415 rows, rel L2 1.761e-03, worst row 3.551e-03"
+        },
+        {
+          "layer": 19,
+          "experts": 68,
+          "rows": 656,
+          "relative_l2": 0.001976,
+          "worst_row_relative_l2": 0.004034,
+          "finite": true,
+          "native_line": "glm prefill light check layer 19: 68 experts, 656 rows, rel L2 1.976e-03, worst row 4.034e-03"
+        },
+        {
+          "layer": 0,
+          "experts": 19,
+          "rows": 157,
+          "relative_l2": 0.0009754,
+          "worst_row_relative_l2": 0.002922,
+          "finite": true,
+          "native_line": "glm prefill light check layer 0: 19 experts, 157 rows, rel L2 9.754e-04, worst row 2.922e-03"
+        },
+        {
+          "layer": 1,
+          "experts": 33,
+          "rows": 212,
+          "relative_l2": 0.001903,
+          "worst_row_relative_l2": 0.003102,
+          "finite": true,
+          "native_line": "glm prefill light check layer 1: 33 experts, 212 rows, rel L2 1.903e-03, worst row 3.102e-03"
+        },
+        {
+          "layer": 2,
+          "experts": 28,
+          "rows": 265,
+          "relative_l2": 0.001951,
+          "worst_row_relative_l2": 0.003343,
+          "finite": true,
+          "native_line": "glm prefill light check layer 2: 28 experts, 265 rows, rel L2 1.951e-03, worst row 3.343e-03"
+        },
+        {
+          "layer": 3,
+          "experts": 19,
+          "rows": 155,
+          "relative_l2": 0.001902,
+          "worst_row_relative_l2": 0.00373,
+          "finite": true,
+          "native_line": "glm prefill light check layer 3: 19 experts, 155 rows, rel L2 1.902e-03, worst row 3.730e-03"
+        },
+        {
+          "layer": 4,
+          "experts": 24,
+          "rows": 188,
+          "relative_l2": 0.001825,
+          "worst_row_relative_l2": 0.004304,
+          "finite": true,
+          "native_line": "glm prefill light check layer 4: 24 experts, 188 rows, rel L2 1.825e-03, worst row 4.304e-03"
+        },
+        {
+          "layer": 5,
+          "experts": 24,
+          "rows": 227,
+          "relative_l2": 0.001666,
+          "worst_row_relative_l2": 0.003399,
+          "finite": true,
+          "native_line": "glm prefill light check layer 5: 24 experts, 227 rows, rel L2 1.666e-03, worst row 3.399e-03"
+        },
+        {
+          "layer": 6,
+          "experts": 28,
+          "rows": 151,
+          "relative_l2": 0.002034,
+          "worst_row_relative_l2": 0.004059,
+          "finite": true,
+          "native_line": "glm prefill light check layer 6: 28 experts, 151 rows, rel L2 2.034e-03, worst row 4.059e-03"
+        },
+        {
+          "layer": 7,
+          "experts": 42,
+          "rows": 520,
+          "relative_l2": 0.002018,
+          "worst_row_relative_l2": 0.003959,
+          "finite": true,
+          "native_line": "glm prefill light check layer 7: 42 experts, 520 rows, rel L2 2.018e-03, worst row 3.959e-03"
+        },
+        {
+          "layer": 13,
+          "experts": 61,
+          "rows": 613,
+          "relative_l2": 0.001931,
+          "worst_row_relative_l2": 0.004487,
+          "finite": true,
+          "native_line": "glm prefill light check layer 13: 61 experts, 613 rows, rel L2 1.931e-03, worst row 4.487e-03"
+        },
+        {
+          "layer": 15,
+          "experts": 49,
+          "rows": 424,
+          "relative_l2": 0.001886,
+          "worst_row_relative_l2": 0.004687,
+          "finite": true,
+          "native_line": "glm prefill light check layer 15: 49 experts, 424 rows, rel L2 1.886e-03, worst row 4.687e-03"
+        },
+        {
+          "layer": 19,
+          "experts": 79,
+          "rows": 721,
+          "relative_l2": 0.001733,
+          "worst_row_relative_l2": 0.003997,
+          "finite": true,
+          "native_line": "glm prefill light check layer 19: 79 experts, 721 rows, rel L2 1.733e-03, worst row 3.997e-03"
+        },
+        {
+          "layer": 0,
+          "experts": 63,
+          "rows": 310,
+          "relative_l2": 0.001454,
+          "worst_row_relative_l2": 0.00348,
+          "finite": true,
+          "native_line": "glm prefill light check layer 0: 63 experts, 310 rows, rel L2 1.454e-03, worst row 3.480e-03"
+        },
+        {
+          "layer": 1,
+          "experts": 71,
+          "rows": 430,
+          "relative_l2": 0.001671,
+          "worst_row_relative_l2": 0.003569,
+          "finite": true,
+          "native_line": "glm prefill light check layer 1: 71 experts, 430 rows, rel L2 1.671e-03, worst row 3.569e-03"
+        },
+        {
+          "layer": 2,
+          "experts": 58,
+          "rows": 358,
+          "relative_l2": 0.001682,
+          "worst_row_relative_l2": 0.004038,
+          "finite": true,
+          "native_line": "glm prefill light check layer 2: 58 experts, 358 rows, rel L2 1.682e-03, worst row 4.038e-03"
+        },
+        {
+          "layer": 3,
+          "experts": 49,
+          "rows": 271,
+          "relative_l2": 0.001666,
+          "worst_row_relative_l2": 0.003033,
+          "finite": true,
+          "native_line": "glm prefill light check layer 3: 49 experts, 271 rows, rel L2 1.666e-03, worst row 3.033e-03"
+        },
+        {
+          "layer": 4,
+          "experts": 76,
+          "rows": 425,
+          "relative_l2": 0.001715,
+          "worst_row_relative_l2": 0.003522,
+          "finite": true,
+          "native_line": "glm prefill light check layer 4: 76 experts, 425 rows, rel L2 1.715e-03, worst row 3.522e-03"
+        },
+        {
+          "layer": 5,
+          "experts": 44,
+          "rows": 213,
+          "relative_l2": 0.001659,
+          "worst_row_relative_l2": 0.003619,
+          "finite": true,
+          "native_line": "glm prefill light check layer 5: 44 experts, 213 rows, rel L2 1.659e-03, worst row 3.619e-03"
+        },
+        {
+          "layer": 6,
+          "experts": 57,
+          "rows": 356,
+          "relative_l2": 0.001652,
+          "worst_row_relative_l2": 0.003933,
+          "finite": true,
+          "native_line": "glm prefill light check layer 6: 57 experts, 356 rows, rel L2 1.652e-03, worst row 3.933e-03"
+        },
+        {
+          "layer": 7,
+          "experts": 54,
+          "rows": 497,
+          "relative_l2": 0.001895,
+          "worst_row_relative_l2": 0.003666,
+          "finite": true,
+          "native_line": "glm prefill light check layer 7: 54 experts, 497 rows, rel L2 1.895e-03, worst row 3.666e-03"
+        },
+        {
+          "layer": 13,
+          "experts": 75,
+          "rows": 785,
+          "relative_l2": 0.001963,
+          "worst_row_relative_l2": 0.005458,
+          "finite": true,
+          "native_line": "glm prefill light check layer 13: 75 experts, 785 rows, rel L2 1.963e-03, worst row 5.458e-03"
+        },
+        {
+          "layer": 15,
+          "experts": 84,
+          "rows": 661,
+          "relative_l2": 0.002054,
+          "worst_row_relative_l2": 0.004011,
+          "finite": true,
+          "native_line": "glm prefill light check layer 15: 84 experts, 661 rows, rel L2 2.054e-03, worst row 4.011e-03"
+        },
+        {
+          "layer": 19,
+          "experts": 87,
+          "rows": 721,
+          "relative_l2": 0.001884,
+          "worst_row_relative_l2": 0.003557,
+          "finite": true,
+          "native_line": "glm prefill light check layer 19: 87 experts, 721 rows, rel L2 1.884e-03, worst row 3.557e-03"
+        },
+        {
+          "layer": 20,
+          "experts": 65,
+          "rows": 494,
+          "relative_l2": 0.001946,
+          "worst_row_relative_l2": 0.003625,
+          "finite": true,
+          "native_line": "glm prefill light check layer 20: 65 experts, 494 rows, rel L2 1.946e-03, worst row 3.625e-03"
+        },
+        {
+          "layer": 33,
+          "experts": 73,
+          "rows": 664,
+          "relative_l2": 0.002153,
+          "worst_row_relative_l2": 0.004547,
+          "finite": true,
+          "native_line": "glm prefill light check layer 33: 73 experts, 664 rows, rel L2 2.153e-03, worst row 4.547e-03"
+        },
+        {
+          "layer": 35,
+          "experts": 64,
+          "rows": 480,
+          "relative_l2": 0.002032,
+          "worst_row_relative_l2": 0.003931,
+          "finite": true,
+          "native_line": "glm prefill light check layer 35: 64 experts, 480 rows, rel L2 2.032e-03, worst row 3.931e-03"
+        },
+        {
+          "layer": 36,
+          "experts": 60,
+          "rows": 587,
+          "relative_l2": 0.002229,
+          "worst_row_relative_l2": 0.003955,
+          "finite": true,
+          "native_line": "glm prefill light check layer 36: 60 experts, 587 rows, rel L2 2.229e-03, worst row 3.955e-03"
+        },
+        {
+          "layer": 37,
+          "experts": 77,
+          "rows": 483,
+          "relative_l2": 0.002191,
+          "worst_row_relative_l2": 0.004347,
+          "finite": true,
+          "native_line": "glm prefill light check layer 37: 77 experts, 483 rows, rel L2 2.191e-03, worst row 4.347e-03"
+        },
+        {
+          "layer": 0,
+          "experts": 59,
+          "rows": 231,
+          "relative_l2": 0.001461,
+          "worst_row_relative_l2": 0.003367,
+          "finite": true,
+          "native_line": "glm prefill light check layer 0: 59 experts, 231 rows, rel L2 1.461e-03, worst row 3.367e-03"
+        },
+        {
+          "layer": 1,
+          "experts": 74,
+          "rows": 398,
+          "relative_l2": 0.0003586,
+          "worst_row_relative_l2": 0.003568,
+          "finite": true,
+          "native_line": "glm prefill light check layer 1: 74 experts, 398 rows, rel L2 3.586e-04, worst row 3.568e-03"
+        },
+        {
+          "layer": 2,
+          "experts": 49,
+          "rows": 385,
+          "relative_l2": 0.0004744,
+          "worst_row_relative_l2": 0.003965,
+          "finite": true,
+          "native_line": "glm prefill light check layer 2: 49 experts, 385 rows, rel L2 4.744e-04, worst row 3.965e-03"
+        },
+        {
+          "layer": 3,
+          "experts": 47,
+          "rows": 253,
+          "relative_l2": 0.0008948,
+          "worst_row_relative_l2": 0.003229,
+          "finite": true,
+          "native_line": "glm prefill light check layer 3: 47 experts, 253 rows, rel L2 8.948e-04, worst row 3.229e-03"
+        },
+        {
+          "layer": 4,
+          "experts": 48,
+          "rows": 276,
+          "relative_l2": 0.001662,
+          "worst_row_relative_l2": 0.004294,
+          "finite": true,
+          "native_line": "glm prefill light check layer 4: 48 experts, 276 rows, rel L2 1.662e-03, worst row 4.294e-03"
+        },
+        {
+          "layer": 5,
+          "experts": 43,
+          "rows": 261,
+          "relative_l2": 0.001668,
+          "worst_row_relative_l2": 0.003482,
+          "finite": true,
+          "native_line": "glm prefill light check layer 5: 43 experts, 261 rows, rel L2 1.668e-03, worst row 3.482e-03"
+        },
+        {
+          "layer": 6,
+          "experts": 42,
+          "rows": 192,
+          "relative_l2": 0.001869,
+          "worst_row_relative_l2": 0.003751,
+          "finite": true,
+          "native_line": "glm prefill light check layer 6: 42 experts, 192 rows, rel L2 1.869e-03, worst row 3.751e-03"
+        },
+        {
+          "layer": 7,
+          "experts": 52,
+          "rows": 444,
+          "relative_l2": 0.001936,
+          "worst_row_relative_l2": 0.004204,
+          "finite": true,
+          "native_line": "glm prefill light check layer 7: 52 experts, 444 rows, rel L2 1.936e-03, worst row 4.204e-03"
+        },
+        {
+          "layer": 13,
+          "experts": 72,
+          "rows": 529,
+          "relative_l2": 0.002017,
+          "worst_row_relative_l2": 0.003749,
+          "finite": true,
+          "native_line": "glm prefill light check layer 13: 72 experts, 529 rows, rel L2 2.017e-03, worst row 3.749e-03"
+        },
+        {
+          "layer": 15,
+          "experts": 67,
+          "rows": 406,
+          "relative_l2": 0.0003742,
+          "worst_row_relative_l2": 0.004405,
+          "finite": true,
+          "native_line": "glm prefill light check layer 15: 67 experts, 406 rows, rel L2 3.742e-04, worst row 4.405e-03"
+        },
+        {
+          "layer": 19,
+          "experts": 77,
+          "rows": 556,
+          "relative_l2": 0.001826,
+          "worst_row_relative_l2": 0.005226,
+          "finite": true,
+          "native_line": "glm prefill light check layer 19: 77 experts, 556 rows, rel L2 1.826e-03, worst row 5.226e-03"
+        },
+        {
+          "layer": 0,
+          "experts": 22,
+          "rows": 164,
+          "relative_l2": 0.001636,
+          "worst_row_relative_l2": 0.00439,
+          "finite": true,
+          "native_line": "glm prefill light check layer 0: 22 experts, 164 rows, rel L2 1.636e-03, worst row 4.390e-03"
+        },
+        {
+          "layer": 1,
+          "experts": 42,
+          "rows": 232,
+          "relative_l2": 0.001963,
+          "worst_row_relative_l2": 0.004622,
+          "finite": true,
+          "native_line": "glm prefill light check layer 1: 42 experts, 232 rows, rel L2 1.963e-03, worst row 4.622e-03"
+        },
+        {
+          "layer": 2,
+          "experts": 27,
+          "rows": 220,
+          "relative_l2": 0.001803,
+          "worst_row_relative_l2": 0.004417,
+          "finite": true,
+          "native_line": "glm prefill light check layer 2: 27 experts, 220 rows, rel L2 1.803e-03, worst row 4.417e-03"
+        },
+        {
+          "layer": 3,
+          "experts": 20,
+          "rows": 195,
+          "relative_l2": 0.001872,
+          "worst_row_relative_l2": 0.003214,
+          "finite": true,
+          "native_line": "glm prefill light check layer 3: 20 experts, 195 rows, rel L2 1.872e-03, worst row 3.214e-03"
+        },
+        {
+          "layer": 4,
+          "experts": 23,
+          "rows": 235,
+          "relative_l2": 0.001853,
+          "worst_row_relative_l2": 0.00325,
+          "finite": true,
+          "native_line": "glm prefill light check layer 4: 23 experts, 235 rows, rel L2 1.853e-03, worst row 3.250e-03"
+        },
+        {
+          "layer": 5,
+          "experts": 22,
+          "rows": 150,
+          "relative_l2": 0.001811,
+          "worst_row_relative_l2": 0.003294,
+          "finite": true,
+          "native_line": "glm prefill light check layer 5: 22 experts, 150 rows, rel L2 1.811e-03, worst row 3.294e-03"
+        },
+        {
+          "layer": 6,
+          "experts": 25,
+          "rows": 120,
+          "relative_l2": 0.002012,
+          "worst_row_relative_l2": 0.003433,
+          "finite": true,
+          "native_line": "glm prefill light check layer 6: 25 experts, 120 rows, rel L2 2.012e-03, worst row 3.433e-03"
+        },
+        {
+          "layer": 7,
+          "experts": 44,
+          "rows": 347,
+          "relative_l2": 0.002134,
+          "worst_row_relative_l2": 0.003598,
+          "finite": true,
+          "native_line": "glm prefill light check layer 7: 44 experts, 347 rows, rel L2 2.134e-03, worst row 3.598e-03"
+        },
+        {
+          "layer": 13,
+          "experts": 56,
+          "rows": 487,
+          "relative_l2": 0.002066,
+          "worst_row_relative_l2": 0.003452,
+          "finite": true,
+          "native_line": "glm prefill light check layer 13: 56 experts, 487 rows, rel L2 2.066e-03, worst row 3.452e-03"
+        },
+        {
+          "layer": 15,
+          "experts": 36,
+          "rows": 283,
+          "relative_l2": 0.001796,
+          "worst_row_relative_l2": 0.003572,
+          "finite": true,
+          "native_line": "glm prefill light check layer 15: 36 experts, 283 rows, rel L2 1.796e-03, worst row 3.572e-03"
+        },
+        {
+          "layer": 19,
+          "experts": 65,
+          "rows": 482,
+          "relative_l2": 0.001754,
+          "worst_row_relative_l2": 0.003687,
+          "finite": true,
+          "native_line": "glm prefill light check layer 19: 65 experts, 482 rows, rel L2 1.754e-03, worst row 3.687e-03"
+        },
+        {
+          "layer": 0,
+          "experts": 21,
+          "rows": 97,
+          "relative_l2": 0.001622,
+          "worst_row_relative_l2": 0.003232,
+          "finite": true,
+          "native_line": "glm prefill light check layer 0: 21 experts, 97 rows, rel L2 1.622e-03, worst row 3.232e-03"
+        },
+        {
+          "layer": 1,
+          "experts": 49,
+          "rows": 257,
+          "relative_l2": 0.00197,
+          "worst_row_relative_l2": 0.004194,
+          "finite": true,
+          "native_line": "glm prefill light check layer 1: 49 experts, 257 rows, rel L2 1.970e-03, worst row 4.194e-03"
+        },
+        {
+          "layer": 2,
+          "experts": 27,
+          "rows": 165,
+          "relative_l2": 0.001829,
+          "worst_row_relative_l2": 0.002997,
+          "finite": true,
+          "native_line": "glm prefill light check layer 2: 27 experts, 165 rows, rel L2 1.829e-03, worst row 2.997e-03"
+        },
+        {
+          "layer": 3,
+          "experts": 28,
+          "rows": 215,
+          "relative_l2": 0.001913,
+          "worst_row_relative_l2": 0.003458,
+          "finite": true,
+          "native_line": "glm prefill light check layer 3: 28 experts, 215 rows, rel L2 1.913e-03, worst row 3.458e-03"
+        },
+        {
+          "layer": 4,
+          "experts": 22,
+          "rows": 224,
+          "relative_l2": 0.001787,
+          "worst_row_relative_l2": 0.003622,
+          "finite": true,
+          "native_line": "glm prefill light check layer 4: 22 experts, 224 rows, rel L2 1.787e-03, worst row 3.622e-03"
+        },
+        {
+          "layer": 5,
+          "experts": 24,
+          "rows": 116,
+          "relative_l2": 0.001805,
+          "worst_row_relative_l2": 0.003852,
+          "finite": true,
+          "native_line": "glm prefill light check layer 5: 24 experts, 116 rows, rel L2 1.805e-03, worst row 3.852e-03"
+        },
+        {
+          "layer": 6,
+          "experts": 29,
+          "rows": 110,
+          "relative_l2": 0.002068,
+          "worst_row_relative_l2": 0.003702,
+          "finite": true,
+          "native_line": "glm prefill light check layer 6: 29 experts, 110 rows, rel L2 2.068e-03, worst row 3.702e-03"
+        },
+        {
+          "layer": 7,
+          "experts": 42,
+          "rows": 374,
+          "relative_l2": 0.002051,
+          "worst_row_relative_l2": 0.003938,
+          "finite": true,
+          "native_line": "glm prefill light check layer 7: 42 experts, 374 rows, rel L2 2.051e-03, worst row 3.938e-03"
+        },
+        {
+          "layer": 13,
+          "experts": 56,
+          "rows": 559,
+          "relative_l2": 0.001906,
+          "worst_row_relative_l2": 0.003593,
+          "finite": true,
+          "native_line": "glm prefill light check layer 13: 56 experts, 559 rows, rel L2 1.906e-03, worst row 3.593e-03"
+        },
+        {
+          "layer": 15,
+          "experts": 48,
+          "rows": 299,
+          "relative_l2": 0.001865,
+          "worst_row_relative_l2": 0.004236,
+          "finite": true,
+          "native_line": "glm prefill light check layer 15: 48 experts, 299 rows, rel L2 1.865e-03, worst row 4.236e-03"
+        },
+        {
+          "layer": 19,
+          "experts": 72,
+          "rows": 557,
+          "relative_l2": 0.00185,
+          "worst_row_relative_l2": 0.003446,
+          "finite": true,
+          "native_line": "glm prefill light check layer 19: 72 experts, 557 rows, rel L2 1.850e-03, worst row 3.446e-03"
+        },
+        {
+          "layer": 0,
+          "experts": 18,
+          "rows": 110,
+          "relative_l2": 0.001029,
+          "worst_row_relative_l2": 0.002922,
+          "finite": true,
+          "native_line": "glm prefill light check layer 0: 18 experts, 110 rows, rel L2 1.029e-03, worst row 2.922e-03"
+        },
+        {
+          "layer": 1,
+          "experts": 40,
+          "rows": 216,
+          "relative_l2": 0.001961,
+          "worst_row_relative_l2": 0.003714,
+          "finite": true,
+          "native_line": "glm prefill light check layer 1: 40 experts, 216 rows, rel L2 1.961e-03, worst row 3.714e-03"
+        },
+        {
+          "layer": 2,
+          "experts": 24,
+          "rows": 240,
+          "relative_l2": 0.001971,
+          "worst_row_relative_l2": 0.003094,
+          "finite": true,
+          "native_line": "glm prefill light check layer 2: 24 experts, 240 rows, rel L2 1.971e-03, worst row 3.094e-03"
+        },
+        {
+          "layer": 3,
+          "experts": 19,
+          "rows": 153,
+          "relative_l2": 0.001866,
+          "worst_row_relative_l2": 0.003382,
+          "finite": true,
+          "native_line": "glm prefill light check layer 3: 19 experts, 153 rows, rel L2 1.866e-03, worst row 3.382e-03"
+        },
+        {
+          "layer": 4,
+          "experts": 22,
+          "rows": 167,
+          "relative_l2": 0.001807,
+          "worst_row_relative_l2": 0.004912,
+          "finite": true,
+          "native_line": "glm prefill light check layer 4: 22 experts, 167 rows, rel L2 1.807e-03, worst row 4.912e-03"
+        },
+        {
+          "layer": 5,
+          "experts": 21,
+          "rows": 188,
+          "relative_l2": 0.001736,
+          "worst_row_relative_l2": 0.004571,
+          "finite": true,
+          "native_line": "glm prefill light check layer 5: 21 experts, 188 rows, rel L2 1.736e-03, worst row 4.571e-03"
+        },
+        {
+          "layer": 6,
+          "experts": 25,
+          "rows": 125,
+          "relative_l2": 0.001956,
+          "worst_row_relative_l2": 0.003381,
+          "finite": true,
+          "native_line": "glm prefill light check layer 6: 25 experts, 125 rows, rel L2 1.956e-03, worst row 3.381e-03"
+        },
+        {
+          "layer": 7,
+          "experts": 48,
+          "rows": 462,
+          "relative_l2": 0.002083,
+          "worst_row_relative_l2": 0.00441,
+          "finite": true,
+          "native_line": "glm prefill light check layer 7: 48 experts, 462 rows, rel L2 2.083e-03, worst row 4.410e-03"
+        },
+        {
+          "layer": 13,
+          "experts": 67,
+          "rows": 574,
+          "relative_l2": 0.00191,
+          "worst_row_relative_l2": 0.00411,
+          "finite": true,
+          "native_line": "glm prefill light check layer 13: 67 experts, 574 rows, rel L2 1.910e-03, worst row 4.110e-03"
+        },
+        {
+          "layer": 15,
+          "experts": 42,
+          "rows": 296,
+          "relative_l2": 0.001989,
+          "worst_row_relative_l2": 0.003901,
+          "finite": true,
+          "native_line": "glm prefill light check layer 15: 42 experts, 296 rows, rel L2 1.989e-03, worst row 3.901e-03"
+        },
+        {
+          "layer": 19,
+          "experts": 73,
+          "rows": 619,
+          "relative_l2": 0.001658,
+          "worst_row_relative_l2": 0.003983,
+          "finite": true,
+          "native_line": "glm prefill light check layer 19: 73 experts, 619 rows, rel L2 1.658e-03, worst row 3.983e-03"
+        },
+        {
+          "layer": 0,
+          "experts": 79,
+          "rows": 259,
+          "relative_l2": 0.001284,
+          "worst_row_relative_l2": 0.003373,
+          "finite": true,
+          "native_line": "glm prefill light check layer 0: 79 experts, 259 rows, rel L2 1.284e-03, worst row 3.373e-03"
+        },
+        {
+          "layer": 1,
+          "experts": 88,
+          "rows": 532,
+          "relative_l2": 0.001699,
+          "worst_row_relative_l2": 0.003623,
+          "finite": true,
+          "native_line": "glm prefill light check layer 1: 88 experts, 532 rows, rel L2 1.699e-03, worst row 3.623e-03"
+        },
+        {
+          "layer": 2,
+          "experts": 61,
+          "rows": 360,
+          "relative_l2": 0.001619,
+          "worst_row_relative_l2": 0.003923,
+          "finite": true,
+          "native_line": "glm prefill light check layer 2: 61 experts, 360 rows, rel L2 1.619e-03, worst row 3.923e-03"
+        },
+        {
+          "layer": 3,
+          "experts": 64,
+          "rows": 298,
+          "relative_l2": 0.00158,
+          "worst_row_relative_l2": 0.003288,
+          "finite": true,
+          "native_line": "glm prefill light check layer 3: 64 experts, 298 rows, rel L2 1.580e-03, worst row 3.288e-03"
+        },
+        {
+          "layer": 4,
+          "experts": 70,
+          "rows": 371,
+          "relative_l2": 0.001768,
+          "worst_row_relative_l2": 0.003204,
+          "finite": true,
+          "native_line": "glm prefill light check layer 4: 70 experts, 371 rows, rel L2 1.768e-03, worst row 3.204e-03"
+        },
+        {
+          "layer": 5,
+          "experts": 51,
+          "rows": 216,
+          "relative_l2": 0.001559,
+          "worst_row_relative_l2": 0.003749,
+          "finite": true,
+          "native_line": "glm prefill light check layer 5: 51 experts, 216 rows, rel L2 1.559e-03, worst row 3.749e-03"
+        },
+        {
+          "layer": 6,
+          "experts": 66,
+          "rows": 343,
+          "relative_l2": 0.001615,
+          "worst_row_relative_l2": 0.004075,
+          "finite": true,
+          "native_line": "glm prefill light check layer 6: 66 experts, 343 rows, rel L2 1.615e-03, worst row 4.075e-03"
+        },
+        {
+          "layer": 7,
+          "experts": 75,
+          "rows": 505,
+          "relative_l2": 0.001872,
+          "worst_row_relative_l2": 0.004095,
+          "finite": true,
+          "native_line": "glm prefill light check layer 7: 75 experts, 505 rows, rel L2 1.872e-03, worst row 4.095e-03"
+        },
+        {
+          "layer": 13,
+          "experts": 88,
+          "rows": 834,
+          "relative_l2": 0.001922,
+          "worst_row_relative_l2": 0.003472,
+          "finite": true,
+          "native_line": "glm prefill light check layer 13: 88 experts, 834 rows, rel L2 1.922e-03, worst row 3.472e-03"
+        },
+        {
+          "layer": 15,
+          "experts": 98,
+          "rows": 704,
+          "relative_l2": 0.002024,
+          "worst_row_relative_l2": 0.004651,
+          "finite": true,
+          "native_line": "glm prefill light check layer 15: 98 experts, 704 rows, rel L2 2.024e-03, worst row 4.651e-03"
+        },
+        {
+          "layer": 19,
+          "experts": 94,
+          "rows": 808,
+          "relative_l2": 0.001827,
+          "worst_row_relative_l2": 0.00392,
+          "finite": true,
+          "native_line": "glm prefill light check layer 19: 94 experts, 808 rows, rel L2 1.827e-03, worst row 3.920e-03"
+        },
+        {
+          "layer": 20,
+          "experts": 70,
+          "rows": 472,
+          "relative_l2": 0.001958,
+          "worst_row_relative_l2": 0.004363,
+          "finite": true,
+          "native_line": "glm prefill light check layer 20: 70 experts, 472 rows, rel L2 1.958e-03, worst row 4.363e-03"
+        },
+        {
+          "layer": 33,
+          "experts": 82,
+          "rows": 628,
+          "relative_l2": 0.002163,
+          "worst_row_relative_l2": 0.004467,
+          "finite": true,
+          "native_line": "glm prefill light check layer 33: 82 experts, 628 rows, rel L2 2.163e-03, worst row 4.467e-03"
+        },
+        {
+          "layer": 35,
+          "experts": 79,
+          "rows": 521,
+          "relative_l2": 0.002156,
+          "worst_row_relative_l2": 0.004354,
+          "finite": true,
+          "native_line": "glm prefill light check layer 35: 79 experts, 521 rows, rel L2 2.156e-03, worst row 4.354e-03"
+        },
+        {
+          "layer": 36,
+          "experts": 67,
+          "rows": 605,
+          "relative_l2": 0.002197,
+          "worst_row_relative_l2": 0.003601,
+          "finite": true,
+          "native_line": "glm prefill light check layer 36: 67 experts, 605 rows, rel L2 2.197e-03, worst row 3.601e-03"
+        },
+        {
+          "layer": 37,
+          "experts": 94,
+          "rows": 504,
+          "relative_l2": 0.002157,
+          "worst_row_relative_l2": 0.004254,
+          "finite": true,
+          "native_line": "glm prefill light check layer 37: 94 experts, 504 rows, rel L2 2.157e-03, worst row 4.254e-03"
+        },
+        {
+          "layer": 0,
+          "experts": 62,
+          "rows": 232,
+          "relative_l2": 0.001583,
+          "worst_row_relative_l2": 0.003367,
+          "finite": true,
+          "native_line": "glm prefill light check layer 0: 62 experts, 232 rows, rel L2 1.583e-03, worst row 3.367e-03"
+        },
+        {
+          "layer": 1,
+          "experts": 77,
+          "rows": 541,
+          "relative_l2": 0.0003752,
+          "worst_row_relative_l2": 0.004188,
+          "finite": true,
+          "native_line": "glm prefill light check layer 1: 77 experts, 541 rows, rel L2 3.752e-04, worst row 4.188e-03"
+        },
+        {
+          "layer": 2,
+          "experts": 50,
+          "rows": 339,
+          "relative_l2": 0.0004503,
+          "worst_row_relative_l2": 0.004038,
+          "finite": true,
+          "native_line": "glm prefill light check layer 2: 50 experts, 339 rows, rel L2 4.503e-04, worst row 4.038e-03"
+        },
+        {
+          "layer": 3,
+          "experts": 49,
+          "rows": 254,
+          "relative_l2": 0.0008073,
+          "worst_row_relative_l2": 0.003366,
+          "finite": true,
+          "native_line": "glm prefill light check layer 3: 49 experts, 254 rows, rel L2 8.073e-04, worst row 3.366e-03"
+        },
+        {
+          "layer": 4,
+          "experts": 47,
+          "rows": 288,
+          "relative_l2": 0.001722,
+          "worst_row_relative_l2": 0.003699,
+          "finite": true,
+          "native_line": "glm prefill light check layer 4: 47 experts, 288 rows, rel L2 1.722e-03, worst row 3.699e-03"
+        },
+        {
+          "layer": 5,
+          "experts": 43,
+          "rows": 226,
+          "relative_l2": 0.001651,
+          "worst_row_relative_l2": 0.003562,
+          "finite": true,
+          "native_line": "glm prefill light check layer 5: 43 experts, 226 rows, rel L2 1.651e-03, worst row 3.562e-03"
+        },
+        {
+          "layer": 6,
+          "experts": 42,
+          "rows": 188,
+          "relative_l2": 0.001926,
+          "worst_row_relative_l2": 0.003715,
+          "finite": true,
+          "native_line": "glm prefill light check layer 6: 42 experts, 188 rows, rel L2 1.926e-03, worst row 3.715e-03"
+        },
+        {
+          "layer": 7,
+          "experts": 57,
+          "rows": 435,
+          "relative_l2": 0.001918,
+          "worst_row_relative_l2": 0.003689,
+          "finite": true,
+          "native_line": "glm prefill light check layer 7: 57 experts, 435 rows, rel L2 1.918e-03, worst row 3.689e-03"
+        },
+        {
+          "layer": 13,
+          "experts": 77,
+          "rows": 609,
+          "relative_l2": 0.001963,
+          "worst_row_relative_l2": 0.00441,
+          "finite": true,
+          "native_line": "glm prefill light check layer 13: 77 experts, 609 rows, rel L2 1.963e-03, worst row 4.410e-03"
+        },
+        {
+          "layer": 15,
+          "experts": 64,
+          "rows": 408,
+          "relative_l2": 0.000378,
+          "worst_row_relative_l2": 0.003568,
+          "finite": true,
+          "native_line": "glm prefill light check layer 15: 64 experts, 408 rows, rel L2 3.780e-04, worst row 3.568e-03"
+        },
+        {
+          "layer": 19,
+          "experts": 82,
+          "rows": 642,
+          "relative_l2": 0.001762,
+          "worst_row_relative_l2": 0.003631,
+          "finite": true,
+          "native_line": "glm prefill light check layer 19: 82 experts, 642 rows, rel L2 1.762e-03, worst row 3.631e-03"
+        },
+        {
+          "layer": 0,
+          "experts": 28,
+          "rows": 181,
+          "relative_l2": 0.001654,
+          "worst_row_relative_l2": 0.00439,
+          "finite": true,
+          "native_line": "glm prefill light check layer 0: 28 experts, 181 rows, rel L2 1.654e-03, worst row 4.390e-03"
+        },
+        {
+          "layer": 1,
+          "experts": 51,
+          "rows": 362,
+          "relative_l2": 0.001927,
+          "worst_row_relative_l2": 0.003313,
+          "finite": true,
+          "native_line": "glm prefill light check layer 1: 51 experts, 362 rows, rel L2 1.927e-03, worst row 3.313e-03"
+        },
+        {
+          "layer": 2,
+          "experts": 32,
+          "rows": 219,
+          "relative_l2": 0.00197,
+          "worst_row_relative_l2": 0.00449,
+          "finite": true,
+          "native_line": "glm prefill light check layer 2: 32 experts, 219 rows, rel L2 1.970e-03, worst row 4.490e-03"
+        },
+        {
+          "layer": 3,
+          "experts": 22,
+          "rows": 203,
+          "relative_l2": 0.001959,
+          "worst_row_relative_l2": 0.004022,
+          "finite": true,
+          "native_line": "glm prefill light check layer 3: 22 experts, 203 rows, rel L2 1.959e-03, worst row 4.022e-03"
+        },
+        {
+          "layer": 4,
+          "experts": 22,
+          "rows": 198,
+          "relative_l2": 0.001861,
+          "worst_row_relative_l2": 0.004051,
+          "finite": true,
+          "native_line": "glm prefill light check layer 4: 22 experts, 198 rows, rel L2 1.861e-03, worst row 4.051e-03"
+        },
+        {
+          "layer": 5,
+          "experts": 19,
+          "rows": 109,
+          "relative_l2": 0.001872,
+          "worst_row_relative_l2": 0.003074,
+          "finite": true,
+          "native_line": "glm prefill light check layer 5: 19 experts, 109 rows, rel L2 1.872e-03, worst row 3.074e-03"
+        },
+        {
+          "layer": 6,
+          "experts": 26,
+          "rows": 122,
+          "relative_l2": 0.001909,
+          "worst_row_relative_l2": 0.003144,
+          "finite": true,
+          "native_line": "glm prefill light check layer 6: 26 experts, 122 rows, rel L2 1.909e-03, worst row 3.144e-03"
+        },
+        {
+          "layer": 7,
+          "experts": 46,
+          "rows": 363,
+          "relative_l2": 0.002146,
+          "worst_row_relative_l2": 0.003675,
+          "finite": true,
+          "native_line": "glm prefill light check layer 7: 46 experts, 363 rows, rel L2 2.146e-03, worst row 3.675e-03"
+        },
+        {
+          "layer": 13,
+          "experts": 57,
+          "rows": 494,
+          "relative_l2": 0.001979,
+          "worst_row_relative_l2": 0.003601,
+          "finite": true,
+          "native_line": "glm prefill light check layer 13: 57 experts, 494 rows, rel L2 1.979e-03, worst row 3.601e-03"
+        },
+        {
+          "layer": 15,
+          "experts": 40,
+          "rows": 308,
+          "relative_l2": 0.001788,
+          "worst_row_relative_l2": 0.003635,
+          "finite": true,
+          "native_line": "glm prefill light check layer 15: 40 experts, 308 rows, rel L2 1.788e-03, worst row 3.635e-03"
+        },
+        {
+          "layer": 19,
+          "experts": 74,
+          "rows": 652,
+          "relative_l2": 0.001805,
+          "worst_row_relative_l2": 0.003637,
+          "finite": true,
+          "native_line": "glm prefill light check layer 19: 74 experts, 652 rows, rel L2 1.805e-03, worst row 3.637e-03"
+        },
+        {
+          "layer": 0,
+          "experts": 24,
+          "rows": 103,
+          "relative_l2": 0.001609,
+          "worst_row_relative_l2": 0.003232,
+          "finite": true,
+          "native_line": "glm prefill light check layer 0: 24 experts, 103 rows, rel L2 1.609e-03, worst row 3.232e-03"
+        },
+        {
+          "layer": 1,
+          "experts": 55,
+          "rows": 415,
+          "relative_l2": 0.001944,
+          "worst_row_relative_l2": 0.003452,
+          "finite": true,
+          "native_line": "glm prefill light check layer 1: 55 experts, 415 rows, rel L2 1.944e-03, worst row 3.452e-03"
+        },
+        {
+          "layer": 2,
+          "experts": 28,
+          "rows": 164,
+          "relative_l2": 0.001916,
+          "worst_row_relative_l2": 0.003077,
+          "finite": true,
+          "native_line": "glm prefill light check layer 2: 28 experts, 164 rows, rel L2 1.916e-03, worst row 3.077e-03"
+        },
+        {
+          "layer": 3,
+          "experts": 32,
+          "rows": 206,
+          "relative_l2": 0.001897,
+          "worst_row_relative_l2": 0.003179,
+          "finite": true,
+          "native_line": "glm prefill light check layer 3: 32 experts, 206 rows, rel L2 1.897e-03, worst row 3.179e-03"
+        },
+        {
+          "layer": 4,
+          "experts": 21,
+          "rows": 217,
+          "relative_l2": 0.001818,
+          "worst_row_relative_l2": 0.003094,
+          "finite": true,
+          "native_line": "glm prefill light check layer 4: 21 experts, 217 rows, rel L2 1.818e-03, worst row 3.094e-03"
+        },
+        {
+          "layer": 5,
+          "experts": 22,
+          "rows": 139,
+          "relative_l2": 0.001972,
+          "worst_row_relative_l2": 0.004256,
+          "finite": true,
+          "native_line": "glm prefill light check layer 5: 22 experts, 139 rows, rel L2 1.972e-03, worst row 4.256e-03"
+        },
+        {
+          "layer": 6,
+          "experts": 30,
+          "rows": 118,
+          "relative_l2": 0.002028,
+          "worst_row_relative_l2": 0.003233,
+          "finite": true,
+          "native_line": "glm prefill light check layer 6: 30 experts, 118 rows, rel L2 2.028e-03, worst row 3.233e-03"
+        },
+        {
+          "layer": 7,
+          "experts": 40,
+          "rows": 349,
+          "relative_l2": 0.001944,
+          "worst_row_relative_l2": 0.003465,
+          "finite": true,
+          "native_line": "glm prefill light check layer 7: 40 experts, 349 rows, rel L2 1.944e-03, worst row 3.465e-03"
+        },
+        {
+          "layer": 13,
+          "experts": 56,
+          "rows": 636,
+          "relative_l2": 0.001907,
+          "worst_row_relative_l2": 0.005025,
+          "finite": true,
+          "native_line": "glm prefill light check layer 13: 56 experts, 636 rows, rel L2 1.907e-03, worst row 5.025e-03"
+        },
+        {
+          "layer": 15,
+          "experts": 50,
+          "rows": 349,
+          "relative_l2": 0.001779,
+          "worst_row_relative_l2": 0.004155,
+          "finite": true,
+          "native_line": "glm prefill light check layer 15: 50 experts, 349 rows, rel L2 1.779e-03, worst row 4.155e-03"
+        },
+        {
+          "layer": 19,
+          "experts": 83,
+          "rows": 766,
+          "relative_l2": 0.001897,
+          "worst_row_relative_l2": 0.00361,
+          "finite": true,
+          "native_line": "glm prefill light check layer 19: 83 experts, 766 rows, rel L2 1.897e-03, worst row 3.610e-03"
+        },
+        {
+          "layer": 0,
+          "experts": 18,
+          "rows": 109,
+          "relative_l2": 0.001026,
+          "worst_row_relative_l2": 0.002922,
+          "finite": true,
+          "native_line": "glm prefill light check layer 0: 18 experts, 109 rows, rel L2 1.026e-03, worst row 2.922e-03"
+        },
+        {
+          "layer": 1,
+          "experts": 46,
+          "rows": 223,
+          "relative_l2": 0.001893,
+          "worst_row_relative_l2": 0.003155,
+          "finite": true,
+          "native_line": "glm prefill light check layer 1: 46 experts, 223 rows, rel L2 1.893e-03, worst row 3.155e-03"
+        },
+        {
+          "layer": 2,
+          "experts": 25,
+          "rows": 239,
+          "relative_l2": 0.002028,
+          "worst_row_relative_l2": 0.003174,
+          "finite": true,
+          "native_line": "glm prefill light check layer 2: 25 experts, 239 rows, rel L2 2.028e-03, worst row 3.174e-03"
+        },
+        {
+          "layer": 3,
+          "experts": 22,
+          "rows": 130,
+          "relative_l2": 0.001751,
+          "worst_row_relative_l2": 0.004036,
+          "finite": true,
+          "native_line": "glm prefill light check layer 3: 22 experts, 130 rows, rel L2 1.751e-03, worst row 4.036e-03"
+        },
+        {
+          "layer": 4,
+          "experts": 20,
+          "rows": 133,
+          "relative_l2": 0.001738,
+          "worst_row_relative_l2": 0.002974,
+          "finite": true,
+          "native_line": "glm prefill light check layer 4: 20 experts, 133 rows, rel L2 1.738e-03, worst row 2.974e-03"
+        },
+        {
+          "layer": 5,
+          "experts": 20,
+          "rows": 180,
+          "relative_l2": 0.001584,
+          "worst_row_relative_l2": 0.003514,
+          "finite": true,
+          "native_line": "glm prefill light check layer 5: 20 experts, 180 rows, rel L2 1.584e-03, worst row 3.514e-03"
+        },
+        {
+          "layer": 6,
+          "experts": 25,
+          "rows": 160,
+          "relative_l2": 0.00189,
+          "worst_row_relative_l2": 0.003187,
+          "finite": true,
+          "native_line": "glm prefill light check layer 6: 25 experts, 160 rows, rel L2 1.890e-03, worst row 3.187e-03"
+        },
+        {
+          "layer": 7,
+          "experts": 52,
+          "rows": 460,
+          "relative_l2": 0.002017,
+          "worst_row_relative_l2": 0.003388,
+          "finite": true,
+          "native_line": "glm prefill light check layer 7: 52 experts, 460 rows, rel L2 2.017e-03, worst row 3.388e-03"
+        },
+        {
+          "layer": 13,
+          "experts": 71,
+          "rows": 554,
+          "relative_l2": 0.001887,
+          "worst_row_relative_l2": 0.004123,
+          "finite": true,
+          "native_line": "glm prefill light check layer 13: 71 experts, 554 rows, rel L2 1.887e-03, worst row 4.123e-03"
+        },
+        {
+          "layer": 15,
+          "experts": 41,
+          "rows": 259,
+          "relative_l2": 0.001909,
+          "worst_row_relative_l2": 0.003769,
+          "finite": true,
+          "native_line": "glm prefill light check layer 15: 41 experts, 259 rows, rel L2 1.909e-03, worst row 3.769e-03"
+        },
+        {
+          "layer": 19,
+          "experts": 78,
+          "rows": 692,
+          "relative_l2": 0.001763,
+          "worst_row_relative_l2": 0.004674,
+          "finite": true,
+          "native_line": "glm prefill light check layer 19: 78 experts, 692 rows, rel L2 1.763e-03, worst row 4.674e-03"
+        },
+        {
+          "layer": 0,
+          "experts": 82,
+          "rows": 289,
+          "relative_l2": 0.001283,
+          "worst_row_relative_l2": 0.003373,
+          "finite": true,
+          "native_line": "glm prefill light check layer 0: 82 experts, 289 rows, rel L2 1.283e-03, worst row 3.373e-03"
+        },
+        {
+          "layer": 1,
+          "experts": 92,
+          "rows": 603,
+          "relative_l2": 0.001687,
+          "worst_row_relative_l2": 0.003859,
+          "finite": true,
+          "native_line": "glm prefill light check layer 1: 92 experts, 603 rows, rel L2 1.687e-03, worst row 3.859e-03"
+        },
+        {
+          "layer": 2,
+          "experts": 60,
+          "rows": 345,
+          "relative_l2": 0.00155,
+          "worst_row_relative_l2": 0.003355,
+          "finite": true,
+          "native_line": "glm prefill light check layer 2: 60 experts, 345 rows, rel L2 1.550e-03, worst row 3.355e-03"
+        },
+        {
+          "layer": 3,
+          "experts": 69,
+          "rows": 335,
+          "relative_l2": 0.001593,
+          "worst_row_relative_l2": 0.003104,
+          "finite": true,
+          "native_line": "glm prefill light check layer 3: 69 experts, 335 rows, rel L2 1.593e-03, worst row 3.104e-03"
+        },
+        {
+          "layer": 4,
+          "experts": 69,
+          "rows": 384,
+          "relative_l2": 0.00174,
+          "worst_row_relative_l2": 0.004577,
+          "finite": true,
+          "native_line": "glm prefill light check layer 4: 69 experts, 384 rows, rel L2 1.740e-03, worst row 4.577e-03"
+        },
+        {
+          "layer": 5,
+          "experts": 54,
+          "rows": 246,
+          "relative_l2": 0.001525,
+          "worst_row_relative_l2": 0.004304,
+          "finite": true,
+          "native_line": "glm prefill light check layer 5: 54 experts, 246 rows, rel L2 1.525e-03, worst row 4.304e-03"
+        },
+        {
+          "layer": 6,
+          "experts": 66,
+          "rows": 342,
+          "relative_l2": 0.001628,
+          "worst_row_relative_l2": 0.003737,
+          "finite": true,
+          "native_line": "glm prefill light check layer 6: 66 experts, 342 rows, rel L2 1.628e-03, worst row 3.737e-03"
+        },
+        {
+          "layer": 7,
+          "experts": 76,
+          "rows": 479,
+          "relative_l2": 0.001835,
+          "worst_row_relative_l2": 0.004196,
+          "finite": true,
+          "native_line": "glm prefill light check layer 7: 76 experts, 479 rows, rel L2 1.835e-03, worst row 4.196e-03"
+        },
+        {
+          "layer": 13,
+          "experts": 95,
+          "rows": 881,
+          "relative_l2": 0.001947,
+          "worst_row_relative_l2": 0.003488,
+          "finite": true,
+          "native_line": "glm prefill light check layer 13: 95 experts, 881 rows, rel L2 1.947e-03, worst row 3.488e-03"
+        },
+        {
+          "layer": 15,
+          "experts": 98,
+          "rows": 680,
+          "relative_l2": 0.002007,
+          "worst_row_relative_l2": 0.004007,
+          "finite": true,
+          "native_line": "glm prefill light check layer 15: 98 experts, 680 rows, rel L2 2.007e-03, worst row 4.007e-03"
+        },
+        {
+          "layer": 19,
+          "experts": 97,
+          "rows": 896,
+          "relative_l2": 0.001806,
+          "worst_row_relative_l2": 0.004404,
+          "finite": true,
+          "native_line": "glm prefill light check layer 19: 97 experts, 896 rows, rel L2 1.806e-03, worst row 4.404e-03"
+        },
+        {
+          "layer": 20,
+          "experts": 68,
+          "rows": 438,
+          "relative_l2": 0.001913,
+          "worst_row_relative_l2": 0.003624,
+          "finite": true,
+          "native_line": "glm prefill light check layer 20: 68 experts, 438 rows, rel L2 1.913e-03, worst row 3.624e-03"
+        },
+        {
+          "layer": 33,
+          "experts": 88,
+          "rows": 709,
+          "relative_l2": 0.001939,
+          "worst_row_relative_l2": 0.004692,
+          "finite": true,
+          "native_line": "glm prefill light check layer 33: 88 experts, 709 rows, rel L2 1.939e-03, worst row 4.692e-03"
+        },
+        {
+          "layer": 35,
+          "experts": 88,
+          "rows": 545,
+          "relative_l2": 0.002134,
+          "worst_row_relative_l2": 0.004327,
+          "finite": true,
+          "native_line": "glm prefill light check layer 35: 88 experts, 545 rows, rel L2 2.134e-03, worst row 4.327e-03"
+        },
+        {
+          "layer": 36,
+          "experts": 75,
+          "rows": 637,
+          "relative_l2": 0.002143,
+          "worst_row_relative_l2": 0.003978,
+          "finite": true,
+          "native_line": "glm prefill light check layer 36: 75 experts, 637 rows, rel L2 2.143e-03, worst row 3.978e-03"
+        },
+        {
+          "layer": 37,
+          "experts": 96,
+          "rows": 523,
+          "relative_l2": 0.002152,
+          "worst_row_relative_l2": 0.005659,
+          "finite": true,
+          "native_line": "glm prefill light check layer 37: 96 experts, 523 rows, rel L2 2.152e-03, worst row 5.659e-03"
+        }
+      ],
+      "pin_failure_lines": [],
+      "calibration_retry_lines": [],
+      "calibration": {
+        "cpu_ms_per_expert": 0.155,
+        "pcie_ms_per_expert": 0.342,
+        "native_line": "glm fast: CUDA0 CPU lane: 12 threads, an expert 0.155 ms on the CPU vs 0.342 ms over PCIe -> of 0..8 RAM-tier experts the CPU takes 0 1 1 2 3 4 4 5 6"
+      }
+    }
+  ],
+  "mode_counts": {
+    "default": 3,
+    "lightcheck": 1
+  },
+  "comparison": null,
+  "previous_confounded_profile_comment": "https://github.com/zephel01/Abyss/issues/24#issuecomment-6595924525",
+  "request_rows": [
+    {
+      "case": "default-01",
+      "name": "warmup-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "26f4f3c5e10efd9b0cfc0563f71d43173e6f49be4bc6901c2a2d61867d3a7f08",
+      "prefill_tps": 2702.1143252960387,
+      "decode_tps": 83.36080820908583,
+      "prefill_ms": 6063.4,
+      "decode_ms": 24567.9,
+      "ttft_s": 8.139870530052576,
+      "wall_s": 30.631867568998132,
+      "draft_accepted": 1601,
+      "draft_offered": 1845,
+      "reused": 0,
+      "done": "DONE 2048 16384 6063.4 24567.9 length 1601 1845 0 350533 550080 427",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.2663010800024495,
+          "line": "PP 4096 16384 1265.8 3236.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.2946186020271853,
+          "line": "PP 8192 16384 2294.1 3570.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.352569759998005,
+          "line": "PP 12288 16384 3352.1 3665.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.9504761670250446,
+          "line": "PP 13715 16384 3949.9 3472.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.029528933053371,
+          "line": "PP 16383 16384 6029.0 2717.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.063860371999908,
+          "line": "PP 16384 16384 6063.4 2702.1 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 37.7796928419848,
+      "done_elapsed_s": 68.41156041098293,
+      "requested_pause_s": 0.0,
+      "purpose": "isolated_prefill_diagnostic",
+      "dispatch_write_ms": 0.06480200681835413,
+      "client_gap_since_previous_done_ms": null,
+      "wall_minus_native_ms": 0.5675689981289906,
+      "first_request": true,
+      "included_in_profiler": true,
+      "classification": "fast_band",
+      "mode": "default",
+      "native_stat": {
+        "tok_s": "83.36",
+        "ms_tok": "12.00",
+        "vram_hit": "0.6372",
+        "ram_fetch": "1.078",
+        "disk": "0.000",
+        "promo": "1.068",
+        "vram_used": "6682",
+        "vram_slots": "6800",
+        "ram_used": "8672",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.009",
+        "miss_ms": "0.000",
+        "lane": "96.349",
+        "lane_ms": "3.539",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "10.90",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.795",
+        "spec_acc": "1601",
+        "spec_offered": "1845",
+        "spec_rounds": "427"
+      }
+    },
+    {
+      "case": "default-01",
+      "name": "trial-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "f10afa6128dd9b9e849c48cd168a4f2d6436ad46b18d702f28a6a4bd769a5f0e",
+      "prefill_tps": 2727.6208234138544,
+      "decode_tps": 100.2589697020135,
+      "prefill_ms": 6006.7,
+      "decode_ms": 20427.1,
+      "ttft_s": 6.114140177029185,
+      "wall_s": 26.43448309303494,
+      "draft_accepted": 1600,
+      "draft_offered": 1828,
+      "reused": 0,
+      "done": "DONE 2048 16384 6006.7 20427.1 length 1600 1828 0 370970 546240 428",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.138036031043157,
+          "line": "PP 4096 16384 1137.4 3601.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.212678070005495,
+          "line": "PP 8192 16384 2212.0 3703.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.3178588580340147,
+          "line": "PP 12288 16384 3317.2 3704.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.9519692950416356,
+          "line": "PP 13715 16384 3951.3 3471.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.978168633999303,
+          "line": "PP 16383 16384 5977.5 2740.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.007293725037016,
+          "line": "PP 16384 16384 6006.7 2727.6 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 68.41166094999062,
+      "done_elapsed_s": 94.84614404302556,
+      "requested_pause_s": 0.0,
+      "purpose": "isolated_prefill_diagnostic",
+      "dispatch_write_ms": 0.057469005696475506,
+      "client_gap_since_previous_done_ms": 0.10053900768980384,
+      "wall_minus_native_ms": 0.6830930349424307,
+      "first_request": false,
+      "included_in_profiler": true,
+      "classification": "fast_band",
+      "mode": "default",
+      "native_stat": {
+        "tok_s": "100.26",
+        "ms_tok": "9.97",
+        "vram_hit": "0.6791",
+        "ram_fetch": "0.382",
+        "disk": "0.000",
+        "promo": "0.380",
+        "vram_used": "6670",
+        "vram_slots": "6800",
+        "ram_used": "8689",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.003",
+        "miss_ms": "0.000",
+        "lane": "85.195",
+        "lane_ms": "2.626",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "9.77",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.605",
+        "spec_acc": "1600",
+        "spec_offered": "1828",
+        "spec_rounds": "428"
+      }
+    },
+    {
+      "case": "default-01",
+      "name": "trial-02",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "ff678cf234373ef3dfc90cc00991b8d77c64dbe3cb24acf32d5b635ccc56c70f",
+      "prefill_tps": 2728.34757123112,
+      "decode_tps": 103.71615804559865,
+      "prefill_ms": 6005.1,
+      "decode_ms": 19746.2,
+      "ttft_s": 6.029633655969519,
+      "wall_s": 25.752015414997004,
+      "draft_accepted": 1617,
+      "draft_offered": 1809,
+      "reused": 0,
+      "done": "DONE 2048 16384 6005.1 19746.2 length 1617 1809 0 366134 537600 412",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.1270555509836413,
+          "line": "PP 4096 16384 1126.4 3636.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.200588119972963,
+          "line": "PP 8192 16384 2199.9 3723.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.3031403619679622,
+          "line": "PP 12288 16384 3302.5 3720.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.9392870370065793,
+          "line": "PP 13715 16384 3938.6 3482.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.979930603993125,
+          "line": "PP 16383 16384 5979.3 2739.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.005759637977462,
+          "line": "PP 16384 16384 6005.1 2728.3 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 94.84623440302676,
+      "done_elapsed_s": 120.59824981802376,
+      "requested_pause_s": 0.0,
+      "purpose": "isolated_prefill_diagnostic",
+      "dispatch_write_ms": 0.041386985685676336,
+      "client_gap_since_previous_done_ms": 0.09036000119522214,
+      "wall_minus_native_ms": 0.7154149970047001,
+      "first_request": false,
+      "included_in_profiler": true,
+      "classification": "fast_band",
+      "mode": "default",
+      "native_stat": {
+        "tok_s": "103.72",
+        "ms_tok": "9.64",
+        "vram_hit": "0.6811",
+        "ram_fetch": "0.280",
+        "disk": "0.000",
+        "promo": "0.281",
+        "vram_used": "6645",
+        "vram_slots": "6800",
+        "ram_used": "8714",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.002",
+        "miss_ms": "0.000",
+        "lane": "83.441",
+        "lane_ms": "2.443",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "9.20",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.323",
+        "spec_acc": "1617",
+        "spec_offered": "1809",
+        "spec_rounds": "412"
+      }
+    },
+    {
+      "case": "default-02",
+      "name": "warmup-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "12edd1b4177d6b99961f8d72031b82f70358ccc40a4b73ed2cd3b7936898b731",
+      "prefill_tps": 2666.8836982176285,
+      "decode_tps": 85.07279788979584,
+      "prefill_ms": 6143.5,
+      "decode_ms": 24073.5,
+      "ttft_s": 8.19942321605049,
+      "wall_s": 30.217592269007582,
+      "draft_accepted": 1595,
+      "draft_offered": 1835,
+      "reused": 0,
+      "done": "DONE 2048 16384 6143.5 24073.5 length 1595 1835 0 355076 549120 434",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.294566789001692,
+          "line": "PP 4096 16384 1294.0 3165.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.3405759030138142,
+          "line": "PP 8192 16384 2340.0 3500.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.402363094035536,
+          "line": "PP 12288 16384 3401.8 3612.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.0046397060505114,
+          "line": "PP 13715 16384 4004.1 3425.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.108975617040414,
+          "line": "PP 16383 16384 6108.4 2682.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.144041078048758,
+          "line": "PP 16384 16384 6143.5 2666.9 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 36.958763987000566,
+      "done_elapsed_s": 67.17635625600815,
+      "requested_pause_s": 0.0,
+      "purpose": "isolated_prefill_diagnostic",
+      "dispatch_write_ms": 0.035657023545354605,
+      "client_gap_since_previous_done_ms": null,
+      "wall_minus_native_ms": 0.5922690075822175,
+      "first_request": true,
+      "included_in_profiler": true,
+      "classification": "fast_band",
+      "mode": "default",
+      "native_stat": {
+        "tok_s": "85.07",
+        "ms_tok": "11.75",
+        "vram_hit": "0.6466",
+        "ram_fetch": "1.122",
+        "disk": "0.000",
+        "promo": "1.098",
+        "vram_used": "6681",
+        "vram_slots": "6800",
+        "ram_used": "8675",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.006",
+        "miss_ms": "0.000",
+        "lane": "93.621",
+        "lane_ms": "3.437",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "9.92",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.519",
+        "spec_acc": "1595",
+        "spec_offered": "1835",
+        "spec_rounds": "434"
+      }
+    },
+    {
+      "case": "default-02",
+      "name": "trial-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "db3bb9e4637a1bd60a6abb4a32bd1a3918dc62d8ac00c7e5c684718a6d9bea11",
+      "prefill_tps": 2704.433660163085,
+      "decode_tps": 101.63670832051294,
+      "prefill_ms": 6058.2,
+      "decode_ms": 20150.2,
+      "ttft_s": 6.169525942008477,
+      "wall_s": 26.20911418600008,
+      "draft_accepted": 1620,
+      "draft_offered": 1814,
+      "reused": 0,
+      "done": "DONE 2048 16384 6058.2 20150.2 length 1620 1814 0 369729 538080 410",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.1578890800010413,
+          "line": "PP 4096 16384 1157.2 3539.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.235540583031252,
+          "line": "PP 8192 16384 2234.9 3665.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.3420065059908666,
+          "line": "PP 12288 16384 3341.3 3677.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.9731854500132613,
+          "line": "PP 13715 16384 3972.5 3452.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.030828555987682,
+          "line": "PP 16383 16384 6030.2 2716.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.058825536980294,
+          "line": "PP 16384 16384 6058.2 2704.5 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 67.17647872702219,
+      "done_elapsed_s": 93.38559291302226,
+      "requested_pause_s": 0.0,
+      "purpose": "isolated_prefill_diagnostic",
+      "dispatch_write_ms": 0.049573020078241825,
+      "client_gap_since_previous_done_ms": 0.12247101403772831,
+      "wall_minus_native_ms": 0.7141860000774614,
+      "first_request": false,
+      "included_in_profiler": true,
+      "classification": "fast_band",
+      "mode": "default",
+      "native_stat": {
+        "tok_s": "101.64",
+        "ms_tok": "9.84",
+        "vram_hit": "0.6871",
+        "ram_fetch": "0.361",
+        "disk": "0.000",
+        "promo": "0.361",
+        "vram_used": "6664",
+        "vram_slots": "6800",
+        "ram_used": "8693",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.004",
+        "miss_ms": "0.000",
+        "lane": "81.837",
+        "lane_ms": "2.552",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "10.32",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.592",
+        "spec_acc": "1620",
+        "spec_offered": "1814",
+        "spec_rounds": "410"
+      }
+    },
+    {
+      "case": "default-02",
+      "name": "trial-02",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "02eacde42ea7c7a414c574499ef3cbc9b75dd2f9c187d51b3741d5acac676ad3",
+      "prefill_tps": 2717.3516436129635,
+      "decode_tps": 100.83504017646132,
+      "prefill_ms": 6029.4,
+      "decode_ms": 20310.4,
+      "ttft_s": 6.0506256080116145,
+      "wall_s": 26.34045228100149,
+      "draft_accepted": 1583,
+      "draft_offered": 1799,
+      "reused": 0,
+      "done": "DONE 2048 16384 6029.4 20310.4 length 1583 1799 0 372801 543360 449",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.1353129440103658,
+          "line": "PP 4096 16384 1134.7 3609.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.2117337860399857,
+          "line": "PP 8192 16384 2211.1 3704.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.3144289909978397,
+          "line": "PP 12288 16384 3313.8 3708.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.948293793015182,
+          "line": "PP 13715 16384 3947.7 3474.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.003576524031814,
+          "line": "PP 16383 16384 6003.0 2729.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.029983486048877,
+          "line": "PP 16384 16384 6029.4 2717.4 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 93.38568953500362,
+      "done_elapsed_s": 119.72614181600511,
+      "requested_pause_s": 0.0,
+      "purpose": "isolated_prefill_diagnostic",
+      "dispatch_write_ms": 0.03741000546142459,
+      "client_gap_since_previous_done_ms": 0.09662198135629296,
+      "wall_minus_native_ms": 0.6522810014866991,
+      "first_request": false,
+      "included_in_profiler": true,
+      "classification": "fast_band",
+      "mode": "default",
+      "native_stat": {
+        "tok_s": "100.84",
+        "ms_tok": "9.92",
+        "vram_hit": "0.6861",
+        "ram_fetch": "0.333",
+        "disk": "0.000",
+        "promo": "0.333",
+        "vram_used": "6651",
+        "vram_slots": "6800",
+        "ram_used": "8709",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.003",
+        "miss_ms": "0.000",
+        "lane": "82.944",
+        "lane_ms": "2.532",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "9.21",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.349",
+        "spec_acc": "1583",
+        "spec_offered": "1799",
+        "spec_rounds": "449"
+      }
+    },
+    {
+      "case": "default-03",
+      "name": "warmup-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "d8b4919c8cbeb192b1aedac868809bf1686b17d0780d315cd9135fc8e3a6acc9",
+      "prefill_tps": 2674.502122102514,
+      "decode_tps": 84.67778613897411,
+      "prefill_ms": 6126.0,
+      "decode_ms": 24185.8,
+      "ttft_s": 8.163068683003075,
+      "wall_s": 30.312572962022386,
+      "draft_accepted": 1585,
+      "draft_offered": 1818,
+      "reused": 0,
+      "done": "DONE 2048 16384 6126.0 24185.8 length 1585 1818 0 348879 547200 448",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.2684272180194966,
+          "line": "PP 4096 16384 1267.7 3231.1 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.3100992910331115,
+          "line": "PP 8192 16384 2309.4 3547.3 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.383375008008443,
+          "line": "PP 12288 16384 3382.6 3632.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.9858531299978495,
+          "line": "PP 13715 16384 3985.1 3441.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.0923354450496845,
+          "line": "PP 16383 16384 6091.6 2689.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.126721381035168,
+          "line": "PP 16384 16384 6126.0 2674.5 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 37.45857094798703,
+      "done_elapsed_s": 67.77114391000941,
+      "requested_pause_s": 0.0,
+      "purpose": "isolated_prefill_diagnostic",
+      "dispatch_write_ms": 0.04618702223524451,
+      "client_gap_since_previous_done_ms": null,
+      "wall_minus_native_ms": 0.7729620223872189,
+      "first_request": true,
+      "included_in_profiler": true,
+      "classification": "fast_band",
+      "mode": "default",
+      "native_stat": {
+        "tok_s": "84.68",
+        "ms_tok": "11.81",
+        "vram_hit": "0.6376",
+        "ram_fetch": "1.073",
+        "disk": "0.000",
+        "promo": "1.060",
+        "vram_used": "6683",
+        "vram_slots": "6800",
+        "ram_used": "8669",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.005",
+        "miss_ms": "0.000",
+        "lane": "95.758",
+        "lane_ms": "3.543",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "10.52",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "3.051",
+        "spec_acc": "1585",
+        "spec_offered": "1818",
+        "spec_rounds": "448"
+      }
+    },
+    {
+      "case": "default-03",
+      "name": "trial-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "09d07ba55d52acbb71beb88cb188753d1370d0c4c7719fa95fe84ad5d644f7e3",
+      "prefill_tps": 2714.9651183985948,
+      "decode_tps": 100.60866275956593,
+      "prefill_ms": 6034.7,
+      "decode_ms": 20356.1,
+      "ttft_s": 6.1387409690069035,
+      "wall_s": 26.391434600984212,
+      "draft_accepted": 1596,
+      "draft_offered": 1807,
+      "reused": 0,
+      "done": "DONE 2048 16384 6034.7 20356.1 length 1596 1807 0 366375 542160 436",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.1439020870020613,
+          "line": "PP 4096 16384 1143.2 3582.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.218081364990212,
+          "line": "PP 8192 16384 2217.4 3694.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.3255772489937954,
+          "line": "PP 12288 16384 3324.9 3695.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.9558848249725997,
+          "line": "PP 13715 16384 3955.2 3467.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.006546884018462,
+          "line": "PP 16383 16384 6005.9 2727.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.035298555972986,
+          "line": "PP 16384 16384 6034.7 2715.0 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 67.77123906800989,
+      "done_elapsed_s": 94.1626736689941,
+      "requested_pause_s": 0.0,
+      "purpose": "isolated_prefill_diagnostic",
+      "dispatch_write_ms": 0.04898302722722292,
+      "client_gap_since_previous_done_ms": 0.09515800047665834,
+      "wall_minus_native_ms": 0.6346009842127387,
+      "first_request": false,
+      "included_in_profiler": true,
+      "classification": "fast_band",
+      "mode": "default",
+      "native_stat": {
+        "tok_s": "100.61",
+        "ms_tok": "9.94",
+        "vram_hit": "0.6758",
+        "ram_fetch": "0.371",
+        "disk": "0.000",
+        "promo": "0.372",
+        "vram_used": "6668",
+        "vram_slots": "6800",
+        "ram_used": "8690",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.004",
+        "miss_ms": "0.000",
+        "lane": "85.458",
+        "lane_ms": "2.631",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "10.53",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.720",
+        "spec_acc": "1596",
+        "spec_offered": "1807",
+        "spec_rounds": "436"
+      }
+    },
+    {
+      "case": "default-03",
+      "name": "trial-02",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "ad7daa1f339bd700cc7753dd145d75e5cb5e42ece95a69bffa0fe64a6a55fa97",
+      "prefill_tps": 2729.529362765514,
+      "decode_tps": 105.87098008198798,
+      "prefill_ms": 6002.5,
+      "decode_ms": 19344.3,
+      "ttft_s": 6.029299781017471,
+      "wall_s": 25.347429546993226,
+      "draft_accepted": 1628,
+      "draft_offered": 1787,
+      "reused": 0,
+      "done": "DONE 2048 16384 6002.5 19344.3 length 1628 1787 0 355993 529440 401",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.130319828982465,
+          "line": "PP 4096 16384 1129.7 3625.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.2016867480124347,
+          "line": "PP 8192 16384 2201.1 3721.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.3059564150171354,
+          "line": "PP 12288 16384 3305.3 3717.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.9362364260014147,
+          "line": "PP 13715 16384 3935.6 3484.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 5.976752436021343,
+          "line": "PP 16383 16384 5976.1 2741.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.003081643022597,
+          "line": "PP 16384 16384 6002.5 2729.5 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 94.16276991000632,
+      "done_elapsed_s": 119.51019945699954,
+      "requested_pause_s": 0.0,
+      "purpose": "isolated_prefill_diagnostic",
+      "dispatch_write_ms": 0.037650985177606344,
+      "client_gap_since_previous_done_ms": 0.09624101221561432,
+      "wall_minus_native_ms": 0.6295469932265405,
+      "first_request": false,
+      "included_in_profiler": true,
+      "classification": "fast_band",
+      "mode": "default",
+      "native_stat": {
+        "tok_s": "105.87",
+        "ms_tok": "9.45",
+        "vram_hit": "0.6724",
+        "ram_fetch": "0.268",
+        "disk": "0.000",
+        "promo": "0.268",
+        "vram_used": "6648",
+        "vram_slots": "6800",
+        "ram_used": "8712",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.001",
+        "miss_ms": "0.000",
+        "lane": "84.422",
+        "lane_ms": "2.445",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "8.52",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.166",
+        "spec_acc": "1628",
+        "spec_offered": "1787",
+        "spec_rounds": "401"
+      }
+    },
+    {
+      "case": "lightcheck-01",
+      "name": "warmup-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "801e2fb0e2817d3446d54120f4edb624d3906c903811ee4185d2b1746ec25ee1",
+      "prefill_tps": 2606.012406553205,
+      "decode_tps": 87.07816200449848,
+      "prefill_ms": 6287.0,
+      "decode_ms": 23519.1,
+      "ttft_s": 8.33011457399698,
+      "wall_s": 29.806674457970075,
+      "draft_accepted": 1610,
+      "draft_offered": 1790,
+      "reused": 0,
+      "done": "DONE 2048 16384 6287.0 23519.1 length 1610 1790 0 338506 534480 416",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.3108457799535245,
+          "line": "PP 4096 16384 1310.3 3126.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.3747779009863734,
+          "line": "PP 8192 16384 2374.2 3450.4 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.4758586739772,
+          "line": "PP 12288 16384 3475.4 3535.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.0860911819618195,
+          "line": "PP 13715 16384 4085.5 3357.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.252150886983145,
+          "line": "PP 16383 16384 6251.6 2620.6 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.287516956974287,
+          "line": "PP 16384 16384 6287.0 2606.0 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 36.935784362023696,
+      "done_elapsed_s": 66.74245881999377,
+      "requested_pause_s": 0.0,
+      "purpose": "prefill_light_numerical_check",
+      "dispatch_write_ms": 0.07554196054115891,
+      "client_gap_since_previous_done_ms": null,
+      "wall_minus_native_ms": 0.5744579700767645,
+      "first_request": true,
+      "included_in_profiler": true,
+      "classification": "fast_band",
+      "mode": "lightcheck",
+      "native_stat": {
+        "tok_s": "87.08",
+        "ms_tok": "11.48",
+        "vram_hit": "0.6333",
+        "ram_fetch": "1.039",
+        "disk": "0.000",
+        "promo": "1.020",
+        "vram_used": "6686",
+        "vram_slots": "6800",
+        "ram_used": "8674",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.004",
+        "miss_ms": "0.000",
+        "lane": "94.647",
+        "lane_ms": "3.401",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "9.93",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.659",
+        "spec_acc": "1610",
+        "spec_offered": "1790",
+        "spec_rounds": "416"
+      }
+    },
+    {
+      "case": "lightcheck-01",
+      "name": "trial-01",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "5b51a74ad5f925f3628b2d4dbfd68f5e4ceff71706d6fd929ef7d49945341a8f",
+      "prefill_tps": 2644.030597424394,
+      "decode_tps": 102.3053675350301,
+      "prefill_ms": 6196.6,
+      "decode_ms": 20018.5,
+      "ttft_s": 6.301665854989551,
+      "wall_s": 26.215870840998832,
+      "draft_accepted": 1601,
+      "draft_offered": 1800,
+      "reused": 0,
+      "done": "DONE 2048 16384 6196.6 20018.5 length 1601 1800 0 361207 539280 431",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.1811226269928738,
+          "line": "PP 4096 16384 1180.4 3469.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.28645387198776,
+          "line": "PP 8192 16384 2285.8 3583.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.4257041059900075,
+          "line": "PP 12288 16384 3425.0 3587.7 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.060155078012031,
+          "line": "PP 13715 16384 4059.5 3378.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.168910318985581,
+          "line": "PP 16383 16384 6168.2 2656.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.197292256983928,
+          "line": "PP 16384 16384 6196.6 2644.0 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 66.74253243900603,
+      "done_elapsed_s": 92.95840328000486,
+      "requested_pause_s": 0.0,
+      "purpose": "prefill_light_numerical_check",
+      "dispatch_write_ms": 0.07168401498347521,
+      "client_gap_since_previous_done_ms": 0.0736190122552216,
+      "wall_minus_native_ms": 0.7708409988335916,
+      "first_request": false,
+      "included_in_profiler": true,
+      "classification": "fast_band",
+      "mode": "lightcheck",
+      "native_stat": {
+        "tok_s": "102.31",
+        "ms_tok": "9.77",
+        "vram_hit": "0.6698",
+        "ram_fetch": "0.337",
+        "disk": "0.000",
+        "promo": "0.338",
+        "vram_used": "6660",
+        "vram_slots": "6800",
+        "ram_used": "8700",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.003",
+        "miss_ms": "0.000",
+        "lane": "86.609",
+        "lane_ms": "2.597",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "9.39",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.445",
+        "spec_acc": "1601",
+        "spec_offered": "1800",
+        "spec_rounds": "431"
+      }
+    },
+    {
+      "case": "lightcheck-01",
+      "name": "trial-02",
+      "input_tokens": 16384,
+      "output_tokens": 2048,
+      "input_ids_sha256": "13f9df432a5568ac5ea8aed610a9949e27414abf94ad73b414181bf8a1e8de1a",
+      "output_ids_sha256": "c5d13b2e1ea5de6f19e2c68ac6318f5a4fd5da3acec9a7c53977db11fc589348",
+      "prefill_tps": 2633.914217735194,
+      "decode_tps": 103.65264218075443,
+      "prefill_ms": 6220.4,
+      "decode_ms": 19758.3,
+      "ttft_s": 6.243796005030163,
+      "wall_s": 25.979310659051407,
+      "draft_accepted": 1617,
+      "draft_offered": 1812,
+      "reused": 0,
+      "done": "DONE 2048 16384 6220.4 19758.3 length 1617 1812 0 364412 538320 411",
+      "prompt_progress": [
+        {
+          "client_elapsed_s": 1.1796182280522771,
+          "line": "PP 4096 16384 1179.0 3474.2 0 0.0"
+        },
+        {
+          "client_elapsed_s": 2.2956386700388975,
+          "line": "PP 8192 16384 2295.0 3569.5 0 0.0"
+        },
+        {
+          "client_elapsed_s": 3.4397342430311255,
+          "line": "PP 12288 16384 3439.1 3573.0 0 0.0"
+        },
+        {
+          "client_elapsed_s": 4.0777469360036775,
+          "line": "PP 13715 16384 4077.1 3363.9 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.195020099054091,
+          "line": "PP 16383 16384 6194.4 2644.8 0 0.0"
+        },
+        {
+          "client_elapsed_s": 6.220993338036351,
+          "line": "PP 16384 16384 6220.4 2633.9 0 0.0"
+        }
+      ],
+      "send_elapsed_s": 92.95849735697266,
+      "done_elapsed_s": 118.93780801602406,
+      "requested_pause_s": 0.0,
+      "purpose": "prefill_light_numerical_check",
+      "dispatch_write_ms": 0.06498204311355948,
+      "client_gap_since_previous_done_ms": 0.09407696779817343,
+      "wall_minus_native_ms": 0.610659051406401,
+      "first_request": false,
+      "included_in_profiler": true,
+      "classification": "fast_band",
+      "mode": "lightcheck",
+      "native_stat": {
+        "tok_s": "103.65",
+        "ms_tok": "9.65",
+        "vram_hit": "0.6769",
+        "ram_fetch": "0.262",
+        "disk": "0.000",
+        "promo": "0.263",
+        "vram_used": "6641",
+        "vram_slots": "6800",
+        "ram_used": "8718",
+        "ram_slots": "9272",
+        "ram_gb": "83.9",
+        "vram_gb": "61.5",
+        "disk_ms": "0.000",
+        "disk_waits": "0.003",
+        "miss_ms": "0.000",
+        "lane": "84.651",
+        "lane_ms": "2.501",
+        "tail_skip": "0.000",
+        "mirror_mb0": "0.0",
+        "mirror_mb1": "0.0",
+        "w_ms_tok": "8.75",
+        "w_disk_ms": "0.000",
+        "w_lane_ms": "2.216",
+        "spec_acc": "1617",
+        "spec_offered": "1812",
+        "spec_rounds": "411"
+      }
+    }
+  ],
+  "policy": {
+    "declared_at_utc": "2026-11-04T09:18:23.538476+00:00",
+    "release": "v1.3.108",
+    "commit": "1c302cedfee31a03ea47a197fb0c18ba7fe0e5e1",
+    "trigger": "MMQ expert-slot over-read padding fix, with same warning found in previous DeepSeek target logs",
+    "fixed_processes": {
+      "default": 3,
+      "lightcheck": 1
+    },
+    "requests_per_process": 3,
+    "total_requests": 12,
+    "speed_requests": 9,
+    "separate_numerical_diagnostic_requests": 3,
+    "input_tokens": 16384,
+    "output_tokens": 2048,
+    "input": "same original trial-01 repeated three times",
+    "default_flags": "PROF1/VERBOSE1, PREFILL_CPU and PIN_MB omitted",
+    "lightcheck_flags": {
+      "STRATA_GLM_PREFILL_LIGHT_CHECK": "1"
+    },
+    "diagnostic_timing_excluded": true,
+    "diagnostic_scope": "Compare eligible light-expert output rows with MMQ via native checker; record count/relativeL2/worstrow/finite status without assuming an arbitrary accuracy tolerance. If no eligible rows are logged, report coverage absent; no extra speed-selected runs.",
+    "early_stopping_for_speed": false,
+    "warning_policy": "Count and retain MMQ slot over-read warnings in every process; do not patch engine or discard warnings.",
+    "limits": "No end-to-end numerical/quality equivalence or Qwen-specific model/HTTP thinking-budget test. Existing model weights/configs preserved; no induced contention."
+  },
+  "temperature_maxima_c": {
+    "0": 55.0,
+    "1": 84.0
+  },
+  "thermal_flags": [],
+  "preservation": {
+    "source_pack_hashes_unchanged": true,
+    "model_sizes_and_mtimes_unchanged": true,
+    "running_user_services_unchanged": true,
+    "gpu_compute_apps_after": ""
+  },
+  "limitations": "Host audit samples same-user process CPU/IO/RSS and all GPU compute PIDs every ~2 seconds, with whole-NVMe settling checks before each case; it cannot exclude every short OS event. The LIGHT_CHECK process is a separate numerical diagnostic; exclude its timings from the default speed results. Diagnostic profiling adds CUDA events and synchronization. Every process runs three identical 16K/2K requests; the exit profiler includes the first warm-up and all subsequent prefill work. Stage event intervals are accumulated GPU stream time, may include stream stalls, and are not a pure kernel breakdown or a sum of end-to-end request wall time. Four fixed fresh starts (three default, one LIGHT_CHECK diagnostic) are a bounded verification sample, not an unbiased frequency estimate or a clean speed/quality comparison. Output IDs can differ. The separate LIGHT_CHECK compares eligible light expert rows with MMQ; this is partial kernel evidence, not a full-model accuracy test or numerical equivalence proof."
+}
