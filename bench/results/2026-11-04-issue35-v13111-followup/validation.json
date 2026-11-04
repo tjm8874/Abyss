@@ -1,0 +1,9 @@
+{
+  "archive_entries": 107,
+  "archive_sha256": "e9a07fe412a4eec2a71280d1a9a469ed44a4a01d5fcb1048b27bc614523a5012",
+  "archive_bytes": 495546,
+  "all_archive_bytes_and_per_entry_manifests_verified": true,
+  "all_JSON_JSONL_parse": true,
+  "private_path_identifier_credential_scan": "passed",
+  "model_weights_included": false
+}
