@@ -1,0 +1,27 @@
+{
+  "results.json": {
+    "bytes": 128448,
+    "sha256": "e1bdd7f32b1fe0ee4b192d4f541c5976b5431462f86a684b0bc5d8faa2ba86c3",
+    "git_blob_sha": "2192796361c5bcdd7930cf87b1ad7c027b21298c"
+  },
+  "README.md": {
+    "bytes": 9828,
+    "sha256": "953159da921b743f97556085ec5a1579861737819a0eccb039529a5eb89f635f",
+    "git_blob_sha": "5b19a5612f0ab2eedf3214aebed7dc5d5f0fc023"
+  },
+  "validation.json": {
+    "bytes": 789,
+    "sha256": "07afdf618c39dc264fd28573ff431810a3e4fe943d7d128e1c3ed46ab96884b0",
+    "git_blob_sha": "28875d72320afe8593055ba3edf78bffae12c689"
+  },
+  "geforce-complete-logs.tar.gz": {
+    "bytes": 986506,
+    "sha256": "0e1cd3dd70083fce1be828c5ebdd10e766ef5f35ff63c2caab7315d51715c228",
+    "git_blob_sha": "61e14b7fa859c7610225ad157ee9fc2f4b2369d2"
+  },
+  "dual-pro-complete-logs.tar.gz": {
+    "bytes": 1202136,
+    "sha256": "82ec6d819a28a9bc2fb4dfc0b6b7ce9f621f984cb324a91b75c97f4136a9a267",
+    "git_blob_sha": "171831127e9a1921d187ee6b31418128d656cef9"
+  }
+}

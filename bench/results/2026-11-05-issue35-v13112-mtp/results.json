@@ -1,0 +1,2624 @@
+{
+  "version": "1.3.112",
+  "commit": "c3d4e923b6df8027fc5a13aa2f6b22f6771e9150",
+  "baseline_version": "1.3.111",
+  "baseline_commit": "5e8b9c44fec443fd1d0c9140885c47973f7970b4",
+  "hosts": {
+    "dual-pro-system": {
+      "cases": {
+        "v111-pro-cap-single32": {
+          "config": {
+            "gpus": "1",
+            "split": "0",
+            "prefill": "4096",
+            "threads": 12,
+            "ram_gib": 119.20928955078125,
+            "prior": "shipped",
+            "env": {
+              "STRATA_GLM_VRAM_GB": "32",
+              "STRATA_GLM_CPU_SHARED": "1"
+            },
+            "name": "v111-pro-cap-single32",
+            "version": "1.3.111",
+            "engine": "<workdir>/build111/strata"
+          },
+          "stats": {
+            "n": 3,
+            "prefill_tps": 2569.7704815182724,
+            "decode_tps": 131.70248614165735,
+            "median_wall_s": 21.975062980956864,
+            "wall_range_s": [
+              21.42478579003364,
+              22.37974346795818
+            ],
+            "median_ttft_s": 6.395430868957192
+          },
+          "rows": [
+            {
+              "case": "v111-pro-cap-single32",
+              "fixture": "input-16384-warmup-01",
+              "warmup": true,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "e85a5f1f6ab158ae08573373fc16ccd95bfc0028c224fe63407eb9a769ee7eff",
+              "output_ids_sha256": "a6dd036653fb61bf79e3ab0f8f713801883072aab736dca09ef756a74408d6c2",
+              "prefill_ms": 6565.5,
+              "decode_ms": 15863.9,
+              "prefill_tps": 2495.468738100678,
+              "decode_tps": 129.09814106241214,
+              "wall_s": 22.430274940968957,
+              "ttft_s": 6.566510944976471,
+              "wall_minus_native_ms": 0.8749409689571621,
+              "draft_accepted": 1053,
+              "draft_offered": 1416,
+              "reuse": 0,
+              "done": "DONE 2048 16384 6565.5 15863.9 length 1053 1416 0 1119471 1156800 638",
+              "gap_after_previous_done_ms": null
+            },
+            {
+              "case": "v111-pro-cap-single32",
+              "fixture": "input-16384-trial-01",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "09b21ed21f83c029880a8c820c1fd905f2732103490274dba6fc4fc3f16c51f8",
+              "output_ids_sha256": "75bf32c0d768c1be57adbd8e8b7f9984f8c636269c037221ee57a0e9435948c8",
+              "prefill_ms": 6394.6,
+              "decode_ms": 15984.4,
+              "prefill_tps": 2562.1618240390326,
+              "decode_tps": 128.12492179875377,
+              "wall_s": 22.37974346795818,
+              "ttft_s": 6.395430868957192,
+              "wall_minus_native_ms": 0.7434679581783712,
+              "draft_accepted": 1006,
+              "draft_offered": 1381,
+              "reuse": 0,
+              "done": "DONE 2048 16384 6394.6 15984.4 length 1006 1381 0 1135399 1162560 653",
+              "gap_after_previous_done_ms": 0.010169052984565496
+            },
+            {
+              "case": "v111-pro-cap-single32",
+              "fixture": "input-16384-trial-02",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "db6f8711d14089a4756d3840f534a8e205d8af639189c1b2e4722efe6ea1827a",
+              "output_ids_sha256": "9271f41ed83d8d31509a32baa3491042f2e50edce99fbc9bfaaefabb05f6b99c",
+              "prefill_ms": 6333.8,
+              "decode_ms": 15640.7,
+              "prefill_tps": 2586.7567652909784,
+              "decode_tps": 130.94043105487606,
+              "wall_s": 21.975062980956864,
+              "ttft_s": 6.334450735012069,
+              "wall_minus_native_ms": 0.5629809568636119,
+              "draft_accepted": 1029,
+              "draft_offered": 1353,
+              "reuse": 0,
+              "done": "DONE 2048 16384 6333.8 15640.7 length 1029 1353 0 1111373 1138080 645",
+              "gap_after_previous_done_ms": 0.009398034308105707
+            },
+            {
+              "case": "v111-pro-cap-single32",
+              "fixture": "input-16384-trial-03",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "2123b2087c5791a541569584c1503a5e9f3e9112500615b17382a814ec21509d",
+              "output_ids_sha256": "eda6c20a05e8b8706444fdad9b5ce56490253bb6c2da426e079bcfeb5791e6a8",
+              "prefill_ms": 6398.6,
+              "decode_ms": 15025.5,
+              "prefill_tps": 2560.5601225268024,
+              "decode_tps": 136.30162057835014,
+              "wall_s": 21.42478579003364,
+              "ttft_s": 6.399437136016786,
+              "wall_minus_native_ms": 0.6857900336381135,
+              "draft_accepted": 1090,
+              "draft_offered": 1385,
+              "reuse": 0,
+              "done": "DONE 2048 16384 6398.6 15025.5 length 1090 1385 0 1100837 1124640 623",
+              "gap_after_previous_done_ms": 0.009568000677973032
+            }
+          ],
+          "startup_and_statistics": [
+            "q4x mtp: CUDA0 the draft layer from <workdir>/mtp (1083 MB, head over 106299 tokens, layers [0, 48))",
+            "glm prefill: CUDA0 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 1024), borrowing 1298 MB of the expert pool while a prompt runs (activations 822, weight scratch 23, expert staging 30, prestage 406: 160 experts); disk landing ring 96 experts (244 MB pinned)",
+            "glm fast: CUDA0 VRAM cap 32.0 GB: 6.62 GB already in use, 23.88 GB left for experts",
+            "glm fast: CUDA0 layers [0,48) expert pool 23.88 GB, 213-338 slots/layer (12562 total)",
+            "glm stat: decode 7.75 ms/tok (129.10 tok/s) | vram hit 96.77% | ram fetches 3.04/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 2.79/tok | cpu lane 15.18/tok in 0.77 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 12418/12562 ram 12158/13038",
+            "glm stat: decode 7.80 ms/tok (128.12 tok/s) | vram hit 97.66% | ram fetches 2.12/tok | disk 0.00 reads/tok in 0.02 waits/tok, 0.00 ms/tok | promotions 1.90/tok | cpu lane 11.13/tok in 0.57 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 12418/12562 ram 12157/13038",
+            "glm stat: decode 7.64 ms/tok (130.94 tok/s) | vram hit 97.65% | ram fetches 2.11/tok | disk 0.00 reads/tok in 0.03 waits/tok, 0.00 ms/tok | promotions 1.91/tok | cpu lane 10.90/tok in 0.55 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 12420/12562 ram 12156/13038",
+            "glm stat: decode 7.34 ms/tok (136.30 tok/s) | vram hit 97.88% | ram fetches 1.77/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 1.66/tok | cpu lane 9.84/tok in 0.50 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 12410/12562 ram 12165/13038"
+          ],
+          "graph_report": [],
+          "host_samples": 54,
+          "contention_events": 0,
+          "peaks": {
+            "NVIDIA RTX PRO 4500 Blackwell": {
+              "temperature_c": 57.0,
+              "memory_mib": 2.0,
+              "working_links": [
+                [
+                  "2",
+                  "8"
+                ],
+                [
+                  "1",
+                  "8"
+                ]
+              ]
+            },
+            "NVIDIA RTX PRO 5000 72GB Blackwell": {
+              "temperature_c": 86.0,
+              "memory_mib": 31688.0,
+              "working_links": [
+                [
+                  "2",
+                  "8"
+                ],
+                [
+                  "5",
+                  "8"
+                ]
+              ]
+            }
+          }
+        },
+        "v111-pro-cap-split20": {
+          "config": {
+            "gpus": "0,1",
+            "split": "20",
+            "prefill": "4096",
+            "threads": 6,
+            "ram_gib": 119.20928955078125,
+            "prior": "shipped",
+            "env": {
+              "STRATA_GLM_VRAM_GB_PARTS": "16,32",
+              "STRATA_GLM_CPU_SHARED": "0"
+            },
+            "name": "v111-pro-cap-split20",
+            "version": "1.3.111",
+            "engine": "<workdir>/build111/strata"
+          },
+          "stats": {
+            "n": 3,
+            "prefill_tps": 3984.8557322026477,
+            "decode_tps": 128.46568811943294,
+            "median_wall_s": 19.947071693022735,
+            "wall_range_s": [
+              19.843502009054646,
+              20.371829735988285
+            ],
+            "median_ttft_s": 4.112387271015905
+          },
+          "rows": [
+            {
+              "case": "v111-pro-cap-split20",
+              "fixture": "input-16384-warmup-01",
+              "warmup": true,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "e85a5f1f6ab158ae08573373fc16ccd95bfc0028c224fe63407eb9a769ee7eff",
+              "output_ids_sha256": "0f2d69d85ecbe04ddda1bcad9c56d39319278f70fa4b0e0c63d9f50d495b82bf",
+              "prefill_ms": 4304.9,
+              "decode_ms": 16350.6,
+              "prefill_tps": 3805.895607331181,
+              "decode_tps": 125.25534231159712,
+              "wall_s": 20.65636359102791,
+              "ttft_s": 4.305861370987259,
+              "wall_minus_native_ms": 0.8635910279117525,
+              "draft_accepted": 1044,
+              "draft_offered": 1370,
+              "reuse": 0,
+              "done": "DONE 2048 16384 4304.9 16350.6 length 1044 1370 0 1126943 1139040 646",
+              "gap_after_previous_done_ms": null
+            },
+            {
+              "case": "v111-pro-cap-split20",
+              "fixture": "input-16384-trial-01",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "09b21ed21f83c029880a8c820c1fd905f2732103490274dba6fc4fc3f16c51f8",
+              "output_ids_sha256": "86aca4dd518a9fd445e9efc75020cbe9a19e2caf11747c33a9adef24c5fbf687",
+              "prefill_ms": 4107.4,
+              "decode_ms": 15735.5,
+              "prefill_tps": 3988.898086380679,
+              "decode_tps": 130.15156811032378,
+              "wall_s": 19.843502009054646,
+              "ttft_s": 4.108116942050401,
+              "wall_minus_native_ms": 0.6020090546462598,
+              "draft_accepted": 1105,
+              "draft_offered": 1430,
+              "reuse": 0,
+              "done": "DONE 2048 16384 4107.4 15735.5 length 1105 1430 0 1130087 1138560 616",
+              "gap_after_previous_done_ms": 0.02415495691820979
+            },
+            {
+              "case": "v111-pro-cap-split20",
+              "fixture": "input-16384-trial-02",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "db6f8711d14089a4756d3840f534a8e205d8af639189c1b2e4722efe6ea1827a",
+              "output_ids_sha256": "29f74b55d017c91836e9a6aa551d2cba6951396eb90548bc54895380571fc9ac",
+              "prefill_ms": 4115.6,
+              "decode_ms": 15830.9,
+              "prefill_tps": 3980.9505296919037,
+              "decode_tps": 129.36725012475603,
+              "wall_s": 19.947071693022735,
+              "ttft_s": 4.116277322988026,
+              "wall_minus_native_ms": 0.5716930227354169,
+              "draft_accepted": 1065,
+              "draft_offered": 1343,
+              "reuse": 0,
+              "done": "DONE 2048 16384 4115.6 15830.9 length 1065 1343 0 1109498 1116000 630",
+              "gap_after_previous_done_ms": 0.021679967176169157
+            },
+            {
+              "case": "v111-pro-cap-split20",
+              "fixture": "input-16384-trial-03",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "2123b2087c5791a541569584c1503a5e9f3e9112500615b17382a814ec21509d",
+              "output_ids_sha256": "c863959f7347f15ab291f9dfc8abeb2e45a9bf9c8efefa8c6e049ecd731102f8",
+              "prefill_ms": 4111.7,
+              "decode_ms": 16259.6,
+              "prefill_tps": 3984.72651214826,
+              "decode_tps": 125.9563580899899,
+              "wall_s": 20.371829735988285,
+              "ttft_s": 4.112387271015905,
+              "wall_minus_native_ms": 0.5297359882843011,
+              "draft_accepted": 1050,
+              "draft_offered": 1417,
+              "reuse": 0,
+              "done": "DONE 2048 16384 4111.7 16259.6 length 1050 1417 0 1152951 1159200 639",
+              "gap_after_previous_done_ms": 0.03110896795988083
+            }
+          ],
+          "startup_and_statistics": [
+            "glm prefill: CUDA0 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 1024), borrowing 1244 MB of the expert pool while a prompt runs (activations 822, weight scratch 23, expert staging 27, prestage 357: 160 experts); disk landing ring 96 experts (214 MB pinned)",
+            "glm fast: CUDA0 VRAM cap 16.0 GB: 2.46 GB already in use, 12.04 GB left for experts",
+            "glm fast: CUDA0 layers [0,20) expert pool 12.03 GB, 266-404 slots/layer (6675 total)",
+            "q4x mtp: CUDA1 the draft layer from <workdir>/mtp (1083 MB, head over 106299 tokens, layers [20, 48))",
+            "glm prefill: CUDA1 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 1024), borrowing 1298 MB of the expert pool while a prompt runs (activations 822, weight scratch 23, expert staging 30, prestage 406: 160 experts); disk landing ring 96 experts (244 MB pinned)",
+            "glm fast: CUDA1 VRAM cap 32.0 GB: 4.83 GB already in use, 25.67 GB left for experts",
+            "glm fast: CUDA1 layers [20,48) expert pool 25.67 GB, 421-499 slots/layer (12970 total)",
+            "glm split: layers [0, 20) on CUDA0, [20, 48) on CUDA1 (a hop per boundary per token: host)",
+            "glm stat: decode 7.98 ms/tok (125.26 tok/s) | vram hit 98.94% | ram fetches 1.05/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 1.01/tok | cpu lane 4.85/tok in 0.31 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 19460/19645 ram 5116/6687",
+            "glm stat: decode 7.68 ms/tok (130.15 tok/s) | vram hit 99.26% | ram fetches 0.75/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.74/tok | cpu lane 3.38/tok in 0.22 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 19462/19645 ram 5114/6687",
+            "glm stat: decode 7.73 ms/tok (129.37 tok/s) | vram hit 99.42% | ram fetches 0.50/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.50/tok | cpu lane 2.67/tok in 0.17 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 19348/19645 ram 5228/6687",
+            "glm stat: decode 7.94 ms/tok (125.96 tok/s) | vram hit 99.46% | ram fetches 0.51/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.49/tok | cpu lane 2.54/tok in 0.17 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 19360/19645 ram 5216/6687"
+          ],
+          "graph_report": [],
+          "host_samples": 52,
+          "contention_events": 0,
+          "peaks": {
+            "NVIDIA RTX PRO 4500 Blackwell": {
+              "temperature_c": 75.0,
+              "memory_mib": 15180.0,
+              "working_links": [
+                [
+                  "2",
+                  "8"
+                ],
+                [
+                  "5",
+                  "8"
+                ]
+              ]
+            },
+            "NVIDIA RTX PRO 5000 72GB Blackwell": {
+              "temperature_c": 81.0,
+              "memory_mib": 31600.0,
+              "working_links": [
+                [
+                  "2",
+                  "8"
+                ],
+                [
+                  "1",
+                  "8"
+                ],
+                [
+                  "5",
+                  "8"
+                ]
+              ]
+            }
+          }
+        },
+        "v111-pro-full": {
+          "config": {
+            "gpus": "1",
+            "split": "0",
+            "prefill": "auto",
+            "threads": 12,
+            "ram_gib": 119.20928955078125,
+            "prior": "shipped",
+            "env": {},
+            "name": "v111-pro-full",
+            "version": "1.3.111",
+            "engine": "<workdir>/build111/strata"
+          },
+          "stats": {
+            "n": 3,
+            "prefill_tps": 3322.2034471105103,
+            "decode_tps": 141.41562937320467,
+            "median_wall_s": 19.49750206700992,
+            "wall_range_s": [
+              19.061509696010035,
+              19.684297653031535
+            ],
+            "median_ttft_s": 4.92988485598471
+          },
+          "rows": [
+            {
+              "case": "v111-pro-full",
+              "fixture": "input-16384-warmup-01",
+              "warmup": true,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "e85a5f1f6ab158ae08573373fc16ccd95bfc0028c224fe63407eb9a769ee7eff",
+              "output_ids_sha256": "c7c7a0571d3be682870cc8e3caba56288dcc7f27c11dc0fcefb163c3925ac99c",
+              "prefill_ms": 5066.5,
+              "decode_ms": 14393.6,
+              "prefill_tps": 3233.790585216619,
+              "decode_tps": 142.28546020453535,
+              "wall_s": 19.4606033799937,
+              "ttft_s": 5.067163477011491,
+              "wall_minus_native_ms": 0.5033799936991272,
+              "draft_accepted": 1068,
+              "draft_offered": 1431,
+              "reuse": 0,
+              "done": "DONE 2048 16384 5066.5 14393.6 length 1068 1431 0 1156800 1156800 647",
+              "gap_after_previous_done_ms": null
+            },
+            {
+              "case": "v111-pro-full",
+              "fixture": "input-16384-trial-01",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "09b21ed21f83c029880a8c820c1fd905f2732103490274dba6fc4fc3f16c51f8",
+              "output_ids_sha256": "ab9b74d81195582ecf2001ab4fa10f5a343729984d2edbc50e55a066957bdf26",
+              "prefill_ms": 4911.6,
+              "decode_ms": 14771.8,
+              "prefill_tps": 3335.7765290333086,
+              "decode_tps": 138.64254863997618,
+              "wall_s": 19.684297653031535,
+              "ttft_s": 4.912608360988088,
+              "wall_minus_native_ms": 0.8976530315358104,
+              "draft_accepted": 1038,
+              "draft_offered": 1439,
+              "reuse": 0,
+              "done": "DONE 2048 16384 4911.6 14771.8 length 1038 1439 0 1175520 1175520 657",
+              "gap_after_previous_done_ms": 0.024356006179004908
+            },
+            {
+              "case": "v111-pro-full",
+              "fixture": "input-16384-trial-02",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "db6f8711d14089a4756d3840f534a8e205d8af639189c1b2e4722efe6ea1827a",
+              "output_ids_sha256": "33bc201b2d448e6af72d0221480fedb076971c3e1c75ccb5e0b0d5ecf6b823ad",
+              "prefill_ms": 4929.3,
+              "decode_ms": 14131.7,
+              "prefill_tps": 3323.7985109447586,
+              "decode_tps": 144.92240848588634,
+              "wall_s": 19.061509696010035,
+              "ttft_s": 4.92988485598471,
+              "wall_minus_native_ms": 0.5096960100345314,
+              "draft_accepted": 1094,
+              "draft_offered": 1408,
+              "reuse": 0,
+              "done": "DONE 2048 16384 4929.3 14131.7 length 1094 1408 0 1133280 1133280 620",
+              "gap_after_previous_done_ms": 0.029785966034978628
+            },
+            {
+              "case": "v111-pro-full",
+              "fixture": "input-16384-trial-03",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "2123b2087c5791a541569584c1503a5e9f3e9112500615b17382a814ec21509d",
+              "output_ids_sha256": "a4f59adf2b0fae455cacecdfb9700f5dfc3aa7ecc8d98edc7524918b8db176a6",
+              "prefill_ms": 4954.1,
+              "decode_ms": 14542.9,
+              "prefill_tps": 3307.1597262873174,
+              "decode_tps": 140.82473234361785,
+              "wall_s": 19.49750206700992,
+              "ttft_s": 4.954694071027916,
+              "wall_minus_native_ms": 0.5020670099183917,
+              "draft_accepted": 1061,
+              "draft_offered": 1421,
+              "reuse": 0,
+              "done": "DONE 2048 16384 4954.1 14542.9 length 1061 1421 0 1155360 1155360 655",
+              "gap_after_previous_done_ms": 0.007484981324523687
+            }
+          ],
+          "startup_and_statistics": [
+            "q4x mtp: CUDA0 the draft layer from <workdir>/mtp (1083 MB, head over 106299 tokens, layers [0, 48))",
+            "glm prefill: CUDA0 chunks of 32768 tokens (--prefill auto, up to 32768; mixer sub-batches of 1024), borrowing 3722 MB of the expert pool while a prompt runs (activations 3247, weight scratch 23, expert staging 30, prestage 406: 160 experts); disk landing ring 96 experts (244 MB pinned)",
+            "glm fast: CUDA0 layers [0,48) expert pool 50.85 GB, 555-555 slots/layer (26640 total)",
+            "glm stat: decode 7.03 ms/tok (142.29 tok/s) | vram hit 100.00% | ram fetches 0.00/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.00/tok | cpu lane 0.00/tok in 0.00 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 24576/26640 ram 0/208",
+            "glm stat: decode 7.21 ms/tok (138.64 tok/s) | vram hit 100.00% | ram fetches 0.00/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.00/tok | cpu lane 0.00/tok in 0.00 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 24576/26640 ram 0/208",
+            "glm stat: decode 6.90 ms/tok (144.92 tok/s) | vram hit 100.00% | ram fetches 0.00/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.00/tok | cpu lane 0.00/tok in 0.00 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 24576/26640 ram 0/208",
+            "glm stat: decode 7.10 ms/tok (140.82 tok/s) | vram hit 100.00% | ram fetches 0.00/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.00/tok | cpu lane 0.00/tok in 0.00 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 24576/26640 ram 0/208"
+          ],
+          "graph_report": [],
+          "host_samples": 48,
+          "contention_events": 0,
+          "peaks": {
+            "NVIDIA RTX PRO 4500 Blackwell": {
+              "temperature_c": 33.0,
+              "memory_mib": 2.0,
+              "working_links": [
+                [
+                  "1",
+                  "8"
+                ]
+              ]
+            },
+            "NVIDIA RTX PRO 5000 72GB Blackwell": {
+              "temperature_c": 76.0,
+              "memory_mib": 59250.0,
+              "working_links": [
+                [
+                  "1",
+                  "8"
+                ],
+                [
+                  "5",
+                  "8"
+                ]
+              ]
+            }
+          }
+        },
+        "v111-pro-native-split22": {
+          "config": {
+            "gpus": "0,1",
+            "split": "22",
+            "prefill": "2048",
+            "threads": 12,
+            "ram_gib": 119.20928955078125,
+            "prior": "shipped",
+            "env": {},
+            "name": "v111-pro-native-split22",
+            "version": "1.3.111",
+            "engine": "<workdir>/build111/strata"
+          },
+          "stats": {
+            "n": 3,
+            "prefill_tps": 4373.1482717202725,
+            "decode_tps": 131.48489764123283,
+            "median_wall_s": 19.258337895036675,
+            "wall_range_s": [
+              19.17539355001645,
+              19.534987104008906
+            ],
+            "median_ttft_s": 3.7481439959956333
+          },
+          "rows": [
+            {
+              "case": "v111-pro-native-split22",
+              "fixture": "input-16384-warmup-01",
+              "warmup": true,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "e85a5f1f6ab158ae08573373fc16ccd95bfc0028c224fe63407eb9a769ee7eff",
+              "output_ids_sha256": "f6a791153ef32d0402e4f98bc786a82df1e0a57f3fcfea548dc67828b4845ffe",
+              "prefill_ms": 3841.1,
+              "decode_ms": 15637.5,
+              "prefill_tps": 4265.444794459921,
+              "decode_tps": 130.96722621902478,
+              "wall_s": 19.47943047899753,
+              "ttft_s": 3.842034376983065,
+              "wall_minus_native_ms": 0.8304789975281892,
+              "draft_accepted": 1104,
+              "draft_offered": 1532,
+              "reuse": 0,
+              "done": "DONE 2048 16384 3841.1 15637.5 length 1104 1532 0 1188480 1188480 653",
+              "gap_after_previous_done_ms": null
+            },
+            {
+              "case": "v111-pro-native-split22",
+              "fixture": "input-16384-trial-01",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "09b21ed21f83c029880a8c820c1fd905f2732103490274dba6fc4fc3f16c51f8",
+              "output_ids_sha256": "bef428c96c0d1d7208d7d5985efa0ff703683b36091b7f0db59405a1605bb261",
+              "prefill_ms": 3735.0,
+              "decode_ms": 15439.9,
+              "prefill_tps": 4386.61311914324,
+              "decode_tps": 132.64334613566152,
+              "wall_s": 19.17539355001645,
+              "ttft_s": 3.73564837500453,
+              "wall_minus_native_ms": 0.4935500164519908,
+              "draft_accepted": 1080,
+              "draft_offered": 1398,
+              "reuse": 0,
+              "done": "DONE 2048 16384 3735.0 15439.9 length 1080 1398 0 1135200 1135200 646",
+              "gap_after_previous_done_ms": 0.03075698623433709
+            },
+            {
+              "case": "v111-pro-native-split22",
+              "fixture": "input-16384-trial-02",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "db6f8711d14089a4756d3840f534a8e205d8af639189c1b2e4722efe6ea1827a",
+              "output_ids_sha256": "e0ab928dce52e05725fd37c871daba356cf5c0be6996bef1e371b0fadfda926e",
+              "prefill_ms": 3747.6,
+              "decode_ms": 15510.3,
+              "prefill_tps": 4371.864660049098,
+              "decode_tps": 132.04128869203046,
+              "wall_s": 19.258337895036675,
+              "ttft_s": 3.7481439959956333,
+              "wall_minus_native_ms": 0.43789503667539975,
+              "draft_accepted": 1083,
+              "draft_offered": 1432,
+              "reuse": 0,
+              "done": "DONE 2048 16384 3747.6 15510.3 length 1083 1432 0 1150560 1150560 642",
+              "gap_after_previous_done_ms": 0.022942957002669573
+            },
+            {
+              "case": "v111-pro-native-split22",
+              "fixture": "input-16384-trial-03",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "2123b2087c5791a541569584c1503a5e9f3e9112500615b17382a814ec21509d",
+              "output_ids_sha256": "85dca734bbc082013edba1310d77e60234e87c6265b83b4d1cd24ad2d12b728e",
+              "prefill_ms": 3756.9,
+              "decode_ms": 15777.6,
+              "prefill_tps": 4361.042348744976,
+              "decode_tps": 129.80427948483927,
+              "wall_s": 19.534987104008906,
+              "ttft_s": 3.757511132978834,
+              "wall_minus_native_ms": 0.4871040089055896,
+              "draft_accepted": 1058,
+              "draft_offered": 1419,
+              "reuse": 0,
+              "done": "DONE 2048 16384 3756.9 15777.6 length 1058 1419 0 1156320 1156320 657",
+              "gap_after_previous_done_ms": 0.02504698932170868
+            }
+          ],
+          "startup_and_statistics": [
+            "glm prefill: CUDA0 chunks of 2048 tokens (--prefill 2048; mixer sub-batches of 1024), borrowing 1058 MB of the expert pool while a prompt runs (activations 635, weight scratch 23, expert staging 27, prestage 357: 160 experts); disk landing ring 96 experts (214 MB pinned)",
+            "glm fast: CUDA0 layers [0,22) expert pool 21.37 GB, 542-542 slots/layer (11924 total)",
+            "q4x mtp: CUDA1 the draft layer from <workdir>/mtp (1083 MB, head over 106299 tokens, layers [22, 48))",
+            "glm prefill: CUDA1 chunks of 2048 tokens (--prefill 2048; mixer sub-batches of 1024), borrowing 1111 MB of the expert pool while a prompt runs (activations 635, weight scratch 23, expert staging 30, prestage 406: 160 experts); disk landing ring 96 experts (244 MB pinned)",
+            "glm fast: CUDA1 layers [22,48) expert pool 27.98 GB, 536-536 slots/layer (13936 total)",
+            "glm split: layers [0, 22) on CUDA0, [22, 48) on CUDA1 (a hop per boundary per token: host)",
+            "glm stat: decode 7.64 ms/tok (130.97 tok/s) | vram hit 100.00% | ram fetches 0.00/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.00/tok | cpu lane 0.00/tok in 0.00 ms/tok | tail skip 0.00/tok | prompt 0.2 ms/tok | vram 24576/25860 ram 0/288",
+            "glm stat: decode 7.54 ms/tok (132.64 tok/s) | vram hit 100.00% | ram fetches 0.00/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.00/tok | cpu lane 0.00/tok in 0.00 ms/tok | tail skip 0.00/tok | prompt 0.2 ms/tok | vram 24576/25860 ram 0/288",
+            "glm stat: decode 7.57 ms/tok (132.04 tok/s) | vram hit 100.00% | ram fetches 0.00/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.00/tok | cpu lane 0.00/tok in 0.00 ms/tok | tail skip 0.00/tok | prompt 0.2 ms/tok | vram 24576/25860 ram 0/288",
+            "glm stat: decode 7.70 ms/tok (129.80 tok/s) | vram hit 100.00% | ram fetches 0.00/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.00/tok | cpu lane 0.00/tok in 0.00 ms/tok | tail skip 0.00/tok | prompt 0.2 ms/tok | vram 24576/25860 ram 0/288"
+          ],
+          "graph_report": [],
+          "host_samples": 48,
+          "contention_events": 0,
+          "peaks": {
+            "NVIDIA RTX PRO 4500 Blackwell": {
+              "temperature_c": 74.0,
+              "memory_mib": 24864.0,
+              "working_links": [
+                [
+                  "2",
+                  "8"
+                ],
+                [
+                  "5",
+                  "8"
+                ]
+              ]
+            },
+            "NVIDIA RTX PRO 5000 72GB Blackwell": {
+              "temperature_c": 80.0,
+              "memory_mib": 33734.0,
+              "working_links": [
+                [
+                  "2",
+                  "8"
+                ],
+                [
+                  "1",
+                  "8"
+                ],
+                [
+                  "5",
+                  "8"
+                ]
+              ]
+            }
+          }
+        },
+        "v112-pro-cap-single32": {
+          "config": {
+            "gpus": "1",
+            "split": "0",
+            "prefill": "4096",
+            "threads": 12,
+            "ram_gib": 119.20928955078125,
+            "prior": "shipped",
+            "env": {
+              "STRATA_GLM_VRAM_GB": "32",
+              "STRATA_GLM_CPU_SHARED": "1"
+            },
+            "name": "v112-pro-cap-single32",
+            "version": "1.3.112"
+          },
+          "stats": {
+            "n": 3,
+            "prefill_tps": 2554.956622084531,
+            "decode_tps": 134.00598054034248,
+            "median_wall_s": 21.65184986795066,
+            "wall_range_s": [
+              21.60737333196448,
+              21.82930367102381
+            ],
+            "median_ttft_s": 6.40051627001958
+          },
+          "rows": [
+            {
+              "case": "v112-pro-cap-single32",
+              "fixture": "input-16384-warmup-01",
+              "warmup": true,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "e85a5f1f6ab158ae08573373fc16ccd95bfc0028c224fe63407eb9a769ee7eff",
+              "output_ids_sha256": "01aabebcf64f6d6872417a0249b40965e66afbc60620c1b46222507b03f10e04",
+              "prefill_ms": 6575.4,
+              "decode_ms": 15592.5,
+              "prefill_tps": 2491.7115308574384,
+              "decode_tps": 131.34519801186468,
+              "wall_s": 22.168580557976384,
+              "ttft_s": 6.576205171004403,
+              "wall_minus_native_ms": 0.6805579763840797,
+              "draft_accepted": 1066,
+              "draft_offered": 1432,
+              "reuse": 0,
+              "done": "DONE 2048 16384 6575.4 15592.5 length 1066 1432 0 1119067 1158240 634",
+              "gap_after_previous_done_ms": null
+            },
+            {
+              "case": "v112-pro-cap-single32",
+              "fixture": "input-16384-trial-01",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "09b21ed21f83c029880a8c820c1fd905f2732103490274dba6fc4fc3f16c51f8",
+              "output_ids_sha256": "092a7b1f2fd4bef4aab94cdd1310291a4609af441e82202fb7117c11a307b18e",
+              "prefill_ms": 6399.7,
+              "decode_ms": 15428.9,
+              "prefill_tps": 2560.1200056252637,
+              "decode_tps": 132.73791391479625,
+              "wall_s": 21.82930367102381,
+              "ttft_s": 6.40051627001958,
+              "wall_minus_native_ms": 0.7036710238080559,
+              "draft_accepted": 1022,
+              "draft_offered": 1416,
+              "reuse": 0,
+              "done": "DONE 2048 16384 6399.7 15428.9 length 1022 1416 0 1151502 1171680 668",
+              "gap_after_previous_done_ms": 0.011681986507028341
+            },
+            {
+              "case": "v112-pro-cap-single32",
+              "fixture": "input-16384-trial-02",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "db6f8711d14089a4756d3840f534a8e205d8af639189c1b2e4722efe6ea1827a",
+              "output_ids_sha256": "c8445680f61521dc8f6570da797fd5d4512857d811dca7ee4c10ca40bddd203e",
+              "prefill_ms": 6439.1,
+              "decode_ms": 15212.2,
+              "prefill_tps": 2544.45497041512,
+              "decode_tps": 134.62878479115446,
+              "wall_s": 21.65184986795066,
+              "ttft_s": 6.4397468629758805,
+              "wall_minus_native_ms": 0.5498679506581539,
+              "draft_accepted": 1032,
+              "draft_offered": 1390,
+              "reuse": 0,
+              "done": "DONE 2048 16384 6439.1 15212.2 length 1032 1390 0 1136973 1154880 652",
+              "gap_after_previous_done_ms": 0.009638024494051933
+            },
+            {
+              "case": "v112-pro-cap-single32",
+              "fixture": "input-16384-trial-03",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "2123b2087c5791a541569584c1503a5e9f3e9112500615b17382a814ec21509d",
+              "output_ids_sha256": "690069a6a1cc1050a2ecea9815d9610af917b4f9a49c5ca75423c978d4051551",
+              "prefill_ms": 6399.1,
+              "decode_ms": 15207.6,
+              "prefill_tps": 2560.36005063212,
+              "decode_tps": 134.66950735158736,
+              "wall_s": 21.60737333196448,
+              "ttft_s": 6.399904785968829,
+              "wall_minus_native_ms": 0.6733319644808944,
+              "draft_accepted": 1020,
+              "draft_offered": 1367,
+              "reuse": 0,
+              "done": "DONE 2048 16384 6399.1 15207.6 length 1020 1367 0 1134575 1149600 644",
+              "gap_after_previous_done_ms": 0.021551037207245827
+            }
+          ],
+          "startup_and_statistics": [
+            "q4x mtp: CUDA0 the draft layer from <workdir>/mtp (1083 MB, head over 106299 tokens, layers [0, 48))",
+            "glm prefill: CUDA0 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 1024), borrowing 1298 MB of the expert pool while a prompt runs (activations 822, weight scratch 23, expert staging 30, prestage 406: 160 experts); disk landing ring 96 experts (244 MB pinned)",
+            "glm fast: CUDA0 VRAM cap 32.0 GB: 6.62 GB already in use, 23.88 GB left for experts",
+            "glm fast: CUDA0 layers [0,48) expert pool 23.88 GB, 213-338 slots/layer (12562 total)",
+            "glm stat: decode 7.61 ms/tok (131.35 tok/s) | vram hit 96.62% | ram fetches 3.44/tok | disk 0.00 reads/tok in 0.03 waits/tok, 0.00 ms/tok | promotions 3.17/tok | cpu lane 15.66/tok in 0.80 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 12420/12562 ram 12151/13038",
+            "glm stat: decode 7.53 ms/tok (132.74 tok/s) | vram hit 98.28% | ram fetches 1.35/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 1.27/tok | cpu lane 8.50/tok in 0.43 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 12418/12562 ram 12158/13038",
+            "glm stat: decode 7.43 ms/tok (134.63 tok/s) | vram hit 98.45% | ram fetches 1.14/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 1.11/tok | cpu lane 7.60/tok in 0.38 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 12417/12562 ram 12153/13038",
+            "glm stat: decode 7.43 ms/tok (134.67 tok/s) | vram hit 98.69% | ram fetches 0.94/tok | disk 0.00 reads/tok in 0.01 waits/tok, 0.00 ms/tok | promotions 0.91/tok | cpu lane 6.39/tok in 0.32 ms/tok | tail skip 0.00/tok | prompt 0.4 ms/tok | vram 12422/12562 ram 12148/13038",
+            "qwen4exp verify graphs CUDA0: 88196 layer segments replayed, 36508 launched (70.7% replayed), 136 graphs, 0 re-captured for new route arguments"
+          ],
+          "graph_report": [
+            "qwen4exp verify graphs CUDA0: 88196 layer segments replayed, 36508 launched (70.7% replayed), 136 graphs, 0 re-captured for new route arguments"
+          ],
+          "host_samples": 53,
+          "contention_events": 0,
+          "peaks": {
+            "NVIDIA RTX PRO 4500 Blackwell": {
+              "temperature_c": 42.0,
+              "memory_mib": 2.0,
+              "working_links": [
+                [
+                  "1",
+                  "8"
+                ]
+              ]
+            },
+            "NVIDIA RTX PRO 5000 72GB Blackwell": {
+              "temperature_c": 86.0,
+              "memory_mib": 31710.0,
+              "working_links": [
+                [
+                  "5",
+                  "8"
+                ]
+              ]
+            }
+          }
+        },
+        "v112-pro-cap-split20": {
+          "config": {
+            "gpus": "0,1",
+            "split": "20",
+            "prefill": "4096",
+            "threads": 6,
+            "ram_gib": 119.20928955078125,
+            "prior": "shipped",
+            "env": {
+              "STRATA_GLM_VRAM_GB_PARTS": "16,32",
+              "STRATA_GLM_CPU_SHARED": "0"
+            },
+            "name": "v112-pro-cap-split20",
+            "version": "1.3.112"
+          },
+          "stats": {
+            "n": 3,
+            "prefill_tps": 3980.4991820670216,
+            "decode_tps": 130.70365965992372,
+            "median_wall_s": 19.758277416985948,
+            "wall_range_s": [
+              19.704029173008166,
+              19.89470856601838
+            ],
+            "median_ttft_s": 4.117132832005154
+          },
+          "rows": [
+            {
+              "case": "v112-pro-cap-split20",
+              "fixture": "input-16384-warmup-01",
+              "warmup": true,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "e85a5f1f6ab158ae08573373fc16ccd95bfc0028c224fe63407eb9a769ee7eff",
+              "output_ids_sha256": "e7ae94068ad2a67c0558acbaee7a1d42347c93b5ae9e27a51ea459f8397d8cd6",
+              "prefill_ms": 4313.3,
+              "decode_ms": 15449.7,
+              "prefill_tps": 3798.483759534463,
+              "decode_tps": 132.55920826941622,
+              "wall_s": 19.76379789499333,
+              "ttft_s": 4.314248577982653,
+              "wall_minus_native_ms": 0.7978949933312833,
+              "draft_accepted": 1094,
+              "draft_offered": 1386,
+              "reuse": 0,
+              "done": "DONE 2048 16384 4313.3 15449.7 length 1094 1386 0 1111848 1122720 631",
+              "gap_after_previous_done_ms": null
+            },
+            {
+              "case": "v112-pro-cap-split20",
+              "fixture": "input-16384-trial-01",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "09b21ed21f83c029880a8c820c1fd905f2732103490274dba6fc4fc3f16c51f8",
+              "output_ids_sha256": "eb435c03cf7d97a620d1e916d48d17ca6d906c1a2a4d8c200511e6b59b916aa7",
+              "prefill_ms": 4110.2,
+              "decode_ms": 15647.5,
+              "prefill_tps": 3986.180721132792,
+              "decode_tps": 130.8835277200831,
+              "wall_s": 19.758277416985948,
+              "ttft_s": 4.110908082977403,
+              "wall_minus_native_ms": 0.5774169859469112,
+              "draft_accepted": 1054,
+              "draft_offered": 1359,
+              "reuse": 0,
+              "done": "DONE 2048 16384 4110.2 15647.5 length 1054 1359 0 1121930 1128960 622",
+              "gap_after_previous_done_ms": 0.02142001176252961
+            },
+            {
+              "case": "v112-pro-cap-split20",
+              "fixture": "input-16384-trial-02",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "db6f8711d14089a4756d3840f534a8e205d8af639189c1b2e4722efe6ea1827a",
+              "output_ids_sha256": "01df6023fa7497ca615b0a1b26559468e2ce72d361cec628455360a93534b4ae",
+              "prefill_ms": 4116.5,
+              "decode_ms": 15587.0,
+              "prefill_tps": 3980.080165188874,
+              "decode_tps": 131.39154423558094,
+              "wall_s": 19.704029173008166,
+              "ttft_s": 4.117132832005154,
+              "wall_minus_native_ms": 0.5291730081662536,
+              "draft_accepted": 1079,
+              "draft_offered": 1412,
+              "reuse": 0,
+              "done": "DONE 2048 16384 4116.5 15587.0 length 1079 1412 0 1136099 1142400 646",
+              "gap_after_previous_done_ms": 0.018463993910700083
+            },
+            {
+              "case": "v112-pro-cap-split20",
+              "fixture": "input-16384-trial-03",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "2123b2087c5791a541569584c1503a5e9f3e9112500615b17382a814ec21509d",
+              "output_ids_sha256": "61919df74b3a764b7c652d80c7986c137777e1267af4602197df653e9d1f690c",
+              "prefill_ms": 4121.5,
+              "decode_ms": 15772.6,
+              "prefill_tps": 3975.2517287395367,
+              "decode_tps": 129.845428147547,
+              "wall_s": 19.89470856601838,
+              "ttft_s": 4.1221898210351355,
+              "wall_minus_native_ms": 0.6085660183798609,
+              "draft_accepted": 1055,
+              "draft_offered": 1398,
+              "reuse": 0,
+              "done": "DONE 2048 16384 4121.5 15772.6 length 1055 1398 0 1141197 1147680 631",
+              "gap_after_previous_done_ms": 0.017341983038932085
+            }
+          ],
+          "startup_and_statistics": [
+            "glm prefill: CUDA0 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 1024), borrowing 1244 MB of the expert pool while a prompt runs (activations 822, weight scratch 23, expert staging 27, prestage 357: 160 experts); disk landing ring 96 experts (214 MB pinned)",
+            "glm fast: CUDA0 VRAM cap 16.0 GB: 2.46 GB already in use, 12.04 GB left for experts",
+            "glm fast: CUDA0 layers [0,20) expert pool 12.03 GB, 266-404 slots/layer (6675 total)",
+            "q4x mtp: CUDA1 the draft layer from <workdir>/mtp (1083 MB, head over 106299 tokens, layers [20, 48))",
+            "glm prefill: CUDA1 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 1024), borrowing 1298 MB of the expert pool while a prompt runs (activations 822, weight scratch 23, expert staging 30, prestage 406: 160 experts); disk landing ring 96 experts (244 MB pinned)",
+            "glm fast: CUDA1 VRAM cap 32.0 GB: 4.83 GB already in use, 25.67 GB left for experts",
+            "glm fast: CUDA1 layers [20,48) expert pool 25.67 GB, 421-499 slots/layer (12970 total)",
+            "glm split: layers [0, 20) on CUDA0, [20, 48) on CUDA1 (a hop per boundary per token: host)",
+            "glm stat: decode 7.54 ms/tok (132.56 tok/s) | vram hit 99.03% | ram fetches 1.08/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 1.05/tok | cpu lane 4.22/tok in 0.27 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 19504/19645 ram 5071/6687",
+            "glm stat: decode 7.64 ms/tok (130.88 tok/s) | vram hit 99.38% | ram fetches 0.56/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.55/tok | cpu lane 2.87/tok in 0.18 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 19500/19645 ram 5074/6687",
+            "glm stat: decode 7.61 ms/tok (131.39 tok/s) | vram hit 99.45% | ram fetches 0.44/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.43/tok | cpu lane 2.63/tok in 0.17 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 19501/19645 ram 5075/6687",
+            "glm stat: decode 7.70 ms/tok (129.85 tok/s) | vram hit 99.44% | ram fetches 0.50/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.48/tok | cpu lane 2.67/tok in 0.17 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 19501/19645 ram 5075/6687",
+            "qwen4exp verify graphs CUDA1: 50520 layer segments replayed, 20320 launched (71.3% replayed), 80 graphs, 0 re-captured for new route arguments",
+            "qwen4exp verify graphs CUDA0: 32838 layer segments replayed, 17762 launched (64.9% replayed), 52 graphs, 0 re-captured for new route arguments"
+          ],
+          "graph_report": [
+            "qwen4exp verify graphs CUDA1: 50520 layer segments replayed, 20320 launched (71.3% replayed), 80 graphs, 0 re-captured for new route arguments",
+            "qwen4exp verify graphs CUDA0: 32838 layer segments replayed, 17762 launched (64.9% replayed), 52 graphs, 0 re-captured for new route arguments"
+          ],
+          "host_samples": 51,
+          "contention_events": 0,
+          "peaks": {
+            "NVIDIA RTX PRO 4500 Blackwell": {
+              "temperature_c": 68.0,
+              "memory_mib": 15190.0,
+              "working_links": [
+                [
+                  "1",
+                  "8"
+                ],
+                [
+                  "5",
+                  "8"
+                ]
+              ]
+            },
+            "NVIDIA RTX PRO 5000 72GB Blackwell": {
+              "temperature_c": 81.0,
+              "memory_mib": 31614.0,
+              "working_links": [
+                [
+                  "5",
+                  "8"
+                ],
+                [
+                  "2",
+                  "8"
+                ],
+                [
+                  "1",
+                  "8"
+                ]
+              ]
+            }
+          }
+        },
+        "v112-pro-full": {
+          "config": {
+            "gpus": "1",
+            "split": "0",
+            "prefill": "auto",
+            "threads": 12,
+            "ram_gib": 119.20928955078125,
+            "prior": "shipped",
+            "env": {},
+            "name": "v112-pro-full",
+            "version": "1.3.112"
+          },
+          "stats": {
+            "n": 3,
+            "prefill_tps": 3263.333311202438,
+            "decode_tps": 144.33817984480828,
+            "median_wall_s": 19.282925767009147,
+            "wall_range_s": [
+              18.871687779028434,
+              19.475742298003752
+            ],
+            "median_ttft_s": 5.027417616045568
+          },
+          "rows": [
+            {
+              "case": "v112-pro-full",
+              "fixture": "input-16384-warmup-01",
+              "warmup": true,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "e85a5f1f6ab158ae08573373fc16ccd95bfc0028c224fe63407eb9a769ee7eff",
+              "output_ids_sha256": "c7c7a0571d3be682870cc8e3caba56288dcc7f27c11dc0fcefb163c3925ac99c",
+              "prefill_ms": 5131.2,
+              "decode_ms": 14111.4,
+              "prefill_tps": 3193.015279077019,
+              "decode_tps": 145.13088708420142,
+              "wall_s": 19.243092645017896,
+              "ttft_s": 5.131823341012932,
+              "wall_minus_native_ms": 0.49264501789548376,
+              "draft_accepted": 1068,
+              "draft_offered": 1431,
+              "reuse": 0,
+              "done": "DONE 2048 16384 5131.2 14111.4 length 1068 1431 0 1156800 1156800 647",
+              "gap_after_previous_done_ms": null
+            },
+            {
+              "case": "v112-pro-full",
+              "fixture": "input-16384-trial-01",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "09b21ed21f83c029880a8c820c1fd905f2732103490274dba6fc4fc3f16c51f8",
+              "output_ids_sha256": "ab9b74d81195582ecf2001ab4fa10f5a343729984d2edbc50e55a066957bdf26",
+              "prefill_ms": 4987.4,
+              "decode_ms": 14487.8,
+              "prefill_tps": 3285.078397561856,
+              "decode_tps": 141.36031695633568,
+              "wall_s": 19.475742298003752,
+              "ttft_s": 4.988042992015835,
+              "wall_minus_native_ms": 0.542298003752876,
+              "draft_accepted": 1038,
+              "draft_offered": 1439,
+              "reuse": 0,
+              "done": "DONE 2048 16384 4987.4 14487.8 length 1038 1439 0 1175520 1175520 657",
+              "gap_after_previous_done_ms": 0.03526697400957346
+            },
+            {
+              "case": "v112-pro-full",
+              "fixture": "input-16384-trial-02",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "db6f8711d14089a4756d3840f534a8e205d8af639189c1b2e4722efe6ea1827a",
+              "output_ids_sha256": "33bc201b2d448e6af72d0221480fedb076971c3e1c75ccb5e0b0d5ecf6b823ad",
+              "prefill_ms": 5026.5,
+              "decode_ms": 13844.4,
+              "prefill_tps": 3259.524520043768,
+              "decode_tps": 147.92984889197078,
+              "wall_s": 18.871687779028434,
+              "ttft_s": 5.027417616045568,
+              "wall_minus_native_ms": 0.7877790284346702,
+              "draft_accepted": 1094,
+              "draft_offered": 1408,
+              "reuse": 0,
+              "done": "DONE 2048 16384 5026.5 13844.4 length 1094 1408 0 1133280 1133280 620",
+              "gap_after_previous_done_ms": 0.025897985324263573
+            },
+            {
+              "case": "v112-pro-full",
+              "fixture": "input-16384-trial-03",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "2123b2087c5791a541569584c1503a5e9f3e9112500615b17382a814ec21509d",
+              "output_ids_sha256": "a4f59adf2b0fae455cacecdfb9700f5dfc3aa7ecc8d98edc7524918b8db176a6",
+              "prefill_ms": 5048.0,
+              "decode_ms": 14234.5,
+              "prefill_tps": 3245.6418383518226,
+              "decode_tps": 143.87579472408584,
+              "wall_s": 19.282925767009147,
+              "ttft_s": 5.0485761040472426,
+              "wall_minus_native_ms": 0.42576700914651155,
+              "draft_accepted": 1061,
+              "draft_offered": 1421,
+              "reuse": 0,
+              "done": "DONE 2048 16384 5048.0 14234.5 length 1061 1421 0 1155360 1155360 655",
+              "gap_after_previous_done_ms": 0.010559975635260344
+            }
+          ],
+          "startup_and_statistics": [
+            "q4x mtp: CUDA0 the draft layer from <workdir>/mtp (1083 MB, head over 106299 tokens, layers [0, 48))",
+            "glm prefill: CUDA0 chunks of 32768 tokens (--prefill auto, up to 32768; mixer sub-batches of 1024), borrowing 3722 MB of the expert pool while a prompt runs (activations 3247, weight scratch 23, expert staging 30, prestage 406: 160 experts); disk landing ring 96 experts (244 MB pinned)",
+            "glm fast: CUDA0 layers [0,48) expert pool 50.85 GB, 555-555 slots/layer (26640 total)",
+            "glm stat: decode 6.89 ms/tok (145.13 tok/s) | vram hit 100.00% | ram fetches 0.00/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.00/tok | cpu lane 0.00/tok in 0.00 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 24576/26640 ram 0/208",
+            "glm stat: decode 7.07 ms/tok (141.36 tok/s) | vram hit 100.00% | ram fetches 0.00/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.00/tok | cpu lane 0.00/tok in 0.00 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 24576/26640 ram 0/208",
+            "glm stat: decode 6.76 ms/tok (147.93 tok/s) | vram hit 100.00% | ram fetches 0.00/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.00/tok | cpu lane 0.00/tok in 0.00 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 24576/26640 ram 0/208",
+            "glm stat: decode 6.95 ms/tok (143.88 tok/s) | vram hit 100.00% | ram fetches 0.00/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.00/tok | cpu lane 0.00/tok in 0.00 ms/tok | tail skip 0.00/tok | prompt 0.3 ms/tok | vram 24576/26640 ram 0/208",
+            "qwen4exp verify graphs CUDA0: 87550 layer segments replayed, 36242 launched (70.7% replayed), 136 graphs, 0 re-captured for new route arguments"
+          ],
+          "graph_report": [
+            "qwen4exp verify graphs CUDA0: 87550 layer segments replayed, 36242 launched (70.7% replayed), 136 graphs, 0 re-captured for new route arguments"
+          ],
+          "host_samples": 47,
+          "contention_events": 0,
+          "peaks": {
+            "NVIDIA RTX PRO 4500 Blackwell": {
+              "temperature_c": 33.0,
+              "memory_mib": 2.0,
+              "working_links": [
+                [
+                  "1",
+                  "8"
+                ]
+              ]
+            },
+            "NVIDIA RTX PRO 5000 72GB Blackwell": {
+              "temperature_c": 85.0,
+              "memory_mib": 59272.0,
+              "working_links": [
+                [
+                  "5",
+                  "8"
+                ]
+              ]
+            }
+          }
+        },
+        "v112-pro-native-split22": {
+          "config": {
+            "gpus": "0,1",
+            "split": "22",
+            "prefill": "2048",
+            "threads": 12,
+            "ram_gib": 119.20928955078125,
+            "prior": "shipped",
+            "env": {},
+            "name": "v112-pro-native-split22",
+            "version": "1.3.112"
+          },
+          "stats": {
+            "n": 3,
+            "prefill_tps": 4376.146298901334,
+            "decode_tps": 134.66744112135194,
+            "median_wall_s": 18.8793441420421,
+            "wall_range_s": [
+              18.816077768977266,
+              19.161466906021815
+            ],
+            "median_ttft_s": 3.744219573040027
+          },
+          "rows": [
+            {
+              "case": "v112-pro-native-split22",
+              "fixture": "input-16384-warmup-01",
+              "warmup": true,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "e85a5f1f6ab158ae08573373fc16ccd95bfc0028c224fe63407eb9a769ee7eff",
+              "output_ids_sha256": "f6a791153ef32d0402e4f98bc786a82df1e0a57f3fcfea548dc67828b4845ffe",
+              "prefill_ms": 3849.7,
+              "decode_ms": 15263.1,
+              "prefill_tps": 4255.916045406136,
+              "decode_tps": 134.17981930276287,
+              "wall_s": 19.113367034995463,
+              "ttft_s": 3.8504024849971756,
+              "wall_minus_native_ms": 0.567034995461654,
+              "draft_accepted": 1104,
+              "draft_offered": 1532,
+              "reuse": 0,
+              "done": "DONE 2048 16384 3849.7 15263.1 length 1104 1532 0 1188480 1188480 653",
+              "gap_after_previous_done_ms": null
+            },
+            {
+              "case": "v112-pro-native-split22",
+              "fixture": "input-16384-trial-01",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "09b21ed21f83c029880a8c820c1fd905f2732103490274dba6fc4fc3f16c51f8",
+              "output_ids_sha256": "bef428c96c0d1d7208d7d5985efa0ff703683b36091b7f0db59405a1605bb261",
+              "prefill_ms": 3736.3,
+              "decode_ms": 15079.2,
+              "prefill_tps": 4385.086850627626,
+              "decode_tps": 135.81622367234334,
+              "wall_s": 18.816077768977266,
+              "ttft_s": 3.7369711989886127,
+              "wall_minus_native_ms": 0.577768977265805,
+              "draft_accepted": 1080,
+              "draft_offered": 1398,
+              "reuse": 0,
+              "done": "DONE 2048 16384 3736.3 15079.2 length 1080 1398 0 1135200 1135200 646",
+              "gap_after_previous_done_ms": 0.019888044334948063
+            },
+            {
+              "case": "v112-pro-native-split22",
+              "fixture": "input-16384-trial-02",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "db6f8711d14089a4756d3840f534a8e205d8af639189c1b2e4722efe6ea1827a",
+              "output_ids_sha256": "e0ab928dce52e05725fd37c871daba356cf5c0be6996bef1e371b0fadfda926e",
+              "prefill_ms": 3743.6,
+              "decode_ms": 15135.2,
+              "prefill_tps": 4376.535954696014,
+              "decode_tps": 135.3137057984037,
+              "wall_s": 18.8793441420421,
+              "ttft_s": 3.744219573040027,
+              "wall_minus_native_ms": 0.5441420420993381,
+              "draft_accepted": 1083,
+              "draft_offered": 1432,
+              "reuse": 0,
+              "done": "DONE 2048 16384 3743.6 15135.2 length 1083 1432 0 1150560 1150560 642",
+              "gap_after_previous_done_ms": 0.02989597851410508
+            },
+            {
+              "case": "v112-pro-native-split22",
+              "fixture": "input-16384-trial-03",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "2123b2087c5791a541569584c1503a5e9f3e9112500615b17382a814ec21509d",
+              "output_ids_sha256": "85dca734bbc082013edba1310d77e60234e87c6265b83b4d1cd24ad2d12b728e",
+              "prefill_ms": 3751.9,
+              "decode_ms": 15409.1,
+              "prefill_tps": 4366.854127242197,
+              "decode_tps": 132.90847616019104,
+              "wall_s": 19.161466906021815,
+              "ttft_s": 3.7524801539839245,
+              "wall_minus_native_ms": 0.46690602181479335,
+              "draft_accepted": 1058,
+              "draft_offered": 1419,
+              "reuse": 0,
+              "done": "DONE 2048 16384 3751.9 15409.1 length 1058 1419 0 1156320 1156320 657",
+              "gap_after_previous_done_ms": 0.04382198676466942
+            }
+          ],
+          "startup_and_statistics": [
+            "glm prefill: CUDA0 chunks of 2048 tokens (--prefill 2048; mixer sub-batches of 1024), borrowing 1058 MB of the expert pool while a prompt runs (activations 635, weight scratch 23, expert staging 27, prestage 357: 160 experts); disk landing ring 96 experts (214 MB pinned)",
+            "glm fast: CUDA0 layers [0,22) expert pool 21.37 GB, 542-542 slots/layer (11924 total)",
+            "q4x mtp: CUDA1 the draft layer from <workdir>/mtp (1083 MB, head over 106299 tokens, layers [22, 48))",
+            "glm prefill: CUDA1 chunks of 2048 tokens (--prefill 2048; mixer sub-batches of 1024), borrowing 1111 MB of the expert pool while a prompt runs (activations 635, weight scratch 23, expert staging 30, prestage 406: 160 experts); disk landing ring 96 experts (244 MB pinned)",
+            "glm fast: CUDA1 layers [22,48) expert pool 27.98 GB, 536-536 slots/layer (13936 total)",
+            "glm split: layers [0, 22) on CUDA0, [22, 48) on CUDA1 (a hop per boundary per token: host)",
+            "glm stat: decode 7.45 ms/tok (134.18 tok/s) | vram hit 100.00% | ram fetches 0.00/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.00/tok | cpu lane 0.00/tok in 0.00 ms/tok | tail skip 0.00/tok | prompt 0.2 ms/tok | vram 24576/25860 ram 0/288",
+            "glm stat: decode 7.36 ms/tok (135.82 tok/s) | vram hit 100.00% | ram fetches 0.00/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.00/tok | cpu lane 0.00/tok in 0.00 ms/tok | tail skip 0.00/tok | prompt 0.2 ms/tok | vram 24576/25860 ram 0/288",
+            "glm stat: decode 7.39 ms/tok (135.31 tok/s) | vram hit 100.00% | ram fetches 0.00/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.00/tok | cpu lane 0.00/tok in 0.00 ms/tok | tail skip 0.00/tok | prompt 0.2 ms/tok | vram 24576/25860 ram 0/288",
+            "glm stat: decode 7.52 ms/tok (132.91 tok/s) | vram hit 100.00% | ram fetches 0.00/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.00/tok | cpu lane 0.00/tok in 0.00 ms/tok | tail skip 0.00/tok | prompt 0.2 ms/tok | vram 24576/25860 ram 0/288",
+            "qwen4exp verify graphs CUDA1: 46692 layer segments replayed, 20856 launched (69.1% replayed), 72 graphs, 0 re-captured for new route arguments",
+            "qwen4exp verify graphs CUDA0: 38910 layer segments replayed, 18246 launched (68.1% replayed), 60 graphs, 0 re-captured for new route arguments"
+          ],
+          "graph_report": [
+            "qwen4exp verify graphs CUDA1: 46692 layer segments replayed, 20856 launched (69.1% replayed), 72 graphs, 0 re-captured for new route arguments",
+            "qwen4exp verify graphs CUDA0: 38910 layer segments replayed, 18246 launched (68.1% replayed), 60 graphs, 0 re-captured for new route arguments"
+          ],
+          "host_samples": 48,
+          "contention_events": 0,
+          "peaks": {
+            "NVIDIA RTX PRO 4500 Blackwell": {
+              "temperature_c": 68.0,
+              "memory_mib": 24874.0,
+              "working_links": [
+                [
+                  "1",
+                  "8"
+                ],
+                [
+                  "5",
+                  "8"
+                ]
+              ]
+            },
+            "NVIDIA RTX PRO 5000 72GB Blackwell": {
+              "temperature_c": 80.0,
+              "memory_mib": 33744.0,
+              "working_links": [
+                [
+                  "5",
+                  "8"
+                ],
+                [
+                  "2",
+                  "8"
+                ],
+                [
+                  "1",
+                  "8"
+                ]
+              ]
+            }
+          }
+        }
+      },
+      "quality": [
+        {
+          "case": "quality-v111-full5000",
+          "status": "complete",
+          "score": "SCORE 255 tokens: nll 0.31308 ppl 1.3676 top1 98.43% | vs ref: KL 0.000956 (max 0.0139), same top token 98.43% | 0.5 ms/token (token path 10.55) | cpu lane 0 experts, vram hit 100.00%"
+        },
+        {
+          "case": "quality-v112-full5000",
+          "status": "complete",
+          "score": "SCORE 255 tokens: nll 0.31308 ppl 1.3676 top1 98.43% | vs ref: KL 0.000956 (max 0.0139), same top token 98.43% | 0.5 ms/token (token path 10.54) | cpu lane 0 experts, vram hit 100.00%"
+        }
+      ],
+      "excluded_cases": {},
+      "build-provenance.json": {
+        "host": "dual-pro-system",
+        "ggml_commit": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+        "versions": {
+          "111": {
+            "version": "1.3.111",
+            "commit": "5e8b9c44fec443fd1d0c9140885c47973f7970b4",
+            "binary_sha256": "c42db7715630787d31bbc9a22cf92cf117c6264d0644b5608d4e692882c9e7b0",
+            "source_clean": true,
+            "finished_at": 1793860196.8935583
+          },
+          "112": {
+            "version": "1.3.112",
+            "commit": "c3d4e923b6df8027fc5a13aa2f6b22f6771e9150",
+            "binary_sha256": "be22c4f747af1efc37ad9e8c0317fd9b54a053bc4ce18dd6540588b50071d7a5",
+            "source_clean": true,
+            "finished_at": 1793860363.3170426
+          }
+        },
+        "compiler": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Wed_Aug_20_01:58:59_PM_PDT_2025\nCuda compilation tools, release 13.0, V13.0.88\nBuild cuda_13.0.r13.0/compiler.36424714_0\n"
+      },
+      "cleanup-proof.json": {
+        "time": 1793861418.4429574,
+        "own_engine_processes": [],
+        "shared_lock_free": true,
+        "lock_note": "Nonblocking acquisition after benchmark exit; released when this read-only verification process exits.",
+        "services_active": true,
+        "services": {},
+        "gpu_apps": "",
+        "gpu": "0, NVIDIA RTX PRO 4500 Blackwell, 2, 200.00, 39, 1, 8\n1, NVIDIA RTX PRO 5000 72GB Blackwell, 2, 300.00, 48, 1, 8\n",
+        "models_same_size_mtime": true,
+        "model_files": {
+          "<model-root>/models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf": [
+            28800138432,
+            1792644619150477070
+          ],
+          "<model-root>/models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf": [
+            54817524224,
+            1792647982703873082
+          ],
+          "<model-root>/packs/iq3_s/dense.bin": [
+            1538035200,
+            1792647983991878665
+          ],
+          "<workdir>/model/pack/index.txt": [
+            93685,
+            1793860363325700672
+          ],
+          "<workdir>/model/pack/native_experts.txt": [
+            3304,
+            1793860363325700672
+          ],
+          "<model-root>/mtp/rt/dense.txt": [
+            1851,
+            1792644830129273066
+          ],
+          "<model-root>/mtp/rt/draft_vocab.bin": [
+            425196,
+            1792644830160272969
+          ],
+          "<model-root>/mtp/rt/dense.bin": [
+            116099072,
+            1792644830129273066
+          ],
+          "<model-root>/mtp/rt/experts.bin": [
+            707788800,
+            1792644829693274438
+          ]
+        },
+        "metadata_sha256": {
+          "<workdir>/model/pack/index.txt": "b2a014878c3b61d6a6f915e194055a5e68ede34f9465dd1cb13249d902f008ac",
+          "<workdir>/model/pack/native_experts.txt": "d9ac2dfa3ee63c55c9c6a6db26f72da0cec0ee41733f007e5cbbbba71617aa5d",
+          "<workdir>/mtp/dense.txt": "991456cf4eb266eb8a888c349e548d11bc640f5dbd9149439aa9786af0f732fd",
+          "<workdir>/source/data/expert_counts/qwen38-flash-next.txt": "d62f4f0da4e8de44e05fdac38e9965855df12d64f6d21df29d05bdfc246ed721"
+        },
+        "binary_sha256": "be22c4f747af1efc37ad9e8c0317fd9b54a053bc4ce18dd6540588b50071d7a5",
+        "binary_matches_build": true,
+        "control_binary_sha256": "c42db7715630787d31bbc9a22cf92cf117c6264d0644b5608d4e692882c9e7b0",
+        "control_binary_unchanged": true,
+        "source_clean": true,
+        "source_commit": "c3d4e923b6df8027fc5a13aa2f6b22f6771e9150",
+        "source_version": "1.3.112",
+        "policy": "No original model/config or power/clock/fan policy writes; only the two approved idle user services were stopped and restored."
+      },
+      "model-preservation-after.json": {
+        "same_size_mtime": true,
+        "files": {
+          "<model-root>/models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf": [
+            28800138432,
+            1792644619150477070
+          ],
+          "<model-root>/models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf": [
+            54817524224,
+            1792647982703873082
+          ],
+          "<model-root>/packs/iq3_s/dense.bin": [
+            1538035200,
+            1792647983991878665
+          ],
+          "<workdir>/model/pack/index.txt": [
+            93685,
+            1793860363325700672
+          ],
+          "<workdir>/model/pack/native_experts.txt": [
+            3304,
+            1793860363325700672
+          ],
+          "<model-root>/mtp/rt/dense.txt": [
+            1851,
+            1792644830129273066
+          ],
+          "<model-root>/mtp/rt/draft_vocab.bin": [
+            425196,
+            1792644830160272969
+          ],
+          "<model-root>/mtp/rt/dense.bin": [
+            116099072,
+            1792644830129273066
+          ],
+          "<model-root>/mtp/rt/experts.bin": [
+            707788800,
+            1792644829693274438
+          ]
+        },
+        "metadata_sha256": {
+          "<workdir>/model/pack/index.txt": "b2a014878c3b61d6a6f915e194055a5e68ede34f9465dd1cb13249d902f008ac",
+          "<workdir>/model/pack/native_experts.txt": "d9ac2dfa3ee63c55c9c6a6db26f72da0cec0ee41733f007e5cbbbba71617aa5d",
+          "<workdir>/mtp/dense.txt": "991456cf4eb266eb8a888c349e548d11bc640f5dbd9149439aa9786af0f732fd",
+          "<workdir>/source/data/expert_counts/qwen38-flash-next.txt": "d62f4f0da4e8de44e05fdac38e9965855df12d64f6d21df29d05bdfc246ed721"
+        }
+      },
+      "services-restored.json": {
+        "before": {},
+        "after": {},
+        "prior_active": [],
+        "restored": true,
+        "time": 1793861228.327952
+      },
+      "inventory.json": {
+        "gpu": "0, NVIDIA RTX PRO 4500 Blackwell, 32623, 595.99.02, 200.00, 5, 16\n1, NVIDIA RTX PRO 5000 72GB Blackwell, 73415, 595.99.02, 300.00, 5, 16\n",
+        "kernel": "6.8.0-147-generic\n",
+        "cpu": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           48 bits physical, 48 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  24\nOn-line CPU(s) list:                     0-23\nVendor ID:                               AuthenticAMD\nModel name:                              AMD Ryzen 9 9900X 12-Core Processor\nCPU family:                              26\nModel:                                   68\nThread(s) per core:                      2\nCore(s) per socket:                      12\nSocket(s):                               1\nStepping:                                0\nCPU(s) scaling MHz:                      22%\nCPU max MHz:                             5658.0000\nCPU min MHz:                             600.0000\nBogoMIPS:                                8782.92\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk avx_vnni avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc amd_ibpb_ret arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid bus_lock_detect movdiri movdir64b overflow_recov succor smca fsrm avx512_vp2intersect flush_l1d srso_user_kernel_no\nVirtualization:                          AMD-V\nL1d cache:                               576 KiB (12 instances)\nL1i cache:                               384 KiB (12 instances)\nL2 cache:                                12 MiB (12 instances)\nL3 cache:                                64 MiB (2 instances)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-23\nVulnerability Gather data sampling:      Not affected\nVulnerability Indirect target selection: Not affected\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Not affected\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; STIBP always-on; PBRSB-eIBRS Not affected; BHI Not affected\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Not affected\n",
+        "mem": "               total        used        free      shared  buff/cache   available\nMem:     200146288640  5778579456 184712982528       90112 11420196864 194367709184\nSwap:     8589930496    55705600  8534224896\n",
+        "mount": "TARGET SOURCE                      FSTYPE\n/home  /dev/mapper/ubuntu--vg-home ext4\n",
+        "disk": "Filesystem                   Size  Used Avail Use% Mounted on\n/dev/mapper/ubuntu--vg-home  1.6T  1.3T  400G  76% /home\n"
+      }
+    },
+    "geforce-system": {
+      "cases": {
+        "v111-geforce-single": {
+          "config": {
+            "gpus": "0",
+            "split": "0",
+            "prefill": "auto",
+            "threads": 8,
+            "ram_gib": 90,
+            "prior": "shipped",
+            "env": {
+              "STRATA_GLM_CPU_SHARED": "1"
+            },
+            "name": "v111-geforce-single",
+            "version": "1.3.111",
+            "engine": "<v111-workdir>/build/strata"
+          },
+          "stats": {
+            "n": 3,
+            "prefill_tps": 2073.381646995301,
+            "decode_tps": 56.069290838456745,
+            "median_wall_s": 44.634418346999155,
+            "wall_range_s": [
+              43.65377614799945,
+              45.000665612999
+            ],
+            "median_ttft_s": 7.905136540997773
+          },
+          "rows": [
+            {
+              "case": "v111-geforce-single",
+              "fixture": "input-16384-warmup-01",
+              "warmup": true,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "e85a5f1f6ab158ae08573373fc16ccd95bfc0028c224fe63407eb9a769ee7eff",
+              "output_ids_sha256": "a23fbd240481243a8fd372b14fb9c1594dd8663512d0aa25785b6a14401785ec",
+              "prefill_ms": 7890.7,
+              "decode_ms": 34080.7,
+              "prefill_tps": 2076.368383033191,
+              "decode_tps": 60.09266241597151,
+              "wall_s": 41.97240501300257,
+              "ttft_s": 7.89172733900341,
+              "wall_minus_native_ms": 1.0050130025774706,
+              "draft_accepted": 1080,
+              "draft_offered": 1408,
+              "reuse": 0,
+              "done": "DONE 2048 16384 7890.7 34080.7 length 1080 1408 0 873467 1140480 636",
+              "gap_after_previous_done_ms": null
+            },
+            {
+              "case": "v111-geforce-single",
+              "fixture": "input-16384-trial-01",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "09b21ed21f83c029880a8c820c1fd905f2732103490274dba6fc4fc3f16c51f8",
+              "output_ids_sha256": "dbbb36dbaba2dca0f80dd46abdd7e85ab0c344bba44dbe5e767bfcf445289308",
+              "prefill_ms": 7884.5,
+              "decode_ms": 36748.7,
+              "prefill_tps": 2078.0011414801193,
+              "decode_tps": 55.72986255296106,
+              "wall_s": 44.634418346999155,
+              "ttft_s": 7.88589079400117,
+              "wall_minus_native_ms": 1.2183469991578022,
+              "draft_accepted": 998,
+              "draft_offered": 1372,
+              "reuse": 0,
+              "done": "DONE 2048 16384 7884.5 36748.7 length 998 1372 0 873379 1162080 656",
+              "gap_after_previous_done_ms": 0.13969100109534338
+            },
+            {
+              "case": "v111-geforce-single",
+              "fixture": "input-16384-trial-02",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "db6f8711d14089a4756d3840f534a8e205d8af639189c1b2e4722efe6ea1827a",
+              "output_ids_sha256": "6648261365046779376ca31ac0a12d790fdd829a90de1b22c8408c9a9a84736a",
+              "prefill_ms": 7918.0,
+              "decode_ms": 37081.3,
+              "prefill_tps": 2069.2093963122,
+              "decode_tps": 55.229994633413604,
+              "wall_s": 45.000665612999,
+              "ttft_s": 7.919557321001776,
+              "wall_minus_native_ms": 1.3656129989976762,
+              "draft_accepted": 1107,
+              "draft_offered": 1387,
+              "reuse": 0,
+              "done": "DONE 2048 16384 7918.0 37081.3 length 1107 1387 0 795281 1116960 611",
+              "gap_after_previous_done_ms": 0.020277999283280224
+            },
+            {
+              "case": "v111-geforce-single",
+              "fixture": "input-16384-trial-03",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "2123b2087c5791a541569584c1503a5e9f3e9112500615b17382a814ec21509d",
+              "output_ids_sha256": "7797ab6e901dd1d319970f6736a284927d6c9f3b5005cc4247cee52bee5b57a0",
+              "prefill_ms": 7903.7,
+              "decode_ms": 35748.7,
+              "prefill_tps": 2072.9531738299784,
+              "decode_tps": 57.2887965156775,
+              "wall_s": 43.65377614799945,
+              "ttft_s": 7.905136540997773,
+              "wall_minus_native_ms": 1.3761479994573165,
+              "draft_accepted": 1062,
+              "draft_offered": 1410,
+              "reuse": 0,
+              "done": "DONE 2048 16384 7903.7 35748.7 length 1062 1410 0 859607 1150080 644",
+              "gap_after_previous_done_ms": 0.10578900401014835
+            }
+          ],
+          "startup_and_statistics": [
+            "q4x mtp: CUDA0 the draft layer from <workdir>/mtp (1083 MB, head over 106299 tokens, layers [0, 48))",
+            "glm prefill: CUDA0 chunks of 32768 tokens (--prefill auto, up to 32768; mixer sub-batches of 1024), borrowing 3722 MB of the expert pool while a prompt runs (activations 3247, weight scratch 23, expert staging 30, prestage 406: 160 experts); disk landing ring 96 experts (244 MB pinned)",
+            "glm fast: CUDA0 layers [0,48) expert pool 7.47 GB, 69-109 slots/layer (3895 total)",
+            "glm stat: decode 16.64 ms/tok (60.09 tok/s) | vram hit 76.59% | ram fetches 41.04/tok | disk 0.00 reads/tok in 2.07 waits/tok, 0.01 ms/tok | promotions 22.03/tok | cpu lane 87.20/tok in 7.86 ms/tok | tail skip 0.00/tok | prompt 0.5 ms/tok | vram 3832/3895 ram 20705/22953",
+            "glm stat: decode 17.94 ms/tok (55.73 tok/s) | vram hit 75.16% | ram fetches 44.63/tok | disk 0.00 reads/tok in 2.10 waits/tok, 0.01 ms/tok | promotions 23.72/tok | cpu lane 94.19/tok in 8.87 ms/tok | tail skip 0.00/tok | prompt 0.5 ms/tok | vram 3804/3895 ram 20705/22953",
+            "glm stat: decode 18.11 ms/tok (55.23 tok/s) | vram hit 71.20% | ram fetches 50.36/tok | disk 0.00 reads/tok in 1.91 waits/tok, 0.01 ms/tok | promotions 23.27/tok | cpu lane 104.74/tok in 9.44 ms/tok | tail skip 0.00/tok | prompt 0.5 ms/tok | vram 3801/3895 ram 20691/22953",
+            "glm stat: decode 17.46 ms/tok (57.29 tok/s) | vram hit 74.74% | ram fetches 44.84/tok | disk 0.00 reads/tok in 1.93 waits/tok, 0.00 ms/tok | promotions 22.69/tok | cpu lane 95.00/tok in 8.40 ms/tok | tail skip 0.00/tok | prompt 0.5 ms/tok | vram 3841/3895 ram 20720/22953"
+          ],
+          "graph_report": [],
+          "host_samples": 98,
+          "contention_events": 0,
+          "peaks": {
+            "NVIDIA GeForce RTX 5070 Ti": {
+              "temperature_c": 64.0,
+              "memory_mib": 14786.0,
+              "working_links": [
+                [
+                  "1",
+                  "16"
+                ],
+                [
+                  "5",
+                  "16"
+                ]
+              ]
+            },
+            "NVIDIA GeForce RTX 5060 Ti": {
+              "temperature_c": 39.0,
+              "memory_mib": 2.0,
+              "working_links": [
+                [
+                  "1",
+                  "4"
+                ]
+              ]
+            }
+          }
+        },
+        "v111-geforce-split32": {
+          "config": {
+            "gpus": "0,1",
+            "split": "32",
+            "prefill": "4096",
+            "threads": 8,
+            "ram_gib": 90,
+            "prior": "shipped",
+            "env": {
+              "STRATA_GLM_CPU_SHARED": "1"
+            },
+            "name": "v111-geforce-split32",
+            "version": "1.3.111",
+            "engine": "<v111-workdir>/build/strata"
+          },
+          "stats": {
+            "n": 3,
+            "prefill_tps": 1972.5816290493467,
+            "decode_tps": 77.3178362080031,
+            "median_wall_s": 34.66191633899871,
+            "wall_range_s": [
+              34.608719957002904,
+              35.11402069700125
+            ],
+            "median_ttft_s": 8.338719232000585
+          },
+          "rows": [
+            {
+              "case": "v111-geforce-split32",
+              "fixture": "input-16384-warmup-01",
+              "warmup": true,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "e85a5f1f6ab158ae08573373fc16ccd95bfc0028c224fe63407eb9a769ee7eff",
+              "output_ids_sha256": "e96392766d22fcc64c6b0c9f0cc10bf251bbf8a3fab8be441d086e2240ca243c",
+              "prefill_ms": 8445.6,
+              "decode_ms": 26285.1,
+              "prefill_tps": 1939.9450601496637,
+              "decode_tps": 77.91486431476388,
+              "wall_s": 34.73173939700064,
+              "ttft_s": 8.44677657399734,
+              "wall_minus_native_ms": 1.0393970006407471,
+              "draft_accepted": 1115,
+              "draft_offered": 1482,
+              "reuse": 0,
+              "done": "DONE 2048 16384 8445.6 26285.1 length 1115 1482 0 1076511 1159200 642",
+              "gap_after_previous_done_ms": null
+            },
+            {
+              "case": "v111-geforce-split32",
+              "fixture": "input-16384-trial-01",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "09b21ed21f83c029880a8c820c1fd905f2732103490274dba6fc4fc3f16c51f8",
+              "output_ids_sha256": "add232765ba585c55c7254019d1187c4af96c2fcea4cdb59f3b3fd48aab7c230",
+              "prefill_ms": 8338.4,
+              "decode_ms": 26269.5,
+              "prefill_tps": 1964.885349707378,
+              "decode_tps": 77.96113363406232,
+              "wall_s": 34.608719957002904,
+              "ttft_s": 8.339407111001492,
+              "wall_minus_native_ms": 0.8199570029028109,
+              "draft_accepted": 1041,
+              "draft_offered": 1383,
+              "reuse": 0,
+              "done": "DONE 2048 16384 8338.4 26269.5 length 1041 1383 0 1083616 1147200 621",
+              "gap_after_previous_done_ms": 0.018719998479355127
+            },
+            {
+              "case": "v111-geforce-split32",
+              "fixture": "input-16384-trial-02",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "db6f8711d14089a4756d3840f534a8e205d8af639189c1b2e4722efe6ea1827a",
+              "output_ids_sha256": "3d2d8e8659b9fb14f83449dc5253a59cbd65be8ed3c6eb91037e424f4525a714",
+              "prefill_ms": 8337.7,
+              "decode_ms": 26775.5,
+              "prefill_tps": 1965.0503136356547,
+              "decode_tps": 76.48783402737577,
+              "wall_s": 35.11402069700125,
+              "ttft_s": 8.338719232000585,
+              "wall_minus_native_ms": 0.8206970012506645,
+              "draft_accepted": 1027,
+              "draft_offered": 1383,
+              "reuse": 0,
+              "done": "DONE 2048 16384 8337.7 26775.5 length 1027 1383 0 1086587 1153440 656",
+              "gap_after_previous_done_ms": 0.018229999113827944
+            },
+            {
+              "case": "v111-geforce-split32",
+              "fixture": "input-16384-trial-03",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "2123b2087c5791a541569584c1503a5e9f3e9112500615b17382a814ec21509d",
+              "output_ids_sha256": "ba5c7fa14118268b2a1580c27fcdb9ad3cd8e716c0d69befe0cf05933a8612a6",
+              "prefill_ms": 8241.5,
+              "decode_ms": 26419.2,
+              "prefill_tps": 1987.9876236122066,
+              "decode_tps": 77.51937984496124,
+              "wall_s": 34.66191633899871,
+              "ttft_s": 8.24294732799899,
+              "wall_minus_native_ms": 1.216338998707215,
+              "draft_accepted": 1004,
+              "draft_offered": 1358,
+              "reuse": 0,
+              "done": "DONE 2048 16384 8241.5 26419.2 length 1004 1358 0 1097221 1152960 661",
+              "gap_after_previous_done_ms": 0.01969599543372169
+            }
+          ],
+          "startup_and_statistics": [
+            "glm prefill: CUDA0 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 1024), borrowing 1244 MB of the expert pool while a prompt runs (activations 822, weight scratch 23, expert staging 27, prestage 357: 160 experts); disk landing ring 96 experts (214 MB pinned)",
+            "glm fast: CUDA0 layers [0,32) expert pool 10.45 GB, 153-192 slots/layer (5643 total)",
+            "q4x mtp: CUDA1 the draft layer from <workdir>/mtp (1083 MB, head over 106299 tokens, layers [32, 48))",
+            "glm prefill: CUDA1 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 1024), borrowing 1298 MB of the expert pool while a prompt runs (activations 822, weight scratch 23, expert staging 30, prestage 406: 160 experts); disk landing ring 96 experts (244 MB pinned)",
+            "glm fast: CUDA1 layers [32,48) expert pool 10.45 GB, 277-371 slots/layer (5198 total)",
+            "glm split: layers [0, 32) on CUDA0, [32, 48) on CUDA1 (a hop per boundary per token: host)",
+            "glm stat: decode 12.83 ms/tok (77.91 tok/s) | vram hit 92.87% | ram fetches 9.21/tok | disk 0.00 reads/tok in 0.16 waits/tok, 0.00 ms/tok | promotions 6.92/tok | cpu lane 31.00/tok in 2.67 ms/tok | tail skip 0.00/tok | prompt 0.5 ms/tok | vram 10716/10841 ram 13838/15463",
+            "glm stat: decode 12.83 ms/tok (77.96 tok/s) | vram hit 94.46% | ram fetches 7.68/tok | disk 0.00 reads/tok in 0.13 waits/tok, 0.00 ms/tok | promotions 5.63/tok | cpu lane 23.23/tok in 2.13 ms/tok | tail skip 0.00/tok | prompt 0.5 ms/tok | vram 10699/10841 ram 13873/15463",
+            "glm stat: decode 13.07 ms/tok (76.49 tok/s) | vram hit 94.20% | ram fetches 8.25/tok | disk 0.00 reads/tok in 0.16 waits/tok, 0.00 ms/tok | promotions 5.84/tok | cpu lane 24.23/tok in 2.21 ms/tok | tail skip 0.00/tok | prompt 0.5 ms/tok | vram 10698/10841 ram 13853/15463",
+            "glm stat: decode 12.90 ms/tok (77.52 tok/s) | vram hit 95.17% | ram fetches 6.38/tok | disk 0.00 reads/tok in 0.13 waits/tok, 0.00 ms/tok | promotions 5.01/tok | cpu lane 20.69/tok in 1.97 ms/tok | tail skip 0.00/tok | prompt 0.5 ms/tok | vram 10710/10841 ram 13865/15463"
+          ],
+          "graph_report": [],
+          "host_samples": 83,
+          "contention_events": 0,
+          "peaks": {
+            "NVIDIA GeForce RTX 5070 Ti": {
+              "temperature_c": 59.0,
+              "memory_mib": 14700.0,
+              "working_links": [
+                [
+                  "2",
+                  "16"
+                ],
+                [
+                  "5",
+                  "16"
+                ]
+              ]
+            },
+            "NVIDIA GeForce RTX 5060 Ti": {
+              "temperature_c": 65.0,
+              "memory_mib": 14626.0,
+              "working_links": [
+                [
+                  "4",
+                  "4"
+                ],
+                [
+                  "1",
+                  "4"
+                ]
+              ]
+            }
+          }
+        },
+        "v112-geforce-single-retry01": {
+          "config": {
+            "gpus": "0",
+            "split": "0",
+            "prefill": "auto",
+            "threads": 8,
+            "ram_gib": 90,
+            "prior": "shipped",
+            "env": {
+              "STRATA_GLM_CPU_SHARED": "1"
+            },
+            "name": "v112-geforce-single-retry01",
+            "version": "1.3.112",
+            "profile": "geforce-single",
+            "replaces_contended_case": "v112-geforce-single"
+          },
+          "stats": {
+            "n": 3,
+            "prefill_tps": 2077.9045090595487,
+            "decode_tps": 57.452508637980934,
+            "median_wall_s": 43.30146422799589,
+            "wall_range_s": [
+              43.09920618899923,
+              44.19816260200605
+            ],
+            "median_ttft_s": 7.889251712003897
+          },
+          "rows": [
+            {
+              "case": "v112-geforce-single-retry01",
+              "fixture": "input-16384-warmup-01",
+              "warmup": true,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "e85a5f1f6ab158ae08573373fc16ccd95bfc0028c224fe63407eb9a769ee7eff",
+              "output_ids_sha256": "14c33a622822aa05439ef526e99f4482007c22910d7f326458073271bbff80b1",
+              "prefill_ms": 7921.0,
+              "decode_ms": 36216.4,
+              "prefill_tps": 2068.4257038252745,
+              "decode_tps": 56.5489667664373,
+              "wall_s": 44.13840823300416,
+              "ttft_s": 7.922258773003705,
+              "wall_minus_native_ms": 1.008233004155045,
+              "draft_accepted": 1052,
+              "draft_offered": 1394,
+              "reuse": 0,
+              "done": "DONE 2048 16384 7921.0 36216.4 length 1052 1394 0 857711 1147200 640",
+              "gap_after_previous_done_ms": null
+            },
+            {
+              "case": "v112-geforce-single-retry01",
+              "fixture": "input-16384-trial-01",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "09b21ed21f83c029880a8c820c1fd905f2732103490274dba6fc4fc3f16c51f8",
+              "output_ids_sha256": "650b71aed614994b5da140bfb62720c8bdf50ef8f33bba63a9bcaf585e7884e0",
+              "prefill_ms": 7891.3,
+              "decode_ms": 35206.7,
+              "prefill_tps": 2076.210510308821,
+              "decode_tps": 58.17074590915934,
+              "wall_s": 43.09920618899923,
+              "ttft_s": 7.892635625001276,
+              "wall_minus_native_ms": 1.206188999232836,
+              "draft_accepted": 1119,
+              "draft_offered": 1460,
+              "reuse": 0,
+              "done": "DONE 2048 16384 7891.3 35206.7 length 1119 1460 0 864917 1146720 632",
+              "gap_after_previous_done_ms": 0.03826099418802187
+            },
+            {
+              "case": "v112-geforce-single-retry01",
+              "fixture": "input-16384-trial-02",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "db6f8711d14089a4756d3840f534a8e205d8af639189c1b2e4722efe6ea1827a",
+              "output_ids_sha256": "9c614f2fa51c7cc2f4481638b1c833a20dbb1e72ff03c3c38a67715029a30f7f",
+              "prefill_ms": 7875.6,
+              "decode_ms": 35424.6,
+              "prefill_tps": 2080.3494336939407,
+              "decode_tps": 57.81293225611581,
+              "wall_s": 43.30146422799589,
+              "ttft_s": 7.876979533997655,
+              "wall_minus_native_ms": 1.2642279958963627,
+              "draft_accepted": 1093,
+              "draft_offered": 1403,
+              "reuse": 0,
+              "done": "DONE 2048 16384 7875.6 35424.6 length 1093 1403 0 851325 1131840 637",
+              "gap_after_previous_done_ms": 0.047432004066649824
+            },
+            {
+              "case": "v112-geforce-single-retry01",
+              "fixture": "input-16384-trial-03",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "2123b2087c5791a541569584c1503a5e9f3e9112500615b17382a814ec21509d",
+              "output_ids_sha256": "e015b24c67a8d51ae8426fe16604ef9657464bdcccea04d1434a8a1cd127b3e5",
+              "prefill_ms": 7887.7,
+              "decode_ms": 36309.2,
+              "prefill_tps": 2077.1581069259732,
+              "decode_tps": 56.40443744285195,
+              "wall_s": 44.19816260200605,
+              "ttft_s": 7.889251712003897,
+              "wall_minus_native_ms": 1.2626020060561132,
+              "draft_accepted": 1028,
+              "draft_offered": 1358,
+              "reuse": 0,
+              "done": "DONE 2048 16384 7887.7 36309.2 length 1028 1358 0 858615 1141440 638",
+              "gap_after_previous_done_ms": 0.04957700002705678
+            }
+          ],
+          "startup_and_statistics": [
+            "q4x mtp: CUDA0 the draft layer from <workdir>/mtp (1083 MB, head over 106299 tokens, layers [0, 48))",
+            "glm prefill: CUDA0 chunks of 32768 tokens (--prefill auto, up to 32768; mixer sub-batches of 1024), borrowing 3722 MB of the expert pool while a prompt runs (activations 3247, weight scratch 23, expert staging 30, prestage 406: 160 experts); disk landing ring 96 experts (244 MB pinned)",
+            "glm fast: CUDA0 layers [0,48) expert pool 7.47 GB, 69-109 slots/layer (3895 total)",
+            "glm stat: decode 17.68 ms/tok (56.55 tok/s) | vram hit 74.77% | ram fetches 63.33/tok | disk 0.00 reads/tok in 2.47 waits/tok, 0.00 ms/tok | promotions 28.16/tok | cpu lane 75.48/tok in 6.93 ms/tok | tail skip 0.00/tok | prompt 0.5 ms/tok | vram 3810/3895 ram 20741/22953",
+            "glm stat: decode 17.19 ms/tok (58.17 tok/s) | vram hit 75.43% | ram fetches 62.11/tok | disk 0.00 reads/tok in 2.45 waits/tok, 0.00 ms/tok | promotions 26.43/tok | cpu lane 72.97/tok in 6.51 ms/tok | tail skip 0.00/tok | prompt 0.5 ms/tok | vram 3810/3895 ram 20734/22953",
+            "glm stat: decode 17.30 ms/tok (57.81 tok/s) | vram hit 75.22% | ram fetches 61.57/tok | disk 0.00 reads/tok in 2.41 waits/tok, 0.01 ms/tok | promotions 26.87/tok | cpu lane 72.92/tok in 6.67 ms/tok | tail skip 0.00/tok | prompt 0.5 ms/tok | vram 3836/3895 ram 20690/22953",
+            "glm stat: decode 17.73 ms/tok (56.40 tok/s) | vram hit 75.22% | ram fetches 62.15/tok | disk 0.00 reads/tok in 2.59 waits/tok, 0.01 ms/tok | promotions 28.04/tok | cpu lane 73.28/tok in 6.59 ms/tok | tail skip 0.00/tok | prompt 0.5 ms/tok | vram 3813/3895 ram 20694/22953",
+            "qwen4exp verify graphs CUDA0: 86462 layer segments replayed, 35794 launched (70.7% replayed), 136 graphs, 0 re-captured for new route arguments"
+          ],
+          "graph_report": [
+            "qwen4exp verify graphs CUDA0: 86462 layer segments replayed, 35794 launched (70.7% replayed), 136 graphs, 0 re-captured for new route arguments"
+          ],
+          "host_samples": 97,
+          "contention_events": 0,
+          "peaks": {
+            "NVIDIA GeForce RTX 5070 Ti": {
+              "temperature_c": 65.0,
+              "memory_mib": 14808.0,
+              "working_links": [
+                [
+                  "1",
+                  "16"
+                ],
+                [
+                  "5",
+                  "16"
+                ]
+              ]
+            },
+            "NVIDIA GeForce RTX 5060 Ti": {
+              "temperature_c": 37.0,
+              "memory_mib": 2.0,
+              "working_links": [
+                [
+                  "1",
+                  "4"
+                ]
+              ]
+            }
+          }
+        },
+        "v112-geforce-split32": {
+          "config": {
+            "gpus": "0,1",
+            "split": "32",
+            "prefill": "4096",
+            "threads": 8,
+            "ram_gib": 90,
+            "prior": "shipped",
+            "env": {
+              "STRATA_GLM_CPU_SHARED": "1"
+            },
+            "name": "v112-geforce-split32",
+            "version": "1.3.112"
+          },
+          "stats": {
+            "n": 3,
+            "prefill_tps": 1958.7308418812615,
+            "decode_tps": 77.69681549282593,
+            "median_wall_s": 34.6375782959949,
+            "wall_range_s": [
+              34.4095947310052,
+              35.126004620004096
+            ],
+            "median_ttft_s": 8.33009697200032
+          },
+          "rows": [
+            {
+              "case": "v112-geforce-split32",
+              "fixture": "input-16384-warmup-01",
+              "warmup": true,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "e85a5f1f6ab158ae08573373fc16ccd95bfc0028c224fe63407eb9a769ee7eff",
+              "output_ids_sha256": "ce8330ff57ef1825683534818ee924bb8d7c355fcb4fc56bbfc0a1042ee4acda",
+              "prefill_ms": 8589.9,
+              "decode_ms": 26513.8,
+              "prefill_tps": 1907.3563138104053,
+              "decode_tps": 77.2427943184304,
+              "wall_s": 35.10468689499976,
+              "ttft_s": 8.5910753989956,
+              "wall_minus_native_ms": 0.9868949997580785,
+              "draft_accepted": 1074,
+              "draft_offered": 1422,
+              "reuse": 0,
+              "done": "DONE 2048 16384 8589.9 26513.8 length 1074 1422 0 1064608 1149600 645",
+              "gap_after_previous_done_ms": null
+            },
+            {
+              "case": "v112-geforce-split32",
+              "fixture": "input-16384-trial-01",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "09b21ed21f83c029880a8c820c1fd905f2732103490274dba6fc4fc3f16c51f8",
+              "output_ids_sha256": "ed99dc9e8db2168dd2aa43e0f220f80c5c28612e351071b1ed871cc2d3bfb5aa",
+              "prefill_ms": 8495.0,
+              "decode_ms": 26630.0,
+              "prefill_tps": 1928.6639199529134,
+              "decode_tps": 76.9057453999249,
+              "wall_s": 35.126004620004096,
+              "ttft_s": 8.496106386002793,
+              "wall_minus_native_ms": 1.0046200040960684,
+              "draft_accepted": 1017,
+              "draft_offered": 1397,
+              "reuse": 0,
+              "done": "DONE 2048 16384 8495.0 26630.0 length 1017 1397 0 1096594 1164960 666",
+              "gap_after_previous_done_ms": 0.02004599809879437
+            },
+            {
+              "case": "v112-geforce-split32",
+              "fixture": "input-16384-trial-02",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "db6f8711d14089a4756d3840f534a8e205d8af639189c1b2e4722efe6ea1827a",
+              "output_ids_sha256": "0ccad08d160cef5c81c966fdaebdd12d592f54584b78a3ff7859b9feaa80e2c2",
+              "prefill_ms": 8269.8,
+              "decode_ms": 26366.9,
+              "prefill_tps": 1981.1845510169535,
+              "decode_tps": 77.6731432212357,
+              "wall_s": 34.6375782959949,
+              "ttft_s": 8.271009029995184,
+              "wall_minus_native_ms": 0.8782959948985081,
+              "draft_accepted": 1125,
+              "draft_offered": 1422,
+              "reuse": 0,
+              "done": "DONE 2048 16384 8269.8 26366.9 length 1125 1422 0 1036470 1125600 618",
+              "gap_after_previous_done_ms": 0.016737998521421105
+            },
+            {
+              "case": "v112-geforce-split32",
+              "fixture": "input-16384-trial-03",
+              "warmup": false,
+              "input_tokens": 16384,
+              "output_tokens": 2048,
+              "input_ids_sha256": "2123b2087c5791a541569584c1503a5e9f3e9112500615b17382a814ec21509d",
+              "output_ids_sha256": "69f0547d439c8030d5ed608773e8261138013e91f20fecab2ff216f553c353d8",
+              "prefill_ms": 8329.0,
+              "decode_ms": 26079.7,
+              "prefill_tps": 1967.1028935046224,
+              "decode_tps": 78.52851068072101,
+              "wall_s": 34.4095947310052,
+              "ttft_s": 8.33009697200032,
+              "wall_minus_native_ms": 0.8947310051989916,
+              "draft_accepted": 1032,
+              "draft_offered": 1396,
+              "reuse": 0,
+              "done": "DONE 2048 16384 8329.0 26079.7 length 1032 1396 0 1095981 1157760 646",
+              "gap_after_previous_done_ms": 0.04423900099936873
+            }
+          ],
+          "startup_and_statistics": [
+            "glm prefill: CUDA0 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 1024), borrowing 1244 MB of the expert pool while a prompt runs (activations 822, weight scratch 23, expert staging 27, prestage 357: 160 experts); disk landing ring 96 experts (214 MB pinned)",
+            "glm fast: CUDA0 layers [0,32) expert pool 10.45 GB, 153-192 slots/layer (5643 total)",
+            "q4x mtp: CUDA1 the draft layer from <workdir>/mtp (1083 MB, head over 106299 tokens, layers [32, 48))",
+            "glm prefill: CUDA1 chunks of 4096 tokens (--prefill 4096; mixer sub-batches of 1024), borrowing 1298 MB of the expert pool while a prompt runs (activations 822, weight scratch 23, expert staging 30, prestage 406: 160 experts); disk landing ring 96 experts (244 MB pinned)",
+            "glm fast: CUDA1 layers [32,48) expert pool 10.45 GB, 277-371 slots/layer (5198 total)",
+            "glm split: layers [0, 32) on CUDA0, [32, 48) on CUDA1 (a hop per boundary per token: host)",
+            "glm stat: decode 12.95 ms/tok (77.24 tok/s) | vram hit 92.61% | ram fetches 11.72/tok | disk 0.00 reads/tok in 0.19 waits/tok, 0.00 ms/tok | promotions 7.67/tok | cpu lane 29.58/tok in 2.53 ms/tok | tail skip 0.00/tok | prompt 0.5 ms/tok | vram 10649/10841 ram 13871/15463",
+            "glm stat: decode 13.00 ms/tok (76.91 tok/s) | vram hit 94.13% | ram fetches 8.67/tok | disk 0.00 reads/tok in 0.17 waits/tok, 0.00 ms/tok | promotions 6.41/tok | cpu lane 24.53/tok in 2.28 ms/tok | tail skip 0.00/tok | prompt 0.5 ms/tok | vram 10716/10841 ram 13857/15463",
+            "glm stat: decode 12.87 ms/tok (77.67 tok/s) | vram hit 92.08% | ram fetches 12.62/tok | disk 0.00 reads/tok in 0.19 waits/tok, 0.00 ms/tok | promotions 7.87/tok | cpu lane 30.70/tok in 2.91 ms/tok | tail skip 0.00/tok | prompt 0.5 ms/tok | vram 10699/10841 ram 13867/15463",
+            "glm stat: decode 12.73 ms/tok (78.53 tok/s) | vram hit 94.66% | ram fetches 7.67/tok | disk 0.00 reads/tok in 0.14 waits/tok, 0.00 ms/tok | promotions 5.65/tok | cpu lane 22.35/tok in 2.13 ms/tok | tail skip 0.00/tok | prompt 0.5 ms/tok | vram 10740/10841 ram 13828/15463",
+            "qwen4exp verify graphs CUDA1: 28281 layer segments replayed, 12919 launched (68.6% replayed), 44 graphs, 44 re-captured for new route arguments",
+            "qwen4exp verify graphs CUDA0: 56562 layer segments replayed, 25838 launched (68.6% replayed), 88 graphs, 0 re-captured for new route arguments"
+          ],
+          "graph_report": [
+            "qwen4exp verify graphs CUDA1: 28281 layer segments replayed, 12919 launched (68.6% replayed), 44 graphs, 44 re-captured for new route arguments",
+            "qwen4exp verify graphs CUDA0: 56562 layer segments replayed, 25838 launched (68.6% replayed), 88 graphs, 0 re-captured for new route arguments"
+          ],
+          "host_samples": 83,
+          "contention_events": 0,
+          "peaks": {
+            "NVIDIA GeForce RTX 5070 Ti": {
+              "temperature_c": 62.0,
+              "memory_mib": 14714.0,
+              "working_links": [
+                [
+                  "2",
+                  "16"
+                ],
+                [
+                  "5",
+                  "16"
+                ]
+              ]
+            },
+            "NVIDIA GeForce RTX 5060 Ti": {
+              "temperature_c": 65.0,
+              "memory_mib": 14634.0,
+              "working_links": [
+                [
+                  "1",
+                  "4"
+                ],
+                [
+                  "4",
+                  "4"
+                ]
+              ]
+            }
+          }
+        }
+      },
+      "quality": [],
+      "excluded_cases": {
+        "v112-geforce-single": {
+          "status": "excluded",
+          "failure": {
+            "error": "RuntimeError('independent CPU use above 0.25 core')",
+            "traceback": "Traceback (most recent call last):\n  File \"<workdir>/search_runner.py\", line 113, in run_case\n    if host.failure:raise RuntimeError(host.failure)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: independent CPU use above 0.25 core\n"
+          },
+          "completed_per_request_records_retained": 4
+        }
+      },
+      "build-provenance.json": {
+        "host": "geforce-system",
+        "ggml_commit": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+        "versions": {
+          "112": {
+            "version": "1.3.112",
+            "commit": "c3d4e923b6df8027fc5a13aa2f6b22f6771e9150",
+            "binary_sha256": "ef693bfcff5461969d8704b071c353187d478da85ab690ac39a0a47e240a009c",
+            "source_clean": true,
+            "finished_at": 1793860271.1779091,
+            "reused_after_contention_retry": true
+          },
+          "111": {
+            "version": "1.3.111",
+            "commit": "5e8b9c44fec443fd1d0c9140885c47973f7970b4",
+            "binary_sha256": "261fd3e975e28533af574170dc4177ca2547b6ab8e809101406bb5f676421422",
+            "reused_same_host_previous_binary": true
+          }
+        },
+        "compiler": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Wed_Aug_20_01:58:59_PM_PDT_2025\nCuda compilation tools, release 13.0, V13.0.88\nBuild cuda_13.0.r13.0/compiler.36424714_0\n"
+      },
+      "cleanup-proof.json": {
+        "time": 1793861534.3892841,
+        "own_engine_processes": [],
+        "shared_lock_free": true,
+        "lock_note": "Nonblocking acquisition after benchmark exit; released when this read-only verification process exits.",
+        "services_active": true,
+        "services": {
+          "gpu-service-A": "MainPID=<pid>\nId=gpu-service-A\nActiveState=active\nSubState=running\n",
+          "gpu-service-B": "MainPID=<pid>\nId=gpu-service-B\nActiveState=active\nSubState=running\n"
+        },
+        "gpu_apps": "<pid>, <gpu-service-B-root>/venv/bin/python, 222\n<pid>, <gpu-service-A-root>/releases/<identifier>/venv/bin/python, 222\n",
+        "gpu": "0, NVIDIA GeForce RTX 5070 Ti, 459, 300.00, 43, 1, 16\n1, NVIDIA GeForce RTX 5060 Ti, 4, 180.00, 44, 1, 4\n",
+        "models_same_size_mtime": true,
+        "model_files": {
+          "<model-root>/models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf": [
+            54817524224,
+            1793661880374657237
+          ],
+          "<model-root>/models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf": [
+            28800138432,
+            1793662164755647201
+          ],
+          "<model-root>/packs/iq3_s/dense.bin": [
+            1538035200,
+            1793662180062866203
+          ],
+          "<workdir>/model/pack/index.txt": [
+            93685,
+            1793860271262502961
+          ],
+          "<workdir>/model/pack/native_experts.txt": [
+            3304,
+            1793860271262567292
+          ],
+          "<model-root>/mtp/rt/experts.bin": [
+            707788800,
+            1793662187661974844
+          ],
+          "<model-root>/mtp/rt/dense.txt": [
+            1851,
+            1793662187806976917
+          ],
+          "<model-root>/mtp/rt/dense.bin": [
+            116099072,
+            1793662188982993725
+          ],
+          "<model-root>/mtp/rt/draft_vocab.bin": [
+            425196,
+            1793662187837977360
+          ]
+        },
+        "metadata_sha256": {
+          "<workdir>/model/pack/index.txt": "b2a014878c3b61d6a6f915e194055a5e68ede34f9465dd1cb13249d902f008ac",
+          "<workdir>/model/pack/native_experts.txt": "d9ac2dfa3ee63c55c9c6a6db26f72da0cec0ee41733f007e5cbbbba71617aa5d",
+          "<workdir>/mtp/dense.txt": "991456cf4eb266eb8a888c349e548d11bc640f5dbd9149439aa9786af0f732fd",
+          "<workdir>/source/data/expert_counts/qwen38-flash-next.txt": "d62f4f0da4e8de44e05fdac38e9965855df12d64f6d21df29d05bdfc246ed721"
+        },
+        "binary_sha256": "ef693bfcff5461969d8704b071c353187d478da85ab690ac39a0a47e240a009c",
+        "binary_matches_build": true,
+        "control_binary_sha256": "261fd3e975e28533af574170dc4177ca2547b6ab8e809101406bb5f676421422",
+        "control_binary_unchanged": true,
+        "source_clean": true,
+        "source_commit": "c3d4e923b6df8027fc5a13aa2f6b22f6771e9150",
+        "source_version": "1.3.112",
+        "policy": "No original model/config or power/clock/fan policy writes; only the two approved idle user services were stopped and restored."
+      },
+      "model-preservation-after.json": {
+        "same_size_mtime": true,
+        "files": {
+          "<model-root>/models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf": [
+            54817524224,
+            1793661880374657237
+          ],
+          "<model-root>/models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf": [
+            28800138432,
+            1793662164755647201
+          ],
+          "<model-root>/packs/iq3_s/dense.bin": [
+            1538035200,
+            1793662180062866203
+          ],
+          "<workdir>/model/pack/index.txt": [
+            93685,
+            1793860271262502961
+          ],
+          "<workdir>/model/pack/native_experts.txt": [
+            3304,
+            1793860271262567292
+          ],
+          "<model-root>/mtp/rt/experts.bin": [
+            707788800,
+            1793662187661974844
+          ],
+          "<model-root>/mtp/rt/dense.txt": [
+            1851,
+            1793662187806976917
+          ],
+          "<model-root>/mtp/rt/dense.bin": [
+            116099072,
+            1793662188982993725
+          ],
+          "<model-root>/mtp/rt/draft_vocab.bin": [
+            425196,
+            1793662187837977360
+          ]
+        },
+        "metadata_sha256": {
+          "<workdir>/model/pack/index.txt": "b2a014878c3b61d6a6f915e194055a5e68ede34f9465dd1cb13249d902f008ac",
+          "<workdir>/model/pack/native_experts.txt": "d9ac2dfa3ee63c55c9c6a6db26f72da0cec0ee41733f007e5cbbbba71617aa5d",
+          "<workdir>/mtp/dense.txt": "991456cf4eb266eb8a888c349e548d11bc640f5dbd9149439aa9786af0f732fd",
+          "<workdir>/source/data/expert_counts/qwen38-flash-next.txt": "d62f4f0da4e8de44e05fdac38e9965855df12d64f6d21df29d05bdfc246ed721"
+        }
+      },
+      "services-restored.json": {
+        "before": {
+          "gpu-service-A": "MainPID=<pid>\nId=gpu-service-A\nActiveState=active\nSubState=running\n",
+          "gpu-service-B": "MainPID=<pid>\nId=gpu-service-B\nActiveState=active\nSubState=running\n"
+        },
+        "after": {
+          "gpu-service-A": "MainPID=<pid>\nId=gpu-service-A\nActiveState=active\nSubState=running\n",
+          "gpu-service-B": "MainPID=<pid>\nId=gpu-service-B\nActiveState=active\nSubState=running\n"
+        },
+        "prior_active": [
+          "gpu-service-A",
+          "gpu-service-B"
+        ],
+        "restored": true,
+        "time": 1793861499.0941103
+      },
+      "inventory.json": {
+        "gpu": "0, NVIDIA GeForce RTX 5070 Ti, 16303, 595.99.02, 300.00, 5, 16\n1, NVIDIA GeForce RTX 5060 Ti, 16311, 595.99.02, 180.00, 4, 16\n",
+        "kernel": "7.0.0-42-generic\n",
+        "cpu": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           39 bits physical, 48 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  16\nOn-line CPU(s) list:                     0-15\nVendor ID:                               GenuineIntel\nModel name:                              Intel(R) Core(TM) i5-14400\nCPU family:                              6\nModel:                                   183\nThread(s) per core:                      2\nCore(s) per socket:                      10\nSocket(s):                               1\nStepping:                                1\nCPU(s) scaling MHz:                      35%\nCPU max MHz:                             4700.0000\nCPU min MHz:                             800.0000\nBogoMIPS:                                4992.00\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities\nVirtualization:                          VT-x\nL1d cache:                               416 KiB (10 instances)\nL1i cache:                               448 KiB (10 instances)\nL2 cache:                                9.5 MiB (7 instances)\nL3 cache:                                20 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-15\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Not affected\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Mitigation; Clear Register File\nVulnerability Retbleed:                  Not affected\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Mitigation; IBPB before exit to userspace\n",
+        "mem": "               total        used        free      shared  buff/cache   available\nMem:     134844608512  2677399552 75111489536     2007040 58099912704 132167208960\nSwap:     8589930496           0  8589930496\n",
+        "mount": "TARGET SOURCE                            FSTYPE\n/      /dev/mapper/ubuntu--vg-ubuntu--lv ext4\n",
+        "disk": "Filesystem                         Size  Used Avail Use% Mounted on\n/dev/mapper/ubuntu--vg-ubuntu--lv  492G  367G  104G  78% /\n"
+      }
+    }
+  },
+  "pairs": {
+    "pro-cap-single32": {
+      "host": "dual-pro-system",
+      "v111": {
+        "n": 3,
+        "prefill_tps": 2569.7704815182724,
+        "decode_tps": 131.70248614165735,
+        "median_wall_s": 21.975062980956864,
+        "wall_range_s": [
+          21.42478579003364,
+          22.37974346795818
+        ],
+        "median_ttft_s": 6.395430868957192
+      },
+      "v112": {
+        "n": 3,
+        "prefill_tps": 2554.956622084531,
+        "decode_tps": 134.00598054034248,
+        "median_wall_s": 21.65184986795066,
+        "wall_range_s": [
+          21.60737333196448,
+          21.82930367102381
+        ],
+        "median_ttft_s": 6.40051627001958
+      },
+      "decode_change_percent": 1.7490136034391313,
+      "wall_reduction_percent": 1.4708176867856748,
+      "output_comparisons": [
+        {
+          "fixture": "input-16384-warmup-01",
+          "warmup": true,
+          "same_input": true,
+          "same_output": false,
+          "first_token_111": 16,
+          "first_token_112": 16,
+          "first_difference_index": 41
+        },
+        {
+          "fixture": "input-16384-trial-01",
+          "warmup": false,
+          "same_input": true,
+          "same_output": false,
+          "first_token_111": 13962,
+          "first_token_112": 13962,
+          "first_difference_index": 4
+        },
+        {
+          "fixture": "input-16384-trial-02",
+          "warmup": false,
+          "same_input": true,
+          "same_output": false,
+          "first_token_111": 16,
+          "first_token_112": 13962,
+          "first_difference_index": 0
+        },
+        {
+          "fixture": "input-16384-trial-03",
+          "warmup": false,
+          "same_input": true,
+          "same_output": false,
+          "first_token_111": 13962,
+          "first_token_112": 13962,
+          "first_difference_index": 18
+        }
+      ]
+    },
+    "pro-cap-split20": {
+      "host": "dual-pro-system",
+      "v111": {
+        "n": 3,
+        "prefill_tps": 3984.8557322026477,
+        "decode_tps": 128.46568811943294,
+        "median_wall_s": 19.947071693022735,
+        "wall_range_s": [
+          19.843502009054646,
+          20.371829735988285
+        ],
+        "median_ttft_s": 4.112387271015905
+      },
+      "v112": {
+        "n": 3,
+        "prefill_tps": 3980.4991820670216,
+        "decode_tps": 130.70365965992372,
+        "median_wall_s": 19.758277416985948,
+        "wall_range_s": [
+          19.704029173008166,
+          19.89470856601838
+        ],
+        "median_ttft_s": 4.117132832005154
+      },
+      "decode_change_percent": 1.7420772606691282,
+      "wall_reduction_percent": 0.9464761491924989,
+      "output_comparisons": [
+        {
+          "fixture": "input-16384-warmup-01",
+          "warmup": true,
+          "same_input": true,
+          "same_output": false,
+          "first_token_111": 16,
+          "first_token_112": 9333,
+          "first_difference_index": 0
+        },
+        {
+          "fixture": "input-16384-trial-01",
+          "warmup": false,
+          "same_input": true,
+          "same_output": false,
+          "first_token_111": 9333,
+          "first_token_112": 9333,
+          "first_difference_index": 44
+        },
+        {
+          "fixture": "input-16384-trial-02",
+          "warmup": false,
+          "same_input": true,
+          "same_output": false,
+          "first_token_111": 13962,
+          "first_token_112": 13962,
+          "first_difference_index": 4
+        },
+        {
+          "fixture": "input-16384-trial-03",
+          "warmup": false,
+          "same_input": true,
+          "same_output": false,
+          "first_token_111": 13962,
+          "first_token_112": 13962,
+          "first_difference_index": 83
+        }
+      ]
+    },
+    "pro-full": {
+      "host": "dual-pro-system",
+      "v111": {
+        "n": 3,
+        "prefill_tps": 3322.2034471105103,
+        "decode_tps": 141.41562937320467,
+        "median_wall_s": 19.49750206700992,
+        "wall_range_s": [
+          19.061509696010035,
+          19.684297653031535
+        ],
+        "median_ttft_s": 4.92988485598471
+      },
+      "v112": {
+        "n": 3,
+        "prefill_tps": 3263.333311202438,
+        "decode_tps": 144.33817984480828,
+        "median_wall_s": 19.282925767009147,
+        "wall_range_s": [
+          18.871687779028434,
+          19.475742298003752
+        ],
+        "median_ttft_s": 5.027417616045568
+      },
+      "decode_change_percent": 2.066638945466792,
+      "wall_reduction_percent": 1.1005322592776534,
+      "output_comparisons": [
+        {
+          "fixture": "input-16384-warmup-01",
+          "warmup": true,
+          "same_input": true,
+          "same_output": true,
+          "first_token_111": 9333,
+          "first_token_112": 9333,
+          "first_difference_index": null
+        },
+        {
+          "fixture": "input-16384-trial-01",
+          "warmup": false,
+          "same_input": true,
+          "same_output": true,
+          "first_token_111": 13962,
+          "first_token_112": 13962,
+          "first_difference_index": null
+        },
+        {
+          "fixture": "input-16384-trial-02",
+          "warmup": false,
+          "same_input": true,
+          "same_output": true,
+          "first_token_111": 13962,
+          "first_token_112": 13962,
+          "first_difference_index": null
+        },
+        {
+          "fixture": "input-16384-trial-03",
+          "warmup": false,
+          "same_input": true,
+          "same_output": true,
+          "first_token_111": 16,
+          "first_token_112": 16,
+          "first_difference_index": null
+        }
+      ]
+    },
+    "pro-native-split22": {
+      "host": "dual-pro-system",
+      "v111": {
+        "n": 3,
+        "prefill_tps": 4373.1482717202725,
+        "decode_tps": 131.48489764123283,
+        "median_wall_s": 19.258337895036675,
+        "wall_range_s": [
+          19.17539355001645,
+          19.534987104008906
+        ],
+        "median_ttft_s": 3.7481439959956333
+      },
+      "v112": {
+        "n": 3,
+        "prefill_tps": 4376.146298901334,
+        "decode_tps": 134.66744112135194,
+        "median_wall_s": 18.8793441420421,
+        "wall_range_s": [
+          18.816077768977266,
+          19.161466906021815
+        ],
+        "median_ttft_s": 3.744219573040027
+      },
+      "decode_change_percent": 2.4204631385141617,
+      "wall_reduction_percent": 1.9679463256912277,
+      "output_comparisons": [
+        {
+          "fixture": "input-16384-warmup-01",
+          "warmup": true,
+          "same_input": true,
+          "same_output": true,
+          "first_token_111": 9333,
+          "first_token_112": 9333,
+          "first_difference_index": null
+        },
+        {
+          "fixture": "input-16384-trial-01",
+          "warmup": false,
+          "same_input": true,
+          "same_output": true,
+          "first_token_111": 9333,
+          "first_token_112": 9333,
+          "first_difference_index": null
+        },
+        {
+          "fixture": "input-16384-trial-02",
+          "warmup": false,
+          "same_input": true,
+          "same_output": true,
+          "first_token_111": 13962,
+          "first_token_112": 13962,
+          "first_difference_index": null
+        },
+        {
+          "fixture": "input-16384-trial-03",
+          "warmup": false,
+          "same_input": true,
+          "same_output": true,
+          "first_token_111": 13962,
+          "first_token_112": 13962,
+          "first_difference_index": null
+        }
+      ]
+    },
+    "geforce-single": {
+      "host": "geforce-system",
+      "v111": {
+        "n": 3,
+        "prefill_tps": 2073.381646995301,
+        "decode_tps": 56.069290838456745,
+        "median_wall_s": 44.634418346999155,
+        "wall_range_s": [
+          43.65377614799945,
+          45.000665612999
+        ],
+        "median_ttft_s": 7.905136540997773
+      },
+      "v112": {
+        "n": 3,
+        "prefill_tps": 2077.9045090595487,
+        "decode_tps": 57.452508637980934,
+        "median_wall_s": 43.30146422799589,
+        "wall_range_s": [
+          43.09920618899923,
+          44.19816260200605
+        ],
+        "median_ttft_s": 7.889251712003897
+      },
+      "decode_change_percent": 2.466979301574246,
+      "wall_reduction_percent": 2.9863817394024106,
+      "output_comparisons": [
+        {
+          "fixture": "input-16384-warmup-01",
+          "warmup": true,
+          "same_input": true,
+          "same_output": false,
+          "first_token_111": 13962,
+          "first_token_112": 9333,
+          "first_difference_index": 0
+        },
+        {
+          "fixture": "input-16384-trial-01",
+          "warmup": false,
+          "same_input": true,
+          "same_output": false,
+          "first_token_111": 9333,
+          "first_token_112": 9333,
+          "first_difference_index": 9
+        },
+        {
+          "fixture": "input-16384-trial-02",
+          "warmup": false,
+          "same_input": true,
+          "same_output": false,
+          "first_token_111": 13962,
+          "first_token_112": 13962,
+          "first_difference_index": 4
+        },
+        {
+          "fixture": "input-16384-trial-03",
+          "warmup": false,
+          "same_input": true,
+          "same_output": false,
+          "first_token_111": 13962,
+          "first_token_112": 13962,
+          "first_difference_index": 83
+        }
+      ]
+    },
+    "geforce-split32": {
+      "host": "geforce-system",
+      "v111": {
+        "n": 3,
+        "prefill_tps": 1972.5816290493467,
+        "decode_tps": 77.3178362080031,
+        "median_wall_s": 34.66191633899871,
+        "wall_range_s": [
+          34.608719957002904,
+          35.11402069700125
+        ],
+        "median_ttft_s": 8.338719232000585
+      },
+      "v112": {
+        "n": 3,
+        "prefill_tps": 1958.7308418812615,
+        "decode_tps": 77.69681549282593,
+        "median_wall_s": 34.6375782959949,
+        "wall_range_s": [
+          34.4095947310052,
+          35.126004620004096
+        ],
+        "median_ttft_s": 8.33009697200032
+      },
+      "decode_change_percent": 0.4901576446129319,
+      "wall_reduction_percent": 0.07021551481971589,
+      "output_comparisons": [
+        {
+          "fixture": "input-16384-warmup-01",
+          "warmup": true,
+          "same_input": true,
+          "same_output": false,
+          "first_token_111": 13962,
+          "first_token_112": 13962,
+          "first_difference_index": 30
+        },
+        {
+          "fixture": "input-16384-trial-01",
+          "warmup": false,
+          "same_input": true,
+          "same_output": false,
+          "first_token_111": 16,
+          "first_token_112": 13962,
+          "first_difference_index": 0
+        },
+        {
+          "fixture": "input-16384-trial-02",
+          "warmup": false,
+          "same_input": true,
+          "same_output": false,
+          "first_token_111": 13962,
+          "first_token_112": 13962,
+          "first_difference_index": 4
+        },
+        {
+          "fixture": "input-16384-trial-03",
+          "warmup": false,
+          "same_input": true,
+          "same_output": false,
+          "first_token_111": 16,
+          "first_token_112": 13962,
+          "first_difference_index": 0
+        }
+      ]
+    }
+  }
+}

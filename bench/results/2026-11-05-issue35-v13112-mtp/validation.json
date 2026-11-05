@@ -1,0 +1,25 @@
+{
+  "archives": {
+    "dual-pro": {
+      "file": "dual-pro-complete-logs.tar.gz",
+      "bytes": 1202136,
+      "sha256": "82ec6d819a28a9bc2fb4dfc0b6b7ce9f621f984cb324a91b75c97f4136a9a267",
+      "entries": 140
+    },
+    "geforce": {
+      "file": "geforce-complete-logs.tar.gz",
+      "bytes": 986506,
+      "sha256": "0e1cd3dd70083fce1be828c5ebdd10e766ef5f35ff63c2caab7315d51715c228",
+      "entries": 104
+    }
+  },
+  "all_archive_bytes_manifests_JSON_JSONL_verified": true,
+  "synthetic_fixture_IDs_and_hashes_preserved": true,
+  "private_path_identifier_credential_scan": "passed",
+  "model_weights_included": false,
+  "speed_processes_accepted": 12,
+  "measured_responses": 36,
+  "full_warmups": 12,
+  "excluded_contaminated_processes": 1,
+  "separate_forced_reference_cases": 2
+}
