@@ -1,0 +1,18 @@
+{
+  "archive": {
+    "file": "geforce-complete-logs.tar.gz",
+    "bytes": 948173,
+    "sha256": "d037cb3f6f381c445d6179176c9130da2aa1b2aa5e846bf929855419368f96b3",
+    "entries": 129
+  },
+  "all_archive_bytes_manifests_JSON_JSONL_verified": true,
+  "exact_fixture_IDs_preserved": true,
+  "private_path_identifier_credential_scan": "passed",
+  "model_weights_included": false,
+  "diagnostic_only": true,
+  "completed_primary_processes": 6,
+  "primary_responses": 22,
+  "additional_stopped_coverage_processes": 1,
+  "additional_probe_native_done_lines": 2,
+  "total_started_processes": 7
+}
